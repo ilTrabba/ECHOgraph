@@ -74,40 +74,40 @@ d3.json("data.json").then(data => {
     .force("center", d3.forceCenter(width / 2, height / 2));
 
   const link = svg.append("g")
-  .attr("stroke", "#aaa")
-  .selectAll("path")
-  .data(links)
-  .join("path")
-  .attr("stroke-width", 2)
-  .attr("fill", "none")
-  .attr("stroke", "#444")
-  .attr("marker-end", "url(#arrow-ambiguo)")
-  .on("click", function(event, d) {
-    if (!activeNodeId) return;
+    .attr("stroke", "#aaa")
+    .selectAll("path")
+    .data(links)
+    .join("path")
+    .attr("stroke-width", 2)
+    .attr("fill", "none")
+    .attr("stroke", "#444")
+    .attr("marker-end", "url(#arrow-ambiguo)")
+    .on("click", function(event, d) {
+      if (!activeNodeId) return;
 
-    const sourceId = typeof d.source === "object" ? d.source.id : d.source;
-    const targetId = typeof d.target === "object" ? d.target.id : d.target;
+      const sourceId = typeof d.source === "object" ? d.source.id : d.source;
+      const targetId = typeof d.target === "object" ? d.target.id : d.target;
 
-    // Solo se l'arco parte dal POV attivo
-    if (sourceId !== activeNodeId) return;
+      // Solo se l'arco parte dal POV attivo
+      if (sourceId !== activeNodeId) return;
 
-    const linkKey = `${sourceId}->${targetId}`;
-    if (selectedLinkId === linkKey) {
-      // Unclick
-      dialogueBox.html("");
-      selectedLinkId = null;
-    } else {
-      const seasonData = d.seasons[selectedSeason];
-      const dialogues = seasonData?.dialogues?.filter(line => line.trim() !== "");
-      if (dialogues && dialogues.length > 0) {
-        dialogueBox.html(dialogues.map(d => `<div>${d}</div>`).join(""));
-        selectedLinkId = linkKey;
+      const linkKey = `${sourceId}->${targetId}`;
+      if (selectedLinkId === linkKey) {
+        // Unclick
+        dialogueBox.html("");
+        selectedLinkId = null;
       } else {
-        dialogueBox.html("<em>Nessun dialogo disponibile</em>");
-        selectedLinkId = linkKey;
+        const seasonData = d.seasons[selectedSeason];
+        const dialogues = seasonData?.dialogues?.filter(line => line.trim() !== "");
+        if (dialogues && dialogues.length > 0) {
+          dialogueBox.html(dialogues.map(d => `<div>${d}</div>`).join(""));
+          selectedLinkId = linkKey;
+        } else {
+          dialogueBox.html("<em>Nessun dialogo disponibile</em>");
+          selectedLinkId = linkKey;
+        }
       }
-    }
-  });
+    });
 
   const node = svg.append("g")
     .selectAll("g")
@@ -125,9 +125,22 @@ d3.json("data.json").then(data => {
     .attr("y", 5)
     .style("font-size", "12px");
 
-  node.on("click", (event, d) => {
+  let clickTimer = null;
+const clickDelay = 250;
+
+node.on("click", function(event, d) {
+  if (clickTimer) clearTimeout(clickTimer);
+  clickTimer = setTimeout(() => {
     toggleHighlight(d.id);
-  });
+    clickTimer = null;
+  }, clickDelay);
+});
+
+node.on("dblclick", function(event, d) {
+  if (clickTimer) clearTimeout(clickTimer); // blocca il click singolo
+  showDonutForNode(d);
+  event.stopPropagation();
+});
 
   node.on("mouseover", function(event, d) {
     if (!activeNodeId || activeNodeId === d.id) return;
@@ -170,9 +183,22 @@ d3.json("data.json").then(data => {
     });
 
     node.attr("transform", d => `translate(${d.x},${d.y})`);
+
+    // Mantieni la donut chart agganciata al nodo durante l'animazione
+    d3.selectAll(".donut-chart").each(function(donutData) {
+      const nodeId = d3.select(this).attr("data-node-id");
+      const n = nodes.find(n => n.id === nodeId);
+      if (n) {
+        d3.select(this)
+          .attr("transform", `translate(${n.x},${n.y})`);
+      }
+    });
   });
 
   function toggleHighlight(nodeId) {
+    d3.selectAll(".donut-chart").remove();
+    d3.selectAll(".donut-tooltip-group").remove();
+    //-------------------------------------------------
     if (activeNodeId === nodeId) {
       node.select("circle").attr("opacity", 1);
       node.select("text").attr("opacity", 1);
@@ -261,4 +287,106 @@ d3.json("data.json").then(data => {
       .on("drag", dragged)
       .on("end", dragended);
   }
+
+  function showDonutForNode(node) {
+  d3.selectAll(".donut-chart").remove();
+  d3.selectAll(".donut-tooltip-group").remove();
+
+  // Trova tutti i link entranti per questa stagione
+  const receivedLinks = rawLinkData.filter(link => {
+    const targetId = typeof link.target === "object" ? link.target.id : link.target;
+    return targetId === node.id && link.seasons && link.seasons[selectedSeason];
+  });
+
+  // Conta tutte le labels (non solo i judgment)
+  const labelCounts = {};
+  receivedLinks.forEach(link => {
+    const season = link.seasons[selectedSeason];
+    if (season && Array.isArray(season.labels)) {
+      season.labels.forEach(label => {
+        if (!label) return;
+        labelCounts[label] = (labelCounts[label] || 0) + 1;
+      });
+    }
+  });
+
+  const data = Object.entries(labelCounts)
+    .map(([label, value]) => ({ label, value }));
+
+  if (!data.length) return;
+
+  // Ottieni posizione nodo attuale
+  const thisNode = d3.selectAll("g").filter(d2 => d2 && d2.id === node.id).data()[0];
+  const cx = thisNode.x;
+  const cy = thisNode.y;
+
+  const radius = 38, innerRadius = 18;
+  const arc = d3.arc().innerRadius(innerRadius).outerRadius(radius);
+  const pie = d3.pie().sort(null).value(d => d.value);
+
+  // Colori: cicla su d3.schemeCategory10 (va bene per etichette arbitrarie)
+  const color = d3.scaleOrdinal(d3.schemeCategory10);
+
+  const donutGroup = svg.append("g")
+    .attr("class", "donut-chart")
+    .attr("data-node-id", node.id)
+    .attr("pointer-events", "none")
+    .attr("transform", `translate(${cx},${cy})`);
+
+  donutGroup.selectAll("path")
+    .data(pie(data))
+    .join("path")
+    .attr("d", arc)
+    .attr("fill", d => color(d.data.label))
+    .attr("opacity", 0.9)
+    .attr("pointer-events", "all")
+    .on("mousemove", function(event, d) {
+      svg.selectAll(".donut-tooltip-group").remove();
+
+      const a = (d.startAngle + d.endAngle) / 2 - Math.PI / 2;
+      const labelRadius = radius + 32;
+      const lx = Math.cos(a) * labelRadius + cx;
+      const ly = Math.sin(a) * labelRadius + cy;
+
+      const labelText = d.data.label;
+
+      const tooltipGroup = svg.append("g")
+        .attr("class", "donut-tooltip-group")
+        .attr("pointer-events", "none")
+        .attr("transform", `translate(${lx},${ly})`);
+
+      const tempText = tooltipGroup.append("text")
+        .attr("font-size", 13)
+        .attr("font-family", "sans-serif")
+        .attr("fill", "#000")
+        .attr("x", 0)
+        .attr("y", 0)
+        .attr("text-anchor", "middle")
+        .text(labelText);
+
+      const bbox = tempText.node().getBBox();
+      const paddingX = 10, paddingY = 6;
+
+      tooltipGroup.insert("rect", "text")
+        .attr("x", bbox.x - paddingX)
+        .attr("y", bbox.y - paddingY)
+        .attr("width", bbox.width + 2 * paddingX)
+        .attr("height", bbox.height + 2 * paddingY)
+        .attr("rx", 6)
+        .attr("ry", 6)
+        .attr("fill", "#f8f8fa")
+        .attr("stroke", "#bbb")
+        .attr("stroke-width", 1)
+        .attr("opacity", 0.86);
+    })
+    .on("mouseleave", function() {
+      svg.selectAll(".donut-tooltip-group").remove();
+    });
+
+  setTimeout(() => {
+    donutGroup.transition().duration(300).style("opacity", 0).remove();
+    svg.selectAll(".donut-tooltip-group").remove();
+  }, 10000);
+}
+  
 });
