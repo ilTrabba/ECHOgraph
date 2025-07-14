@@ -1,6 +1,5 @@
 const width = 800;
 const height = 600;
-
 const svg = d3.select("svg");
 const tooltip = d3.select("#tooltip");
 
@@ -12,46 +11,34 @@ const colorMap = {
 
 let activeNodeId = null;
 let rawLinkData = null;
-
 let selectedSeason = "1";
 let selectedLinkId = null;
 
 const dialogueBox = d3.select("#dialogue-box");
 
+// SEASON DOT FILTER BAR
 const seasonDotContainer = d3.select("#season-dots");
 for (let i = 1; i <= 6; i++) {
   seasonDotContainer.append("div")
     .attr("class", "season-dot" + (i == 1 ? " selected" : ""))
     .attr("data-season", i)
     .text(i)
-    .on("click", function() {
+    .on("click", function () {
       selectedSeason = String(i);
-
-      d3.selectAll(".season-dot")
-        .classed("selected", false);
-      d3.select(this)
-        .classed("selected", true);
-
-      d3.select("#dialogue-box").html(""); // Reset box
-
+      d3.selectAll(".season-dot").classed("selected", false);
+      d3.select(this).classed("selected", true);
+      dialogueBox.html(""); // reset
       if (activeNodeId) toggleHighlight(activeNodeId);
     });
 }
 
-// Definizione dei marker freccia colorati
+// DEFINIZIONE FRECCE
 const defs = svg.append("defs");
-
-const arrowData = [
-  { id: "arrow-positivo", color: colorMap.positivo },
-  { id: "arrow-negativo", color: colorMap.negativo },
-  { id: "arrow-ambiguo", color: colorMap.ambiguo },
-];
-
-arrowData.forEach(({ id, color }) => {
+["positivo", "negativo", "ambiguo"].forEach(judgment => {
   defs.append("marker")
-    .attr("id", id)
+    .attr("id", `arrow-${judgment}`)
     .attr("viewBox", "0 -5 10 10")
-    .attr("refX", 30) // più lungo per non finire sotto al nodo
+    .attr("refX", 32) // refX per freccia all'esterno del nodo
     .attr("refY", 0)
     .attr("markerWidth", 6)
     .attr("markerHeight", 6)
@@ -59,56 +46,60 @@ arrowData.forEach(({ id, color }) => {
     .attr("markerUnits", "userSpaceOnUse")
     .append("path")
     .attr("d", "M0,-5L10,0L0,5")
-    .attr("fill", color);
+    .attr("fill", colorMap[judgment]);
 });
 
 d3.json("data.json").then(data => {
   rawLinkData = data.links;
-
-  const nodes = data.nodes.map(d => Object.assign({}, d));
-  const links = data.links.map(d => Object.assign({}, d));
+  const nodes = data.nodes.map(d => ({ ...d }));
+  const links = data.links.map(d => ({ ...d }));
 
   const simulation = d3.forceSimulation(nodes)
     .force("link", d3.forceLink(links).id(d => d.id).distance(150))
     .force("charge", d3.forceManyBody().strength(-300))
     .force("center", d3.forceCenter(width / 2, height / 2));
 
+  // LINK
   const link = svg.append("g")
-  .attr("stroke", "#aaa")
-  .selectAll("path")
-  .data(links)
-  .join("path")
-  .attr("stroke-width", 2)
-  .attr("fill", "none")
-  .attr("stroke", "#444")
-  .attr("marker-end", "url(#arrow-ambiguo)")
-  .on("click", function(event, d) {
-    if (!activeNodeId) return;
+    .attr("stroke", "#aaa")
+    .selectAll("path")
+    .data(links)
+    .join("path")
+    .attr("stroke-width", 2)
+    .attr("fill", "none")
+    .attr("stroke", "#444")
+    .attr("marker-end", "url(#arrow-ambiguo)")
+    .on("click", function (event, d) {
+      if (!activeNodeId) return;
 
-    const sourceId = typeof d.source === "object" ? d.source.id : d.source;
-    const targetId = typeof d.target === "object" ? d.target.id : d.target;
+      const sourceId = d.source.id || d.source;
+      const targetId = d.target.id || d.target;
+      if (sourceId !== activeNodeId) return;
 
-    // Solo se l'arco parte dal POV attivo
-    if (sourceId !== activeNodeId) return;
+      const linkKey = `${sourceId}->${targetId}`;
 
-    const linkKey = `${sourceId}->${targetId}`;
-    if (selectedLinkId === linkKey) {
-      // Unclick
-      dialogueBox.html("");
-      selectedLinkId = null;
-    } else {
-      const seasonData = d.seasons[selectedSeason];
-      const dialogues = seasonData?.dialogues?.filter(line => line.trim() !== "");
-      if (dialogues && dialogues.length > 0) {
-        dialogueBox.html(dialogues.map(d => `<div>${d}</div>`).join(""));
-        selectedLinkId = linkKey;
+      if (selectedLinkId === linkKey) {
+        dialogueBox.html("");
+        selectedLinkId = null;
       } else {
-        dialogueBox.html("<em>Nessun dialogo disponibile</em>");
+        const seasonData = rawLinkData.find(link => {
+          const s = link.source.id || link.source;
+          const t = link.target.id || link.target;
+          return s === sourceId && t === targetId;
+        })?.seasons?.[selectedSeason];
+
+        const dialogues = seasonData?.dialogues?.filter(line => line.trim() !== "");
+        if (dialogues && dialogues.length > 0) {
+          dialogueBox.html(dialogues.map(line => `<div class="dialogue-line">🎬 ${line}</div>`).join(""));
+        } else {
+          dialogueBox.html("<em>Nessun dialogo disponibile</em>");
+        }
+
         selectedLinkId = linkKey;
       }
-    }
-  });
+    });
 
+  // NODE
   const node = svg.append("g")
     .selectAll("g")
     .data(nodes)
@@ -129,15 +120,13 @@ d3.json("data.json").then(data => {
     toggleHighlight(d.id);
   });
 
-  node.on("mouseover", function(event, d) {
+  node.on("mouseover", function (event, d) {
     if (!activeNodeId || activeNodeId === d.id) return;
-
     const opinionData = getOpinions(activeNodeId, d.id);
     if (!opinionData) return;
 
     const matrix = this.getCTM();
     const svgRect = svg.node().getBoundingClientRect();
-
     const x = svgRect.left + matrix.e;
     const y = svgRect.top + matrix.f;
 
@@ -153,20 +142,34 @@ d3.json("data.json").then(data => {
   });
 
   simulation.on("tick", () => {
+    // GESTIONE ARCHI CURVI PER BIDIREZIONALITÀ
+    const arcMap = {};
+    links.forEach(link => {
+      const sourceId = link.source.id || link.source;
+      const targetId = link.target.id || link.target;
+      const key = `${sourceId}->${targetId}`;
+      const reverseKey = `${targetId}->${sourceId}`;
+      if (arcMap[reverseKey]) {
+        arcMap[key] = true;
+      } else {
+        arcMap[key] = false;
+      }
+    });
+
     link.attr("d", d => {
-      // Calcolo con margine per la freccia (raggio 20)
-      const dx = d.target.x - d.source.x;
-      const dy = d.target.y - d.source.y;
-      const dr = Math.sqrt(dx * dx + dy * dy);
-      const offsetX = (dx * 6) / dr;
-      const offsetY = (dy * 6) / dr;
+      const sx = d.source.x;
+      const sy = d.source.y;
+      const tx = d.target.x;
+      const ty = d.target.y;
+      const dx = tx - sx;
+      const dy = ty - sy;
+      const dr = Math.sqrt(dx * dx + dy * dy) * (arcMap[`${d.source.id}->${d.target.id}`] ? 1.5 : 0);
 
-      const x1 = d.source.x;
-      const y1 = d.source.y;
-      const x2 = d.target.x - offsetX;
-      const y2 = d.target.y - offsetY;
+      if (dr === 0) {
+        return `M${sx},${sy}L${tx},${ty}`;
+      }
 
-      return `M${x1},${y1}L${x2},${y2}`;
+      return `M${sx},${sy}A${dr},${dr} 0 0,1 ${tx},${ty}`;
     });
 
     node.attr("transform", d => `translate(${d.x},${d.y})`);
@@ -191,44 +194,36 @@ d3.json("data.json").then(data => {
 
     const connectedTargets = new Set(
       links
-        .filter(l => l.source === nodeId || l.source.id === nodeId)
-        .map(l => (typeof l.target === "string" ? l.target : l.target.id))
+        .filter(l => (l.source.id || l.source) === nodeId)
+        .map(l => (l.target.id || l.target))
     );
 
-    node.select("circle").attr("opacity", d => {
-      return d.id === nodeId || connectedTargets.has(d.id) ? 1 : 0.1;
-    });
+    node.select("circle").attr("opacity", d =>
+      d.id === nodeId || connectedTargets.has(d.id) ? 1 : 0.1
+    );
 
-    node.select("text").attr("opacity", d => {
-      return d.id === nodeId || connectedTargets.has(d.id) ? 1 : 0.1;
-    });
+    node.select("text").attr("opacity", d =>
+      d.id === nodeId || connectedTargets.has(d.id) ? 1 : 0.1
+    );
 
     link
       .attr("opacity", d => (d.source.id || d.source) === nodeId ? 1 : 0.1)
       .attr("stroke", d => {
-        const sourceId = typeof d.source === "object" ? d.source.id : d.source;
-        if (sourceId === nodeId) {
-          const seasons = Object.values(d.seasons);
-          return colorMap[seasons[0].judgment] || "#999";
-        }
-        return "#444";
+        const seasons = Object.values(d.seasons);
+        return colorMap[seasons[0].judgment] || "#999";
       })
       .attr("marker-end", d => {
-        const sourceId = typeof d.source === "object" ? d.source.id : d.source;
-        if (sourceId === nodeId) {
-          const seasons = Object.values(d.seasons);
-          const judgment = seasons[0].judgment.toLowerCase();
-          return `url(#arrow-${judgment})`;
-        }
-        return "url(#arrow-ambiguo)";
+        const seasons = Object.values(d.seasons);
+        const judgment = seasons[0].judgment.toLowerCase();
+        return `url(#arrow-${judgment})`;
       });
   }
 
   function getOpinions(fromId, toId) {
     for (const link of rawLinkData) {
-      const sourceId = typeof link.source === "object" ? link.source.id : link.source;
-      const targetId = typeof link.target === "object" ? link.target.id : link.target;
-      if (sourceId === fromId && targetId === toId) {
+      const s = link.source.id || link.source;
+      const t = link.target.id || link.target;
+      if (s === fromId && t === toId) {
         const seasons = Object.values(link.seasons);
         if (seasons.length > 0) {
           return { labels: seasons[0].labels };
