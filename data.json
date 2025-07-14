@@ -1,0 +1,71 @@
+{
+  "nodes": [
+    { "id": "Jack Shephard", "image": "images/jack.png" },
+    { "id": "Kate Austen", "image": "images/kate.png" },
+    { "id": "John Locke", "image": "images/locke.png" },
+    { "id": "Sawyer", "image": "images/sawyer.png" },
+    { "id": "Hurley", "image": "images/hurley.png" }
+  ],
+  "links": [
+    {
+      "source": "Jack Shephard",
+      "target": "Kate Austen",
+      "seasons": {
+        "1": {
+          "labels": ["Affascinante", "Misteriosa", "Inaffidabile"],
+          "judgment": "ambiguo",
+          "dialogues": [""]
+        }
+      }
+    },
+    {
+      "source": "Jack Shephard",
+      "target": "John Locke",
+      "seasons": {
+        "1": {
+          "labels": ["Pericoloso", "Inquietante"],
+          "judgment": "negativo",
+          "dialogues": ["S1E17 “Orientation”-Locke: “Each one of us was brought here for a reason. The Island chose you too, Jack. It's destiny.”"]
+        },
+        "2": {
+          "labels": ["Fanatico", "Spirituale"],
+          "judgment": "negativo",
+          "dialogues": [""]
+        }
+      }
+    },
+    {
+      "source": "Kate Austen",
+      "target": "Jack Shephard",
+      "seasons": {
+        "1": {
+          "labels": ["Senso del dovere", "Testardo"],
+          "judgment": "ambiguo",
+          "dialogues": [""]
+        }
+      }
+    },
+    {
+      "source": "John Locke",
+      "target": "Hurley",
+      "seasons": {
+        "1": {
+          "labels": ["Gentile", "Inutile", "Inadatto alla sopravvivenza"],
+          "judgment": "negativo",
+          "dialogues": [""]
+        }
+      }
+    },
+    {
+      "source": "Hurley",
+      "target": "Sawyer",
+      "seasons": {
+        "1": {
+          "labels": ["Tipo duro", "Cuore tenero", "Ha sofferto"],
+          "judgment": "positivo",
+          "dialogues": [""]
+        }
+      }
+    }
+  ]
+}

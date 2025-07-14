@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>POVMap Prototype</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Timeline filtro stagioni -->
+<div id="season-timeline">
+  <div class="season-line"></div>
+  <div id="season-dots"></div>
+</div>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+<!-- HTML aggiornato -->
+<div id="season-timeline" style="position: absolute; top: 10px; right: 10px; display: flex; align-items: center; gap: 15px; font-family: 'Poppins', sans-serif;">
+ <span style="font-size: 13px; font-weight: 500; margin-bottom: 10px;"><strong>Stagioni</strong></span>
+  <div id="season-dots" style="display: flex; gap: 10px;">
+    <!-- I dot saranno generati da JS -->
+  </div>
+</div>
+
+<!-- Box plot per dialoghi -->
+<div id="dialogue-box" class="dialogue-box"></div>
+
+<!-- Legenda -->
+<div id="legend" class="legend">
+  <span style="font-size: 13px; font-weight: 500; margin-bottom: 10px;"><strong>Archi:</strong></span>
+  <div><span style="background:#4CAF50"></span> Positivo</div>
+  <div><span style="background:#F44336"></span> Negativo</div>
+  <div><span style="background:#FFC107"></span> Ambiguo</div>
+</div>
+  <svg>
+    <defs>
+        <marker id="arrow-positivo" viewBox="0 -5 10 10" refX="20" refY="0"
+            markerWidth="6" markerHeight="6" orient="auto">
+            <path d="M0,-5L10,0L0,5" fill="green" />
+        </marker>
+        <marker id="arrow-negativo" viewBox="0 -5 10 10" refX="20" refY="0"
+            markerWidth="6" markerHeight="6" orient="auto">
+            <path d="M0,-5L10,0L0,5" fill="red" />
+        </marker>
+        <marker id="arrow-ambiguo" viewBox="0 -5 10 10" refX="20" refY="0"
+            markerWidth="6" markerHeight="6" orient="auto">
+            <path d="M0,-5L10,0L0,5" fill="orange" />
+        </marker>
+    </defs>
+  </svg>
+  <div id="tooltip" class="hidden"></div>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="graph.js"></script>
+</body>
+</html>
