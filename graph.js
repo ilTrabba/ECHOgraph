@@ -59,7 +59,7 @@ d3.json("data.json").then(data => {
     .force("charge", d3.forceManyBody().strength(-300))
     .force("center", d3.forceCenter(width / 2, height / 2));
 
-  // LINK
+  //LINK  
   const link = svg.append("g")
     .attr("stroke", "#aaa")
     .selectAll("path")
@@ -70,34 +70,47 @@ d3.json("data.json").then(data => {
     .attr("stroke", "#444")
     .attr("marker-end", "url(#arrow-ambiguo)")
     .on("click", function (event, d) {
-      if (!activeNodeId) return;
+  if (!activeNodeId) return;
 
-      const sourceId = d.source.id || d.source;
-      const targetId = d.target.id || d.target;
-      if (sourceId !== activeNodeId) return;
+  const sourceId = typeof d.source === "object" ? d.source.id : d.source;
+  const targetId = typeof d.target === "object" ? d.target.id : d.target;
 
-      const linkKey = `${sourceId}->${targetId}`;
+  if (sourceId !== activeNodeId) return;
 
-      if (selectedLinkId === linkKey) {
-        dialogueBox.html("");
-        selectedLinkId = null;
-      } else {
-        const seasonData = rawLinkData.find(link => {
-          const s = link.source.id || link.source;
-          const t = link.target.id || link.target;
-          return s === sourceId && t === targetId;
-        })?.seasons?.[selectedSeason];
+  const linkKey = `${sourceId}->${targetId}`;
+  if (selectedLinkId === linkKey) {
+    dialogueBox.html("").classed("visible", false);
+    selectedLinkId = null;
+  } else {
+    const seasonData = d.seasons[selectedSeason];
+    const dialogues = seasonData?.dialogues?.filter(line => line.trim() !== "");
 
-        const dialogues = seasonData?.dialogues?.filter(line => line.trim() !== "");
-        if (dialogues && dialogues.length > 0) {
-          dialogueBox.html(dialogues.map(line => `<div class="dialogue-line">🎬 ${line}</div>`).join(""));
-        } else {
-          dialogueBox.html("<em>Nessun dialogo disponibile</em>");
-        }
+    if (dialogues && dialogues.length > 0) {
+      // Calcolo posizione centro arco
+      const sx = d.source.x;
+      const sy = d.source.y;
+      const tx = d.target.x;
+      const ty = d.target.y;
+      const midX = (sx + tx) / 2;
+      const midY = (sy + ty) / 2;
 
-        selectedLinkId = linkKey;
-      }
-    });
+      // Posiziona il dialogueBox vicino al centro dell’arco
+      dialogueBox
+        .html(dialogues.map(d => `<div>🗨️ ${d}</div>`).join(""))
+        .style("left", `${midX + 10}px`) // Offset per spostarlo leggermente
+        .style("top", `${midY + 10}px`)
+        .classed("visible", true);
+    } else {
+      dialogueBox
+        .html("<em>Nessun dialogo disponibile</em>")
+        .style("left", `${(d.source.x + d.target.x) / 2}px`)
+        .style("top", `${(d.source.y + d.target.y) / 2}px`)
+        .classed("visible", true);
+    }
+    selectedLinkId = linkKey;
+  }
+});
+
 
   // NODE
   const node = svg.append("g")
