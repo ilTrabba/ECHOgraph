@@ -1,71 +1,2028 @@
 {
   "nodes": [
+    { "id": "Benjamin Linus", "image": "" },
+    { "id": "Charlie Pace", "image": "" },
+    { "id": "Claire Littleton", "image": "" },
+    { "id": "Danielle Russeau", "image": "" },
+    { "id": "Desmond Hume", "image": "" },
+    { "id": "Ethan Rom", "image": "" },
+    { "id": "Hugo 'Hurley' Reyes", "image": "images/hurley.png" },
+    { "id": "Jacob", "image": "" },
+    { "id": "James 'Sawyer' Ford", "image": "images/sawyer.png" },
     { "id": "Jack Shephard", "image": "images/jack.png" },
-    { "id": "Kate Austen", "image": "images/kate.png" },
     { "id": "John Locke", "image": "images/locke.png" },
-    { "id": "Sawyer", "image": "images/sawyer.png" },
-    { "id": "Hurley", "image": "images/hurley.png" }
+    { "id": "Juliet Burke", "image": "" },
+    { "id": "Jin-Soo Kwon", "image": "" },
+    { "id": "Kate Austen", "image": "images/kate.png" },
+    { "id": "Man in black", "image": "" },
+    { "id": "Michael Dawson", "image": "" },
+    { "id": "Mr. Eko", "image": "" },
+    { "id": "Penelope 'Penny' Widmore", "image": "" },
+    { "id": "Sayid Jarrah", "image": "" },
+    { "id": "Sun-Hwa Kwon", "image": "" },
+    { "id": "Implicit Reader", "image": "" }
   ],
-  "links": [
+  "links": 
+  [
+    {
+      "source": "Benjamin Linus",
+      "target": "Charlie Pace",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Benjamin Linus",
+      "target": "Claire Littleton",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Benjamin Linus",
+      "target": "Danielle Russeau",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    }, 
+    {
+      "source": "Benjamin Linus",
+      "target": "Desmond Hume",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Benjamin Linus",
+      "target": "Ethan Rom",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Benjamin Linus",
+      "target": "Hugo 'Hurley' Reyes",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Benjamin Linus",
+      "target": "Jacob",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Benjamin Linus",
+      "target": "James 'Sawyer' Ford",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Benjamin Linus",
+      "target": "Jack Shephard",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Benjamin Linus",
+      "target": "John Locke",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Benjamin Linus",
+      "target": "Juliet Burke",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Benjamin Linus",
+      "target": "Jin-Soo Kwon",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Benjamin Linus",
+      "target": "Kate Austen",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Benjamin Linus",
+      "target": "Man in black",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Benjamin Linus",
+      "target": "Michael Dawson",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Benjamin Linus",
+      "target": "Mr. Eko",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Benjamin Linus",
+      "target": "Penelope 'Penny' Widmore",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Benjamin Linus",
+      "target": "Sayid Jarrah",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Benjamin Linus",
+      "target": "Sun-Hwa Kwon",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Charlie Pace",
+      "target": "Benjamin Linus",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Charlie Pace",
+      "target": "Claire Littleton",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Charlie Pace",
+      "target": "Danielle Russeau",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Charlie Pace",
+      "target": "Desmond Hume",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Charlie Pace",
+      "target": "Ethan Rom",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Charlie Pace",
+      "target": "Hugo 'Hurley' Reyes",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Charlie Pace",
+      "target": "Jacob",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Charlie Pace",
+      "target": "James 'Sawyer' Ford",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Charlie Pace",
+      "target": "Jack Shephard",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Charlie Pace",
+      "target": "John Locke",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Charlie Pace",
+      "target": "Juliet Burke",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Charlie Pace",
+      "target": "Jin-Soo Kwon",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Charlie Pace",
+      "target": "Kate Austen",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Charlie Pace",
+      "target": "Man in black",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Charlie Pace",
+      "target": "Michael Dawson",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Charlie Pace",
+      "target": "Mr. Eko",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Charlie Pace",
+      "target": "Penelope 'Penny' Widmore",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Charlie Pace",
+      "target": "Sayid Jarrah",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Charlie Pace",
+      "target": "Sun-Hwa Kwon",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Claire Littleton",
+      "target": "Benjamin Linus",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Claire Littleton",
+      "target": "Charlie Pace",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Claire Littleton",
+      "target": "Danielle Russeau",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Claire Littleton",
+      "target": "Desmond Hume",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Claire Littleton",
+      "target": "Ethan Rom",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Claire Littleton",
+      "target": "Hugo 'Hurley' Reyes",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Claire Littleton",
+      "target": "Jacob",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Claire Littleton",
+      "target": "James 'Sawyer' Ford",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Claire Littleton",
+      "target": "Jack Shephard",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Claire Littleton",
+      "target": "John Locke",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Claire Littleton",
+      "target": "Juliet Burke",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Claire Littleton",
+      "target": "Jin-Soo Kwon",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Claire Littleton",
+      "target": "Kate Austen",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Claire Littleton",
+      "target": "Man in black",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Claire Littleton",
+      "target": "Michael Dawson",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Claire Littleton",
+      "target": "Mr. Eko",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Claire Littleton",
+      "target": "Penelope 'Penny' Widmore",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Claire Littleton",
+      "target": "Sayid Jarrah",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Claire Littleton",
+      "target": "Sun-Hwa Kwon",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Danielle Russeau",
+      "target": "Benjamin Linus",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Danielle Russeau",
+      "target": "Charlie Pace",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Danielle Russeau",
+      "target": "Claire Littleton",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Danielle Russeau",
+      "target": "Desmond Hume",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Danielle Russeau",
+      "target": "Ethan Rom",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Danielle Russeau",
+      "target": "Hugo 'Hurley' Reyes",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Danielle Russeau",
+      "target": "Jacob",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Danielle Russeau",
+      "target": "James 'Sawyer' Ford",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Danielle Russeau",
+      "target": "Jack Shephard",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Danielle Russeau",
+      "target": "John Locke",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Danielle Russeau",
+      "target": "Juliet Burke",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Danielle Russeau",
+      "target": "Jin-Soo Kwon",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Danielle Russeau",
+      "target": "Kate Austen",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Danielle Russeau",
+      "target": "Man in black",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Danielle Russeau",
+      "target": "Michael Dawson",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Danielle Russeau",
+      "target": "Mr. Eko",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Danielle Russeau",
+      "target": "Penelope 'Penny' Widmore",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Danielle Russeau",
+      "target": "Sayid Jarrah",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Danielle Russeau",
+      "target": "Sun-Hwa Kwon",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Desmond Hume",
+      "target": "Benjamin Linus",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Desmond Hume",
+      "target": "Charlie Pace",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Desmond Hume",
+      "target": "Claire Littleton",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Desmond Hume",
+      "target": "Danielle Russeau",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Desmond Hume",
+      "target": "Ethan Rom",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Desmond Hume",
+      "target": "Hugo 'Hurley' Reyes",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Desmond Hume",
+      "target": "Jacob",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Desmond Hume",
+      "target": "James 'Sawyer' Ford",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Desmond Hume",
+      "target": "Jack Shephard",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Desmond Hume",
+      "target": "John Locke",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Desmond Hume",
+      "target": "Juliet Burke",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Desmond Hume",
+      "target": "Jin-Soo Kwon",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Desmond Hume",
+      "target": "Kate Austen",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Desmond Hume",
+      "target": "Man in black",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Desmond Hume",
+      "target": "Michael Dawson",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Desmond Hume",
+      "target": "Mr. Eko",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Desmond Hume",
+      "target": "Penelope 'Penny' Widmore",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Desmond Hume",
+      "target": "Sayid Jarrah",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Desmond Hume",
+      "target": "Sun-Hwa Kwon",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Ethan Rom",
+      "target": "Benjamin Linus",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Ethan Rom",
+      "target": "Charlie Pace",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Ethan Rom",
+      "target": "Claire Littleton",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Ethan Rom",
+      "target": "Danielle Russeau",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Ethan Rom",
+      "target": "Desmond Hume",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Ethan Rom",
+      "target": "Hugo 'Hurley' Reyes",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Ethan Rom",
+      "target": "Jacob",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Ethan Rom",
+      "target": "James 'Sawyer' Ford",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Ethan Rom",
+      "target": "Jack Shephard",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Ethan Rom",
+      "target": "John Locke",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Ethan Rom",
+      "target": "Juliet Burke",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Ethan Rom",
+      "target": "Jin-Soo Kwon",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Ethan Rom",
+      "target": "Kate Austen",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Ethan Rom",
+      "target": "Man in black",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Ethan Rom",
+      "target": "Michael Dawson",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Ethan Rom",
+      "target": "Mr. Eko",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Ethan Rom",
+      "target": "Penelope 'Penny' Widmore",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Ethan Rom",
+      "target": "Sayid Jarrah",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Ethan Rom",
+      "target": "Sun-Hwa Kwon",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Hugo 'Hurley' Reyes",
+      "target": "Benjamin Linus",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Hugo 'Hurley' Reyes",
+      "target": "Charlie Pace",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Hugo 'Hurley' Reyes",
+      "target": "Claire Littleton",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Hugo 'Hurley' Reyes",
+      "target": "Danielle Russeau",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Hugo 'Hurley' Reyes",
+      "target": "Desmond Hume",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Hugo 'Hurley' Reyes",
+      "target": "Ethan Rom",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Hugo 'Hurley' Reyes",
+      "target": "Jacob",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Hugo 'Hurley' Reyes",
+      "target": "James 'Sawyer' Ford",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Hugo 'Hurley' Reyes",
+      "target": "Jack Shephard",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Hugo 'Hurley' Reyes",
+      "target": "John Locke",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Hugo 'Hurley' Reyes",
+      "target": "Juliet Burke",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Hugo 'Hurley' Reyes",
+      "target": "Jin-Soo Kwon",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Hugo 'Hurley' Reyes",
+      "target": "Kate Austen",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Hugo 'Hurley' Reyes",
+      "target": "Man in black",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Hugo 'Hurley' Reyes",
+      "target": "Michael Dawson",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Hugo 'Hurley' Reyes",
+      "target": "Mr. Eko",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Hugo 'Hurley' Reyes",
+      "target": "Penelope 'Penny' Widmore",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Hugo 'Hurley' Reyes",
+      "target": "Sayid Jarrah",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Hugo 'Hurley' Reyes",
+      "target": "Sun-Hwa Kwon",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Jacob",
+      "target": "Benjamin Linus",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Jacob",
+      "target": "Charlie Pace",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Jacob",
+      "target": "Claire Littleton",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Jacob",
+      "target": "Danielle Russeau",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Jacob",
+      "target": "Desmond Hume",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Jacob",
+      "target": "Ethan Rom",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Jacob",
+      "target": "Hugo 'Hurley' Reyes",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Jacob",
+      "target": "James 'Sawyer' Ford",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Jacob",
+      "target": "Jack Shephard",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Jacob",
+      "target": "John Locke",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Jacob",
+      "target": "Juliet Burke",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Jacob",
+      "target": "Jin-Soo Kwon",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Jacob",
+      "target": "Kate Austen",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Jacob",
+      "target": "Man in black",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Jacob",
+      "target": "Michael Dawson",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Jacob",
+      "target": "Mr. Eko",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Jacob",
+      "target": "Penelope 'Penny' Widmore",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Jacob",
+      "target": "Sayid Jarrah",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Jacob",
+      "target": "Sun-Hwa Kwon",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "James 'Sawyer' Ford",
+      "target": "Benjamin Linus",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "James 'Sawyer' Ford",
+      "target": "Charlie Pace",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "James 'Sawyer' Ford",
+      "target": "Claire Littleton",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "James 'Sawyer' Ford",
+      "target": "Danielle Russeau",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "James 'Sawyer' Ford",
+      "target": "Desmond Hume",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "James 'Sawyer' Ford",
+      "target": "Ethan Rom",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "James 'Sawyer' Ford",
+      "target": "Hugo 'Hurley' Reyes",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "James 'Sawyer' Ford",
+      "target": "Jacob",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "James 'Sawyer' Ford",
+      "target": "Jack Shephard",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "James 'Sawyer' Ford",
+      "target": "John Locke",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "James 'Sawyer' Ford",
+      "target": "Juliet Burke",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "James 'Sawyer' Ford",
+      "target": "Jin-Soo Kwon",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "James 'Sawyer' Ford",
+      "target": "Kate Austen",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "James 'Sawyer' Ford",
+      "target": "Man in black",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "James 'Sawyer' Ford",
+      "target": "Michael Dawson",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "James 'Sawyer' Ford",
+      "target": "Mr. Eko",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "James 'Sawyer' Ford",
+      "target": "Penelope 'Penny' Widmore",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "James 'Sawyer' Ford",
+      "target": "Sayid Jarrah",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "James 'Sawyer' Ford",
+      "target": "Sun-Hwa Kwon",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
     {
       "source": "Jack Shephard",
-      "target": "Kate Austen",
-      "seasons": {
-        "1": {
-          "labels": ["Affascinante", "Misteriosa", "Inaffidabile"],
-          "judgment": "ambiguo",
-          "dialogues": [""]
-        }
-      }
+      "target": "Benjamin Linus",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Jack Shephard",
+      "target": "Charlie Pace",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Jack Shephard",
+      "target": "Claire Littleton",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Jack Shephard",
+      "target": "Danielle Russeau",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Jack Shephard",
+      "target": "Desmond Hume",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Jack Shephard",
+      "target": "Ethan Rom",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Jack Shephard",
+      "target": "Hugo 'Hurley' Reyes",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Jack Shephard",
+      "target": "Jacob",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Jack Shephard",
+      "target": "James 'Sawyer' Ford",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
     },
     {
       "source": "Jack Shephard",
       "target": "John Locke",
-      "seasons": {
-        "1": {
-          "labels": ["Pericoloso", "Inquietante"],
-          "judgment": "negativo",
-          "dialogues": ["S1E17 “Orientation”-Locke: “Each one of us was brought here for a reason. The Island chose you too, Jack. It's destiny.”"]
-        },
-        "2": {
-          "labels": ["Fanatico", "Spirituale"],
-          "judgment": "negativo",
-          "dialogues": [""]
-        }
-      }
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Jack Shephard",
+      "target": "Juliet Burke",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Jack Shephard",
+      "target": "Jin-Soo Kwon",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Jack Shephard",
+      "target": "Kate Austen",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Jack Shephard",
+      "target": "Man in black",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Jack Shephard",
+      "target": "Michael Dawson",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Jack Shephard",
+      "target": "Mr. Eko",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Jack Shephard",
+      "target": "Penelope 'Penny' Widmore",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Jack Shephard",
+      "target": "Sayid Jarrah",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Jack Shephard",
+      "target": "Sun-Hwa Kwon",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "John Locke",
+      "target": "Benjamin Linus",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "John Locke",
+      "target": "Charlie Pace",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "John Locke",
+      "target": "Claire Littleton",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "John Locke",
+      "target": "Danielle Russeau",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "John Locke",
+      "target": "Desmond Hume",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "John Locke",
+      "target": "Ethan Rom",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "John Locke",
+      "target": "Hugo 'Hurley' Reyes",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "John Locke",
+      "target": "Jacob",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "John Locke",
+      "target": "James 'Sawyer' Ford",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "John Locke",
+      "target": "Jack Shephard",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "John Locke",
+      "target": "Juliet Burke",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "John Locke",
+      "target": "Jin-Soo Kwon",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "John Locke",
+      "target": "Kate Austen",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "John Locke",
+      "target": "Man in black",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "John Locke",
+      "target": "Michael Dawson",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "John Locke",
+      "target": "Mr. Eko",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "John Locke",
+      "target": "Penelope 'Penny' Widmore",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "John Locke",
+      "target": "Sayid Jarrah",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "John Locke",
+      "target": "Sun-Hwa Kwon",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Juliet Burke",
+      "target": "Benjamin Linus",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Juliet Burke",
+      "target": "Charlie Pace",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Juliet Burke",
+      "target": "Claire Littleton",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Juliet Burke",
+      "target": "Danielle Russeau",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Juliet Burke",
+      "target": "Desmond Hume",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Juliet Burke",
+      "target": "Ethan Rom",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Juliet Burke",
+      "target": "Hugo 'Hurley' Reyes",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Juliet Burke",
+      "target": "Jacob",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Juliet Burke",
+      "target": "James 'Sawyer' Ford",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Juliet Burke",
+      "target": "Jack Shephard",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Juliet Burke",
+      "target": "John Locke",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Juliet Burke",
+      "target": "Jin-Soo Kwon",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Juliet Burke",
+      "target": "Kate Austen",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Juliet Burke",
+      "target": "Man in black",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Juliet Burke",
+      "target": "Michael Dawson",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Juliet Burke",
+      "target": "Mr. Eko",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Juliet Burke",
+      "target": "Penelope 'Penny' Widmore",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Juliet Burke",
+      "target": "Sayid Jarrah",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Juliet Burke",
+      "target": "Sun-Hwa Kwon",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Jin-Soo Kwon",
+      "target": "Benjamin Linus",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Jin-Soo Kwon",
+      "target": "Charlie Pace",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Jin-Soo Kwon",
+      "target": "Claire Littleton",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Jin-Soo Kwon",
+      "target": "Danielle Russeau",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Jin-Soo Kwon",
+      "target": "Desmond Hume",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Jin-Soo Kwon",
+      "target": "Ethan Rom",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Jin-Soo Kwon",
+      "target": "Hugo 'Hurley' Reyes",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Jin-Soo Kwon",
+      "target": "Jacob",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Jin-Soo Kwon",
+      "target": "James 'Sawyer' Ford",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Jin-Soo Kwon",
+      "target": "Jack Shephard",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Jin-Soo Kwon",
+      "target": "John Locke",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Jin-Soo Kwon",
+      "target": "Juliet Burke",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Jin-Soo Kwon",
+      "target": "Kate Austen",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Jin-Soo Kwon",
+      "target": "Man in black",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Jin-Soo Kwon",
+      "target": "Michael Dawson",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Jin-Soo Kwon",
+      "target": "Mr. Eko",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Jin-Soo Kwon",
+      "target": "Penelope 'Penny' Widmore",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Jin-Soo Kwon",
+      "target": "Sayid Jarrah",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Jin-Soo Kwon",
+      "target": "Sun-Hwa Kwon",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Kate Austen",
+      "target": "Benjamin Linus",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Kate Austen",
+      "target": "Charlie Pace",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Kate Austen",
+      "target": "Claire Littleton",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Kate Austen",
+      "target": "Danielle Russeau",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Kate Austen",
+      "target": "Desmond Hume",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Kate Austen",
+      "target": "Ethan Rom",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Kate Austen",
+      "target": "Hugo 'Hurley' Reyes",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Kate Austen",
+      "target": "Jacob",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Kate Austen",
+      "target": "James 'Sawyer' Ford",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
     },
     {
       "source": "Kate Austen",
       "target": "Jack Shephard",
-      "seasons": {
-        "1": {
-          "labels": ["Senso del dovere", "Testardo"],
-          "judgment": "ambiguo",
-          "dialogues": [""]
-        }
-      }
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
     },
     {
-      "source": "John Locke",
-      "target": "Hurley",
-      "seasons": {
-        "1": {
-          "labels": ["Gentile", "Inutile", "Inadatto alla sopravvivenza"],
-          "judgment": "negativo",
-          "dialogues": [""]
-        }
-      }
+      "source": "Kate Austen",
+      "target": "John Locke",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
     },
     {
-      "source": "Hurley",
-      "target": "Sawyer",
-      "seasons": {
-        "1": {
-          "labels": ["Tipo duro", "Cuore tenero", "Ha sofferto"],
-          "judgment": "positivo",
-          "dialogues": [""]
-        }
-      }
+      "source": "Kate Austen",
+      "target": "Juliet Burke",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Kate Austen",
+      "target": "Jin-Soo Kwon",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Kate Austen",
+      "target": "Man in black",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Kate Austen",
+      "target": "Michael Dawson",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Kate Austen",
+      "target": "Mr. Eko",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Kate Austen",
+      "target": "Penelope 'Penny' Widmore",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Kate Austen",
+      "target": "Sayid Jarrah",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Kate Austen",
+      "target": "Sun-Hwa Kwon",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Man in black",
+      "target": "Benjamin Linus",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Man in black",
+      "target": "Charlie Pace",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Man in black",
+      "target": "Claire Littleton",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Man in black",
+      "target": "Danielle Russeau",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Man in black",
+      "target": "Desmond Hume",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Man in black",
+      "target": "Ethan Rom",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Man in black",
+      "target": "Hugo 'Hurley' Reyes",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Man in black",
+      "target": "Jacob",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Man in black",
+      "target": "James 'Sawyer' Ford",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Man in black",
+      "target": "Jack Shephard",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Man in black",
+      "target": "John Locke",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Man in black",
+      "target": "Juliet Burke",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Man in black",
+      "target": "Jin-Soo Kwon",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Man in black",
+      "target": "Kate Austen",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Man in black",
+      "target": "Michael Dawson",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Man in black",
+      "target": "Mr. Eko",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Man in black",
+      "target": "Penelope 'Penny' Widmore",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Man in black",
+      "target": "Sayid Jarrah",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Man in black",
+      "target": "Sun-Hwa Kwon",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Michael Dawson",
+      "target": "Benjamin Linus",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Michael Dawson",
+      "target": "Charlie Pace",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Michael Dawson",
+      "target": "Claire Littleton",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Michael Dawson",
+      "target": "Danielle Russeau",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Michael Dawson",
+      "target": "Desmond Hume",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Michael Dawson",
+      "target": "Ethan Rom",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Michael Dawson",
+      "target": "Hugo 'Hurley' Reyes",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Michael Dawson",
+      "target": "Jacob",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Michael Dawson",
+      "target": "James 'Sawyer' Ford",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Michael Dawson",
+      "target": "Jack Shephard",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Michael Dawson",
+      "target": "John Locke",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Michael Dawson",
+      "target": "Juliet Burke",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Michael Dawson",
+      "target": "Jin-Soo Kwon",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Michael Dawson",
+      "target": "Kate Austen",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Michael Dawson",
+      "target": "Man in black",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Michael Dawson",
+      "target": "Mr. Eko",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Michael Dawson",
+      "target": "Penelope 'Penny' Widmore",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Michael Dawson",
+      "target": "Sayid Jarrah",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Michael Dawson",
+      "target": "Sun-Hwa Kwon",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Mr. Eko",
+      "target": "Benjamin Linus",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Mr. Eko",
+      "target": "Charlie Pace",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Mr. Eko",
+      "target": "Claire Littleton",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Mr. Eko",
+      "target": "Danielle Russeau",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Mr. Eko",
+      "target": "Desmond Hume",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Mr. Eko",
+      "target": "Ethan Rom",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Mr. Eko",
+      "target": "Hugo 'Hurley' Reyes",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Mr. Eko",
+      "target": "Jacob",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Mr. Eko",
+      "target": "James 'Sawyer' Ford",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Mr. Eko",
+      "target": "Jack Shephard",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Mr. Eko",
+      "target": "John Locke",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Mr. Eko",
+      "target": "Juliet Burke",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Mr. Eko",
+      "target": "Jin-Soo Kwon",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Mr. Eko",
+      "target": "Kate Austen",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Mr. Eko",
+      "target": "Man in black",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Mr. Eko",
+      "target": "Michael Dawson",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Mr. Eko",
+      "target": "Penelope 'Penny' Widmore",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Mr. Eko",
+      "target": "Sayid Jarrah",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Mr. Eko",
+      "target": "Sun-Hwa Kwon",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Penelope 'Penny' Widmore",
+      "target": "Benjamin Linus",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Penelope 'Penny' Widmore",
+      "target": "Charlie Pace",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Penelope 'Penny' Widmore",
+      "target": "Claire Littleton",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Penelope 'Penny' Widmore",
+      "target": "Danielle Russeau",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Penelope 'Penny' Widmore",
+      "target": "Desmond Hume",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Penelope 'Penny' Widmore",
+      "target": "Ethan Rom",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Penelope 'Penny' Widmore",
+      "target": "Hugo 'Hurley' Reyes",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Penelope 'Penny' Widmore",
+      "target": "Jacob",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Penelope 'Penny' Widmore",
+      "target": "James 'Sawyer' Ford",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Penelope 'Penny' Widmore",
+      "target": "Jack Shephard",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Penelope 'Penny' Widmore",
+      "target": "John Locke",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Penelope 'Penny' Widmore",
+      "target": "Juliet Burke",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Penelope 'Penny' Widmore",
+      "target": "Jin-Soo Kwon",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Penelope 'Penny' Widmore",
+      "target": "Kate Austen",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Penelope 'Penny' Widmore",
+      "target": "Man in black",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Penelope 'Penny' Widmore",
+      "target": "Michael Dawson",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Penelope 'Penny' Widmore",
+      "target": "Mr. Eko",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Penelope 'Penny' Widmore",
+      "target": "Sayid Jarrah",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Penelope 'Penny' Widmore",
+      "target": "Sun-Hwa Kwon",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Sayid Jarrah",
+      "target": "Benjamin Linus",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Sayid Jarrah",
+      "target": "Charlie Pace",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} 
+    },
+    {
+      "source": "Sayid Jarrah",
+      "target": "Claire Littleton",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Sayid Jarrah",
+      "target": "Danielle Russeau",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Sayid Jarrah",
+      "target": "Desmond Hume",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Sayid Jarrah",
+      "target": "Ethan Rom",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Sayid Jarrah",
+      "target": "Hugo 'Hurley' Reyes",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Sayid Jarrah",
+      "target": "Jacob",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Sayid Jarrah",
+      "target": "James 'Sawyer' Ford",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Sayid Jarrah",
+      "target": "Jack Shephard",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Sayid Jarrah",
+      "target": "John Locke",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Sayid Jarrah",
+      "target": "Juliet Burke",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Sayid Jarrah",
+      "target": "Jin-Soo Kwon",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Sayid Jarrah",
+      "target": "Kate Austen",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Sayid Jarrah",
+      "target": "Man in black",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Sayid Jarrah",
+      "target": "Michael Dawson",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Sayid Jarrah",
+      "target": "Mr. Eko",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Sayid Jarrah",
+      "target": "Penelope 'Penny' Widmore",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Sayid Jarrah",
+      "target": "Sun-Hwa Kwon",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Sun-Hwa Kwon",
+      "target": "Benjamin Linus",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Sun-Hwa Kwon",
+      "target": "Charlie Pace",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Sun-Hwa Kwon",
+      "target": "Claire Littleton",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Sun-Hwa Kwon",
+      "target": "Danielle Russeau",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Sun-Hwa Kwon",
+      "target": "Desmond Hume",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Sun-Hwa Kwon",
+      "target": "Ethan Rom",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Sun-Hwa Kwon",
+      "target": "Hugo 'Hurley' Reyes",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Sun-Hwa Kwon",
+      "target": "Jacob",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Sun-Hwa Kwon",
+      "target": "James 'Sawyer' Ford",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Sun-Hwa Kwon",
+      "target": "Jack Shephard",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Sun-Hwa Kwon",
+      "target": "John Locke",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Sun-Hwa Kwon",
+      "target": "Juliet Burke",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Sun-Hwa Kwon",
+      "target": "Jin-Soo Kwon",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Sun-Hwa Kwon",
+      "target": "Kate Austen",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Sun-Hwa Kwon",
+      "target": "Man in black",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Sun-Hwa Kwon",
+      "target": "Michael Dawson",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Sun-Hwa Kwon",
+      "target": "Mr. Eko",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Sun-Hwa Kwon",
+      "target": "Penelope 'Penny' Widmore",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Sun-Hwa Kwon",
+      "target": "Sayid Jarrah",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Implicit Reader",
+      "target": "Benjamin Linus",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Implicit Reader",
+      "target": "Charlie Pace",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Implicit Reader",
+      "target": "Claire Littleton",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Implicit Reader",
+      "target": "Danielle Russeau",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Implicit Reader",
+      "target": "Desmond Hume",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Implicit Reader",
+      "target": "Ethan Rom",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Implicit Reader",
+      "target": "Hugo 'Hurley' Reyes",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Implicit Reader",
+      "target": "Jacob",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Implicit Reader",
+      "target": "James 'Sawyer' Ford",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Implicit Reader",
+      "target": "Jack Shephard",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Implicit Reader",
+      "target": "John Locke",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Implicit Reader",
+      "target": "Juliet Burke",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Implicit Reader",
+      "target": "Jin-Soo Kwon",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Implicit Reader",
+      "target": "Kate Austen",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Implicit Reader",
+      "target": "Man in black",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Implicit Reader",
+      "target": "Michael Dawson",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Implicit Reader",
+      "target": "Mr. Eko",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Implicit Reader",
+      "target": "Penelope 'Penny' Widmore",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Implicit Reader",
+      "target": "Sayid Jarrah",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Implicit Reader",
+      "target": "Sun-Hwa Kwon",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
     }
   ]
 }
