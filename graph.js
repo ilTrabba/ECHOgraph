@@ -75,7 +75,7 @@ const link = svg.append("g")
   .attr("stroke-width", 2)
   .attr("fill", "none")
   .attr("stroke", "#444")
-  .attr("marker-end", "url(#arrow-ambiguo)")
+  .attr("marker-end", "url(#arrow-neutro)")
   .on("click", function (event, d) {
     if (!activeNodeId) return;
 
@@ -251,7 +251,7 @@ const link = svg.append("g")
       link
         .attr("opacity", 1)
         .attr("stroke", "#444")
-        .attr("marker-end", "url(#arrow-ambiguo)");
+        .attr("marker-end", "url(#arrow-neutro)");
       activeNodeId = null;
       tooltip.classed("hidden", true);
       return;
