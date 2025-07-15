@@ -6,7 +6,8 @@ const tooltip = d3.select("#tooltip");
 const colorMap = {
   positivo: "#4CAF50",
   negativo: "#F44336",
-  ambiguo: "#FFC107"
+  ambiguo: "#FFC107",
+  neutro:"#000000"
 };
 
 let activeNodeId = null;
@@ -38,11 +39,11 @@ for (let i = 1; i <= 6; i++) {
 
 // DEFINIZIONE FRECCE
 const defs = svg.append("defs");
-["positivo", "negativo", "ambiguo"].forEach(judgment => {
+["positivo", "negativo", "ambiguo", "neutro"].forEach(judgment => {
   defs.append("marker")
     .attr("id", `arrow-${judgment}`)
     .attr("viewBox", "0 -5 10 10")
-    .attr("refX", 32)
+    .attr("refX", 22)
     .attr("refY", 0)
     .attr("markerWidth", 6)
     .attr("markerHeight", 6)
@@ -63,66 +64,60 @@ d3.json("data.json").then(data => {
     .force("charge", d3.forceManyBody().strength(-300))
     .force("center", d3.forceCenter(width / 2, height / 2));
 
-  // Creazione archi (link)
-  const link = svg.append("g")
-    .attr("stroke", "#aaa")
-    .selectAll("path")
-    .data(links)
-    .join("path")
-    .attr("stroke-width", 2)
-    .attr("fill", "none")
-    .attr("stroke", "#444")
-    .attr("marker-end", "url(#arrow-ambiguo)")
-    .on("click", function (event, d) {
-      if (!activeNodeId) return;
+  const NODE_RADIUS = 20; // raggio dei nodi
 
-      const sourceId = typeof d.source === "object" ? d.source.id : d.source;
-      const targetId = typeof d.target === "object" ? d.target.id : d.target;
+// Creazione archi (link)
+const link = svg.append("g")
+  .attr("stroke", "#aaa")
+  .selectAll("path")
+  .data(links)
+  .join("path")
+  .attr("stroke-width", 2)
+  .attr("fill", "none")
+  .attr("stroke", "#444")
+  .attr("marker-end", "url(#arrow-ambiguo)")
+  .on("click", function (event, d) {
+    if (!activeNodeId) return;
 
-      if (sourceId !== activeNodeId) return;
+    const sourceId = typeof d.source === "object" ? d.source.id : d.source;
+    const targetId = typeof d.target === "object" ? d.target.id : d.target;
 
-      const linkKey = `${sourceId}->${targetId}`;
-      if (selectedLinkId === linkKey) {
-        dialogueBox.html("").classed("visible", false);
-        selectedLinkId = null;
-      } else {
-        const seasonData = d.seasons[selectedSeason];
-        const dialogues = seasonData?.dialogues?.filter(line => line.trim() !== "");
+    if (sourceId !== activeNodeId) return;
 
-        if (dialogues && dialogues.length > 0) {
-          // Calcolo posizione centro arco (gestisce anche archi curvi)
-          let sx = d.source.x, sy = d.source.y, tx = d.target.x, ty = d.target.y;
-          let cx = (sx + tx) / 2, cy = (sy + ty) / 2;
+    const linkKey = `${sourceId}->${targetId}`;
+    if (selectedLinkId === linkKey) {
+      dialogueBox.html("").classed("visible", false);
+      selectedLinkId = null;
+    } else {
+      const seasonData = d.seasons[selectedSeason];
+      const dialogues = seasonData?.dialogues?.filter(line => line.trim() !== "");
 
-          // Se è curvo, calcola il punto di controllo
-          if (d._isCurved && d._ctrlPoint) {
-            cx = d._ctrlPoint.x;
-            cy = d._ctrlPoint.y;
-          }
+      let sx = d.source.x, sy = d.source.y, tx = d.target.x, ty = d.target.y;
+      let cx = (sx + tx) / 2, cy = (sy + ty) / 2;
 
-          // Posiziona il dialogueBox vicino al centro dell’arco
-          dialogueBox
-            .html(dialogues.map(dd => `<div>🗨️ ${dd}</div>`).join(""))
-            .style("left", `${cx + 10}px`)
-            .style("top", `${cy + 10}px`)
-            .classed("visible", true);
-        } else {
-          // Calcolo posizione centro arco
-          let sx = d.source.x, sy = d.source.y, tx = d.target.x, ty = d.target.y;
-          let cx = (sx + tx) / 2, cy = (sy + ty) / 2;
-          if (d._isCurved && d._ctrlPoint) {
-            cx = d._ctrlPoint.x;
-            cy = d._ctrlPoint.y;
-          }
-          dialogueBox
-            .html("<em>Nessun dialogo disponibile</em>")
-            .style("left", `${cx}px`)
-            .style("top", `${cy}px`)
-            .classed("visible", true);
-        }
-        selectedLinkId = linkKey;
+      // Se curvo, usa punto di controllo
+      if (d._isCurved && d._ctrlPoint) {
+        cx = d._ctrlPoint.x;
+        cy = d._ctrlPoint.y;
       }
-    });
+
+      if (dialogues && dialogues.length > 0) {
+        dialogueBox
+          .html(dialogues.map(dd => `<div>🗨️ ${dd}</div>`).join(""))
+          .style("left", `${cx + 10}px`)
+          .style("top", `${cy + 10}px`)
+          .classed("visible", true);
+      } else {
+        dialogueBox
+          .html("<em>Nessun dialogo disponibile</em>")
+          .style("left", `${cx}px`)
+          .style("top", `${cy}px`)
+          .classed("visible", true);
+      }
+
+      selectedLinkId = linkKey;
+    }
+  });
 
   // Creazione nodi
   const node = svg.append("g")
@@ -132,7 +127,7 @@ d3.json("data.json").then(data => {
     .call(drag(simulation));
 
   node.append("circle")
-    .attr("r", 20)
+    .attr("r", 14)
     .attr("fill", "#69b3a2");
 
   node.append("text")
