@@ -264,13 +264,13 @@ const link = svg.append("g")
     );
 
     node.select("circle").attr("opacity", d =>
-      d.id === nodeId || connectedTargets.has(d.id) ? 1 : 0.1
+      d.id === nodeId || connectedTargets.has(d.id) ? 1 : 0.3
     );
     node.select("text").attr("opacity", d =>
       d.id === nodeId || connectedTargets.has(d.id) ? 1 : 0.1
     );
     link
-      .attr("opacity", d => (d.source.id || d.source) === nodeId ? 1 : 0.1)
+      .attr("opacity", d => (d.source.id || d.source) === nodeId ? 1 : 0.01)
       .attr("stroke", d => {
         const seasons = Object.values(d.seasons);
         return colorMap[seasons[0].judgment] || "#999";
