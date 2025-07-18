@@ -4,34 +4,12 @@
   <meta charset="UTF-8">
   <title>POVMap Prototype</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<!-- Timeline filtro stagioni -->
-<div id="season-timeline">
-  <div class="season-line"></div>
-  <div id="season-dots"></div>
-</div>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-
-<!-- HTML aggiornato -->
-<div id="season-timeline" style="position: absolute; top: 20px; right: 10px; display: flex; align-items: center; gap: 10px; font-family: 'Poppins', sans-serif;">
- <span style="font-size: 13px; font-weight: 500; margin-bottom: 0px;"><strong>Stagioni</strong></span>
-  <div id="season-dots" style="display: flex; gap: 10px;">
-    <!-- I dot saranno generati da JS -->
-  </div>
-</div>
-
-<!-- Box plot per dialoghi -->
-<div id="dialogue-box" class="dialogue-box"></div>
-
-<!-- Legenda -->
-<div id="legend" class="legend">
-  <span style="font-size: 13px; font-weight: 500; margin-bottom: 10px; font-family: 'Poppins', sans-serif;"><strong>Archi</strong></span>
-  <div><span style="background:#4CAF50; font-family: 'Poppins', sans-serif;"></span> Positivo</div>
-  <div><span style="background:#F44336; font-family: 'Poppins', sans-serif;"></span> Negativo</div>
-  <div><span style="background:#FFC107; font-family: 'Poppins', sans-serif;"></span> Ambiguo</div>
-</div>
+<!-- Contenitore per il grafico D3 per la funzionalità di zoom -->
+<div id="graph-container">
   <svg>
     <defs>
         <marker id="arrow-positivo" viewBox="0 -5 10 10" refX="20" refY="0"
@@ -51,9 +29,46 @@
             <path d="M0,-5L10,0L0,5" fill="black" />
         </marker>
     </defs>
+    <!-- Un elemento <g> per raggruppare tutti gli elementi del grafico e applicare lo zoom -->
+    <g id="zoom-group"></g>
   </svg>
-  <div id="tooltip" class="hidden"></div>
-  <script src="https://d3js.org/d3.v7.min.js"></script>
-  <script src="graph.js"></script>
+</div>
+
+<!-- Timeline filtro stagioni -->
+<div id="season-timeline">
+  <span><strong>Stagioni</strong></span>
+  <div id="season-dots">
+    <!-- I dot saranno generati da JS -->
+  </div>
+</div>
+
+<!-- Box plot per dialoghi (stile migliorato nel CSS) -->
+<div id="dialogue-box" class="dialogue-box">
+  <div class="dialogue-header">
+    <span class="dialogue-title">Dialogo</span>
+    <button class="close-btn" onclick="document.getElementById('dialogue-box').classList.remove('visible')">×</button>
+  </div>
+  <div class="dialogue-content"></div>
+</div>
+
+<!-- Legenda -->
+<div id="legend" class="legend">
+  <span style="font-size: 13px; font-weight: 500; margin-bottom: 10px; font-family: 'Poppins', sans-serif;"><strong>Archi</strong></span>
+  <div><span style="background:#4CAF50; font-family: 'Poppins', sans-serif;"></span> Positivo</div>
+  <div><span style="background:#F44336; font-family: 'Poppins', sans-serif;"></span> Negativo</div>
+  <div><span style="background:#FFC107; font-family: 'Poppins', sans-serif;"></span> Ambiguo</div>
+</div>
+
+<div id="tooltip" class="hidden"></div>
+
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="graph.js"></script>
+
+<div class="content-below-graph">
+  <h2>Informazioni Aggiuntive sul Progetto</h2>
+  <p>Questa sezione può contenere note, analisi, o qualsiasi altro tipo di informazione relativa alla visualizzazione dei dati.</p>
+  <p>Lo scorrimento della pagina ora è abilitato, mentre il grafo e i suoi controlli rimangono visibili e interattivi nella parte superiore.</p>
+</div>
+
 </body>
 </html>
