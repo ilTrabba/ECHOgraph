@@ -21,7 +21,11 @@
     {
       "source": "Benjamin Linus",
       "target": "Charlie Pace",
-      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": ["The Follower", "The Intruder", "The Annoyance"], "judgment": "negativo", "dialogues": [{
+          "episode": "2x16 - The Whole Truth",
+          "character": "Benjamin Linus",
+          "line": "(to Charlie) Your friend... the one with the baby... she's starting to remember things."
+        }]}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
     },
     {
       "source": "Benjamin Linus",
@@ -46,22 +50,70 @@
     {
       "source": "Benjamin Linus",
       "target": "James 'Sawyer' Ford",
-      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {
+      "labels": ["The Intruder", "The Troublemaker", "The Provocateur"],
+      "judgment": "negativo",
+      "dialogues": [
+        {
+          "episode": "3x02 - The Glass Ballerina",
+          "character": "Benjamin Linus",
+          "line": "(to James) Every time your heart rate goes above 140, the device in your chest will detonate, and your heart will explode."
+        }
+      ]
+    }, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
     },
     {
       "source": "Benjamin Linus",
       "target": "Jack Shephard",
-      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": ["The Rival Leader", "The Man of Science", "The Antagonist", "The Protector", "The Doctor"], "judgment": "negativo", "dialogues": [{
+          "episode": "2x16 - The Whole Truth",
+          "character": "Benjamin Linus-Jack",
+          "line": "**Jack**: Do you want to tell me your real name? **Ben**: I already did. Henry Gale. From Minnesota. **Jack**: You expect me to believe you crashed in a hot-air balloon? **Ben**: Yes. Because it's the truth. **Jack**: Sayid doesn’t think so. He says your story doesn’t check out. **Ben**: Then why am I still here? If you think I'm lying... why keep me alive? **Jack**: Because the minute we kill you, we become just like you."
+        }]}, "3": {
+      "labels": ["The Doctor", "The Rival Leader", "The Man of Science", "The Protector"],
+      "judgment": "negativo",
+      "dialogues": [
+        {
+          "episode": "3x01 – A Tale of Two Cities",
+          "character": "Benjamin Linus-Jack",
+          "line": "**Ben**: Let me ask you something, Jack. If I told you that I was the one who brought you here, would you believe me? **Jack**: You’re lying. Ben: And yet... here you are."
+        }
+      ]
+    }, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
     },
     {
       "source": "Benjamin Linus",
       "target": "John Locke",
-      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": ["The Man of Faith", "The Potential", "The Rival", "The Island's Chosen", "The Hunter"], "judgment": "ambiguo", "dialogues": [{
+          "episode": "2x17 - Lockdown",
+          "character": "Benjamin Linus-John Locke",
+          "line": "**Ben**: Why do you let him talk to you like that? **Locke**: I’m just trying to keep us alive. **Ben**: That’s exactly what the leader would say."
+        }]}, "3": {
+      "labels": ["The Man of Faith", "The Rival", "The Potential", "The Follower", "The Island's Chosen"],
+      "judgment": "ambiguo",
+      "dialogues": [
+        {
+          "episode": "3x13 – The Man from Tallahassee",
+          "character": "Benjamin Linus-John Locke",
+          "line": "**Ben**: I know what you're looking for, John. You're looking for someone to tell you what to do next. **Locke**: No, Ben. I’m looking for the man who's in charge — and I don’t think it’s you."
+        }
+      ]
+    }, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
     },
     {
       "source": "Benjamin Linus",
       "target": "Kate Austen",
-      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {
+      "labels": ["The Intruder", "The Survivor", "The Protector"],
+      "judgment": "negativo",
+      "dialogues": [
+        {
+          "episode": "3x06 - I Do",
+          "character": "Benjamin Linus-Kate",
+          "line": "**Ben**: Do you love him (referring to Jack), Kate? **Kate**: What does it matter? **Ben**: Because I need to know what you’re willing to do to keep him alive."
+        }
+      ]
+    }, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
     },
     {
       "source": "Benjamin Linus",
@@ -76,7 +128,21 @@
     {
       "source": "Benjamin Linus",
       "target": "Sayid Jarrah",
-      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "negativo", "dialogues": [{
+          "episode": "2x14 - One of Them",
+          "character": "Benjamin Linus-Sayid",
+          "line": "**Sayid**: I want you to tell me exactly how you got here. **Ben**: I’ve already told you. **Sayid**: I want to hear it again. **Ben**: I crashed here, in my balloon. My wife died. I buried her. I’ve been alone ever since. **Sayid**: You're lying. **Ben**: I am not lying! **Sayid**: You think I haven’t seen men like you before? **Ben**: I told you the truth! Sayid: Then tell me this — how did you bury your wife without tearing your shoulder? The one you claim Rousseau shot?"
+        }]}, "3": {
+      "labels": ["The Threat", "The Man of Action", "The Problem-solver", "The Intruder"],
+      "judgment": "negativo",
+      "dialogues": [
+        {
+          "episode": "3x18 – D.O.C.",
+          "character": "Benjamin Linus",
+          "line": "**Sayid**: Who are you? **Ben**: I'm Benjamin Linus. And I believe you're holding one of my people. **Sayid**: Then maybe you shouldn't have sent him to spy on us."
+        }
+      ]
+    }, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
     },
     {
       "source": "Benjamin Linus",
@@ -91,7 +157,17 @@
   {
     "source": "Charlie Pace",
     "target": "Desmond Hume",
-    "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {
+      "labels": ["The Protector", "The Man of Faith", "The Threat"],
+      "judgment": "ambiguo",
+      "dialogues": [
+        {
+          "episode": "3x08 – Flashes Before Your Eyes",
+          "character": "Charlie Pace",
+          "line": "**Charlie**: So you’re telling me the universe is trying to kill me? **Desmond**: No, brother — I’m saying I’ve seen how you die, and I’m trying to stop it."
+        }
+      ]
+    }, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
   },
   {
     "source": "Charlie Pace",
@@ -100,7 +176,11 @@
       "episode": "1x19 - Deus Ex Machina",
       "character": "Charlie Pace",
       "line": "He kidnapped Claire! Who does that?"
-    }]}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    }]}, "2": {"labels": ["The Threat/Villain", "The Enigmatic One", "The Wildcard"], "judgment": "negativo", "dialogues": [{
+      "episode": "",
+      "character": "",
+      "line": ""
+    }]}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
   },
   {
     "source": "Charlie Pace",
@@ -109,7 +189,21 @@
       "episode": "1x02 - Pilot (Part 2)",
       "character": "Charlie Pace",
       "line": "Hurley’s the kind of guy you want around in a mess like this."
-    }]}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    }]}, "2": {"labels": ["The Helper", "The Calm Presence", "The Good-hearted", "The Loyal"], "judgment": "positivo", "dialogues": [{
+      "episode": "2x03 - Orientation",
+      "character": "Charlie Pace-Hurley",
+      "line": "**Charlie**: Hurley, what’s with all the bad luck talk? It’s like you believe the island’s cursed or something. **Hurley**: Man, I know it sounds crazy, but I’ve had nothing but bad luck since the crash. I mean, numbers showing up everywhere, people dying... I’m telling you, it’s the island. **Charlie**: Maybe it’s just us. Maybe the island’s not cursed — maybe it’s just messing with our heads. **Hurley**: Or maybe the island’s trying to tell us something. We just gotta figure out what."
+    }]}, "3": {
+      "labels": ["The Helper", "The Calm Presence", "The Good-hearted", "The Loyal"],
+      "judgment": "positivo",
+      "dialogues": [
+        {
+          "episode": "3x10 - Tricia Tanaka Is Dead",
+          "character": "Charlie Pace-Hugo",
+          "line": "**Hurley**: Charlie, you ever think about how weird this all is? **Charlie**: Every day, man. But if we don’t laugh, we’ll go crazy."
+        }
+      ]
+    }, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
   },
   {
     "source": "Charlie Pace",
@@ -123,7 +217,22 @@
       "episode": "1x05 - White Rabbit",
       "character": "Charlie Pace",
       "line": "That Sawyer guy’s trouble. You don’t want to get involved with him."
-    }]}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    }]}, "2": {"labels": ["The Antagonist", "The Troublemaker", "The Skeptic", "The Provocateur"], "judgment": "ambiguo",
+      "dialogues": [{
+          "episode": "2x12 - Fire + Water",
+          "character": "Charlie Pace",
+          "line": "(to Sawyer) You've got them, don't you? The rest of my statues. You took them from my stash."
+        }]}, "3": {
+      "labels": ["The Man of Action", "The Survivor", "The Provocateur", "The Ally"],
+      "judgment": "ambiguo",
+      "dialogues": [
+        {
+          "episode": "3x10 - Tricia Tanaka Is Dead",
+          "character": "Charlie Pace",
+          "line": "**Charlie**: Sawyer, you think you’re the king of the island? **Sawyer**: Maybe I am. What’s it to you? **Charlie**: Just don’t forget who actually keeps us alive sometimes."
+        }
+      ]
+    }, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
   },
   {
     "source": "Charlie Pace",
@@ -132,16 +241,37 @@
       "episode": "1x11 - All the Best Cowboys Have Daddy Issues",
       "character": "Charlie Pace",
       "line": "(Charlie respects Jack as a strong leader and hero, but also notices his stubbornness and the burden he carries) Sometimes I think Jack’s so focused on fixing everyone, he forgets about himself."
-    }]}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    }]}, "2": {"labels": ["The Leader", "The Hero", "The Skeptic", "The Doctor"], "judgment": "ambiguo",
+      "dialogues": [{
+          "episode": "2x21 - ?",
+          "character": "Charlie Pace",
+          "line": "He doesn't believe, you know."
+        }]
+    }, "3": {
+      "labels": ["The Leader", "The Hero", "The Doctor", "The Protector", "The Ally"],
+      "judgment": "positivo",
+      "dialogues": [
+        {
+          "episode": "3x01 – A Tale of Two Cities",
+          "character": "Charlie Pace-Jack",
+          "line": "**Charlie**: What’s the plan, Doc? Rescue or wait? **Jack**: Right now, staying alive is the plan."
+        }
+      ]
+    }, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
   },
   {
     "source": "Charlie Pace",
     "target": "John Locke",
-    "seasons": { "1": {"labels": ["The Enigmatic One", "The Analyst", "The Spiritual/Philosophical", "The Hunter", "The Survivor"], "judgment": "positivo", "dialogues": [{
-      "episode": "1x11 - All the Best Cowboys Have Daddy Issues",
-      "character": "Charlie Pace",
-      "line": "He saved my life. I owe him that much."
-    }]}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    "seasons": { "1": {"labels": ["The Antagonist", "The Man of Faith", "The Rival", "The Protector"], "judgment": "negativo", 
+    "dialogues": [{
+        "episode": "1x11 - All the Best Cowboys Have Daddy Issues",
+        "character": "Charlie Pace",
+        "line": "He saved my life. I owe him that much."
+    }]}, "2": {"labels": ["The Antagonist", "The Man of Faith", "The Rival", "The Protector"], "judgment": "negativo", "dialogues": [{
+          "episode": "2x12 - Fire + Water",
+          "character": "Charlie Pace",
+          "line": "Don't you walk away from me! You're the one who told me that this place was special! That it had a purpose for me! And when I finally find it, you call me a madman!"
+    }]}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
   },
   {
     "source": "Charlie Pace",
@@ -150,7 +280,11 @@
       "episode": "1x03 - Tabula Rasa",
       "character": "Charlie Pace",
       "line": "Kate’s a fighter. She doesn’t take crap from anyone."
-    }]}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    }]}, "2": {"labels": ["The Survivor", "The Ally", "The Protector"], "judgment": "positivo", "dialogues": [{
+          "episode": "2x09 - What Kate Did",
+          "character": "Charlie Pace",
+          "line": "**Charlie**: You trust Jack too much, Kate. **Kate**: And you don’t trust anyone, **Charlie**: maybe that’s my problem."
+        }]}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
   },
   {
     "source": "Charlie Pace",
@@ -169,12 +303,36 @@
       "episode": "1x12 - Whatever the Case May Be",
       "character": "Charlie Pace",
       "line": "I trust Sayid. He’s always there when you need him."
-    }]}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    }]}, "2": {"labels": ["The Problem-solver", "The Ally", "The Man of Action", "The Skeptic"], "judgment": "ambiguo", "dialogues": [{
+          "episode": "2x16 - The Whole Truth",
+          "character": "Charlie Pace",
+          "line": "Why? What's out there? Is it the Others?"
+        }]}, "3": {
+      "labels": ["The Problem-solver", "The Ally", "The Man of Action", "The Skeptic"],
+      "judgment": "positivo",
+      "dialogues": [
+        {
+          "episode": "3x21 - Greatest Hits",
+          "character": "Charlie Pace-Sayid",
+          "line": "**Charlie**: Sayid, you’re always the one who keeps us grounded. **Sayid**: Someone’s got to. Otherwise, we’re lost"
+        }
+      ]
+    }, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
   },
   {
     "source": "Charlie Pace",
     "target": "Sun-Hwa Kwon",
-    "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {
+      "labels": ["The Friend", "The Confidant", "The Ally", "The Protector"],
+      "judgment": "positivo",
+      "dialogues": [
+        {
+          "episode": "3x18 - D.O.C.",
+          "character": "Charlie Pace",
+          "line": "**Sun**: Why did you do it? **Charlie**: Because sometimes desperation makes you do stupid things. **Sun**: Just don’t let it happen again."
+        }
+      ]
+    }, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
   },
     {
       "source": "Desmond Hume",
@@ -184,7 +342,17 @@
     {
       "source": "Desmond Hume",
       "target": "Charlie Pace",
-      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {
+      "labels": ["The Friend", "The Musician", "The Man of Faith"],
+      "judgment": "positivo",
+      "dialogues": [
+        {
+          "episode": "3x08 - Flashes Before Your Eyes",
+          "character": "Desmond Hume-Charlie",
+          "line": "**Desmond**: I’ve seen your death, Charlie. It’s coming. **Charlie**: Then why tell me? Just let it happen."
+        }
+      ]
+    }, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
     },
     {
       "source": "Desmond Hume",
@@ -194,7 +362,17 @@
     {
       "source": "Desmond Hume",
       "target": "Hugo 'Hurley' Reyes",
-      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {
+      "labels": ["The Friend", "The Ally", "The Helper", "The Confidant", "The Comic Relief"],
+      "judgment": "positivo",
+      "dialogues": [
+        {
+          "episode": "3x20 – The Cost of Living",
+          "character": "Desmond Hume-Hugo",
+          "line": "**Hurley**: Man, you’re always carrying the weight of the world. **Desmond**: Someone has to, Hurley. Someone has to."
+        }
+      ]
+    }, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
     },
     {
       "source": "Desmond Hume",
@@ -209,17 +387,62 @@
     {
       "source": "Desmond Hume",
       "target": "Jack Shephard",
-      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": ["The Man of Science", "The Skeptic", "The Intruder", "The Threat", "The Leader"], "judgment": "ambiguo", "dialogues": [{
+          "episode": "2x01 - Man of Science, Man of Faith",
+          "character": "Desmond Hume",
+          "line": "See you in another life, brother."
+        }]}, "3": {
+      "labels": ["The Leader", "The Doctor", "The Man of Science", "The Ally", "The Protector"],
+      "judgment": "positivo",
+      "dialogues": [
+        {
+          "episode": "3x21 - Greatest Hits",
+          "character": "Desmond Hume-Jack",
+          "line": "**Jack**: You really believe he (Charlie) can change what’s meant to happen? **Desmond**: I believe in fighting for a second chance, even when it seems impossible."
+        }
+      ]
+    }, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
     },
     {
       "source": "Desmond Hume",
       "target": "John Locke",
-      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {
+      "labels": ["The Man of Faith", "The Intruder", "The Potential", "The Island's Chosen", "The Follower"],
+      "judgment": "ambiguo",
+      "dialogues": [{
+          "episode": "2x03 - Orientation",
+          "character": "Desmond Hume-John Locke",
+          "line": "**Desmond**: Are you him? **Locke**: Yes, I’m him. **Desmond**: What did one snowman say to the other snowman? **Locke**: …I don’t know. **Desmond**: You’re not him."
+        }]}, "3": {
+      "labels": ["The Man of Faith", "The Troublemaker"],
+      "judgment": "ambiguo",
+      "dialogues": [
+        {
+          "episode": "3x19 – The Brig",
+          "character": "Desmond Hume-John Locke",
+          "line": "**Locke**: The island chooses who lives and dies. **Desmond**: Then maybe it’s time to question the island’s choices."
+        }
+      ]
+    }, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
     },
     {
       "source": "Desmond Hume",
       "target": "Kate Austen",
-      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": ["The Intruder", "The Follower", "The Survivor", "The Threat"], "judgment": "ambiguo", "dialogues": [{
+          "episode": "2x02 - Adrift",
+          "character": "Desmond Hume-Kate",
+          "line": "**Desmond**: What did you do to the computer?! **Kate**: Nothing! I didn’t touch it! **Desmond**: Don’t lie to me!"
+        }]}, "3": {
+      "labels": ["The Survivor", "The Ally", "The Man of Action", "The Friend"],
+      "judgment": "positivo",
+      "dialogues": [
+        {
+          "episode": "3x17 - Catch 22",
+          "character": "Desmond Hume-Kate",
+          "line": "**Kate**: You’re risking too much for him (Charlie). **Desmond**: Sometimes saving one is worth risking everything."
+        }
+      ]
+    }, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
     },
     {
       "source": "Desmond Hume",
@@ -253,7 +476,15 @@
       "episode": "1x15 - Homecoming",
       "character": "Ethan Rom",
       "line": "(to Charlie, talking about Claire) You bring her here! If you don't, I'm going to kill one of them..., and another..., and another. One every day, and Charlie I'll kill you last."
-    }]}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    }]}, "2": {"labels": ["The Vulnerable", "The Antagonist", "The Obstacle", "The Annoying"], "judgment": "negativo", "dialogues": [{
+      "episode": "",
+      "character": "",
+      "line": ""
+    }]}, "3": {"labels": ["The Vulnerable", "The Antagonist", "The Obstacle", "The Annoying"], "judgment": "negativo", "dialogues": [{
+      "episode": "",
+      "character": "",
+      "line": ""
+    }]}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
   },
   {
     "source": "Ethan Rom",
@@ -282,7 +513,15 @@
       "episode": "1x11 - All the Best Cowboys Have Daddy Issues",
       "character": "Ethan Rom",
       "line": "(to Jack) You don't have to follow me, Jack. But if you keep looking for her, you won't like what happens next."
-    }]}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    }]}, "2": {"labels": ["The Threat/Villain", "The Obstacle", "The Enigmatic One", "The Confrontational"], "judgment": "negativo", "dialogues": [{
+      "episode": "",
+      "character": "",
+      "line": ""
+    }]}, "3": {"labels": ["The Threat/Villain", "The Obstacle", "The Enigmatic One", "The Confrontational"], "judgment": "negativo", "dialogues": [{
+      "episode": "",
+      "character": "",
+      "line": ""
+    }]}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
   },
   {
     "source": "Ethan Rom",
@@ -326,12 +565,36 @@
       "episode": "1x02 - Pilot (Part 2)",
       "character": "Hugo 'Hurley' Reyes",
       "line": "(to Charlie) You're a good dude, Charlie. Even if you are a rock star."
-    }]}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    }]}, "2": {"labels": ["The Helper", "The Loyal", "The Good-hearted", "The Musician", "The Vulnerable"], "judgment": "positivo", "dialogues": [{
+      "episode": "2x04 - Everybody Hates Hugo",
+      "character": "Hugo 'Hurley' Reyes-Sawyer",
+      "line": "**Hurley**: Dude, you ever think we’re all just pieces on some giant chessboard? **Charlie**: I dunno, mate. If this is chess, I feel like I’m the pawn that gets sacrificed first. **Hurley**: Better than being the guy who knocks over the board."
+    }]}, "3": {
+      "labels": ["The Friend", "The Ally", "The Confidant", "The Musician", "The Helper"],
+      "judgment": "positivo",
+      "dialogues": [
+        {
+          "episode": "3x10 - Tricia Tanaka Is Dead",
+          "character": "Hugo 'Hurley' Reyes-Charlie",
+          "line": "**Hurley**: Dude, you’re coming with me. We’re fixing this van. **Charlie**: And if it explodes? **Hurley**: Then we’ll go together, man."
+        }
+      ]
+    }, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
   },
   {
     "source": "Hugo 'Hurley' Reyes",
     "target": "Desmond Hume",
-    "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {
+      "labels": ["The Friend", "The Ally", "The Confidant", "The Helper"],
+      "judgment": "positivo",
+      "dialogues": [
+        {
+          "episode": "3x21 – Greatest Hits",
+          "character": "Hugo 'Hurley' Reyes-Desmond",
+          "line": "**Hurley**: Charlie needs you to believe in him. **Desmond**: I already do, Hurley."
+        }
+      ]
+    }, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
   },
   {
     "source": "Hugo 'Hurley' Reyes",
@@ -350,7 +613,21 @@
       "episode": "1x08 - Confidence Man",
       "character": "Hugo 'Hurley' Reyes",
       "line": "(to Jack, talking about Sawyer) He's a con man, dude. He steals stuff."
-    }]}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    }]}, "2": {"labels": ["The Troublemaker", "The Provocateur", "The Annoyance"], "judgment": "ambiguo", "dialogues": [{
+      "episode": "2x04 - Everybody Hates Hugo",
+      "character": "Hugo 'Hurley' Reyes-Sawyer",
+      "line": "**Hurley**: Sawyer, why do you always gotta be such a pain? **Sawyer**: Someone’s gotta keep things interesting around here. **Hurley**: Yeah, well, you’re just making everyone’s life harder. **Sawyer**: Maybe you’re just too soft, big guy."
+    }]}, "3": {
+      "labels": ["The Troublemaker", "The Provocateur", "The Ally", "The Hero", "The Survivor"],
+      "judgment": "ambiguo",
+      "dialogues": [
+        {
+          "episode": "3x14 - Exposé",
+          "character": "Hugo 'Hurley' Reyes-Hugo",
+          "line": "**Sawyer**: You trying to be the new sheriff in town? **Hurley**: Maybe the island needs a new kind of lawman."
+        }
+      ]
+    }, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
   },
   {
     "source": "Hugo 'Hurley' Reyes",
@@ -359,7 +636,21 @@
       "episode": "1x04 - Walkabout",
       "character": "Hugo 'Hurley' Reyes",
       "line": "(to Sayid, talking about Jack) He's the guy who fixes stuff. Always has been."
-    }]}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    }]}, "2": {"labels": ["The Leader", "The Reliable", "The Trustworthy", "The Responsible", "The Helper"], "judgment": "positivo", "dialogues": [{
+      "episode": "2x23 - Live together, Die alone",
+      "character": "Hugo 'Hurley' Reyes-Jack",
+      "line": "**Hurley**: I don’t think we should go. It feels like a trap. **Jack**: We don’t have a choice, Hurley. They took our people. **Hurley**: Yeah… but walking into the jungle at night? That’s how horror movies start, dude."
+    }]}, "3": {
+      "labels": ["The Leader", "The Hero", "The Protector", "The Doctor", "The Trusted Ally"],
+      "judgment": "positivo",
+      "dialogues": [
+        {
+          "episode": "3x22 - Through the Looking Glass",
+          "character": "Hugo 'Hurley' Reyes-Jack",
+          "line": "**Hurley**: You didn’t want me in the plan, but I came anyway. I saved them, Jack. **Jack**: You did, Hurley. You saved us all."
+        }
+      ]
+    }, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
   },
   {
     "source": "Hugo 'Hurley' Reyes",
@@ -368,7 +659,21 @@
       "episode": "1x11 - All the Best Cowboys Have Daddy Issues",
       "character": "Hugo 'Hurley' Reyes",
       "line": "(to Jack, talking about Locke) Sometimes that dude just... he gives me the creeps, you know?"
-    }]}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    }]}, "2": {"labels": ["The Enigmatic One", "The Hunter", "The Spiritual/Philosophical", "The Mysterious"], "judgment": "ambiguo", "dialogues": [{
+      "episode": "2x18 - Dave",
+      "character": "Hugo 'Hurley' Reyes",
+      "line": "(to Locke) The numbers are bad, and this island... this island is a part of it. And it's all my fault."
+    }]}, "3": {
+      "labels": ["The Enigmatic One", "The Troublemaker", "The Man of Faith"],
+      "judgment": "negativo",
+      "dialogues": [
+        {
+          "episode": "3x22 – Through the Looking Glass",
+          "character": "Hugo 'Hurley' Reyes-John Locke",
+          "line": "**Hurley**: You left us, John. People died. **Locke**: I did what I had to. **Hurley**: So did I. That’s why I drove the van.."
+        }
+      ]
+    }, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
   },
   {
     "source": "Hugo 'Hurley' Reyes",
@@ -377,7 +682,21 @@
       "episode": "1x02 - Pilot (Part 2)",
       "character": "Hugo 'Hurley' Reyes",
       "line": "Kate's good. She knows what she's doing."
-    }]}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    }]}, "2": {"labels": ["The Survivor", "The Capable", "The Independent", "The Strong"], "judgment": "positivo", "dialogues": [{
+      "episode": "2x08 - Collision",
+      "character": "Hugo 'Hurley' Reyes",
+      "line": "**Hurley**: So, uh, you ever think we’re like… in a reality show or something? **Kate**: If we are, it’s got the worst catering ever. **Hurley**: Yeah, and zero privacy. I'm not a fan."
+    }]}, "3": {
+      "labels": ["The Friend", "The Ally", "The Survivor", "The Man of Action"],
+      "judgment": "positivo",
+      "dialogues": [
+        {
+          "episode": "3x14 – Exposé",
+          "character": "Hugo 'Hurley' Reyes-Kate",
+          "line": "**Kate**: We can't just let him get away with it. **Hurley**: I know. But we’ve gotta be smart, not angry."
+        }
+      ]
+    }, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
   },
   {
     "source": "Hugo 'Hurley' Reyes",
@@ -396,7 +715,15 @@
       "episode": "1x05 - White Rabbit",
       "character": "Hugo 'Hurley' Reyes",
       "line": "(A Charlie, dopo che Sayid ha riparato qualcosa) See? Told ya. Sayid always comes through."
-    }]}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    }]}, "2": {"labels": ["The Analyst", "The Problem-solver", "The Stoic", "The Trustworthy", "The Reliable"], "judgment": "positivo", "dialogues": [{
+      "episode": "2x11 – The Hunting Party",
+      "character": "Hugo 'Hurley' Reyes-Sayid",
+      "line": "**Hurley**: You ever fix a radio with coconuts and bamboo? **Sayid**: No, but I have fixed one with a piece of chewing gum and a battery. **Hurley**: Dude… you’re like, our Iraqi MacGyver."
+    }]}, "3": {"labels": ["The Analyst", "The Problem-solver", "The Stoic", "The Trustworthy", "The Reliable"], "judgment": "positivo", "dialogues": [{
+      "episode": "3x22 – Through the Looking Glass",
+      "character": "Hugo 'Hurley' Reyes-Sayid",
+      "line": "**Sayid**: You shouldn't be here, Hurley. **Hurley**: Maybe not. But I am. And I’m gonna help."
+    }]}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
   },
   {
     "source": "Hugo 'Hurley' Reyes",
@@ -405,7 +732,15 @@
       "episode": "1x16 - Outlaws",
       "character": "Hugo 'Hurley' Reyes",
       "line": "Sun's got this whole thing growing. She's really good at it."
-    }]}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    }]}, "2": {"labels": ["The Helper", "The Calm Presence", "The Intelligent", "The Capable", "The Caring"], "judgment": "positivo", "dialogues": [{
+      "episode": "2x18 - Dave",
+      "character": "Hugo 'Hurley' Reyes-Sun",
+      "line": "**Hurley**: Hey, Sun… you got any more of that tea stuff? **Sun**: Of course. It helps with stress. **Hurley**: Great, ‘cause I’m like, one mango away from a breakdown."
+    }]}, "3": {"labels": ["The Helper", "The Calm Presence", "The Intelligent", "The Capable", "The Caring"], "judgment": "positivo", "dialogues": [{
+      "episode": "3x10 – “Tricia Tanaka Is Dead",
+      "character": "Hugo 'Hurley' Reyes-Sun",
+      "line": "**Hurley**: We found a car, want to come? **Sun**: Jin might like that. **Hurley**: Bring him, it’s a group joyride!"
+    }]}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
   },
     {
       "source": "Jacob",
@@ -484,7 +819,11 @@
       "episode": "1x05 - White Rabbit",
       "character": "James 'Sawyer' Ford",
       "line": "(to Charlie) You're a rock star, huh? More like a paper boy."
-    }]}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    }]}, "2": {"labels": ["The Antagonist", "The Vulnerable", "The Annoying", "The Troubled", "The Pathetic"], "judgment": "negativo", "dialogues": [{
+      "episode": "2x17 - Lockdown",
+      "character": "James 'Sawyer' Ford-Charlie",
+      "line": "**Charlie**: Why do you always nickname everyone? **Sawyer**: ‘Cause it’s more fun than remembering boring names. **Charlie**: So what’s mine? **Sawyer**: You? You’ll always be Baby Napster to me."
+    }]}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
   },
   {
     "source": "James 'Sawyer' Ford",
@@ -498,7 +837,11 @@
       "episode": "1x11 - All the Best Cowboys Have Daddy Issues",
       "character": "James 'Sawyer' Ford",
       "line": "(to Kate, talking about Ethan) That guy's creepy. Mark my words, there's something wrong with him."
-    }]}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    }]}, "2": {"labels": ["The Threat/Villain", "The Enigmatic One", "The Suspicious", "The Dangerous", "The Wildcard"], "judgment": "negativo", "dialogues": [{
+      "episode": "",
+      "character": "",
+      "line": ""
+    }]}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
   },
   {
     "source": "James 'Sawyer' Ford",
@@ -507,7 +850,14 @@
       "episode": "1x07 - The Moth",
       "character": "James 'Sawyer' Ford",
       "line": "(A Hurley, dopo che Hurley ha fatto o detto qualcosa di goffo) Easy there, Mongo."
-    }]}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    }]}, "2": {
+      "labels": ["The Comic Relief", "The Annoyance", "The Bystander", "The Helper"],
+      "judgment": "ambiguo",
+      "dialogues": [{
+          "episode": "2x04 - Everybody Hates Hugo",
+          "character": "James 'Sawyer' Ford",
+          "line": "**Hurley**: I think I’m going crazy, man. **Sawyer**: Welcome to the club, everyone on this rock. **Hurley**: Yeah, but I brought snacks."
+        }]}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
   },
   {
     "source": "James 'Sawyer' Ford",
@@ -530,7 +880,11 @@
       "episode": "1x04 - Walkabout",
       "character": "James 'Sawyer' Ford",
       "line": "(to Locke) What's the great hunter gonna tell us today, Johnny?"
-    }]}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    }]}, "2": {"labels": ["The Enigmatic One", "The Mysterious", "The Hunter", "The Spiritual/Philosophical", "The Strange"], "judgment": "ambiguo", "dialogues": [{
+      "episode": "2x09 - What kate did",
+      "character": "James 'Sawyer' Ford-Jack",
+      "line": "**Sawyer**: You love her, don’t you? **Jack**: It’s not that simple. **Sawyer**: Sure it is — you either do, or you don’t. **Jack**: And what about you? **Sawyer**: Me? I never claimed to be the hero."
+    }]}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
   },
   {
     "source": "James 'Sawyer' Ford",
@@ -539,7 +893,11 @@
       "episode": "1x03 - Tabula Rasa",
       "character": "James 'Sawyer' Ford",
       "line": "(to Kate) Well, hello there, Freckles."
-    }]}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    }]}, "2": {"labels": ["The Attractive", "The Troublemaker", "The Strong", "The Independent", "The Wildcard"], "judgment": "positivo", "dialogues": [{
+      "episode": "2x09 - What Kate did",
+      "character": "James 'Sawyer' Ford-Kate",
+      "line": "**Sawyer**: I love her. I love her like I’ve never loved anybody. **Kate**: Who do you mean? **Sawyer** (weakly, half-conscious): You, Freckles... always you."
+    }]}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
   },
   {
     "source": "James 'Sawyer' Ford",
@@ -558,7 +916,11 @@
       "episode": "1x06 - House of the Rising Sun",
       "character": "James 'Sawyer' Ford",
       "line": "(to Sayid) You're a regular little commando, aren't ya, chief?"
-    }]}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    }]}, "2": {"labels": ["The Analyst", "The Skilled", "The Stoic", "The Suspicious"], "judgment": "positivo", "dialogues": [{
+      "episode": "2x17 - Lockdown",
+      "character": "James 'Sawyer' Ford-Sayid",
+      "line": "**Sawyer**: You gonna torture him again, Captain Falafel? **Sayid**: Only if he lies. **Sawyer**: Then you better get comfortable — that guy’s mouth is a damn factory."
+    }]}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
   },
   {
     "source": "James 'Sawyer' Ford",
@@ -567,340 +929,543 @@
       "episode": "1x20 - Do No Harm",
       "character": "James 'Sawyer' Ford",
       "line": "(to Kate, smiling and talking about Sun) Well, shut my mouth. The quiet one actually speaks English."
-    }]}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    }]}, "2": {"labels": ["The Quiet", "The Mysterious", "The Intelligent", "The Enigmatic One"], "judgment": "ambiguo", "dialogues": [{
+      "episode": "2x05 - …And Found",
+      "character": "James 'Sawyer' Ford-Sun",
+      "line": "**Sawyer**: Hey, Seoul, you seen Jin? **Sun**: His name is Jin, and yes — he went looking for Michael. **Sawyer**: Right. Tell Tarzan I want my damn shirt back."
+    }]}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
   },
     {
-  "source": "Jack Shephard",
-  "target": "Benjamin Linus",
-  "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
-},
-{
-  "source": "Jack Shephard",
-  "target": "Charlie Pace",
-  "seasons": { "1": {"labels": ["The Vulnerable", "The Troubled", "The Helper", "The Determined", "The Good-hearted"], "judgment": "positivo", "dialogues": [{
+      "source": "Jack Shephard",
+      "target": "Benjamin Linus",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {
+        "labels": ["The Others leader", "The Manipulator"],
+        "judgment": "negativo",
+        "dialogues": [
+          {"episode": "2x07 - The Other 48 Days", "character": "Jack", "line": "(A Ben, con rabbia) 'Who are you people? What do you want from us?'"},
+          {"episode": "2x14 - One of Them", "character": "Jack", "line": "(A Ben, sotto interrogatorio) 'I will never help you. Never.'"},
+          {"episode": "2x16 - The whole truth", "character": "Ben-Jack", "line": "**Jack**: You are a liar. **Ben**: A liar. This is a strong accusation, Doctor. **Jack**: Who are you really? **Ben**: I've already answered this question. I'm Henry Gale. **Jack**: We know that you are not who you claim to be. We know that you are one of the Others."}
+        ]
+      }, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Jack Shephard",
+      "target": "Charlie Pace",
+      "seasons": { "1": {"labels": ["The Vulnerable", "The Troubled", "The Good-hearted"], "judgment": "positivo", "dialogues": [{
     "episode": "1x07 - The Moth",
     "character": "Jack Shephard",
     "line": "(A Charlie, con preoccupazione ma anche risoluzione) You got a problem, Charlie. And we're gonna fix it."
-  }]}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
-},
-{
-  "source": "Jack Shephard",
-  "target": "Desmond Hume",
-  "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
-},
-{
-  "source": "Jack Shephard",
-  "target": "Ethan Rom",
-  "seasons": { "1": {"labels": ["The Threat/Villain", "The Dangerous", "The Kidnapper", "The Obstacle", "The Enigmatic One"], "judgment": "negativo", "dialogues": [{
-    "episode": "1x11 - All the Best Cowboys Have Daddy Issues",
-    "character": "Jack Shephard",
-    "line": "(to Locke, referring to Ethan after realizing his true nature) He's not one of us. He's a monster."
-  },
-  {
-    "episode": "1x15 - Homecoming",
-    "character": "Jack Shephard",
-    "line": "(to the group, about finding Ethan) We need to find him. Before he hurts anyone else."
-  }]}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
-},
-{
-  "source": "Jack Shephard",
-  "target": "Hugo 'Hurley' Reyes",
-  "seasons": { "1": {"labels": ["The Good-hearted", "The Reliable", "The Calm Presence", "The Trustworthy", "The Helper"], "judgment": "positivo", "dialogues": [{
-    "episode": "1x04 - Walkabout",
-    "character": "Jack Shephard",
-    "line": "(to Hurley, after Hurley has helped him) Thanks, Hurley. You're a good man."
-  }]}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
-},
-{
-  "source": "Jack Shephard",
-  "target": "Jacob",
-  "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
-},
-{
-  "source": "Jack Shephard",
-  "target": "James 'Sawyer' Ford",
-  "seasons": { "1": {"labels": ["The Antagonist", "The Troublemaker", "The Selfish", "The Annoying", "The Unreliable"], "judgment": "negativo", "dialogues": [{
-    "episode": "1x24 - Exodus, Part 2",
-    "character": "Jack Shephard",
-    "line": "(to Locke, regarding Sawyer) He's a pain in the ass, but he's not entirely useless."
-  }]}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
-},
-{
-  "source": "Jack Shephard",
-  "target": "John Locke",
-  "seasons": { "1": {"labels": ["The Man of Faith", "The Enigmatic One", "The Mysterious", "The Skilled", "The Rival"], "judgment": "ambiguo", "dialogues": [{
-    "episode": "1x05 - White rabbit",
-    "character": "Jack Shephard-John Locke",
-    "line": "(John talking to Jack) You're chasing the white rabbit... like Alice. I'm an ordinary man Jack, meat and potatoes. I live in the real world, I'm not a big believer in magic but this place is different. It's special. Is your white rabbit real or is a hallucination?"
-  }]}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
-},
-{
-  "source": "Jack Shephard",
-  "target": "Kate Austen",
-  "seasons": { "1": {"labels": ["The Strong", "The Brave", "The Trustworthy", "The Mysterious", "The Intriguing"], "judgment": "positivo", "dialogues": [{
-    "episode": "1x20 - Do No Harm",
-    "character": "Jack Shephard",
-    "line": "(to Kate, in a moment of stress) You're the only one I trust out here."
-  }]}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
-},
-{
-  "source": "Jack Shephard",
-  "target": "Man in black",
-  "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
-},
-{
-  "source": "Jack Shephard",
-  "target": "Mr. Eko",
-  "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
-},
-{
-  "source": "Jack Shephard",
-  "target": "Sayid Jarrah",
-  "seasons": { "1": {"labels": ["The Analyst", "The Trustworthy", "The Reliable", "The Skilled", "The Problem-solver"], "judgment": "positivo", "dialogues": [{
-    "episode": "1x24 - Exodus, Part 2",
-    "character": "Jack Shephard",
-    "line": "(to Locke, relying on Sayid's expertise) Sayid knows what he's doing. He's been through worse."
-  }]}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
-},
-{
-  "source": "Jack Shephard",
-  "target": "Sun-Hwa Kwon",
-  "seasons": { "1": {"labels": ["The Intelligent", "The Capable", "The Caring", "The Strong", "The Survivor"], "judgment": "positivo", "dialogues": [{
-    "episode": "1x14 - Special",
-    "character": "Jack Shephard",
-    "line": "(to Kate, after seeing Sun gardening) She's really made something out of nothing. She's stronger than she looks."
-  }]}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
-},
+  }]}, "2": {
+        "labels": ["The drug addict", "The Burden", "The Vulnerable"],
+        "judgment": "ambiguo",
+        "dialogues": [
+          {"episode": "2x05 - ...And Found", "character": "Jack", "line": "(A Charlie, con irritazione) 'You're putting everyone at risk, Charlie! What were you thinking?'"},
+          {"episode": "2x07 - The Other 48 Days", "character": "Jack", "line": "(A Claire, su Charlie) 'He needs to get his act together. For all our sakes.'" }
+        ]
+      }, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
     {
-  "source": "John Locke",
-  "target": "Benjamin Linus",
-  "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
-},
-{
-  "source": "John Locke",
-  "target": "Charlie Pace",
-  "seasons": { "1": {
-    "labels": ["The Vulnerable", "The Troubled", "The Lost Soul", "The Potential", "The Follower"],
+      "source": "Jack Shephard",
+      "target": "Desmond Hume",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {
+        "labels": ["The man in the Hatch"],
+        "judgment": "ambiguo",
+        "dialogues": [
+          {"episode": "2x01 - Man of Science, Man of Faith", "character": "Jack", "line": "(A Desmond, interrogandolo) 'Who are you? What is this place?!'"},
+          {"episode": "2x02 - Adrift", "character": "Jack-Desmond", "line": "**Jack**: Desmond! Fermo! Non puoi andare! **Desmond**: Devo andare. Non posso rimanere. Ho premuto il pulsante. Se non lo ripremo, il mondo finisce! **Jack**: Il mondo non finisce se non premi un pulsante! Desmond: Tu non sai niente! Non sai cosa succede qui!"}
+        ]
+      }, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Jack Shephard",
+      "target": "Ethan Rom",
+      "seasons": { "1": {"labels": ["The Villain", "The Dangerous", "The Kidnapper", "The Obstacle", "The Enigmatic One"], "judgment": "negativo", "dialogues": [{
+        "episode": "1x11 - All the Best Cowboys Have Daddy Issues",
+        "character": "Jack Shephard",
+        "line": "(to Locke, referring to Ethan after realizing his true nature) He's not one of us. He's a monster."
+      },
+      {
+        "episode": "1x15 - Homecoming",
+        "character": "Jack Shephard",
+        "line": "(to the group, about finding Ethan) We need to find him. Before he hurts anyone else."
+      }]}, "2": {"labels": ["The Villain", "The Dangerous", "The Kidnapper", "The Obstacle", "The Enigmatic One"], "judgment": "negativo", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Jack Shephard",
+      "target": "Hugo 'Hurley' Reyes",
+      "seasons": { "1": {"labels": ["The Good-hearted", "The Reliable", "The Calm Presence", "The Trustworthy", "The Helper"], "judgment": "positivo", "dialogues": [{
+        "episode": "1x04 - Walkabout",
+        "character": "Jack Shephard",
+        "line": "(to Hurley, after Hurley has helped him) Thanks, Hurley. You're a good man."
+      }]}, "2": {
+        "labels": ["The Unsettled Friend", "The Moral Compass", "The Burdened", "The Concerned Confidante"],
+        "judgment": " di buon cuore, ma è anche preoccupato per il suo disagio e il peso che porta (i numeri, i fantasmi). Jack cerca di supportarlo, pur non comprendendo appieno le sue esperienze, e vede Hurley come una figura di cui fidarsi per la sua integrità morale.",
+        "dialogues": [
+          {"episode": "2x10 - The 23rd Psalm", "character": "Jack", "line": "(A Hurley, cercando di rassicurarlo) 'Whatever's going on, we'll figure it out. Together.'" }
+        ]
+      }, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Jack Shephard",
+      "target": "Jacob",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Jack Shephard",
+      "target": "James 'Sawyer' Ford",
+      "seasons": { "1": {"labels": [ "The Troublemaker", "The Selfish", "The Annoyance"], "judgment": "negativo", "dialogues": [{
+        "episode": "1x24 - Exodus, Part 2",
+        "character": "Jack Shephard",
+        "line": "(to Locke, regarding Sawyer) He's a pain in the ass, but he's not entirely useless."
+      }]}, "2": {
+        "labels": ["The Troublemaker", "The Selfish", "The Annoyance","The Rival"],
+        "judgment": "ambiguo",
+        "dialogues": [
+          {"episode": "2x01 - Man of Science, Man of Faith", "character": "Jack", "line": "(A Sawyer, con irritazione) 'You never make things easy, do you?'"},
+          {"episode": "2x08 - Collision", "character": "Jack", "line": "(A Ana Lucia, riguardo a Sawyer) 'He's a menace. But he's one of ours.'"},
+          {"episode": "2x13 - The Long Con", "character": "Jack", "line": "(A Kate, frustrato per Sawyer) 'He's always looking out for himself, Kate. Always.'"}
+        ]
+      }, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Jack Shephard",
+      "target": "John Locke",
+      "seasons": { "1": {"labels": ["The Man of Faith", "The Enigmatic One", "The Mysterious", "The Hunter"], "judgment": "ambiguo", "dialogues": [{
+        "episode": "1x05 - White rabbit",
+        "character": "Jack Shephard-John Locke",
+        "line": "(John talking to Jack) You're chasing the white rabbit... like Alice. I'm an ordinary man Jack, meat and potatoes. I live in the real world, I'm not a big believer in magic but this place is different. It's special. Is your white rabbit real or is a hallucination?"
+      }]}, "2": {
+        "labels": ["The Man of Faith", "The Obsessed", "The Rival Ideology", "The Unpredictable Ally"],
+        "judgment": "ambiguo",
+        "dialogues": [
+          {"episode": "2x01 - Man of Science, Man of Faith", "character": "Jack", "line": "(A Locke, con fermezza) 'I am a man of science, John. Not a man of faith.'"},
+          {"episode": "2x03 - Orientation", "character": "Jack-John", "line": "**Jack**:It's not 32, it's 42. He just tol me, Desmond **John Locke**:...You do it Jack, you have to do it **Jack**: You do it yourself John **John Locke**: No you saw the film Jack, this is a 2-person job, at least **Jack**: Look, you want to push the button? You do it yourself **John Locke**: If it's not real, then what are you doing here Jack? Why did you come back. Why do you find so hard to belive!? **Jack**: Why do you find it so easy? **John Locke**: It's neven been, easy. **Jack**: I don't want to. It's just a button **John Locke**: I can't do this alone, Jack. It's a leap of faith, Jack"}
+          ]
+      }, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Jack Shephard",
+      "target": "Kate Austen",
+      "seasons": { "1": {"labels": ["The Strong", "The Trustworthy", "The Intriguing"], "judgment": "positivo", "dialogues": [{
+        "episode": "1x20 - Do No Harm",
+        "character": "Jack Shephard",
+        "line": "(to Kate, in a moment of stress) You're the only one I trust out here."
+      }]}, "2": {
+        "labels": ["The Trustworthy", "The Intriguing", "The Love Interest"],
+        "judgment": "positivo",
+        "dialogues": [
+          ]
+      }, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Jack Shephard",
+      "target": "Man in black",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Jack Shephard",
+      "target": "Mr. Eko",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {
+        "labels": [],
+        "judgment": "",
+        "dialogues": []
+      }, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Jack Shephard",
+      "target": "Sayid Jarrah",
+      "seasons": { "1": {"labels": ["The Analyst","The Reliable", "The Skilled", "The Problem-solver"], "judgment": "positivo", "dialogues": [{
+        "episode": "1x24 - Exodus, Part 2",
+        "character": "Jack Shephard",
+        "line": "(to Locke, relying on Sayid's expertise) Sayid knows what he's doing. He's been through worse."
+      }]}, "2": {
+        "labels": ["The Analyst", "The Interrogator", "The Reliable"],
+        "judgment": "positivo",
+        "dialogues": [
+          {"episode": "2x02 - Adrift", "character": "Jack", "line": "(A Sayid, con urgenza) 'We need to figure out what this place is. You're the one to do it.'"},
+          {"episode": "2x14 - One of Them", "character": "Jack", "line": "Good work, Sayid. What's our next move?"}
+        ]
+      }, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Jack Shephard",
+      "target": "Sun-Hwa Kwon",
+      "seasons": { "1": {"labels": ["The Kind-hearted", "The Strong"], "judgment": "positivo", "dialogues": [{
+        "episode": "1x14 - Special",
+        "character": "Jack Shephard",
+        "line": "(to Kate, after seeing Sun gardening) She's really made something out of nothing. She's stronger than she looks."
+      }]}, "2": {"labels": ["The Kind-hearted", "The Strong"], "judgment": "positivo","dialogues": [
+          {"episode": "2x04 - Everybody Hates Hugo", "character": "Jack", "line": "(A Sun, sul suo giardino) 'It's amazing what you've done here, Sun. Truly.'"},
+          {"episode": "2x07 - The Other 48 Days", "character": "Jack", "line": "(A Sun) 'You've been through a lot. You're very strong.'" }
+        ]
+      }, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "John Locke",
+      "target": "Benjamin Linus",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {
+        "labels": ["The Prisoner", "The Liar", "The Manipulator", "The Enigma"],
+        "judgment": "negativo",
+        "dialogues": [
+          {"episode": "2x14 - One of Them", "character": "John Locke", "line": "**John Locke**: Who are you really? **Ben**: I'm Henry Gale. And you are John Locke. I know who you are, John. **John Locke**: How do you know that? **Ben**: I know a great many things. I know you were in a wheelchair. I know the Island healed you. I know you believe in this place, John. More than anyone else. **John Locke**: (Surprised and troubled) What do you want from me? **Ben*: I just want to go home."},
+          {"episode": "2x17 - Lockdown", "character": "John Locke", "line": "**Ben**: (To Locke, as the Hatch locks down) You don't trust him (Jack), do you? You shouldn't. **John Locke**: How do you know these things? **Ben**: I lived here, John. I pushed the button. I know what happens when you don't."},
+          {"episode": "2x20 - Two for the Road", "character": "John Locke", "line": "(A Jack, about Ben) 'He lied to us, Jack. About everything.'"}
+        ]
+      }, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "John Locke",
+      "target": "Charlie Pace",
+      "seasons": { "1": {
+    "labels": ["The Vulnerable", "The Lost Soul", "The Potential", "The drug addict"],
     "judgment": "positivo",
     "dialogues": [
       {"episode": "1x04 - Walkabout", "character": "John Locke", "line": "Fear, Charlie, is a powerful weapon. And it's using you."},
       {"episode": "1x11 - All the Best Cowboys Have Daddy Issues", "character": "John Locke", "line": "(to Charlie) You're stronger than you think. You just have to believe it."}
     ]
-  }, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
-},
-{
-  "source": "John Locke",
-  "target": "Desmond Hume",
-  "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
-},
-{
-  "source": "John Locke",
-  "target": "Ethan Rom",
-  "seasons": { "1": {
-    "labels": ["The Threat/Villain", "The Intruder", "The Dangerous", "The Disruptor", "The Other"],
+  }, "2": {
+        "labels": ["The drug addict", "The Lost Soul", "The Potential"],
+        "judgment": "ambiguo",
+        "dialogues": [
+          {"episode": "2x05 - ...And Found", "character": "John Locke-Charlie", "line": "**Charlie**: She has a lot to learn about being a mum; you know... it's a responsability. **John Locke**: You know, that is interesting told by an heroin addict"}
+          ]
+      }, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "John Locke",
+      "target": "Desmond Hume",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {
+        "labels": ["The man in the Hatch"],
+        "judgment": "positivo",
+        "dialogues": [
+          {"episode": "2x01 - Man of Science, Man of Faith", "character": "John Locke-Desmond", "line": "**John Locke**: What is this place? **Desmond**: It's a station. It's a bloody station. **John Locke: What's it for? **Desmond**: I push a button. Every 108 minutes. That's what it's for, brother. **John Locke: And what happens if you don't? **Desmond**: Then the world ends."},
+          {"episode": "2x24 - Live Together, Die Alone, Part 2", "character": "John Locke", "line": "**Desmond**: Three days ago, before we met, I heard a banging on the hatch door, shouting, but it was you John, wasn't it? You say there isn't any purpose, there is no such thing as fate? But you saved my life brother, so that i could save yours. **John Locke**: No,no,no! None of this is real **Desmond**: I'm sorry for whatever happened that made you stop believing,but it's all real. **John Locke**: Wait, Desmond! **Desmond**: I'll see you in another life brother!"}
+        ]
+      }, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "John Locke",
+      "target": "Ethan Rom",
+      "seasons": { "1": {
+    "labels": ["The Villain", "The Intruder", "The Other"],
     "judgment": "negativo",
     "dialogues": [
       {"episode": "1x11 - All the Best Cowboys Have Daddy Issues", "character": "John Locke", "line": "(to Jack) He doesn't belong here. He needs to be dealt with"},
       {"episode": "1x11 - All the Best Cowboys Have Daddy Issues", "character": "John Locke", "line": "(to Charlie) He was never going to let her go. You did what you had to do."}
     ]
-  }, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
-},
-{
-  "source": "John Locke",
-  "target": "Hugo 'Hurley' Reyes",
-  "seasons": { "1": {"labels": ["The Good-hearted", "The Calm Presence", "The Innocent", "The Pure"], "judgment": "positivo", "dialogues": [{
+  }, "2": {
+        "labels": ["The Villain", "The Intruder", "The Other"],
+        "judgment": "negativo",
+        "dialogues": []
+      }, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "John Locke",
+      "target": "Hugo 'Hurley' Reyes",
+      "seasons": { "1": {"labels": ["The Good-hearted", "The Calm Presence", "The Innocent", "The Pure"], "judgment": "positivo", "dialogues": [{
     "episode": "1x04 - Walkabout",
     "character": "John Locke",
     "line": "(to Hurley, observing him) You see the wonder in things, Hurley. Don't lose that."
-  }]}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
-},
-{
-  "source": "John Locke",
-  "target": "Jacob",
-  "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
-},
-{
-  "source": "John Locke",
-  "target": "James 'Sawyer' Ford",
-  "seasons": { "1": {
-    "labels": ["The Skeptic", "The Disbeliever", "The Selfish", "The Troubled", "The Lost Soul"],
+  }]}, "2": {
+        "labels": ["The Good-hearted", "The Calm Presence", "The Innocent", "The Pure"],
+        "judgment": "positivo",
+        "dialogues": [
+          {"episode": "2x10 - The 23rd Psalm", "character": "John Locke", "line": "(A Hurley, sul suo passato) 'Whatever happened to you before, Hurley... it doesn't matter now. This island wants you here.'"}
+        ]
+      }, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "John Locke",
+      "target": "Jacob",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "John Locke",
+      "target": "James 'Sawyer' Ford",
+      "seasons": { "1": {
+    "labels": ["The Selfish", "The Troublemaker", "The Lost Soul"],
     "judgment": "ambiguo",
     "dialogues": [
-      {"episode": "1x04 - Walkabout", "character": "John Locke", "line": "(to Sawyer) Don't tell me what I can't do."},
       {"episode": "1x16 - Outlaws", "character": "John Locke", "line": "(to Sawyer) You're holding onto something, James. Something you need to let go of."}
     ]
-  }, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
-},
-{
-  "source": "John Locke",
-  "target": "Jack Shephard",
-  "seasons": { "1": {
-    "labels": ["The Man of Science", "The Skeptic", "The Rival Leader", "The Blind Man", "The Unbeliever"],
-    "judgment": "ambiguo",
+  }, "2": {
+        "labels": ["The Selfish", "The Materialist", "The Lost Soul"],
+        "judgment": "positivo",
+        "dialogues": [
+          {"episode": "2x08 - Collision", "character": "John Locke", "line": "(A Sawyer, per ottenere le medicine) 'You think I enjoy this, James? You think I enjoy playing games?'"},
+          {"episode": "2x13 - The Long Con", "character": "John Locke", "line": "(A Sawyer) 'This isn't about the guns, is it, James? It's about control.'"}
+        ]
+      }, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "John Locke",
+      "target": "Jack Shephard",
+      "seasons": { "1": {
+    "labels": ["The Man of Science", "The Skeptic"],
+    "judgment": "positivo",
     "dialogues": [
       {"episode": "1x04 - Walkabout", "character": "John Locke", "line": "(to Jack) Don't tell me what I can't do!"},
       {"episode": "1x14 - Special", "character": "John Locke", "line": "(to Jack) You can't leave this island, Jack. Not yet. We have a purpose here!"},
       {"episode": "1x24 - Exodus: Part 2", "character": "John Locke", "line": "(to Jack, near the bunker) We're here for a reason, Jack. And it's not because of a plane crash!"}
     ]
-  }, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
-},
-{
-  "source": "John Locke",
-  "target": "Kate Austen",
-  "seasons": { "1": {
-    "labels": ["The Resourceful", "The Capable", "The Independent", "The Pragmatist", "The Ally"],
+  }, "2": {
+        "labels": ["The Man of Science", "The Skeptic"],
+        "judgment": "positivo",
+        "dialogues": [
+          {"episode": "2x03 - Orientation", "character": "Jack-John", "line": "**Jack**:It's not 32, it's 42. He just tol me, Desmond **John Locke**:...You do it Jack, you have to do it **Jack**: You do it yourself John **John Locke**: No you saw the film Jack, this is a 2-person job, at least **Jack**: Look, you want to push the button? You do it yourself **John Locke**: If it's not real, then what are you doing here Jack? Why did you come back. Why do you find so hard to belive!? **Jack**: Why do you find it so easy? **John Locke**: It's neven been, easy. **Jack**: I don't want to. It's just a button **John Locke**: I can't do this alone, Jack. It's a leap of faith, Jack"}
+          ]
+      }, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "John Locke",
+      "target": "Kate Austen",
+      "seasons": { "1": {
+    "labels": ["The Capable","The Ally"],
     "judgment": "positivo",
     "dialogues": [
       {"episode": "1x04 - Walkabout", "character": "John Locke", "line": "(to Kate) You have a good eye for the land, Kate. You'll be useful."},
       {"episode": "1x11 - All the Best Cowboys Have Daddy Issues", "character": "John Locke", "line": "(to Kate, while looking for Claire) You're coming with me. You're the best tracker we have."}
     ]
-  }, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
-},
-{
-  "source": "John Locke",
-  "target": "Man in black",
-  "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
-},
-{
-  "source": "John Locke",
-  "target": "Mr. Eko",
-  "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
-},
-{
-  "source": "John Locke",
-  "target": "Sayid Jarrah",
-  "seasons": { "1": {
-    "labels": ["The Man of Logic", "The Inquisitor", "The Pragmatist", "The Analyst", "The Skilled"],
+  }, "2": {
+        "labels": ["The Capable", "The Adaptable"],
+        "judgment": "",
+        "dialogues": [
+          {"episode": "2x01 - Man of Science, Man of Faith", "character": "John Locke", "line": "(A Kate, nella botola) 'We need your help with this, Kate. You're quick on your feet.'"}
+          ]
+      }, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "John Locke",
+      "target": "Man in black",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "John Locke",
+      "target": "Mr. Eko",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {
+        "labels": ["The Man of God", "The Fellow Believer", "The Spiritual Guide", "The Unquestioning Follower of the Island"],
+        "judgment": "ambiguo",
+        "dialogues": [
+          {"episode": "2x9 - What Kate did", "character": "John Locke- Mr.Eko", "line": "**John Locke**: Somebody made this film, someone else cut this piece out. We crash. Two halves of the same plane fall on different parts of the island, you're over there and i'm over here, and now here's the missing piece. What are the odds? **Mr.Eko**: Don't mistake coincidence for fate."},
+          {"episode": "2x21 - ?", "character": "John Locke", "line": "(A Mr. Eko, sulla botola) **John Locke**: That's a joke. Rats in a maze, with no cheese **Mr.EKo**: It is work John. We are being tested. The reason to do it, is not because we're told to do so in a film **John Locke**: Well, then what is the reason? **Mr. Eko**: We do it because we believe we are meant to. Isn't that the reason you pushed it John?"}
+          ]
+      }, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "John Locke",
+      "target": "Sayid Jarrah",
+      "seasons": { "1": {
+    "labels": ["The Man of Logic", "The Interrogator", "The Pragmatist", "The Skilled"],
     "judgment": "positivo",
     "dialogues": [
       {"episode": "1x05 - White Rabbit", "character": "John Locke", "line": "(to Sayid) You're the one with the technical skills, Sayid. See what you can do with it."},
       {"episode": "1x09 - Solitary", "character": "John Locke", "line": "(to Sayid) You seek answers, Sayid. The island has them."}
     ]
-  }, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
-},
-{
-  "source": "John Locke",
-  "target": "Sun-Hwa Kwon",
-  "seasons": { "1": {
-    "labels": ["The Patient Soul", "The Quiet Contributor", "The Resourceful", "The Capable", "The Harmonizer"],
+  }, "2": {
+        "labels": ["The Man of Logic", "The Interrogator", "The Skilled"],
+        "judgment": "positivo",
+        "dialogues": [
+          {"episode": "2x02 - Adrift", "character": "John Locke", "line": "(A Sayid, sui cavi) We need to figure out where these go, Sayid. You're the best at this."},
+          {"episode": "2x14 - One of Them", "character": "John Locke", "line": "(A Sayid, su Benjamin Linus) He's lying, Sayid. I know it."}
+        ]
+      }, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "John Locke",
+      "target": "Sun-Hwa Kwon",
+      "seasons": { "1": {
+    "labels": ["The Patient Soul", "The Kind-hearted", "The Harmonizer"],
     "judgment": "positivo",
     "dialogues": [ {"episode": "1x16 - Outlaws", "character": "John Locke", "line": "(looking Sun) You have a way with things, Sun... a good way."}
     ]
-  }, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
-},
+  }, "2": {
+        "labels": ["The Kind-hearted", "The Patient Soul", "The Harmonizer"],
+        "judgment": "positivo",
+        "dialogues": [
+          {"episode": "2x04 - Everybody Hates Hugo", "character": "John Locke", "line": "(A Sun, osservandola mentre lavora in giardino) 'You've made this place... home.'"}
+        ]
+      }, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
     {
-  "source": "Kate Austen",
-  "target": "Benjamin Linus",
-  "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
-},
-{
-  "source": "Kate Austen",
-  "target": "Charlie Pace",
-  "seasons": { "1": {"labels": ["The Vulnerable", "The Good-hearted", "The Fellow Survivor"], "judgment": "positivo", "dialogues": [{
+      "source": "Kate Austen",
+      "target": "Benjamin Linus",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {
+        "labels": ["The Deceiver", "The Others leader"],
+        "judgment": "negativo",
+        "dialogues": [
+          {"episode": "2x14 - One of Them", "character": "Kate", "line": "(A Sayid, su Henry Gale) 'You don't trust him, do you? I don't either.'"},
+          {"episode": "2x20 - Two for the Road", "character": "Kate", "line": "(A Jack, mentre discutono di Henry Gale) 'He's hiding something, Jack. I know it.'" }
+        ]
+      }, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Kate Austen",
+      "target": "Charlie Pace",
+      "seasons": { "1": {"labels": ["The Vulnerable", "The drug addict"], "judgment": "positivo", "dialogues": [{
     "episode": "1x07 - The Moth",
     "character": "Kate Austen",
     "line": "(to Jack, about Charlie) He's a mess, but he's got a good heart."
-  }]}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
-},
-{
-  "source": "Kate Austen",
-  "target": "Desmond Hume",
-  "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
-},
-{
-  "source": "Kate Austen",
-  "target": "Ethan Rom",
-  "seasons": { "1": {
-    "labels": ["The Threat/Villain", "The Dangerous", "The Kidnapper", "The Other", "The Ruthless"],
+  }]}, "2": {
+        "labels": ["The Vulnerable", "The drug Addict"],
+        "judgment": "positivo",
+        "dialogues": [
+          {"episode": "2x05 - ...And Found", "character": "Kate", "line": "(A Charlie, con rammarico) 'You can't keep doing this to yourself, Charlie. Or to Claire.'"},
+          {"episode": "2x10 - The 23rd Psalm", "character": "Kate", "line": "(A Jack, su Charlie) 'He's hurting, Jack. We need to help him.'" }
+        ]
+      }, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Kate Austen",
+      "target": "Desmond Hume",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {
+        "labels": ["The man in the Hatch"],
+        "judgment": "ambiguo",
+        "dialogues": [
+          {"episode": "2x01 - Man of Science, Man of Faith", "character": "Kate", "line": "(A Jack, su Desmond) 'Who is that guy? And what is he doing down here?'"},
+          {"episode": "2x03 - Orientation", "character": "Kate", "line": "(A Desmond) 'So, you've been pushing that button for three years?'"}
+        ]
+      }, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Kate Austen",
+      "target": "Ethan Rom",
+      "seasons": { "1": {
+    "labels": ["The Villain", "The Other"],
     "judgment": "negativo",
     "dialogues": [
       {"episode": "1x11 - All the Best Cowboys Have Daddy Issues", "character": "Kate", "line": "(to Jack, desperate) He took her, Jack! He took Claire!" }
     ]
-  }, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
-},
-{
-  "source": "Kate Austen",
-  "target": "Hugo 'Hurley' Reyes",
-  "seasons": { "1": {"labels": ["The Good-hearted", "The Loyal", "The Innocent", "The Comic Relief"], "judgment": "positivo", "dialogues": [{
+  }, "2": {"labels": ["The Villain", "The Other"], "judgment": "negativo", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Kate Austen",
+      "target": "Hugo 'Hurley' Reyes",
+      "seasons": { "1": {"labels": ["The Good-hearted", "The Loyal", "The Innocent", "The Comic Relief"], "judgment": "positivo", "dialogues": [{
     "episode": "1x04 - Walkabout",
     "character": "Kate Austen",
     "line": "(to Hurley, affectionately) You're alright, Hurley. Just stay out of trouble."
-  }]}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
-},
-{
-  "source": "Kate Austen",
-  "target": "Jacob",
-  "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
-},
-{
-  "source": "Kate Austen",
-  "target": "James 'Sawyer' Ford",
-  "seasons": { "1": {
-    "labels": ["The Annoying", "The Selfish", "The Troublemaker", "The Vulnerable", "The Intriguing"],
+  }]}, "2": {
+        "labels": ["The Good-hearted", "The Loyal", "The Innocent", "The Comic Relief"],
+        "judgment": "positivo",
+        "dialogues": [
+          {"episode": "2x04 - Everybody Hates Hugo", "character": "Kate", "line": "(Ad Hurley, rassicurandolo) 'You're not crazy, Hurley. You just... see things differently.'"},
+          {"episode": "2x09 - What Kate Did", "character": "Kate", "line": "(Ad Hurley, dopo la caduta di Libby) 'Are you okay, Hurley? You look like you've seen a ghost.'" }
+        ]
+      }, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Kate Austen",
+      "target": "Jacob",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Kate Austen",
+      "target": "James 'Sawyer' Ford",
+      "seasons": { "1": {
+    "labels": ["The Annoyance", "The Selfish", "The Troublemaker", "The Vulnerable", "The Intriguing"],
     "judgment": "ambiguo",
     "dialogues": [
       {"episode": "1x02 - Tabula Rasa", "character": "Kate", "line": "(to Sawyer, annoyed) You know what? You're a pig."},
       {"episode": "1x16 - Outlaws", "character": "Kate", "line": "(to Sawyer, about his vulnerability) You're not as tough as you pretend to be, are you?"}]
-  }, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
-},
-{
-  "source": "Kate Austen",
-  "target": "Jack Shephard",
-  "seasons": { "1": {
+  }, "2": {
+        "labels": ["The Intriguing", "The Annoyance", "The Troublemaker"],
+        "judgment": "positivo",
+        "dialogues": [
+          {"episode": "2x08 - Collision", "character": "Kate", "line": "(A Sawyer, dopo averlo curato) 'You're not so tough, are you, Ford?'"},
+          {"episode": "2x13 - The Long Con", "character": "Kate", "line": "(A Sawyer, con affetto) 'You're a con man, Sawyer. It's what you do.'"}
+        ]
+      }, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Kate Austen",
+      "target": "Jack Shephard",
+      "seasons": { "1": {
     "labels": ["The Hero", "The Leader", "The Reliable", "The Trustworthy", "The Protector"],
     "judgment": "positivo",
     "dialogues": [
       {"episode": "1x05 - White Rabbit", "character": "Kate", "line": "(to Jack, as he's struggling) You're not alone, Jack. We're all in this together."},
       {"episode": "1x20 - Do No Harm", "character": "Kate", "line": "(to Jack, after he performs surgery) You're good, Jack. Really good."}
     ]
-  }, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
-},
-{
-  "source": "Kate Austen",
-  "target": "John Locke",
-  "seasons": { "1": {
-    "labels": ["The Enigmatic One", "The Hunter", "The Believer", "The Skilled", "The Mysterious"],
+  }, "2": {
+        "labels": ["The Leader", "The Protector", "The Hero"],
+        "judgment": "positivo",
+        "dialogues": [
+          {"episode": "2x01 - Man of Science, Man of Faith", "character": "Kate", "line": "(A Jack, appena svegli) 'Are you okay? What happened?'"},
+          {"episode": "2x03 - Orientation", "character": "Kate", "line": "(A Jack, dopo aver scoperto la botola) 'What do we do now, Jack?'"},
+          {"episode": "2x24 - Live Together, Die Alone, Part 2", "character": "Kate", "line": "(A Jack, con preoccupazione) 'Don't do this, Jack. Don't leave me.'"}
+        ]
+      }, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Kate Austen",
+      "target": "John Locke",
+      "seasons": { "1": {
+    "labels": ["The Mysterious Man", "The Hunter", "The Believer"],
     "judgment": "ambiguo",
     "dialogues": [
       {"episode": "1x04 - Walkabout", "character": "Kate", "line": "(to Jack, about Locke's hunting skills) He's good. Really good."},
       {"episode": "1x11 - All the Best Cowboys Have Daddy Issues", "character": "Kate", "line": "(to Locke, regarding his certainty about Ethan) You sound like you know something we don't."}
     ]
-  }, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
-},
-{
-  "source": "Kate Austen",
-  "target": "Man in black",
-  "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
-},
-{
-  "source": "Kate Austen",
-  "target": "Mr. Eko",
-  "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
-},
-{
-  "source": "Kate Austen",
-  "target": "Sayid Jarrah",
-  "seasons": { "1": {
-    "labels": ["The Analyst", "The Skilled", "The Trustworthy", "The Resourceful", "The Protector"],
+  }, "2": {
+        "labels": ["The Man of Faith", "The Believer", "The Hunter"],
+        "judgment": "ambiguo",
+        "dialogues": [
+          {"episode": "2x01 - Man of Science, Man of Faith", "character": "Kate", "line": "(A Locke, nella botola) 'What is it you think this button does, Locke?'"},
+          {"episode": "2x03 - Orientation", "character": "Kate", "line": "(A Locke, incredula) 'You seriously believe that pushing a button every 108 minutes is going to save the world?'"}
+        ]
+      }, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Kate Austen",
+      "target": "Man in black",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Kate Austen",
+      "target": "Mr. Eko",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {
+        "labels": [],
+        "judgment": "",
+        "dialogues": []
+      }, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Kate Austen",
+      "target": "Sayid Jarrah",
+      "seasons": { "1": {
+    "labels": ["The Analyst", "The Skilled", "The Trusted Ally", "The Resourceful"],
     "judgment": "positivo",
     "dialogues": [
       {"episode": "1x05 - White Rabbit", "character": "Kate", "line": "(to Jack, about Sayid) He knows what he's doing. You should trust him."},
       {"episode": "1x20 - Do No Harm", "character": "Kate", "line": "(to Sayid, appreciating his skills) You really are a jack of all trades, aren't you?"}
     ]
-  }, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
-},
-{
-  "source": "Kate Austen",
-  "target": "Sun-Hwa Kwon",
-  "seasons": { "1": {
-    "labels": ["The Quiet Observer", "The Confidant", "The Fellow Woman", "The Strong", "The Survivor"],
+  }, "2": {
+        "labels": ["The Interrogator", "The Skilled","The Trusted Ally"],
+        "judgment": "positivo",
+        "dialogues": [
+          {"episode": "2x14 - One of Them", "character": "Kate", "line": "(A Sayid, sull'interrogatorio di Henry Gale) 'You think you can get him to talk?'"} 
+          ]
+      }, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Kate Austen",
+      "target": "Sun-Hwa Kwon",
+      "seasons": { "1": {
+    "labels": ["The Confidant", "The Fellow Woman", "The Strong"],
     "judgment": "positivo",
     "dialogues": [
       {"episode": "1x06 - House of the Rising Sun", "character": "Sun", "line": "(in English, to Kate, revealing her secret) 'I speak English.' (Kate's reaction shows surprise and a new understanding)"},
       {"episode": "1x17 - ...In Translation", "character": "Kate", "line": "(to Sun, offering support) 'You don't have to put up with that, Sun. You're stronger than you think.'"}
     ]
-  }, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
-},
+  }, "2": {
+        "labels": ["The Confidant", "The Fellow Woman", "The Strong"],
+        "judgment": "positivo",
+        "dialogues": [
+          {"episode": "2x04 - Everybody Hates Hugo", "character": "Kate", "line": "(A Sun, sul giardino) 'You've made this place beautiful, Sun.'"},
+          {"episode": "2x07 - The Other 48 Days", "character": "Kate", "line": "(A Sun, con empatia) 'I know what it's like to keep secrets. You're doing great.'"}
+        ]
+      }, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
     {
       "source": "Man in black",
       "target": "Benjamin Linus",
@@ -969,17 +1534,32 @@
     {
       "source": "Mr. Eko",
       "target": "Benjamin Linus",
-      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {
+        "labels": [],
+        "judgment": "",
+        "dialogues": []
+      }, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
     },
     {
       "source": "Mr. Eko",
       "target": "Charlie Pace",
-      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {
+        "labels": ["The Lost Soul", "The Burdened"],
+        "judgment": "positivo",
+        "dialogues": [
+          {"episode": "2x10 - The 23rd Psalm", "character": "Mr. Eko", "line": "(A Charlie, dopo aver scoperto le statuette) 'You carry guilt. I can see it.'"},
+          {"episode": "2x10 - The 23rd Psalm", "character": "Mr. Eko", "line": "(A Charlie, mentre costruiscono la chiesa) 'Confess your sins, Charlie. It is the only way.'"}
+          ]
+      }, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
     },
     {
       "source": "Mr. Eko",
       "target": "Desmond Hume",
-      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {
+        "labels": [],
+        "judgment": "",
+        "dialogues": []
+      }, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
     },
     {
       "source": "Mr. Eko",
@@ -989,7 +1569,11 @@
     {
       "source": "Mr. Eko",
       "target": "Hugo 'Hurley' Reyes",
-      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {
+        "labels": [],
+        "judgment": "",
+        "dialogues": []
+      }, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
     },
     {
       "source": "Mr. Eko",
@@ -999,22 +1583,41 @@
     {
       "source": "Mr. Eko",
       "target": "James 'Sawyer' Ford",
-      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {
+        "labels": [],
+        "judgment": "*",
+        "dialogues": []
+      }, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
     },
     {
       "source": "Mr. Eko",
       "target": "Jack Shephard",
-      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {
+        "labels": [],
+        "judgment": "",
+        "dialogues": []
+      }, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
     },
     {
       "source": "Mr. Eko",
       "target": "John Locke",
-      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {
+        "labels": ["The Fellow Believer", "The Man of Faith", "The Shattered Believer"],
+        "judgment": "positivo",
+        "dialogues": [
+          {"episode": "2x9 - What Kate did", "character": "John Locke- Mr.Eko", "line": "**John Locke**: Somebody made this film, someone else cut this piece out. We crash. Two halves of the same plane fall on different parts of the island, you're over there and i'm over here, and now here's the missing piece. What are the odds? **Mr.Eko**: Don't mistake coincidence for fate."},
+          {"episode": "2x21 - ?", "character": "John Locke", "line": "(A Mr. Eko, sulla botola) **John Locke**: That's a joke. Rats in a maze, with no cheese **Mr.EKo**: It is work John. We are being tested. The reason to do it, is not because we're told to do so in a film **John Locke**: Well, then what is the reason? **Mr. Eko**: We do it because we believe we are meant to. Isn't that the reason you pushed it John?"}
+          ]
+      }, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
     },
     {
       "source": "Mr. Eko",
       "target": "Kate Austen",
-      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {
+        "labels": [],
+        "judgment": "",
+        "dialogues": []
+      }, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
     },
     {
       "source": "Mr. Eko",
@@ -1024,223 +1627,364 @@
     {
       "source": "Mr. Eko",
       "target": "Sayid Jarrah",
-      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {
+        "labels": [],
+        "judgment": "",
+        "dialogues": []
+      }, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
     },
     {
       "source": "Mr. Eko",
       "target": "Sun-Hwa Kwon",
-      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {
+        "labels": [],
+        "judgment": "",
+        "dialogues": []
+      }, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
     },
     {
-  "source": "Sayid Jarrah",
-  "target": "Desmond Hume",
-  "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
-},
-{
-  "source": "Sayid Jarrah",
-  "target": "Ethan Rom",
-  "seasons": { "1": {
-    "labels": ["The Villain", "The Other", "The Threat", "The Dangerous", "The Intruder"],
+      "source": "Sayid Jarrah",
+      "target": "Benjamin Linus",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {
+        "labels": ["The Deceiver","The Other"],
+        "judgment": "negativo",
+        "dialogues": [
+          {"episode": "2x14 - One of Them", "character": "Sayid", "line": "(A Henry Gale, con fredda determinazione) 'Tell me, where are the others?'"},
+          {"episode": "2x14 - One of Them", "character": "Sayid", "line": "(A Henry Gale) 'You are lying. I know it.'"},
+          {"episode": "2x17 - Lockdown", "character": "Sayid", "line": "(A Henry Gale, con rabbia) 'I will break you. I will make you talk.'"}
+        ]
+      }, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Sayid Jarrah",
+      "target": "Charlie Pace",
+      "seasons": { "1": {"labels": ["The Vulnerable", "The Good-hearted", "The Fellow Survivor"], "judgment": "positivo", "dialogues": [{
+    "episode": "1x07 - The Moth",
+    "character": "Kate Austen",
+    "line": "(to Jack, about Charlie) He's a mess, but he's got a good heart."
+  }]}, "2": {
+        "labels": ["The Vulnerable", "The Good-hearted", "The Fellow Survivor"],
+        "judgment": "positivo",
+        "dialogues": []
+      }, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Sayid Jarrah",
+      "target": "Desmond Hume",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {
+        "labels": ["The man in the Hatch"],
+        "judgment": "ambiguo",
+        "dialogues": [
+          {"episode": "2x01 - Man of Science, Man of Faith", "character": "Sayid", "line": "(A Desmond, nella botola) 'Explain this to me. What is this place?'"},
+          {"episode": "2x03 - Orientation", "character": "Sayid", "line": "(A Locke e Jack, su Desmond) 'He has been pushing a button for three years. There has to be a scientific explanation!'"}
+        ]
+      }, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Sayid Jarrah",
+      "target": "Ethan Rom",
+      "seasons": { "1": {
+    "labels": ["The Villain", "The Other", "The Intruder"],
     "judgment": "negativo",
     "dialogues": [
       {"episode": "1x11 - All the Best Cowboys Have Daddy Issues", "character": "Sayid", "line": "(to Jack, with determination) We have to find him, Jack. We have to stop him."}
     ]
-  }, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
-},
-{
-  "source": "Sayid Jarrah",
-  "target": "Hugo 'Hurley' Reyes",
-  "seasons": { "1": {"labels": ["The Good-hearted", "The Innocent", "The Trustworthy", "The Friend"], "judgment": "positivo", "dialogues": [{
+  }, "2": {
+        "labels": ["The Villain", "The Other", "The Intruder"],
+        "judgment": "negativo",
+        "dialogues": []
+      }, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Sayid Jarrah",
+      "target": "Hugo 'Hurley' Reyes",
+      "seasons": { "1": {"labels": ["The Good-hearted", "The Innocent", "The Trustworthy", "The Friend"], "judgment": "positivo", "dialogues": [{
     "episode": "1x04 - Walkabout",
     "character": "Sayid Jarrah",
     "line": "(to Hurley, calmly) Your presence is... calming, Hurley. Thank you."
-  }]}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
-},
-{
-  "source": "Sayid Jarrah",
-  "target": "Jacob",
-  "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
-},
-{
-  "source": "Sayid Jarrah",
-  "target": "James 'Sawyer' Ford",
-  "seasons": { "1": {
-    "labels": ["The Untrustworthy", "The Annoyance", "The Selfish", "The Manipulator", "The Antagonist"],
+  }]}, "2": {
+        "labels": ["The Good-hearted", "The Innocent", "The Trustworthy", "The Friend"],
+        "judgment": "positivo",
+        "dialogues": [
+          {"episode": "2x04 - Everybody Hates Hugo", "character": "Sayid", "line": "(Ad Hurley, con rassicurazione) 'Do not worry, Hurley. We will find out what is happening.'"}
+        ]
+      }, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Sayid Jarrah",
+      "target": "Jacob",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Sayid Jarrah",
+      "target": "James 'Sawyer' Ford",
+      "seasons": { "1": {
+    "labels": ["The Untrustworthy", "The Annoyance", "The Selfish"],
     "judgment": "negativo",
     "dialogues": [
       {"episode": "1x08 - Confidence Man", "character": "Sayid", "line": "(to Sawyer) Where is the truth, Sawyer? Where is the bloody truth?!"},
       {"episode": "1x16 - Outlaws", "character": "Sayid", "line": "(to Jack, talking about Sawyer) He cares only for himself. He always has."}
     ]
-  }, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
-},
-{
-  "source": "Sayid Jarrah",
-  "target": "Jack Shephard",
-  "seasons": { "1": {
-    "labels": ["The Leader", "The Trusted Ally", "The Doctor", "The Man of Action", "The Problem-solver"],
+  }, "2": {
+        "labels": ["The Untrustworthy", "The Annoyance", "The Selfish"],
+        "judgment": "negativo",
+        "dialogues": [
+          {"episode": "2x08 - Collision", "character": "Sayid", "line": "(A Jack, su Sawyer) 'He is a nuisance. And a liability.'"},
+          {"episode": "2x13 - The Long Con", "character": "Sayid", "line": "(A Jack, sulla rissa) 'He provoked it. He always does.'"}
+        ]
+      }, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Sayid Jarrah",
+      "target": "Jack Shephard",
+      "seasons": { "1": {
+    "labels": ["The Leader", "The Trusted Ally", "The Doctor", "The Hero"],
     "judgment": "positivo",
     "dialogues": [
       {"episode": "1x05 - White Rabbit", "character": "Sayid", "line": "(to Jack) I can lead the search party, Jack. I have experience."},
       {"episode": "1x11 - All the Best Cowboys Have Daddy Issues", "character": "Sayid", "line": "(talking about Jack) He knows something. He's connected to this island."}
     ]
-  }, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
-},
-{
-  "source": "Sayid Jarrah",
-  "target": "John Locke",
-  "seasons": { "1": {
-    "labels": ["The Mysterious Man", "The Man of Faith", "The Unpredictable", "The Enigmatic One", "The Island's Chosen"],
+  }, "2": {
+        "labels": ["The Leader", "The Trusted Ally", "The Doctor", "The Hero"],
+        "judgment": "positivo",
+        "dialogues": [
+          {"episode": "2x02 - Adrift", "character": "Sayid", "line": "(A Jack, dopo aver visto la botola) 'What do we do now, Jack? What is our next move?'"},
+          {"episode": "2x14 - One of Them", "character": "Sayid", "line": "(A Jack, riguardo a Henry Gale) 'I believe he is lying. And I will find out why.'"}
+        ]
+      }, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Sayid Jarrah",
+      "target": "John Locke",
+      "seasons": { "1": {
+    "labels": ["The Mysterious Man", "The Man of Faith", "The Hunter"],
     "judgment": "ambiguo",
     "dialogues": [
       {"episode": "1x09 - Solitary", "character": "Sayid - John","line":"**Sayid**: You hit me. You hit me over the head. Why? **Locke**: Because you were trying to send out a signal. And I didn't want you to. **Sayid**: Why not? **Locke**: Because we're here for a reason. And the Island doesn't want us to leave." },
       {"episode": "1x04 - Walkabout", "character": "Sayid", "line": "(to Jack, talking about Locke) He seems to know things. More than he lets on."},
       {"episode": "1x14 - Special", "character": "Sayid", "line": "(to Locke) What exactly is your interest in Walt, John?"}
     ]
-  }, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
-},
-{
-  "source": "Sayid Jarrah",
-  "target": "Kate Austen",
-  "seasons": { "1": {
-    "labels": ["The Trusted Ally", "The Resourceful", "The Brave", "The Capable", "The Intelligent"],
+  }, "2": {
+        "labels": ["The Mysterious Man", "The Man of Faith", "The Hunter"],
+        "judgment": "ambiguo",
+        "dialogues": [
+          {"episode": "2x01 - Man of Science, Man of Faith", "character": "Sayid", "line": "(A Locke, sulla botola) 'There must be a logical explanation for this. Your faith... it is not enough.'"},
+          {"episode": "2x10 - The 23rd Psalm", "character": "Sayid", "line": "(A Locke, sulla botola) 'Your belief, John, it blinds you to the truth of what this place is.'"}
+        ]
+      }, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Sayid Jarrah",
+      "target": "Kate Austen",
+      "seasons": { "1": {
+    "labels": ["The Trusted Ally"],
     "judgment": "positivo",
     "dialogues": [
       {"episode": "1x05 - White Rabbit", "character": "Sayid", "line": "(to Kate) You are very quick, Kate. That is good."},
       {"episode": "1x17 - ...In Translation", "character": "Sayid", "line": "(to Kate) I need your help. You are very good at this."}
     ]
-  }, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
-},
-{
-  "source": "Sayid Jarrah",
-  "target": "Man in black",
-  "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
-},
-{
-  "source": "Sayid Jarrah",
-  "target": "Mr. Eko",
-  "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
-},
-{
-  "source": "Sayid Jarrah",
-  "target": "Sun-Hwa Kwon",
-  "seasons": { "1": {
-    "labels": ["The Strong", "The Kind-hearted", "The Intelligent", "The Resilient", "The Quiet Observer"],
+  }, "2": {
+        "labels": ["The Trusted Ally"],
+        "judgment": "positivo",
+        "dialogues": [
+          {"episode": "2x14 - One of Them", "character": "Sayid", "line": "(A Kate, sul prigioniero) 'We need to be careful with him. You will help me.'"},
+          {"episode": "2x22 - Three Minutes", "character": "Sayid", "line": "(A Kate, mentre si preparano) 'Are you ready? We must be precise.'"}
+        ]
+      }, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Sayid Jarrah",
+      "target": "Man in black",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Sayid Jarrah",
+      "target": "Mr. Eko",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {
+        "labels": [],
+        "judgment": "",
+        "dialogues": []
+      }, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Sayid Jarrah",
+      "target": "Sun-Hwa Kwon",
+      "seasons": { "1": {
+    "labels": ["The Strong", "The Kind-hearted"],
     "judgment": "positivo",
     "dialogues": [
       {"episode": "1x17 - ...In Translation", "character": "Sayid", "line": "(to Sun) You are a very strong woman, Sun. Stronger than many here."}
     ]
-  }, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
-},
+  }, "2": {
+        "labels": ["The Strong", "The Kind-hearted"],
+        "judgment": "positivo",
+        "dialogues": [
+          {"episode": "2x04 - Everybody Hates Hugo", "character": "Sayid", "line": "(A Sun, sul suo giardino) 'It is a remarkable achievement, Sun. Truly.'"},
+          {"episode": "2x18 - Dave", "character": "Sayid", "line": "(A Sun, sul telefono) 'Your English is very good, Sun. You are very clever.'"}
+        ]
+      }, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+        {
+      "source": "Sun-Hwa Kwon",
+      "target": "Benjamin Linus",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {
+        "labels": [],
+        "judgment": "",
+        "dialogues": []
+      }, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
     {
-  "source": "Sun-Hwa Kwon",
-  "target": "Benjamin Linus",
-  "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
-},
-{
-  "source": "Sun-Hwa Kwon",
-  "target": "Charlie Pace",
-  "seasons": { "1": {"labels": ["The Vulnerable", "The Troubled", "The Fellow Survivor", "The Good-hearted"], "judgment": "positivo", "dialogues": [{
+      "source": "Sun-Hwa Kwon",
+      "target": "Charlie Pace",
+      "seasons": { "1": {"labels": ["The Vulnerable", "The Troubled", "The Fellow Survivor", "The Good-hearted"], "judgment": "positivo", "dialogues": [{
     "episode": "1x07 - The Moth",
     "character": "Sun-Hwa Kwon",
     "line": "(to Jin, in Korean, watching Charlie) He is not strong, but he tries. He is a good man."
-  }]}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
-},
-{
-  "source": "Sun-Hwa Kwon",
-  "target": "Desmond Hume",
-  "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
-},
-{
-  "source": "Sun-Hwa Kwon",
-  "target": "Ethan Rom",
-  "seasons": { "1": {"labels": ["The Threat", "The Dangerous", "The Other", "The Unseen Enemy"], "judgment": "negativo", "dialogues": [{
+  }]}, "2": {
+        "labels": ["The Vulnerable", "The Troubled", "The Fellow Survivor", "The Good-hearted"],
+        "judgment": "positivo",
+        "dialogues": [
+          {"episode": "2x10 - The 23rd Psalm", "character": "Sun", "line": "(A Claire, dopo che Charlie ha preso la statuetta) 'He is... lost, Claire. He needs help.'" }
+        ]
+      }, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Sun-Hwa Kwon",
+      "target": "Desmond Hume",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {
+        "labels": [],
+        "judgment": "",
+        "dialogues": []
+      }, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Sun-Hwa Kwon",
+      "target": "Ethan Rom",
+      "seasons": { "1": {"labels": ["The Villain", "The Other"], "judgment": "negativo", "dialogues": [{
     "episode": "1x11 - All the Best Cowboys Have Daddy Issues",
     "character": "Sun-Hwa Kwon",
     "line": "(to Jin, in Korean, after Claire's kidnapping) This man... he is not good. We must be careful."
-  }]}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
-},
-{
-  "source": "Sun-Hwa Kwon",
-  "target": "Hugo 'Hurley' Reyes",
-  "seasons": { "1": {"labels": ["The Kind-hearted", "The Gentle Giant", "The Humorous", "The Unassuming"], "judgment": "positivo", "dialogues": [{
+  }]}, "2": {"labels": ["The Villain", "The Other"], "judgment": "negativo", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Sun-Hwa Kwon",
+      "target": "Hugo 'Hurley' Reyes",
+      "seasons": { "1": {"labels": ["The Kind-hearted", "The Comic Relief", "The Friend"], "judgment": "positivo", "dialogues": [{
     "episode": "1x04 - Walkabout",
     "character": "Sun-Hwa Kwon",
     "line": "(to Jin, in Korean, watching Hurley) He brings a smile to faces. He is a good man."
-  }]}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
-},
-{
-  "source": "Sun-Hwa Kwon",
-  "target": "Jacob",
-  "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
-},
-{
-  "source": "Sun-Hwa Kwon",
-  "target": "James 'Sawyer' Ford",
-  "seasons": { "1": {
-    "labels": ["The Annoyance", "The Rude", "The Selfish", "The Troublemaker", "The Provocateur"],
+  }]}, "2": {
+        "labels": ["The Kind-hearted", "The Comic Relief", "The Friend"],
+        "judgment": "positivo",
+        "dialogues": [
+          {"episode": "2x04 - Everybody Hates Hugo", "character": "Sun", "line": "(A Hurley, in inglese, con gentilezza) 'You are a good man, Hurley. Don't let anyone tell you otherwise.'"}
+        ]
+      }, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Sun-Hwa Kwon",
+      "target": "Jacob",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Sun-Hwa Kwon",
+      "target": "James 'Sawyer' Ford",
+      "seasons": { "1": {
+    "labels": ["The Annoyance", "The Selfish", "The Troublemaker", "The Provocateur"],
     "judgment": "negativo",
     "dialogues": [
       {"episode": "1x04 - Walkabout", "character": "Sun", "line": "(in korean to Jin, her husband) He is a rude man. Do not listen to him."}]
-  }, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
-},
-{
-  "source": "Sun-Hwa Kwon",
-  "target": "Jack Shephard",
-  "seasons": { "1": {
-    "labels": ["The Leader", "The Doctor", "The Trustworthy", "The Responsible", "The Hopeful"],
+  }, "2": {
+        "labels": ["The Annoyance", "The Ally","The Selfish", "The Troublemaker"],
+        "judgment": "ambiguo",
+        "dialogues": [
+          {"episode": "2x08 - Collision", "character": "Sun", "line": "(A Jack, su Sawyer) 'He is very ill. He needs your help.'"},
+          {"episode": "2x13 - The Long Con", "character": "Sun", "line": "(A Sawyer, con stanchezza) 'Must you always be so... difficult?'"}
+        ]
+      }, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Sun-Hwa Kwon",
+      "target": "Jack Shephard",
+      "seasons": { "1": {
+    "labels": ["The Leader", "The Doctor", "The Trustworthy", "The Hero"],
     "judgment": "positivo",
     "dialogues": [
       {"episode": "1x01 - Pilot, Part 1", "character": "Sun", "line": "(in korean to Jin, talking about Jack) He is helping. He is a doctor."},
       {"episode": "1x08 - Confidence Man", "character": "Sun", "line": "(looking to Jack) He does not hurt people. He tries to heal them."}
     ]
-  }, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
-},
-{
-  "source": "Sun-Hwa Kwon",
-  "target": "John Locke",
-  "seasons": { "1": {
-    "labels": ["The Hunter", "The Mysterious Man", "The Knowledgeable", "The Island's Confidant", "The Practical"],
+  }, "2": {
+        "labels": ["The Leader", "The Doctor", "The Trustworthy", "The Hero"],
+        "judgment": "positivo",
+        "dialogues": [
+          {"episode": "2x01 - Man of Science, Man of Faith", "character": "Sun", "line": "(A Jin, in coreano, mentre Jack entra nella botola) 'Lui è il dottore. Si prenderà cura di loro.'"},
+          {"episode": "2x08 - Collision", "character": "Sun", "line": "(A Jack, disperata per Jin) 'Please, Jack. You must help him.'" }
+        ]
+      }, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Sun-Hwa Kwon",
+      "target": "John Locke",
+      "seasons": { "1": {
+    "labels": ["The Hunter", "The Mysterious Man", "The Island's Voice"],
     "judgment": "ambiguo",
     "dialogues": [
       {"episode": "1x04 - Walkabout", "character": "Sun", "line": "(in korean to Jin, talking about Locke) He knows this island. He knows how to get food."}
       ]
-  }, "2": {"labels": ["The Hunter", "The Mysterious Man", "The Unpredictable", "The Enlightened", "The Island's Voice"], "judgment": "positivo", "dialogues": [
+  }, "2": {"labels": ["The Hunter", "The Believer", "The Island's Voice"], "judgment": "positivo", "dialogues": [
       {"episode": "2x05 - ...And found", "character": "Sun-John Locke", "line": "**Sun**: I don’t think I’ve ever seen you angry. **John**: Oh, I used to get angry—frustrated, too. **Sun**: You’re not frustrated any more? **John**: I’m not lost any more. **Sun**: How did you do that? **John**: The same way anything lost gets found. I stopped looking."}
     ]}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
-},
-{
-  "source": "Sun-Hwa Kwon",
-  "target": "Kate Austen",
-  "seasons": { "1": {
-    "labels": ["The Trusted Ally", "The Strong", "The Independent", "The Empathetic", "The Confidant"],
+    },
+    {
+      "source": "Sun-Hwa Kwon",
+      "target": "Kate Austen",
+      "seasons": { "1": {
+    "labels": ["The Trusted Ally", "The Strong", "The Confidant"],
     "judgment": "positivo",
     "dialogues": [
       {"episode": "1x06 - House of the Rising Sun", "character": "Sun", "line": "(to Kate) I speak English."}]
-  }, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
-},
-{
-  "source": "Sun-Hwa Kwon",
-  "target": "Man in black",
-  "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
-},
-{
-  "source": "Sun-Hwa Kwon",
-  "target": "Mr. Eko",
-  "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
-},
-{
-  "source": "Sun-Hwa Kwon",
-  "target": "Sayid Jarrah",
-  "seasons": { "1": {
-    "labels": ["The Skilled", "The Resourceful", "The Protector", "The Reliable"],
+  }, "2": {
+        "labels": ["The Trusted Ally", "The Strong", "The Confidant", "The Friend"],
+        "judgment": "positivo",
+        "dialogues": [
+          {"episode": "2x04 - Everybody Hates Hugo", "character": "Sun", "line": "(A Kate, con un sorriso) 'My garden is good. It is good for the soul.'"},
+          {"episode": "2x07 - The Other 48 Days", "character": "Sun", "line": "(A Kate, parlando della gravidanza) 'I am afraid, Kate. Very afraid.'"}
+        ]
+      }, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Sun-Hwa Kwon",
+      "target": "Man in black",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Sun-Hwa Kwon",
+      "target": "Mr. Eko",
+      "seasons": { "1": {"labels": [], "judgment": "", "dialogues": []}, "2": {
+        "labels": [],
+        "judgment": "",
+        "dialogues": []
+      }, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
+    {
+      "source": "Sun-Hwa Kwon",
+      "target": "Sayid Jarrah",
+      "seasons": { "1": {
+    "labels": ["The Skilled", "The Resourceful", "The Reliable"],
     "judgment": "positivo",
     "dialogues": [
       {"episode": "1x18 - Numbers",
       "character": "Sun-Hwa Kwon",
       "line": "(to Jin, in Korean, after Sayid repairs the transceiver) He is very smart. He can fix anything."
       }]
-  }, "2": {"labels": [], "judgment": "", "dialogues": []}, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
-},
+  }, "2": {
+        "labels": ["The Skilled", "The Resourceful", "The Reliable"],
+        "judgment": "positivo",
+        "dialogues": [
+          {"episode": "2x18 - Dave", "character": "Sun", "line": "(A Sayid, con rispetto) 'You fixed it. Thank you, Sayid.'"}
+        ]
+      }, "3": {"labels": [], "judgment": "", "dialogues": []}, "4": {"labels": [], "judgment": "", "dialogues": []}, "5": {"labels": [], "judgment": "", "dialogues": []}, "6": {"labels": [], "judgment": "", "dialogues": []} }
+    },
     {
       "source": "Implicit Reader",
       "target": "Benjamin Linus",
