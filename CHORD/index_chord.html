@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualizzazione Relazioni Personaggi - LOST</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Visualizzazione Relazioni Personaggi - LOST</h1>
+        <div class="controls">
+            <select id="season-selector">
+                <option value="1">Stagione 1</option>
+            </select>
+            <button id="zoom-in">Zoom +</button>
+            <button id="zoom-out">Zoom -</button>
+            <button id="zoom-reset">Reset</button>
+        </div>
+    </div>
+
+    <div class="visualization-container">
+        <svg id="visualization" viewBox="0 0 800 600">
+            <g id="zoom-group"></g>
+        </svg>
+        
+        <div id="info-panel" class="info-panel">
+            <strong>Istruzioni:</strong><br>
+            Clicca su un personaggio per evidenziare le sue relazioni.<br>
+            Clicca su una label interna per evidenziare solo gli archi che la puntano.<br>
+            <span style="color: #ff6b6b;">Rosso</span>: Archi in uscita<br>
+            <span style="color: #4fc3f7;">Blu</span>: Archi in entrata<br>
+            <br>
+            <strong>Controlli:</strong><br>
+            • Rotella mouse: Zoom al cursore<br>
+            • Trascina: Pan<br>
+            • Bottoni: Zoom controlli<br>
+            • Selettore: Cambia stagione
+        </div>
+    </div>
+
+    <script src="chord.js"></script>
+</body>
+</html>

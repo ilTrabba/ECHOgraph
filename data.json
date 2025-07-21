@@ -2178,36 +2178,16 @@
           "inherited_labels": []
         },
         "2": {
-          "labels": [
-            "The Vulnerable",
-            "The Obstacle",
-            "The Annoyance"
-          ],
-          "judgment": "negative",
-          "dialogues": [
-            {
-              "episode": "",
-              "character": "",
-              "line": ""
-            }
-          ],
-          "inherited_labels": [["The Vulnerable",1],["The Obstacle",1],["The Annoyance",1]]
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         },
         "3": {
-          "labels": [
-            "The Vulnerable",
-            "The Obstacle",
-            "The Annoyance"
-          ],
-          "judgment": "negative",
-          "dialogues": [
-            {
-              "episode": "",
-              "character": "",
-              "line": ""
-            }
-          ],
-          "inherited_labels": [["The Vulnerable",1],["The Obstacle",1],["The Annoyance",1]]
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         },
         "4": {
           "labels": [],
@@ -2417,34 +2397,16 @@
           "inherited_labels": []
         },
         "2": {
-          "labels": [
-            "The Threat",
-            "The Obstacle"
-          ],
-          "judgment": "negative",
-          "dialogues": [
-            {
-              "episode": "",
-              "character": "",
-              "line": ""
-            }
-          ],
-          "inherited_labels": [["The Threat",1],["The Obstacle",1]]
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         },
         "3": {
-          "labels": [
-            "The Threat",
-            "The Obstacle"
-          ],
-          "judgment": "negative",
-          "dialogues": [
-            {
-              "episode": "",
-              "character": "",
-              "line": ""
-            }
-          ],
-          "inherited_labels": [["The Threat",1],["The Obstacle",1]]
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         },
         "4": {
           "labels": [],
