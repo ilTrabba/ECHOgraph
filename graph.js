@@ -533,7 +533,7 @@ d3.json("data.json").then(data => {
 
     let tooltipContent;
     if (selectedSeasons.size > 1) {
-      // Multi-chapter mode: show boxes side by side
+      // Multi-chapter mode: show boxes side by side with inheritance info
       const seasonsArray = Array.from(selectedSeasons).sort();
       const boxes = seasonsArray.map(season => {
         const link = rawLinkData.find(l => {
@@ -544,17 +544,40 @@ d3.json("data.json").then(data => {
         
         const seasonData = link?.seasons?.[season];
         const labels = seasonData?.labels || [];
-        const labelText = labels.length > 0 ? labels.join('<br>') : 'No opinion';
         
-        return `<div style="display: inline-block; margin-right: 10px; padding: 5px; border: 1px solid #ccc; border-radius: 4px; background: #f9f9f9;">
+        let labelText = 'No opinion';
+        if (labels.length > 0) {
+          // Crea una mappa per le label ereditate
+          const inheritedMap = new Map();
+          if (seasonData.inherited_labels && Array.isArray(seasonData.inherited_labels)) {
+            seasonData.inherited_labels.forEach(([label, originalSeason]) => {
+              inheritedMap.set(label.toLowerCase(), originalSeason);
+            });
+          }
+          
+          // Processa le label con informazioni di ereditarietà
+          const processedLabels = labels.map(label => {
+            const labelKey = label.toLowerCase();
+            if (inheritedMap.has(labelKey)) {
+              return `${label} (chapter ${inheritedMap.get(labelKey)})`;
+            }
+            return label;
+          });
+          
+          // Unisci le label con <br> invece che con virgole per metterle una per riga
+          labelText = processedLabels.join('<br>');
+        }
+        
+        return `<div style="display: inline-block; margin-right: 10px; padding: 5px; border: 1px solid #ccc; border-radius: 4px; background: #f9f9f9; vertical-align: top;">
           <strong>Ch.${season}</strong><br>
           ${labelText}
         </div>`;
       }).join('');
       
-      tooltipContent = `<div style="display: flex; flex-wrap: nowrap; overflow-x: auto;">${boxes}</div>`;
+      // Usa display: flex con nowrap per forzare i box sempre in orizzontale
+      tooltipContent = `<div style="display: flex; flex-wrap: nowrap; white-space: nowrap;">${boxes}</div>`;
     } else {
-      // Single chapter mode: original behavior
+      // Single chapter mode: uses getOpinions which already has inheritance info
       tooltipContent = opinionData.labels.join("<br>");
     }
 
@@ -564,7 +587,7 @@ d3.json("data.json").then(data => {
       .style("left", `${x}px`)
       .style("top", `${y - 40}px`);
   });
-
+  
   node.on("mouseout", () => {
     tooltip.classed("hidden", true);
   });
@@ -759,13 +782,31 @@ d3.json("data.json").then(data => {
         // If multiple seasons selected, combine labels from all seasons
         if (selectedSeasons.size > 1) {
           const allLabels = [];
-          let hasRealOpinion = false; // Traccia se ci sono opinioni reali
+          let hasRealOpinion = false;
           const seasonsArray = Array.from(selectedSeasons).sort();
           seasonsArray.forEach(season => {
             const seasonData = link.seasons?.[season];
             if (seasonData && seasonData.labels && seasonData.labels.length > 0) {
-              allLabels.push(`Chapter ${season}: ${seasonData.labels.join(', ')}`);
-              hasRealOpinion = true; // Trovata almeno una opinione reale
+              // Crea una mappa per le label ereditate
+              const inheritedMap = new Map();
+              if (seasonData.inherited_labels && Array.isArray(seasonData.inherited_labels)) {
+                seasonData.inherited_labels.forEach(([label, originalSeason]) => {
+                  // Confronto case-insensitive per gestire variazioni di maiuscole/minuscole
+                  inheritedMap.set(label.toLowerCase(), originalSeason);
+                });
+              }
+              
+              // Processa le label con informazioni di ereditarietà
+              const processedLabels = seasonData.labels.map(label => {
+                const labelKey = label.toLowerCase();
+                if (inheritedMap.has(labelKey)) {
+                  return `${label} (chapter ${inheritedMap.get(labelKey)})`;
+                }
+                return label;
+              });
+              
+              allLabels.push(`Chapter ${season}: ${processedLabels.join(', ')}`);
+              hasRealOpinion = true;
             } else {
               allLabels.push(`Chapter ${season}: No opinion`);
             }
@@ -773,11 +814,29 @@ d3.json("data.json").then(data => {
           // Restituisci null se non ci sono opinioni reali in nessun capitolo
           return hasRealOpinion ? { labels: allLabels } : null;
         } else if (selectedSeasons.size === 1) {
-          // Single season - original behavior
+          // Single season - original behavior with inheritance info
           const season = Array.from(selectedSeasons)[0];
           const seasonData = link.seasons?.[season];
-          if (seasonData && seasonData.labels) {
-            return { labels: seasonData.labels };
+          if (seasonData && seasonData.labels && seasonData.labels.length > 0) {
+            // Crea una mappa per le label ereditate
+            const inheritedMap = new Map();
+            if (seasonData.inherited_labels && Array.isArray(seasonData.inherited_labels)) {
+              seasonData.inherited_labels.forEach(([label, originalSeason]) => {
+                // Confronto case-insensitive per gestire variazioni di maiuscole/minuscole
+                inheritedMap.set(label.toLowerCase(), originalSeason);
+              });
+            }
+            
+            // Processa le label con informazioni di ereditarietà
+            const processedLabels = seasonData.labels.map(label => {
+              const labelKey = label.toLowerCase();
+              if (inheritedMap.has(labelKey)) {
+                return `${label} (chapter ${inheritedMap.get(labelKey)})`;
+              }
+              return label;
+            });
+            
+            return { labels: processedLabels };
           }
         }
       }
