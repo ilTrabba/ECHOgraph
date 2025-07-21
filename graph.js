@@ -12,7 +12,7 @@ const colorMap = {
 
 let activeNodeId = null;
 let rawLinkData = null;
-let selectedSeason = "1";
+let selectedSeasons = new Set(); // Changed to support multiple selection
 let selectedLinkId = null;
 let graphData = null;
 let simulation = null;
@@ -27,18 +27,26 @@ const seasonDotContainer = d3.select("#season-dots");
 
 for (let i = 1; i <= 6; i++) {
   seasonDotContainer.append("div")
-    .attr("class", "season-dot" + (i === 1 ? " selected" : ""))
+    .attr("class", "season-dot") // No initial selection
     .attr("data-season", i)
     .text(i)
     .on("click", function () {
-      selectedSeason = String(i);
+      const season = String(i);
+      
+      if (selectedSeasons.has(season)) {
+        // Deselect if already selected
+        selectedSeasons.delete(season);
+        d3.select(this).classed("selected", false);
+      } else {
+        // Select if not selected
+        // If no seasons selected, allow single selection
+        // If seasons already selected, allow multiple selection
+        selectedSeasons.add(season);
+        d3.select(this).classed("selected", true);
+      }
 
-      // Aggiorna stile dot selezionato
-      d3.selectAll(".season-dot").classed("selected", false);
-      d3.select(this).classed("selected", true);
-
-      // Aggiorna tutto in base alla stagione
-      updateGraphForSeason(selectedSeason);
+      // Update graph for selected seasons
+      updateGraphForSeasons();
     });
 }
 
@@ -59,23 +67,22 @@ const defs = svg.append("defs");
     .attr("fill", colorMap[judgment]);
 });
 
-// Funzione per aggiornare il grafo per la stagione
-function updateGraphForSeason(season) {
-  selectedSeason = season;
-  
-  // Reset dello stato
+// Function to update graph for selected seasons
+function updateGraphForSeasons() {
+  // Reset state
   activeNodeId = null;
   selectedLinkId = null;
   
-  // Chiudi dialogue box e rimuovi donut charts
+  // Close dialogue box and remove donut charts
   dialogueBox.html("").classed("visible", false);
   svg.selectAll(".donut-chart").remove();
   svg.selectAll(".donut-tooltip-group").remove();
+  svg.selectAll(".segmented-links").remove();
   
-  // Aggiorna visibilità e stile dei link per la nuova stagione
+  // Update link visibility and style for selected seasons
   updateLinkVisibility();
   
-  // Ripristina opacità dei nodi
+  // Restore node opacity
   if (node) {
     node.select("circle").attr("opacity", 1);
     node.select("text").attr("opacity", 1);
@@ -84,59 +91,239 @@ function updateGraphForSeason(season) {
     link.attr("opacity", 1);
   }
   
-  // Nascondi tooltip se visibile
+  // Hide tooltip if visible
   tooltip.classed("hidden", true);
 }
 
-// Funzione per aggiornare la visibilità dei link
+// Function to update link visibility for multiple seasons
 function updateLinkVisibility() {
   if (!link) return;
   
-  link
-    .attr("display", d => {
-      const seasonData = d.seasons?.[selectedSeason];
-      return (seasonData && seasonData.judgment && seasonData.judgment.trim() !== "") ? "inline" : "none";
-    })
-    .attr("stroke", d => {
-      const seasonData = d.seasons?.[selectedSeason];
-      return seasonData?.judgment ? colorMap[seasonData.judgment] : "#999";
-    })
-    .attr("marker-end", d => {
-      const seasonData = d.seasons?.[selectedSeason];
-      return seasonData?.judgment ? `url(#arrow-${seasonData.judgment})` : "";
-    });
+  // Remove any existing segmented links
+  svg.selectAll(".segmented-link").remove();
+  
+  // If no seasons selected, hide all links
+  if (selectedSeasons.size === 0) {
+    link.attr("display", "none");
+    return;
+  }
+  
+  // For each link, check if it has any non-empty judgment in selected seasons
+  link.attr("display", d => {
+    let hasJudgment = false;
+    for (const season of selectedSeasons) {
+      const seasonData = d.seasons?.[season];
+      if (seasonData && seasonData.judgment && seasonData.judgment.trim() !== "") {
+        hasJudgment = true;
+        break;
+      }
+    }
+    return hasJudgment ? "inline" : "none";
+  });
+  
+  // If only one season selected, use simple coloring
+  if (selectedSeasons.size === 1) {
+    const season = Array.from(selectedSeasons)[0];
+    link
+      .attr("stroke", d => {
+        const seasonData = d.seasons?.[season];
+        return seasonData?.judgment ? colorMap[seasonData.judgment] || colorMap.neutral : colorMap.neutral;
+      })
+      .attr("marker-end", d => {
+        const seasonData = d.seasons?.[season];
+        return seasonData?.judgment ? `url(#arrow-${seasonData.judgment})` : `url(#arrow-neutral)`;
+      });
+  } else if (selectedSeasons.size > 1) {
+    // Multiple seasons - create segmented paths
+    createSegmentedLinks();
+    // Hide original links when segmented
+    link.attr("display", "none");
+  }
 }
 
-// Funzione per configurare gli event listener sui link
+// Function to create segmented links for multi-chapter visualization
+function createSegmentedLinks() {
+  const seasonsArray = Array.from(selectedSeasons).sort();
+  const segmentCount = seasonsArray.length;
+  
+  // Get visible links data
+  const visibleLinks = link.data().filter(d => {
+    let hasJudgment = false;
+    for (const season of selectedSeasons) {
+      const seasonData = d.seasons?.[season];
+      if (seasonData && seasonData.judgment && seasonData.judgment.trim() !== "") {
+        hasJudgment = true;
+        break;
+      }
+    }
+    return hasJudgment;
+  });
+  
+  const segmentedGroup = svg.append("g").attr("class", "segmented-links");
+  
+  visibleLinks.forEach(linkData => {
+    const sx = linkData.source.x, sy = linkData.source.y;
+    const tx = linkData.target.x, ty = linkData.target.y;
+    
+    // Determine if this is a curved link (bidirectional)
+    const sourceId = linkData.source.id || linkData.source;
+    const targetId = linkData.target.id || linkData.target;
+    const isCurved = linkData._isCurved;
+    
+    seasonsArray.forEach((season, index) => {
+      const seasonData = linkData.seasons?.[season];
+      const judgment = seasonData?.judgment || "";
+      const color = judgment ? (colorMap[judgment] || colorMap.neutral) : colorMap.neutral;
+      
+      // Calculate segment path
+      let segmentPath;
+      if (isCurved && linkData._ctrlPoint) {
+        // For curved links, create segments along the curve
+        const t1 = index / segmentCount;
+        const t2 = (index + 1) / segmentCount;
+        const ctrlX = linkData._ctrlPoint.x;
+        const ctrlY = linkData._ctrlPoint.y;
+        
+        // Calculate points along quadratic bezier curve
+        const startX = (1-t1)*(1-t1)*sx + 2*(1-t1)*t1*ctrlX + t1*t1*tx;
+        const startY = (1-t1)*(1-t1)*sy + 2*(1-t1)*t1*ctrlY + t1*t1*ty;
+        const endX = (1-t2)*(1-t2)*sx + 2*(1-t2)*t2*ctrlX + t2*t2*tx;
+        const endY = (1-t2)*(1-t2)*sy + 2*(1-t2)*t2*ctrlY + t2*t2*ty;
+        
+        // Control point for this segment
+        const segCtrlX = (1-(t1+t2)/2)*(1-(t1+t2)/2)*sx + 2*(1-(t1+t2)/2)*((t1+t2)/2)*ctrlX + ((t1+t2)/2)*((t1+t2)/2)*tx;
+        const segCtrlY = (1-(t1+t2)/2)*(1-(t1+t2)/2)*sy + 2*(1-(t1+t2)/2)*((t1+t2)/2)*ctrlY + ((t1+t2)/2)*((t1+t2)/2)*ty;
+        
+        segmentPath = `M${startX},${startY} Q${segCtrlX},${segCtrlY} ${endX},${endY}`;
+      } else {
+        // For straight links, create linear segments
+        const startX = sx + (tx - sx) * (index / segmentCount);
+        const startY = sy + (ty - sy) * (index / segmentCount);
+        const endX = sx + (tx - sx) * ((index + 1) / segmentCount);
+        const endY = sy + (ty - sy) * ((index + 1) / segmentCount);
+        
+        segmentPath = `M${startX},${startY}L${endX},${endY}`;
+      }
+      
+      // Create the segment path
+      const segment = segmentedGroup.append("path")
+        .attr("class", "segmented-link")
+        .attr("d", segmentPath)
+        .attr("stroke", color)
+        .attr("stroke-width", 2)
+        .attr("fill", "none")
+        .attr("opacity", activeNodeId ? (sourceId === activeNodeId ? 1 : 0.01) : 1)
+        .style("cursor", "pointer")
+        .datum({
+          ...linkData,
+          segment: {
+            season: season,
+            seasonData: seasonData,
+            index: index
+          }
+        });
+      
+      // Add arrow marker only to the last segment
+      if (index === segmentCount - 1 && judgment) {
+        segment.attr("marker-end", `url(#arrow-${judgment})`);
+      }
+      
+      // Add click handler for segment
+      segment.on("click", function(event, d) {
+        if (!activeNodeId) return;
+        
+        const sourceId = typeof d.source === "object" ? d.source.id : d.source;
+        if (sourceId !== activeNodeId) return;
+        
+        const segmentSeason = d.segment.season;
+        const segmentSeasonData = d.segment.seasonData;
+        
+        if (segmentSeasonData && segmentSeasonData.judgment && segmentSeasonData.judgment.trim() !== "") {
+          // Show dialogue for this specific season
+          showDialogueForLink(d, segmentSeasonData);
+        } else {
+          // Show "no opinion" message
+          showNoOpinionMessage(d, segmentSeason);
+        }
+        
+        event.stopPropagation();
+      });
+    });
+  });
+}
+
+// Function to show "no opinion" message for neutral segments
+function showNoOpinionMessage(linkData, season) {
+  let sx = linkData.source.x, sy = linkData.source.y, tx = linkData.target.x, ty = linkData.target.y;
+  let cx = (sx + tx) / 2, cy = (sy + ty) / 2;
+
+  if (linkData._isCurved && linkData._ctrlPoint) {
+    cx = linkData._ctrlPoint.x;
+    cy = linkData._ctrlPoint.y;
+  }
+
+  const svgRect = svg.node().getBoundingClientRect();
+  const pageX = svgRect.left + cx;
+  const pageY = svgRect.top + cy;
+
+  dialogueBox
+    .html(`<em>Nessuna opinione presente nel capitolo ${season}</em>`)
+    .style("left", `${pageX}px`)
+    .style("top", `${pageY}px`)
+    .classed("visible", true);
+}
+
+// Function to configure event listeners on links
 function setupLinkClickHandlers(showDialogueCallback) {
   if (!link) return;
   
   link.on("click", function (event, d) {
-    // Permetti click sui link solo se siamo in modalità POV
+    // Allow click on links only in POV mode
     if (!activeNodeId) return;
 
     const sourceId = typeof d.source === "object" ? d.source.id : d.source;
     const targetId = typeof d.target === "object" ? d.target.id : d.target;
 
-    // Permetti click solo sui link che partono dal nodo attivo
+    // Allow click only on links from the active node
     if (sourceId !== activeNodeId) return;
 
-    // Verifica che il link sia visibile per la stagione corrente
-    const seasonData = d.seasons?.[selectedSeason];
-    if (!seasonData || !seasonData.judgment || seasonData.judgment.trim() === "") return;
+    // If multiple seasons selected, need to determine which segment was clicked
+    if (selectedSeasons.size > 1) {
+      // For now, show dialogue for first season with judgment
+      // TODO: Implement segment-based clicking
+      for (const season of selectedSeasons) {
+        const seasonData = d.seasons?.[season];
+        if (seasonData && seasonData.judgment && seasonData.judgment.trim() !== "") {
+          const linkKey = `${sourceId}->${targetId}-${season}`;
+          
+          if (selectedLinkId === linkKey) {
+            dialogueBox.html("").classed("visible", false);
+            selectedLinkId = null;
+            return;
+          }
 
-    const linkKey = `${sourceId}->${targetId}-${selectedSeason}`;
-    
-    // Se clicco sullo stesso link, chiudi il dialogue box
-    if (selectedLinkId === linkKey) {
-      dialogueBox.html("").classed("visible", false);
-      selectedLinkId = null;
-      return;
+          showDialogueCallback(d, seasonData);
+          selectedLinkId = linkKey;
+          return;
+        }
+      }
+    } else if (selectedSeasons.size === 1) {
+      // Single season - original behavior
+      const season = Array.from(selectedSeasons)[0];
+      const seasonData = d.seasons?.[season];
+      if (!seasonData || !seasonData.judgment || seasonData.judgment.trim() === "") return;
+
+      const linkKey = `${sourceId}->${targetId}-${season}`;
+      
+      if (selectedLinkId === linkKey) {
+        dialogueBox.html("").classed("visible", false);
+        selectedLinkId = null;
+        return;
+      }
+
+      showDialogueCallback(d, seasonData);
+      selectedLinkId = linkKey;
     }
-
-    // Mostra il dialogue box per il nuovo link
-    showDialogueCallback(d, seasonData);
-    selectedLinkId = linkKey;
   });
 }
 
@@ -258,9 +445,36 @@ d3.json("data.json").then(data => {
     const x = svgRect.left + matrix.e;
     const y = svgRect.top + matrix.f;
 
+    let tooltipContent;
+    if (selectedSeasons.size > 1) {
+      // Multi-chapter mode: show boxes side by side
+      const seasonsArray = Array.from(selectedSeasons).sort();
+      const boxes = seasonsArray.map(season => {
+        const link = rawLinkData.find(l => {
+          const s = l.source.id || l.source;
+          const t = l.target.id || l.target;
+          return s === activeNodeId && t === d.id;
+        });
+        
+        const seasonData = link?.seasons?.[season];
+        const labels = seasonData?.labels || [];
+        const labelText = labels.length > 0 ? labels.join(', ') : 'No opinion';
+        
+        return `<div style="display: inline-block; margin-right: 10px; padding: 5px; border: 1px solid #ccc; border-radius: 4px; background: #f9f9f9;">
+          <strong>Ch.${season}</strong><br>
+          ${labelText}
+        </div>`;
+      }).join('');
+      
+      tooltipContent = `<div style="display: flex; flex-wrap: wrap;">${boxes}</div>`;
+    } else {
+      // Single chapter mode: original behavior
+      tooltipContent = opinionData.labels.join("<br>");
+    }
+
     tooltip
       .classed("hidden", false)
-      .html(opinionData.labels.join("<br>"))
+      .html(tooltipContent)
       .style("left", `${x}px`)
       .style("top", `${y - 40}px`);
   });
@@ -272,9 +486,9 @@ d3.json("data.json").then(data => {
   // Inizializza la visibilità dei link per la stagione corrente
   updateLinkVisibility();
 
-  // ANIMAZIONE: aggiorna posizioni durante la simulazione
+  // ANIMATION: update positions during simulation
   simulation.on("tick", () => {
-    // Costruisci una mappa per individuare i link bidirezionali
+    // Build map to identify bidirectional links
     const bidir = {};
     links.forEach(link => {
       const a = (link.source.id || link.source);
@@ -296,7 +510,7 @@ d3.json("data.json").then(data => {
       const b = (d.target.id || d.target);
       
       if (bidir[`${a}->${b}`]) {
-        // CURVA per link bidirezionali
+        // CURVE for bidirectional links
         const curveOffset = 35;
         const dx = tx - sx;
         const dy = ty - sy;
@@ -320,7 +534,13 @@ d3.json("data.json").then(data => {
 
     node.attr("transform", d => `translate(${d.x},${d.y})`);
 
-    // Mantieni le donut chart agganciate ai nodi
+    // Update segmented links if they exist
+    if (selectedSeasons.size > 1) {
+      svg.selectAll(".segmented-link").remove();
+      createSegmentedLinks();
+    }
+
+    // Keep donut charts attached to nodes
     d3.selectAll(".donut-chart").each(function() {
       const nodeId = d3.select(this).attr("data-node-id");
       const n = nodes.find(n => n.id === nodeId);
@@ -373,14 +593,15 @@ d3.json("data.json").then(data => {
   }
 
   function toggleHighlight(nodeId) {
-    // Chiudi dialogue box, donut charts e tooltip
+    // Close dialogue box, donut charts and tooltip
     d3.selectAll(".donut-chart").remove();
     d3.selectAll(".donut-tooltip-group").remove();
+    svg.selectAll(".segmented-links").remove();
     dialogueBox.html("").classed("visible", false);
     selectedLinkId = null;
     
     if (activeNodeId === nodeId) {
-      // Disattiva POV
+      // Deactivate POV
       node.select("circle").attr("opacity", 1);
       node.select("text").attr("opacity", 1);
       link.attr("opacity", 1);
@@ -390,25 +611,28 @@ d3.json("data.json").then(data => {
       return;
     }
     
-    // Attiva POV
+    // Activate POV
     activeNodeId = nodeId;
     selectedLinkId = null;
     
-    // Trova i nodi connessi per la stagione corrente
+    // Find connected nodes for selected seasons
     const connectedTargets = new Set();
     rawLinkData.forEach(l => {
       const sourceId = l.source.id || l.source;
       const targetId = l.target.id || l.target;
       
       if (sourceId === nodeId) {
-        const seasonData = l.seasons?.[selectedSeason];
-        if (seasonData && seasonData.judgment && seasonData.judgment.trim() !== "") {
-          connectedTargets.add(targetId);
+        for (const season of selectedSeasons) {
+          const seasonData = l.seasons?.[season];
+          if (seasonData && seasonData.judgment && seasonData.judgment.trim() !== "") {
+            connectedTargets.add(targetId);
+            break; // Found at least one connection, add target
+          }
         }
       }
     });
 
-    // Aggiorna opacità dei nodi
+    // Update node opacity
     node.select("circle").attr("opacity", d =>
       d.id === nodeId || connectedTargets.has(d.id) ? 1 : 0.3
     );
@@ -416,17 +640,29 @@ d3.json("data.json").then(data => {
       d.id === nodeId || connectedTargets.has(d.id) ? 1 : 0.1
     );
     
-    // Aggiorna opacità dei link
+    // Update link opacity
     link.attr("opacity", d => {
       const sourceId = d.source.id || d.source;
       if (sourceId === nodeId) {
-        const seasonData = d.seasons?.[selectedSeason];
-        return (seasonData && seasonData.judgment && seasonData.judgment.trim() !== "") ? 1 : 0.01;
+        // Check if any selected season has judgment
+        for (const season of selectedSeasons) {
+          const seasonData = d.seasons?.[season];
+          if (seasonData && seasonData.judgment && seasonData.judgment.trim() !== "") {
+            return 1;
+          }
+        }
+        return 0.01;
       }
       return 0.01;
     });
     
     updateLinkVisibility();
+    
+    // Update segmented link opacity if they exist
+    svg.selectAll(".segmented-link").attr("opacity", d => {
+      const sourceId = d.source.id || d.source;
+      return sourceId === nodeId ? 1 : 0.01;
+    });
   }
 
   function getOpinions(fromId, toId) {
@@ -434,9 +670,26 @@ d3.json("data.json").then(data => {
       const s = link.source.id || link.source;
       const t = link.target.id || link.target;
       if (s === fromId && t === toId) {
-        const seasonData = link.seasons?.[selectedSeason];
-        if (seasonData && seasonData.labels) {
-          return { labels: seasonData.labels };
+        // If multiple seasons selected, combine labels from all seasons
+        if (selectedSeasons.size > 1) {
+          const allLabels = [];
+          const seasonsArray = Array.from(selectedSeasons).sort();
+          seasonsArray.forEach(season => {
+            const seasonData = link.seasons?.[season];
+            if (seasonData && seasonData.labels && seasonData.labels.length > 0) {
+              allLabels.push(`Chapter ${season}: ${seasonData.labels.join(', ')}`);
+            } else {
+              allLabels.push(`Chapter ${season}: No opinion`);
+            }
+          });
+          return { labels: allLabels };
+        } else if (selectedSeasons.size === 1) {
+          // Single season - original behavior
+          const season = Array.from(selectedSeasons)[0];
+          const seasonData = link.seasons?.[season];
+          if (seasonData && seasonData.labels) {
+            return { labels: seasonData.labels };
+          }
         }
       }
     }
@@ -464,25 +717,33 @@ d3.json("data.json").then(data => {
       .on("end", dragended);
   }
 
-  // Funzione per mostrare la donut chart
+  // Function to show donut chart
   function showDonutForNode(node) {
     d3.selectAll(".donut-chart").remove();
     d3.selectAll(".donut-tooltip-group").remove();
     
-    // Filtra i link in base alla stagione corrente
+    // Filter links based on selected seasons
     const receivedLinks = rawLinkData.filter(link => {
       const targetId = typeof link.target === "object" ? link.target.id : link.target;
-      return targetId === node.id && link.seasons && link.seasons[selectedSeason];
+      if (targetId !== node.id || !link.seasons) return false;
+      
+      // Check if any selected season has data
+      for (const season of selectedSeasons) {
+        if (link.seasons[season]) return true;
+      }
+      return false;
     });
     
     const labelCounts = {};
     receivedLinks.forEach(link => {
-      const season = link.seasons[selectedSeason];
-      if (season && Array.isArray(season.labels)) {
-        season.labels.forEach(label => {
-          if (!label) return;
-          labelCounts[label] = (labelCounts[label] || 0) + 1;
-        });
+      for (const season of selectedSeasons) {
+        const seasonData = link.seasons[season];
+        if (seasonData && Array.isArray(seasonData.labels)) {
+          seasonData.labels.forEach(label => {
+            if (!label) return;
+            labelCounts[label] = (labelCounts[label] || 0) + 1;
+          });
+        }
       }
     });
     
@@ -555,7 +816,7 @@ d3.json("data.json").then(data => {
         svg.selectAll(".donut-tooltip-group").remove();
       });
     
-    // Auto-remove dopo 10 secondi
+    // Auto-remove after 10 seconds
     setTimeout(() => {
       donutGroup.transition().duration(300).style("opacity", 0).remove();
       svg.selectAll(".donut-tooltip-group").remove();

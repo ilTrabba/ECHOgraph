@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Chapter Filter Test</title>
+  <style>
+    .season-dot {
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: #ddd;
+      text-align: center;
+      line-height: 30px;
+      margin: 5px;
+      cursor: pointer;
+      border: 2px solid transparent;
+    }
+    .season-dot.selected {
+      background: #69b3a2;
+      color: white;
+      border-color: #333;
+    }
+    #selected-seasons {
+      margin-top: 20px;
+      padding: 10px;
+      background: #f0f0f0;
+    }
+  </style>
+</head>
+<body>
+  <h2>Chapter Filter Test</h2>
+  <p>Click chapters to select/deselect. Multiple selection is allowed.</p>
+  
+  <div id="season-dots"></div>
+  
+  <div id="selected-seasons">
+    <strong>Selected chapters:</strong> <span id="selected-list">None</span>
+  </div>
+
+  <script>
+    let selectedSeasons = new Set();
+    
+    const seasonDotContainer = document.getElementById('season-dots');
+    const selectedList = document.getElementById('selected-list');
+    
+    function updateSelectedDisplay() {
+      if (selectedSeasons.size === 0) {
+        selectedList.textContent = 'None';
+      } else {
+        selectedList.textContent = Array.from(selectedSeasons).sort().join(', ');
+      }
+    }
+    
+    for (let i = 1; i <= 6; i++) {
+      const dot = document.createElement('div');
+      dot.className = 'season-dot';
+      dot.setAttribute('data-season', i);
+      dot.textContent = i;
+      
+      dot.addEventListener('click', function() {
+        const season = String(i);
+        
+        if (selectedSeasons.has(season)) {
+          // Deselect if already selected
+          selectedSeasons.delete(season);
+          this.classList.remove('selected');
+        } else {
+          // Select if not selected
+          selectedSeasons.add(season);
+          this.classList.add('selected');
+        }
+        
+        updateSelectedDisplay();
+      });
+      
+      seasonDotContainer.appendChild(dot);
+    }
+    
+    updateSelectedDisplay();
+  </script>
+</body>
+</html>

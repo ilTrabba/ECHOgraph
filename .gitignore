@@ -36,6 +36,9 @@ coverage/
 .tmp/
 .parcel-cache/
 
+# Test files
+test_*.html
+
 # Optional: lock files (if you want to ignore them)
 # package-lock.json
 # yarn.lock
