@@ -12,19 +12,19 @@
 <div id="graph-container">
   <svg>
     <defs>
-        <marker id="arrow-positivo" viewBox="0 -5 10 10" refX="20" refY="0"
+        <marker id="arrow-positive" viewBox="0 -5 10 10" refX="20" refY="0"
             markerWidth="6" markerHeight="6" orient="auto">
             <path d="M0,-5L10,0L0,5" fill="green" />
         </marker>
-        <marker id="arrow-negativo" viewBox="0 -5 10 10" refX="20" refY="0"
+        <marker id="arrow-negative" viewBox="0 -5 10 10" refX="20" refY="0"
             markerWidth="6" markerHeight="6" orient="auto">
             <path d="M0,-5L10,0L0,5" fill="red" />
         </marker>
-        <marker id="arrow-ambiguo" viewBox="0 -5 10 10" refX="20" refY="0"
+        <marker id="arrow-ambiguous" viewBox="0 -5 10 10" refX="20" refY="0"
             markerWidth="6" markerHeight="6" orient="auto">
             <path d="M0,-5L10,0L0,5" fill="orange" />
         </marker>
-        <marker id="arrow-neutro" viewBox="0 -5 10 10" refX="20" refY="0"
+        <marker id="arrow-neutral" viewBox="0 -5 10 10" refX="20" refY="0"
             markerWidth="6" markerHeight="6" orient="auto">
             <path d="M0,-5L10,0L0,5" fill="black" />
         </marker>
@@ -36,7 +36,7 @@
 
 <!-- Timeline filtro stagioni -->
 <div id="season-timeline">
-  <span><strong>Stagioni</strong></span>
+  <span><strong>Chapters</strong></span>
   <div id="season-dots">
     <!-- I dot saranno generati da JS -->
   </div>
@@ -45,7 +45,7 @@
 <!-- Box plot per dialoghi (stile migliorato nel CSS) -->
 <div id="dialogue-box" class="dialogue-box">
   <div class="dialogue-header">
-    <span class="dialogue-title">Dialogo</span>
+    <span class="dialogue-title">Dialogue</span>
     <button class="close-btn" onclick="document.getElementById('dialogue-box').classList.remove('visible')">×</button>
   </div>
   <div class="dialogue-content"></div>
@@ -53,10 +53,10 @@
 
 <!-- Legenda -->
 <div id="legend" class="legend">
-  <span style="font-size: 13px; font-weight: 500; margin-bottom: 10px; font-family: 'Poppins', sans-serif;"><strong>Archi</strong></span>
-  <div><span style="background:#4CAF50; font-family: 'Poppins', sans-serif;"></span> Positivo</div>
-  <div><span style="background:#F44336; font-family: 'Poppins', sans-serif;"></span> Negativo</div>
-  <div><span style="background:#FFC107; font-family: 'Poppins', sans-serif;"></span> Ambiguo</div>
+  <span style="font-size: 13px; font-weight: 500; margin-bottom: 10px; font-family: 'Poppins', sans-serif;"><strong>Links</strong></span>
+  <div><span style="background:#4CAF50; font-family: 'Poppins', sans-serif;"></span> positive</div>
+  <div><span style="background:#F44336; font-family: 'Poppins', sans-serif;"></span> negative</div>
+  <div><span style="background:#FFC107; font-family: 'Poppins', sans-serif;"></span> ambiguous</div>
 </div>
 
 <div id="tooltip" class="hidden"></div>

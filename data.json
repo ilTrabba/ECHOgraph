@@ -78,7 +78,7 @@
             "The Intruder",
             "The Annoyance"
           ],
-          "judgment": "negativo",
+          "judgment": "negative",
           "dialogues": [
             {
               "episode": "2x16 - The Whole Truth",
@@ -94,7 +94,7 @@
             "The Intruder",
             "The Annoyance"
           ],
-          "judgment": "negativo",
+          "judgment": "negative",
           "dialogues": [
             {
               "episode": "",
@@ -314,7 +314,7 @@
             "The Troublemaker",
             "The Provocateur"
           ],
-          "judgment": "negativo",
+          "judgment": "negative",
           "dialogues": [
             {
               "episode": "3x02 - The Glass Ballerina",
@@ -361,7 +361,7 @@
             "The Antagonist",
             "The Doctor"
           ],
-          "judgment": "negativo",
+          "judgment": "negative",
           "dialogues": [
             {
               "episode": "2x16 - The Whole Truth",
@@ -378,7 +378,7 @@
             "The Antagonist",
             "The Man of Science"
           ],
-          "judgment": "negativo",
+          "judgment": "negative",
           "dialogues": [
             {
               "episode": "3x01 – A Tale of Two Cities",
@@ -425,7 +425,7 @@
             "The Island's Chosen",
             "The Hunter"
           ],
-          "judgment": "ambiguo",
+          "judgment": "ambiguous",
           "dialogues": [
             {
               "episode": "2x17 - Lockdown",
@@ -442,7 +442,7 @@
             "The Hunter",
             "The Island's Chosen"
           ],
-          "judgment": "ambiguo",
+          "judgment": "ambiguous",
           "dialogues": [
             {
               "episode": "3x13 – The Man from Tallahassee",
@@ -493,7 +493,7 @@
             "The Intruder",
             "The Pawn"
           ],
-          "judgment": "negativo",
+          "judgment": "negative",
           "dialogues": [
             {
               "episode": "3x06 - I Do",
@@ -623,7 +623,7 @@
             "The Man of Action",
             "The Intruder"
           ],
-          "judgment": "negativo",
+          "judgment": "negative",
           "dialogues": [
             {
               "episode": "2x14 - One of Them",
@@ -639,7 +639,7 @@
             "The Man of Action",
             "The Intruder"
           ],
-          "judgment": "negativo",
+          "judgment": "negative",
           "dialogues": [
             {
               "episode": "3x18 – D.O.C.",
@@ -774,7 +774,7 @@
             "The Man of Faith",
             "The Threat"
           ],
-          "judgment": "ambiguo",
+          "judgment": "ambiguous",
           "dialogues": [
             {
               "episode": "3x08 – Flashes Before Your Eyes",
@@ -814,7 +814,7 @@
             "The Other",
             "The Threat"
           ],
-          "judgment": "negativo",
+          "judgment": "negative",
           "dialogues": [
             {
               "episode": "1x19 - Deus Ex Machina",
@@ -830,7 +830,7 @@
             "The Other",
             "The Threat"
           ],
-          "judgment": "negativo",
+          "judgment": "negative",
           "dialogues": [
             {
               "episode": "",
@@ -846,7 +846,7 @@
             "The Other",
             "The Threat"
           ],
-          "judgment": "negativo",
+          "judgment": "negative",
           "dialogues": [
             {
               "episode": "",
@@ -887,7 +887,7 @@
             "The Good-hearted",
             "The Loyal"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [
             {
               "episode": "1x02 - Pilot (Part 2)",
@@ -904,7 +904,7 @@
             "The Good-hearted",
             "The Loyal"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [
             {
               "episode": "2x03 - Orientation",
@@ -921,7 +921,7 @@
             "The Good-hearted",
             "The Loyal"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [
             {
               "episode": "3x10 - Tricia Tanaka Is Dead",
@@ -1004,7 +1004,7 @@
             "The Annoyance",
             "The Provocateur"
           ],
-          "judgment": "negativo",
+          "judgment": "negative",
           "dialogues": [
             {
               "episode": "1x05 - White Rabbit",
@@ -1020,7 +1020,7 @@
             "The Annoyance",
             "The Provocateur"
           ],
-          "judgment": "ambiguo",
+          "judgment": "ambiguous",
           "dialogues": [
             {
               "episode": "2x12 - Fire + Water",
@@ -1036,7 +1036,7 @@
             "The Wildcard",
             "The Provocateur"
           ],
-          "judgment": "ambiguo",
+          "judgment": "ambiguous",
           "dialogues": [
             {
               "episode": "3x10 - Tricia Tanaka Is Dead",
@@ -1076,7 +1076,7 @@
             "The Hero",
             "The Doctor"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [
             {
               "episode": "1x11 - All the Best Cowboys Have Daddy Issues",
@@ -1093,7 +1093,7 @@
             "The Skeptic",
             "The Doctor"
           ],
-          "judgment": "ambiguo",
+          "judgment": "ambiguous",
           "dialogues": [
             {
               "episode": "2x21 - ?",
@@ -1110,7 +1110,7 @@
             "The Doctor",
             "The Skeptic"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [
             {
               "episode": "3x01 – A Tale of Two Cities",
@@ -1149,7 +1149,7 @@
             "The Man of Faith",
             "The Mysterious One"
           ],
-          "judgment": "ambiguo",
+          "judgment": "ambiguous",
           "dialogues": [
             {
               "episode": "1x11 - All the Best Cowboys Have Daddy Issues",
@@ -1166,7 +1166,7 @@
             "The Mysterious One",
             "The Rival"
           ],
-          "judgment": "negativo",
+          "judgment": "negative",
           "dialogues": [
             {
               "episode": "2x12 - Fire + Water",
@@ -1182,7 +1182,7 @@
             "The Mysterious One",
             "The Rival"
           ],
-          "judgment": "ambiguo",
+          "judgment": "ambiguous",
           "dialogues": [
             {
               "episode": "3x03 - Further Instructions",
@@ -1222,7 +1222,7 @@
             "The Independent",
             "The Wildcard"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [
             {
               "episode": "1x03 - Tabula Rasa",
@@ -1238,7 +1238,7 @@
             "The Indipendent",
             "The Wildcard"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [
             {
               "episode": "2x10 - The 23rd Psalm",
@@ -1254,7 +1254,7 @@
             "The Indipendent",
             "The Wildcard"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [
             {
               "episode": "3x12 Par Avion",
@@ -1378,7 +1378,7 @@
             "The Helper",
             "The Reliable"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [
             {
               "episode": "1x12 - Whatever the Case May Be",
@@ -1394,7 +1394,7 @@
             "The Man of Action",
             "The Analyst"
           ],
-          "judgment": "ambiguo",
+          "judgment": "ambiguous",
           "dialogues": [
             {
               "episode": "2x16 - The Whole Truth",
@@ -1411,7 +1411,7 @@
             "The Man of Action",
             "The Skeptic"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [
             {
               "episode": "3x21 - Greatest Hits",
@@ -1463,7 +1463,7 @@
             "The Confidant",
             "The Ally"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [
             {
               "episode": "3x18 - D.O.C.",
@@ -1556,7 +1556,7 @@
             "The Friend",
             "The Musician"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [
             {
               "episode": "3x08 - Flashes Before Your Eyes",
@@ -1650,7 +1650,7 @@
             "The Confidant",
             "The Comic Relief"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [
             {
               "episode": "3x20 – The Cost of Living",
@@ -1781,7 +1781,7 @@
             "The Intruder",
             "The Leader"
           ],
-          "judgment": "ambiguo",
+          "judgment": "ambiguous",
           "dialogues": [
             {
               "episode": "2x01 - Man of Science, Man of Faith",
@@ -1797,7 +1797,7 @@
             "The Skeptic",
             "The Leader"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [
             {
               "episode": "3x21 - Greatest Hits",
@@ -1842,7 +1842,7 @@
             "The Man of Faith",
             "The Intruder"
           ],
-          "judgment": "ambiguo",
+          "judgment": "ambiguous",
           "dialogues": [
             {
               "episode": "2x03 - Orientation",
@@ -1857,7 +1857,7 @@
             "The Man of Faith",
             "The Troublemaker"
           ],
-          "judgment": "ambiguo",
+          "judgment": "ambiguous",
           "dialogues": [
             {
               "episode": "3x19 – The Brig",
@@ -1901,7 +1901,7 @@
           "labels": [
             "The Intruder"
           ],
-          "judgment": "ambiguo",
+          "judgment": "ambiguous",
           "dialogues": [
             {
               "episode": "2x02 - Adrift",
@@ -1917,7 +1917,7 @@
             "The Strong",
             "The Friend"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [
             {
               "episode": "3x17 - Catch 22",
@@ -2167,7 +2167,7 @@
             "The Obstacle",
             "The Annoyance"
           ],
-          "judgment": "negativo",
+          "judgment": "negative",
           "dialogues": [
             {
               "episode": "1x15 - Homecoming",
@@ -2183,7 +2183,7 @@
             "The Obstacle",
             "The Annoyance"
           ],
-          "judgment": "negativo",
+          "judgment": "negative",
           "dialogues": [
             {
               "episode": "",
@@ -2199,7 +2199,7 @@
             "The Obstacle",
             "The Annoyance"
           ],
-          "judgment": "negativo",
+          "judgment": "negative",
           "dialogues": [
             {
               "episode": "",
@@ -2406,7 +2406,7 @@
             "The Threat",
             "The Obstacle"
           ],
-          "judgment": "negativo",
+          "judgment": "negative",
           "dialogues": [
             {
               "episode": "1x11 - All the Best Cowboys Have Daddy Issues",
@@ -2421,7 +2421,7 @@
             "The Threat",
             "The Obstacle"
           ],
-          "judgment": "negativo",
+          "judgment": "negative",
           "dialogues": [
             {
               "episode": "",
@@ -2436,7 +2436,7 @@
             "The Threat",
             "The Obstacle"
           ],
-          "judgment": "negativo",
+          "judgment": "negative",
           "dialogues": [
             {
               "episode": "",
@@ -2771,7 +2771,7 @@
             "The Musician",
             "The Vulnerable"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [
             {
               "episode": "1x02 - Pilot (Part 2)",
@@ -2788,7 +2788,7 @@
             "The Musician",
             "The Vulnerable"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [
             {
               "episode": "2x04 - Everybody Hates Hugo",
@@ -2805,7 +2805,7 @@
             "The Musician",
             "The Vulnerable"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [
             {
               "episode": "3x10 - Tricia Tanaka Is Dead",
@@ -2857,7 +2857,7 @@
             "The Confidant",
             "The Helper"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [
             {
               "episode": "3x21 – Greatest Hits",
@@ -2981,7 +2981,7 @@
             "The Wildcard",
             "The Troublemaker"
           ],
-          "judgment": "negativo",
+          "judgment": "negative",
           "dialogues": [
             {
               "episode": "1x08 - Confidence Man",
@@ -2998,7 +2998,7 @@
             "The Troublemaker",
             "The Resourceful"
           ],
-          "judgment": "ambiguo",
+          "judgment": "ambiguous",
           "dialogues": [
             {
               "episode": "2x04 - Everybody Hates Hugo",
@@ -3015,7 +3015,7 @@
             "The Troublemaker",
             "The Resourceful"
           ],
-          "judgment": "ambiguo",
+          "judgment": "ambiguous",
           "dialogues": [
             {
               "episode": "3x14 - Exposé",
@@ -3056,7 +3056,7 @@
             "The Doctor",
             "The Responsible"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [
             {
               "episode": "1x04 - Walkabout",
@@ -3073,7 +3073,7 @@
             "The Doctor",
             "The Responsible"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [
             {
               "episode": "2x23 - Live together, Die alone",
@@ -3090,7 +3090,7 @@
             "The Doctor",
             "The Responsible"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [
             {
               "episode": "3x22 - Through the Looking Glass",
@@ -3130,7 +3130,7 @@
             "The Man of Faith",
             "The Mysterious One"
           ],
-          "judgment": "ambiguo",
+          "judgment": "ambiguous",
           "dialogues": [
             {
               "episode": "1x11 - All the Best Cowboys Have Daddy Issues",
@@ -3146,7 +3146,7 @@
             "The Man of Faith",
             "The Mysterious One"
           ],
-          "judgment": "ambiguo",
+          "judgment": "ambiguous",
           "dialogues": [
             {
               "episode": "2x18 - Dave",
@@ -3162,7 +3162,7 @@
             "The Man of Faith",
             "The Mysterious One"
           ],
-          "judgment": "negativo",
+          "judgment": "negative",
           "dialogues": [
             {
               "episode": "3x22 – Through the Looking Glass",
@@ -3202,7 +3202,7 @@
             "The Independent",
             "The Strong"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [
             {
               "episode": "1x02 - Pilot (Part 2)",
@@ -3218,7 +3218,7 @@
             "The Independent",
             "The Strong"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [
             {
               "episode": "2x08 - Collision",
@@ -3234,7 +3234,7 @@
             "The Independent",
             "The Strong"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [
             {
               "episode": "3x14 – Exposé",
@@ -3358,7 +3358,7 @@
             "The Problem-solver",
             "The Trustworthy"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [
             {
               "episode": "1x05 - White Rabbit",
@@ -3374,7 +3374,7 @@
             "The Problem-solver",
             "The Trustworthy"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [
             {
               "episode": "2x11 – The Hunting Party",
@@ -3390,7 +3390,7 @@
             "The Problem-solver",
             "The Trustworthy"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [
             {
               "episode": "3x22 – Through the Looking Glass",
@@ -3431,7 +3431,7 @@
             "The Intelligent",
             "The Caring"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [
             {
               "episode": "1x16 - Outlaws",
@@ -3448,7 +3448,7 @@
             "The Intelligent",
             "The Caring"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [
             {
               "episode": "2x18 - Dave",
@@ -3465,7 +3465,7 @@
             "The Intelligent",
             "The Caring"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [
             {
               "episode": "3x10 – “Tricia Tanaka Is Dead",
@@ -4064,7 +4064,7 @@
             "The Threat",
             "The Rival Leader"
           ],
-          "judgment": "negativo",
+          "judgment": "negative",
           "dialogues": [
             {
               "episode": "3x13 “The Man Behind the Curtain”",
@@ -4104,7 +4104,7 @@
             "The Troubled",
             "The Pathetic"
           ],
-          "judgment": "negativo",
+          "judgment": "negative",
           "dialogues": [
             {
               "episode": "1x05 - White Rabbit",
@@ -4120,7 +4120,7 @@
             "The Troubled",
             "The Pathetic"
           ],
-          "judgment": "ambiguo",
+          "judgment": "ambiguous",
           "dialogues": [
             {
               "episode": "2x17 - Lockdown",
@@ -4136,7 +4136,7 @@
             "The Troubled",
             "The Cynical Friend"
           ],
-          "judgment": "ambiguo",
+          "judgment": "ambiguous",
           "dialogues": [
             {
               "episode": "3x14 - Exposé",
@@ -4217,7 +4217,7 @@
             "The Threat",
             "The Dangerous"
           ],
-          "judgment": "negativo",
+          "judgment": "negative",
           "dialogues": [
             {
               "episode": "1x11 - All the Best Cowboys Have Daddy Issues",
@@ -4232,7 +4232,7 @@
             "The Threat",
             "The Dangerous"
           ],
-          "judgment": "negativo",
+          "judgment": "negative",
           "dialogues": [
             {
               "episode": "",
@@ -4247,7 +4247,7 @@
             "The Threat",
             "The Dangerous"
           ],
-          "judgment": "negativo",
+          "judgment": "negative",
           "dialogues": [
             {
               "episode": "",
@@ -4287,7 +4287,7 @@
             "The Chubby guy",
             "The Simple Minded"
           ],
-          "judgment": "ambiguo",
+          "judgment": "ambiguous",
           "dialogues": [
             {
               "episode": "1x07 - The Moth",
@@ -4304,7 +4304,7 @@
             "The Simple Minded",
             "The Helper"
           ],
-          "judgment": "ambiguo",
+          "judgment": "ambiguous",
           "dialogues": [
             {
               "episode": "2x04 - Everybody Hates Hugo",
@@ -4322,7 +4322,7 @@
             "The Simple Minded",
             "The Helper"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [
             {
               "episode": "3x10 “Tricia Tanaka Is Dead",
@@ -4403,7 +4403,7 @@
             "The Rival",
             "The Doctor"
           ],
-          "judgment": "ambiguo",
+          "judgment": "ambiguous",
           "dialogues": [
             {
               "episode": "1x04 - Walkabout",
@@ -4417,7 +4417,7 @@
           "labels": [
             "The Rival",
             "The Doctor"],
-          "judgment": "ambiguo",
+          "judgment": "ambiguous",
           "dialogues": [
             {
               "episode": "2x09 – What Kate Did",
@@ -4433,7 +4433,7 @@
             "The Doctor",
             "The Friend"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [
             {
               "episode": "3x01 - A Tale of Two Cities",
@@ -4473,7 +4473,7 @@
             "The Hunter",
             "The Strange"
           ],
-          "judgment": "ambiguo",
+          "judgment": "ambiguous",
           "dialogues": [
             {
               "episode": "1x04 - Walkabout",
@@ -4489,7 +4489,7 @@
             "The Hunter",
             "The Strange"
           ],
-          "judgment": "ambiguo",
+          "judgment": "ambiguous",
           "dialogues": [
             {
               "episode": "2x11 – The Hunting Party",
@@ -4506,7 +4506,7 @@
             "The Hunter",
             "The Strange"
           ],
-          "judgment": "ambiguo",
+          "judgment": "ambiguous",
           "dialogues": [
             {
               "episode": "3x19 - The Brig",
@@ -4546,7 +4546,7 @@
             "The Strong",
             "The Independent"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [
             {
               "episode": "1x03 - Tabula Rasa",
@@ -4562,7 +4562,7 @@
             "The Strong",
             "The Independent"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [
             {
               "episode": "2x09 - What Kate did",
@@ -4579,7 +4579,7 @@
             "The Strong",
             "The Independent"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [
             {
               "episode": "3x06 - I Do",
@@ -4703,7 +4703,7 @@
             "The Skilled",
             "The Suspicious"
           ],
-          "judgment": "ambiguo",
+          "judgment": "ambiguous",
           "dialogues": [
             {
               "episode": "1x06 - House of the Rising Sun",
@@ -4720,7 +4720,7 @@
             "The Suspicious",
             "The Ally"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [
             {
               "episode": "2x17 - Lockdown",
@@ -4737,10 +4737,10 @@
             "The Suspicious",
             "The Ally"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [
             {
-              "episode": "positivo",
+              "episode": "positive",
               "character": "James 'Sawyer' Ford-Sayid",
               "line": "**Sawyer**: You think killing’s the answer? **Sayid**: Sometimes it’s the only language people understand. **Sawyer**: Then we’re both in trouble."
             }
@@ -4777,7 +4777,7 @@
             "The Mysterious One",
             "The Intelligent"
           ],
-          "judgment": "ambiguo",
+          "judgment": "ambiguous",
           "dialogues": [
             {
               "episode": "1x20 - Do No Harm",
@@ -4793,7 +4793,7 @@
             "The Mysterious One",
             "The Intelligent"
           ],
-          "judgment": "ambiguo",
+          "judgment": "ambiguous",
           "dialogues": [
             {
               "episode": "2x05 - …And Found",
@@ -4809,7 +4809,7 @@
             "The Mysterious One",
             "The Intelligent"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [
             {
               "episode": "3x06 - I Do",
@@ -4854,7 +4854,7 @@
             "The Others leader",
             "The Manipulator"
           ],
-          "judgment": "negativo",
+          "judgment": "negative",
           "dialogues": [
             {
               "episode": "2x07 - The Other 48 Days",
@@ -4880,7 +4880,7 @@
             "The Mastermind", 
             "The Others leader"
           ],
-          "judgment": "negativo",
+          "judgment": "negative",
           "dialogues": [
             {
               "episode": "3x01 - A Tale of Two Cities", 
@@ -4935,7 +4935,7 @@
             "The Troubled",
             "The Good-hearted"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [
             {
               "episode": "1x07 - The Moth",
@@ -4951,7 +4951,7 @@
             "The Troubled",
             "The Vulnerable"
           ],
-          "judgment": "ambiguo",
+          "judgment": "ambiguous",
           "dialogues": [
             {
               "episode": "2x05 - ...And Found",
@@ -4971,7 +4971,7 @@
             "The Vulnerable",  
             "The Good-hearted"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [
             {
               "episode": "3x16 - One of Us", 
@@ -5014,7 +5014,7 @@
           "labels": [
             "The man in the Hatch"
           ],
-          "judgment": "ambiguo",
+          "judgment": "ambiguous",
           "dialogues": [
             {
               "episode": "2x01 - Man of Science, Man of Faith",
@@ -5034,7 +5034,7 @@
             "The Man with Visions",
             "The man in the Hatch"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [
             {
               "episode": "2x03 – Orientation",
@@ -5074,7 +5074,7 @@
             "The Dangerous",
             "The Kidnapper"
           ],
-          "judgment": "negativo",
+          "judgment": "negative",
           "dialogues": [
             {
               "episode": "1x11 - All the Best Cowboys Have Daddy Issues",
@@ -5095,7 +5095,7 @@
             "The Dangerous",
             "The Kidnapper"
           ],
-          "judgment": "negativo",
+          "judgment": "negative",
           "dialogues": [],
           "inherited_labels": [["The Threat",1],["The Dangerous",1],["The Kidnapper",1]]
         },
@@ -5139,7 +5139,7 @@
             "The Reliable",
             "The Helper"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [
             {
               "episode": "1x04 - Walkabout",
@@ -5155,7 +5155,7 @@
             "The Reliable",
             "The Helper"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [
             {
               "episode": "2x10 - The 23rd Psalm",
@@ -5171,7 +5171,7 @@
             "The Reliable",
             "The Helper"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [
             {
               "episode": "3x22 – Through the Looking Glass",
@@ -5253,7 +5253,7 @@
             "The Selfish",
             "The Annoyance"
           ],
-          "judgment": "negativo",
+          "judgment": "negative",
           "dialogues": [
             {
               "episode": "1x24 - Exodus, Part 2",
@@ -5269,7 +5269,7 @@
             "The Selfish",
             "The Annoyance"
           ],
-          "judgment": "ambiguo",
+          "judgment": "ambiguous",
           "dialogues": [
             {
               "episode": "2x01 - Man of Science, Man of Faith",
@@ -5296,7 +5296,7 @@
             "The Annoyance",
             "The Cynical Friend"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [
             {
               "episode": "3x01 - A Tale of Two Cities", 
@@ -5340,7 +5340,7 @@
             "The Mysterious One",
             "The Hunter"
           ],
-          "judgment": "ambiguo",
+          "judgment": "ambiguous",
           "dialogues": [
             {
               "episode": "1x05 - White rabbit",
@@ -5356,7 +5356,7 @@
             "The Obsessed",
             "The Unpredictable Ally"
           ],
-          "judgment": "ambiguo",
+          "judgment": "ambiguous",
           "dialogues": [
             {
               "episode": "2x01 - Man of Science, Man of Faith",
@@ -5377,7 +5377,7 @@
             "The Stubborn",
             "The Man of Faith"
           ],
-          "judgment": "negativo",
+          "judgment": "negative",
           "dialogues": [
             {
               "episode": "3x23 - Trough the looking glass: part 2", 
@@ -5417,7 +5417,7 @@
             "The Trustworthy",
             "The Attractive"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [
             {
               "episode": "1x20 - Do No Harm",
@@ -5433,7 +5433,7 @@
             "The Trustworthy",
             "The Attractive"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [
             {
               "episode": "2x01 - Man of Science, Man of Faith", 
@@ -5453,7 +5453,7 @@
             "The Attractive",
             "The Love Interest"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [
           {
             "episode": "3x01 - A Tale of Two Cities", 
@@ -5550,7 +5550,7 @@
             "The Man of Faith (Byblical)", 
             "The Spiritual Guide"
           ],
-          "judgment": "ambiguo",
+          "judgment": "ambiguous",
           "dialogues": [
             {
               "episode": "2x07 - The Other 48 Days", 
@@ -5570,7 +5570,7 @@
             "The Spiritual Guide",
             "The Lost Soul"
           ],
-          "judgment": "ambiguo",
+          "judgment": "ambiguous",
           "dialogues": [
             {
               "episode": "3x05 - The Cost of Living", 
@@ -5616,7 +5616,7 @@
             "The Skilled",
             "The Interrogator"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [
             {
               "episode": "1x24 - Exodus, Part 2",
@@ -5633,7 +5633,7 @@
             "The Skilled",
             "The Interrogator"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [
             {
               "episode": "2x02 - Adrift",
@@ -5656,7 +5656,7 @@
             "The Pragmatist",
             "The Interrogator"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [
             {
               "episode": "3x01 - A Tale of Two Cities", 
@@ -5700,7 +5700,7 @@
             "The Kind-hearted",
             "The Strong"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [
             {
               "episode": "1x14 - Special",
@@ -5715,7 +5715,7 @@
             "The Kind-hearted",
             "The Strong"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [
             {
               "episode": "2x04 - Everybody Hates Hugo",
@@ -5737,7 +5737,7 @@
             "The Mother",
             "The Resilient"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [
             {
               "episode": "3x04 - Every Man for Himself", 
@@ -5789,7 +5789,7 @@
             "The Manipulator",
             "The Enigma"
           ],
-          "judgment": "negativo",
+          "judgment": "negative",
           "dialogues": [
             {
               "episode": "2x14 - One of Them",
@@ -5816,7 +5816,7 @@
             "The Manipulator",
             "The Enigma"
           ],
-          "judgment": "negativo",
+          "judgment": "negative",
           "dialogues": [
             {
               "episode": "3x13 - The Man from Tallahassee", 
@@ -5861,7 +5861,7 @@
             "The Lost Soul",
             "The drug addict"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [
             {
               "episode": "1x04 - Walkabout",
@@ -5882,7 +5882,7 @@
             "The Lost Soul",
             "The Potential"
           ],
-          "judgment": "ambiguo",
+          "judgment": "ambiguous",
           "dialogues": [
             {
               "episode": "2x05 - ...And Found",
@@ -5897,7 +5897,7 @@
             "The Lost Soul",
             "The Potential"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [],
           "inherited_labels": [["The Lost Soul",1],["The Potential",2]]
         },
@@ -5935,7 +5935,7 @@
           "labels": [
             "The man in the Hatch"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [
             {
               "episode": "2x01 - Man of Science, Man of Faith",
@@ -5954,7 +5954,7 @@
           "labels": [
             "The man in the Hatch"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [],
           "inherited_labels": [["The Man in the Hatch",1]]
         },
@@ -5988,7 +5988,7 @@
             "The Intruder",
             "The Other"
           ],
-          "judgment": "negativo",
+          "judgment": "negative",
           "dialogues": [
             {
               "episode": "1x11 - All the Best Cowboys Have Daddy Issues",
@@ -6009,7 +6009,7 @@
             "The Intruder",
             "The Other"
           ],
-          "judgment": "negativo",
+          "judgment": "negative",
           "dialogues": [],
           "inherited_labels": [["The Villain",1],["The Intruder",1],["The Other",1]]
         },
@@ -6019,7 +6019,7 @@
             "The Intruder",
             "The Other"
           ],
-          "judgment": "negativo",
+          "judgment": "negative",
           "dialogues": [],
           "inherited_labels": [["The Villain",1],["The Intruder",1],["The Other",1]]
         },
@@ -6054,7 +6054,7 @@
             "The Innocent",
             "The Pure"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [
             {
               "episode": "1x04 - Walkabout",
@@ -6071,7 +6071,7 @@
             "The Innocent",
             "The Pure"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [
             {
               "episode": "2x10 - The 23rd Psalm",
@@ -6088,7 +6088,7 @@
             "The Source of Optimism", 
             "The Intuitive"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [
             {
               "episode": "3x04 - Every Man for Himself", 
@@ -6145,7 +6145,7 @@
             "The Manipulator", 
             "The Embodiment of the Island"
           ],
-          "judgment": "ambiguo",
+          "judgment": "ambiguous",
           "dialogues": [
             {
               "episode": "3x20 - The Man Behind the Curtain", "character": "Benjamin Linus-John Locke", "line": "**Ben**: You want to meet Jacob, John? He lives here. **John Locke**: (with amazement) He lives here? Show me. **Ben**: Say hello, Jacob."
@@ -6183,7 +6183,7 @@
             "The Troublemaker",
             "The Lost Soul"
           ],
-          "judgment": "ambiguo",
+          "judgment": "ambiguous",
           "dialogues": [
             {
               "episode": "1x16 - Outlaws",
@@ -6199,7 +6199,7 @@
             "The Troublemaker",
             "The Lost Soul"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [
             {
               "episode": "2x08 - Collision",
@@ -6218,7 +6218,7 @@
           "labels": [
             "The Ally"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [
             {
               "episode": "3x04 - Every Man for Himself", 
@@ -6272,7 +6272,7 @@
             "The Man of Science",
             "The Skeptic"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [
             {
               "episode": "1x04 - Walkabout",
@@ -6297,7 +6297,7 @@
             "The Man of Science",
             "The Skeptic"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [
             {
               "episode": "2x03 - Orientation",
@@ -6312,7 +6312,7 @@
             "The Man of Science",
             "The Skeptic"
           ],
-          "judgment": "ambiguo",
+          "judgment": "ambiguous",
           "dialogues": [
             {
               "episode": "3x23 - Trough the looking glass: part 2", 
@@ -6351,7 +6351,7 @@
             "The Capable",
             "The Ally"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [
             {
               "episode": "1x04 - Walkabout",
@@ -6371,7 +6371,7 @@
             "The Capable",
             "The Ally"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [
             {
               "episode": "2x01 - Man of Science, Man of Faith",
@@ -6386,7 +6386,7 @@
             "The Capable",
             "The Ally"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [],
           "inherited_labels": []
         },
@@ -6467,7 +6467,7 @@
             "The Man of God",
             "The Spiritual Guide"
           ],
-          "judgment": "ambiguo",
+          "judgment": "ambiguous",
           "dialogues": [
             {
               "episode": "2x9 - What Kate did",
@@ -6487,7 +6487,7 @@
             "The Man of God",
             "The Spiritual Guide"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [
             {
               "episode": "3x05 - The Cost of Living", 
@@ -6528,7 +6528,7 @@
             "The Pragmatist",
             "The Skilled"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [
             {
               "episode": "1x05 - White Rabbit",
@@ -6549,7 +6549,7 @@
             "The Interrogator",
             "The Skilled"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [
             {
               "episode": "2x02 - Adrift",
@@ -6570,7 +6570,7 @@
             "The Interrogator",
             "The Skilled"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [],
           "inherited_labels": [["The Man of Logic",1],["The Interrogator",1],["The Skilled",1]]
         },
@@ -6603,7 +6603,7 @@
             "The Patient Soul",
             "The Kind-hearted"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [
             {
               "episode": "1x16 - Outlaws",
@@ -6618,7 +6618,7 @@
             "The Patient Soul",
             "The Kind-hearted"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [
             {
               "episode": "2x04 - Everybody Hates Hugo",
@@ -6633,7 +6633,7 @@
             "The Patient Soul",
             "The Kind-hearted"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [],
           "inherited_labels": [["The Patient Soul",1],["The Kind-hearted",1]]
         },
@@ -6672,7 +6672,7 @@
             "The Deceiver",
             "The Others leader"
           ],
-          "judgment": "negativo",
+          "judgment": "negative",
           "dialogues": [
             {
               "episode": "2x14 - One of Them",
@@ -6692,7 +6692,7 @@
             "The Deceiver",
             "The Others leader"
           ],
-          "judgment": "negativo",
+          "judgment": "negative",
           "dialogues": [],
           "inherited_labels": [["The Deceiver",2],["The Others leader",2]]
         },
@@ -6725,7 +6725,7 @@
             "The Vulnerable",
             "The drug addict"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [
             {
               "episode": "1x07 - The Moth",
@@ -6740,7 +6740,7 @@
             "The Vulnerable",
             "The drug Addict"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [
             {
               "episode": "2x05 - ...And Found",
@@ -6760,7 +6760,7 @@
             "The Vulnerable",
             "The drug addict"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [],
           "inherited_labels": [["The Vulnerable",1],["The drug addict",2]]
         },
@@ -6798,7 +6798,7 @@
           "labels": [
             "The man in the Hatch"
           ],
-          "judgment": "ambiguo",
+          "judgment": "ambiguous",
           "dialogues": [
             {
               "episode": "2x01 - Man of Science, Man of Faith",
@@ -6819,7 +6819,7 @@
             "The Protector (of Charlie)", 
             "The Mysterious Ally"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [],
           "inherited_labels": []
         },
@@ -6852,7 +6852,7 @@
             "The Villain",
             "The Other"
           ],
-          "judgment": "negativo",
+          "judgment": "negative",
           "dialogues": [
             {
               "episode": "1x11 - All the Best Cowboys Have Daddy Issues",
@@ -6867,7 +6867,7 @@
             "The Villain",
             "The Other"
           ],
-          "judgment": "negativo",
+          "judgment": "negative",
           "dialogues": [],
           "inherited_labels": [["The Villain",1],["The Other",1]]
         },
@@ -6876,7 +6876,7 @@
             "The Villain",
             "The Other"
           ],
-          "judgment": "negativo",
+          "judgment": "negative",
           "dialogues": [],
           "inherited_labels": [["The Villain",1],["The Other",1]]
         },
@@ -6911,7 +6911,7 @@
             "The Innocent",
             "The Comic Relief"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [
             {
               "episode": "1x04 - Walkabout",
@@ -6928,7 +6928,7 @@
             "The Innocent",
             "The Comic Relief"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [
             {
               "episode": "2x04 - Everybody Hates Hugo",
@@ -6950,7 +6950,7 @@
             "The Innocent",
             "The Comic Relief"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [],
           "inherited_labels": [["The Good-hearted",1],["The Loyal",1],["The Innocent",1],["The Comic Relief",1]]
         },
@@ -7028,7 +7028,7 @@
             "The Vulnerable",
             "The Intriguing"
           ],
-          "judgment": "ambiguo",
+          "judgment": "ambiguous",
           "dialogues": [
             {
               "episode": "1x02 - Tabula Rasa",
@@ -7049,7 +7049,7 @@
             "The Annoyance",
             "The Troublemaker"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [
             {
               "episode": "2x08 - Collision",
@@ -7070,7 +7070,7 @@
             "The Annoyance",
             "The Trusted Ally"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [
             {
               "episode": "3x02 - The Glass Ballerina", 
@@ -7111,7 +7111,7 @@
             "The Trustworthy",
             "The Protector"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [
             {
               "episode": "1x05 - White Rabbit",
@@ -7132,7 +7132,7 @@
             "The Protector",
             "The Hero"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [
             {
               "episode": "2x01 - Man of Science, Man of Faith",
@@ -7158,7 +7158,7 @@
             "The Protector", 
             "The Hero"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [
             {
               "episode": "3x06 - I Do", 
@@ -7197,7 +7197,7 @@
             "The Mysterious One",
             "The Hunter"
           ],
-          "judgment": "ambiguo",
+          "judgment": "ambiguous",
           "dialogues": [
             {
               "episode": "1x04 - Walkabout",
@@ -7218,7 +7218,7 @@
             "The Mysterious One",
             "The Hunter"
           ],
-          "judgment": "ambiguo",
+          "judgment": "ambiguous",
           "dialogues": [
             {
               "episode": "2x01 - Man of Science, Man of Faith",
@@ -7239,7 +7239,7 @@
             "The Mysterious One",
             "The Stubborn"
           ],
-          "judgment": "negativo",
+          "judgment": "negative",
           "dialogues": [],
           "inherited_labels": [["The Man of Faith",2],["The Mysterious One",1]]
         },
@@ -7358,7 +7358,7 @@
             "The Trusted Ally",
             "The Resourceful"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [
             {
               "episode": "1x05 - White Rabbit",
@@ -7379,7 +7379,7 @@
             "The Skilled",
             "The Trusted Ally"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [
             {
               "episode": "2x14 - One of Them",
@@ -7395,7 +7395,7 @@
             "The Skilled",
             "The Trusted Ally"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [],
           "inherited_labels": [["The Interrogator",2],["The Skilled",1],["The Trusted Ally",1]]
         },
@@ -7429,7 +7429,7 @@
             "The Strong",
             "The Kind-hearted"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [
             {
               "episode": "1x06 - House of the Rising Sun",
@@ -7450,7 +7450,7 @@
             "The Strong",
             "The Kind-hearted"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [
             {
               "episode": "2x04 - Everybody Hates Hugo",
@@ -7471,7 +7471,7 @@
             "The Strong",
             "The Kind-hearted"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [],
           "inherited_labels": [["The Confidant",1],["The Strong",1],["The Kind-hearted",1]]
         },
@@ -8098,7 +8098,7 @@
             "The Lost Soul",
             "The Burdened"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [
             {
               "episode": "2x10 - The 23rd Psalm",
@@ -8118,7 +8118,7 @@
             "The Lost Soul",
             "The Burdened"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [],
           "inherited_labels": [["The Lost Soul",1],["The Burdened",1]]
         },
@@ -8322,7 +8322,7 @@
         },
         "2": {
           "labels": [],
-          "judgment": "*",
+          "judgment": "",
           "dialogues": [],
           "inherited_labels": []
         },
@@ -8409,7 +8409,7 @@
             "The Man of Faith",
             "The Shattered Believer"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [
             {
               "episode": "2x9 - What Kate did",
@@ -8428,7 +8428,7 @@
           "labels": [
             "The Shattered Believer"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [
             {
               "episode": "3x05 - The Cost of Living", 
@@ -8479,7 +8479,7 @@
             "The Smoke Monster", 
             "The Devil"
           ],
-          "judgment": "negativo",
+          "judgment": "negative",
           "dialogues": [
             {
               "episode": "3x05 - The Cost of Living", 
@@ -8655,7 +8655,7 @@
             "The Deceiver",
             "The Other"
           ],
-          "judgment": "negativo",
+          "judgment": "negative",
           "dialogues": [
             {
               "episode": "2x14 - One of Them",
@@ -8680,7 +8680,7 @@
             "The Deceiver",
             "The Other"
           ],
-          "judgment": "negativo",
+          "judgment": "negative",
           "dialogues": [],
           "inherited_labels": [["The Deceiver",2],["The Other",2]]
         },
@@ -8713,7 +8713,7 @@
             "The Vulnerable",
             "The Good-hearted"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [
             {
               "episode": "1x07 - The Moth",
@@ -8728,7 +8728,7 @@
             "The Vulnerable",
             "The Good-hearted"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [],
           "inherited_labels": [["The Vulnerable",1],["The Good-hearted",1]]
         },
@@ -8737,7 +8737,7 @@
             "The Vulnerable", 
             "The Trusted Ally"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [
             {
               "episode": "3x21 - Greatest Hits",
@@ -8781,7 +8781,7 @@
           "labels": [
             "The man in the Hatch"
           ],
-          "judgment": "ambiguo",
+          "judgment": "ambiguous",
           "dialogues": [
             {
               "episode": "2x01 - Man of Science, Man of Faith",
@@ -8801,7 +8801,7 @@
             "The man in the Hatch",
             "The Seer"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [],
           "inherited_labels": [["The Man in the Hatch",2]]
         },
@@ -8835,7 +8835,7 @@
             "The Other",
             "The Intruder"
           ],
-          "judgment": "negativo",
+          "judgment": "negative",
           "dialogues": [
             {
               "episode": "1x11 - All the Best Cowboys Have Daddy Issues",
@@ -8851,7 +8851,7 @@
             "The Other",
             "The Intruder"
           ],
-          "judgment": "negativo",
+          "judgment": "negative",
           "dialogues": [],
           "inherited_labels": [["The Villain",1],["The Other",1],["The Intruder",1]]
         },
@@ -8861,7 +8861,7 @@
             "The Other",
             "The Intruder"
           ],
-          "judgment": "negativo",
+          "judgment": "negative",
           "dialogues": [],
           "inherited_labels": [["The Villain",1],["The Other",1],["The Intruder",1]]
         },
@@ -8896,7 +8896,7 @@
             "The Trustworthy",
             "The Friend"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [
             {
               "episode": "1x04 - Walkabout",
@@ -8913,7 +8913,7 @@
             "The Trustworthy",
             "The Friend"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [
             {
               "episode": "2x04 - Everybody Hates Hugo",
@@ -8929,7 +8929,7 @@
             "The Trustworthy",
             "The Friend"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [],
           "inherited_labels": [["The Good-hearted",1],["The Trustworthy",1],["The Friend",1]]
         },
@@ -9005,7 +9005,7 @@
             "The Annoyance",
             "The Selfish"
           ],
-          "judgment": "negativo",
+          "judgment": "negative",
           "dialogues": [
             {
               "episode": "1x08 - Confidence Man",
@@ -9026,7 +9026,7 @@
             "The Annoyance",
             "The Selfish"
           ],
-          "judgment": "negativo",
+          "judgment": "negative",
           "dialogues": [
             {
               "episode": "2x08 - Collision",
@@ -9045,7 +9045,7 @@
           "labels": [
             "The Selfish"
           ],
-          "judgment": "ambiguo",
+          "judgment": "ambiguous",
           "dialogues": [],
           "inherited_labels": []
         },
@@ -9080,7 +9080,7 @@
             "The Doctor",
             "The Hero"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [
             {
               "episode": "1x05 - White Rabbit",
@@ -9102,7 +9102,7 @@
             "The Doctor",
             "The Hero"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [
             {
               "episode": "2x02 - Adrift",
@@ -9124,7 +9124,7 @@
             "The Doctor",
             "The Hero"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [],
           "inherited_labels": [["The Leader",1],["The Trusted Ally",1],["The Doctor",1],["The Hero",1]]
         },
@@ -9158,7 +9158,7 @@
             "The Man of Faith",
             "The Hunter"
           ],
-          "judgment": "ambiguo",
+          "judgment": "ambiguous",
           "dialogues": [
             {
               "episode": "1x09 - Solitary",
@@ -9184,7 +9184,7 @@
             "The Man of Faith",
             "The Hunter"
           ],
-          "judgment": "ambiguo",
+          "judgment": "ambiguous",
           "dialogues": [
             {
               "episode": "2x01 - Man of Science, Man of Faith",
@@ -9203,7 +9203,7 @@
           "labels": [
             "The Stubborn Believer"
           ],
-          "judgment": "negativo",
+          "judgment": "negative",
           "dialogues": [
             {
               "episode": "3x11 - Enter 77", 
@@ -9241,7 +9241,7 @@
           "labels": [
             "The Trusted Ally"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [
             {
               "episode": "1x05 - White Rabbit",
@@ -9260,7 +9260,7 @@
           "labels": [
             "The Trusted Ally"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [
             {
               "episode": "2x14 - One of Them",
@@ -9279,7 +9279,7 @@
           "labels": [
             "The Trusted Ally"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [],
           "inherited_labels": [["The Trusted Ally",1]]
         },
@@ -9396,7 +9396,7 @@
             "The Strong",
             "The Kind-hearted"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [
             {
               "episode": "1x17 - ...In Translation",
@@ -9411,7 +9411,7 @@
             "The Strong",
             "The Kind-hearted"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [
             {
               "episode": "2x04 - Everybody Hates Hugo",
@@ -9431,7 +9431,7 @@
             "The Strong",
             "The Kind-hearted"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [],
           "inherited_labels": []
         },
@@ -9477,7 +9477,7 @@
             "The Deceiver", 
             "The Others leader"
           ],
-          "judgment": "negativo",
+          "judgment": "negative",
           "dialogues": [],
           "inherited_labels": []
         },
@@ -9512,7 +9512,7 @@
             "The Fellow Survivor",
             "The Good-hearted"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [
             {
               "episode": "1x07 - The Moth",
@@ -9529,7 +9529,7 @@
             "The Fellow Survivor",
             "The Good-hearted"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [
             {
               "episode": "2x10 - The 23rd Psalm",
@@ -9546,7 +9546,7 @@
             "The Fellow Survivor",
             "The Good-hearted"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [],
           "inherited_labels": [["The Vulnerable",1],["The Troubled",1],["The Fellow Survivor",1],["The Good-hearted",1]]
         },
@@ -9590,7 +9590,7 @@
           "labels": [
             "The Seer"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [
             {
               "episode": "3x08 - Flashes Before Your Eyes", 
@@ -9629,7 +9629,7 @@
             "The Villain",
             "The Other"
           ],
-          "judgment": "negativo",
+          "judgment": "negative",
           "dialogues": [
             {
               "episode": "1x11 - All the Best Cowboys Have Daddy Issues",
@@ -9644,7 +9644,7 @@
             "The Villain",
             "The Other"
           ],
-          "judgment": "negativo",
+          "judgment": "negative",
           "dialogues": [],
           "inherited_labels": [["The Villain",1],["The Other",1]]
         },
@@ -9653,7 +9653,7 @@
             "The Villain",
             "The Other"
           ],
-          "judgment": "negativo",
+          "judgment": "negative",
           "dialogues": [],
           "inherited_labels": [["The Villain",1],["The Other",1]]
         },
@@ -9687,7 +9687,7 @@
             "The Comic Relief",
             "The Friend"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [
             {
               "episode": "1x04 - Walkabout",
@@ -9703,7 +9703,7 @@
             "The Comic Relief",
             "The Friend"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [
             {
               "episode": "2x04 - Everybody Hates Hugo",
@@ -9719,7 +9719,7 @@
             "The Comic Relief",
             "The Friend"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [
             {
               "episode": "3x04 - Every Man for Himself", 
@@ -9802,7 +9802,7 @@
             "The Troublemaker",
             "The Provocateur"
           ],
-          "judgment": "negativo",
+          "judgment": "negative",
           "dialogues": [
             {
               "episode": "1x04 - Walkabout",
@@ -9819,7 +9819,7 @@
             "The Selfish",
             "The Troublemaker"
           ],
-          "judgment": "ambiguo",
+          "judgment": "ambiguous",
           "dialogues": [
             {
               "episode": "2x08 - Collision",
@@ -9839,7 +9839,7 @@
             "The Annoyance", 
             "The Reluctant Ally"
           ],
-          "judgment": "ambiguo",
+          "judgment": "ambiguous",
           "dialogues": [],
           "inherited_labels": [["The Annoyance",1]]
         },
@@ -9874,7 +9874,7 @@
             "The Trustworthy",
             "The Hero"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [
             {
               "episode": "1x01 - Pilot, Part 1",
@@ -9896,7 +9896,7 @@
             "The Trustworthy",
             "The Hero"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [
             {
               "episode": "2x01 - Man of Science, Man of Faith",
@@ -9918,7 +9918,7 @@
             "The Trustworthy",
             "The Hero"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [
             {
               "episode": "3x22 - Through the Looking Glass, Part 1", 
@@ -9958,7 +9958,7 @@
             "The Mysterious One",
             "The Island's Voice"
           ],
-          "judgment": "ambiguo",
+          "judgment": "ambiguous",
           "dialogues": [
             {
               "episode": "1x04 - Walkabout",
@@ -9973,7 +9973,7 @@
             "The Hunter",
             "The Man of Faith"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [
             {
               "episode": "2x05 - ...And found",
@@ -9988,7 +9988,7 @@
             "The Hunter",
             "The Man of Faith"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [],
           "inherited_labels": [["The Hunter",1],["The Man of Faith",2]]
         },
@@ -10022,7 +10022,7 @@
             "The Strong",
             "The Confidant"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [
             {
               "episode": "1x06 - House of the Rising Sun",
@@ -10039,7 +10039,7 @@
             "The Confidant",
             "The Friend"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [
             {
               "episode": "2x04 - Everybody Hates Hugo",
@@ -10061,7 +10061,7 @@
             "The Confidant",
             "The Friend"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [],
           "inherited_labels": [["The Trusted Ally",1],["The Strong",1],["The Confidant",1],["The Friend",2]]
         },
@@ -10179,7 +10179,7 @@
             "The Resourceful",
             "The Reliable"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [
             {
               "episode": "1x18 - Numbers",
@@ -10195,7 +10195,7 @@
             "The Resourceful",
             "The Reliable"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [
             {
               "episode": "2x18 - Dave",
@@ -10211,7 +10211,7 @@
             "The Resourceful",
             "The Reliable"
           ],
-          "judgment": "positivo",
+          "judgment": "positive",
           "dialogues": [
             {
               "episode": "3x16 - One of Us", 

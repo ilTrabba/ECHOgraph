@@ -4,10 +4,10 @@ const svg = d3.select("svg");
 const tooltip = d3.select("#tooltip");
 
 const colorMap = {
-  positivo: "#4CAF50",
-  negativo: "#F44336",
-  ambiguo: "#FFC107",
-  neutro: "#000000"
+  positive: "#4CAF50",
+  negative: "#F44336",
+  ambiguous: "#FFC107",
+  neutral: "#000000"
 };
 
 let activeNodeId = null;
@@ -44,7 +44,7 @@ for (let i = 1; i <= 6; i++) {
 
 // DEFINIZIONE FRECCE
 const defs = svg.append("defs");
-["positivo", "negativo", "ambiguo", "neutro"].forEach(judgment => {
+["positive", "negative", "ambiguous", "neutral"].forEach(judgment => {
   defs.append("marker")
     .attr("id", `arrow-${judgment}`)
     .attr("viewBox", "0 -5 10 10")
@@ -183,7 +183,7 @@ d3.json("data.json").then(data => {
 
     if (!dialogues || dialogues.length === 0) {
       dialogueBox
-        .html("<em>Nessun dialogo disponibile per questa stagione</em>")
+        .html("<em>No dialogues available for this chapter</em>")
         .style("left", `${pageX}px`)
         .style("top", `${pageY}px`)
         .classed("visible", true);
@@ -350,7 +350,7 @@ d3.json("data.json").then(data => {
 
     if (!dialogues || dialogues.length === 0) {
       dialogueBox
-        .html("<em>Nessun dialogo disponibile per questa stagione</em>")
+        .html("<em>No dialogues available for this chapter</em>")
         .style("left", `${pageX}px`)
         .style("top", `${pageY}px`)
         .classed("visible", true);
