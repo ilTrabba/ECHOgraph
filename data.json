@@ -73,36 +73,20 @@
           "inherited_labels": []
         },
         "2": {
-          "labels": [
-            "The Follower",
-            "The Intruder",
-            "The Annoyance"
-          ],
-          "judgment": "negative",
+          "labels": [],
+          "judgment": "",
           "dialogues": [
-            {
-              "episode": "2x16 - The Whole Truth",
-              "character": "Benjamin Linus",
-              "line": "(to Charlie) Your friend... the one with the baby... she's starting to remember things."
-            }
+            {}
           ],
           "inherited_labels": []
         },
         "3": {
-          "labels": [
-            "The Follower",
-            "The Intruder",
-            "The Annoyance"
-          ],
-          "judgment": "negative",
+          "labels": [],
+          "judgment": "",
           "dialogues": [
-            {
-              "episode": "",
-              "character": "",
-              "line": ""
-            }
+            {}
           ],
-          "inherited_labels": [["the follower",2], ["the intruder",2], ["the annoyance",2]]
+          "inherited_labels": []
         },
         "4": {
           "labels": [],

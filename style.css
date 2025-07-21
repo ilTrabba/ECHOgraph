@@ -313,3 +313,31 @@ svg {
 #graph-container::-webkit-scrollbar-thumb:hover {
   background: rgba(0, 0, 0, 0.4);
 }
+
+/* Pulsante di reset quadrato */
+.reset-button {
+  width: 24px;
+  height: 24px;
+  border-radius: 4px; /* Quadrato con angoli leggermente arrotondati */
+  background-color: #e74c3c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 700;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border: 2px solid transparent;
+  margin-left: 8px; /* Spazio aggiuntivo per separarlo dai dot */
+}
+
+.reset-button:hover {
+  background-color: #c0392b;
+  transform: scale(1.1);
+  box-shadow: 0 0 8px rgba(231, 76, 60, 0.4);
+}
+
+.reset-button:active {
+  transform: scale(0.95);
+}

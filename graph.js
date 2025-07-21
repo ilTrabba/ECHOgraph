@@ -50,6 +50,22 @@ for (let i = 1; i <= 6; i++) {
     });
 }
 
+// Reset button
+seasonDotContainer.append("div")
+  .attr("class", "reset-button")
+  .text("↻")
+  .on("click", function () {
+    // Deseleziona tutti i capitoli
+    selectedSeasons.clear();
+    
+    // Rimuovi la classe selected da tutti i dot
+    seasonDotContainer.selectAll(".season-dot").classed("selected", false);
+    
+    // Aggiorna il grafo
+    updateGraphForSeasons();
+  });
+
+
 // DEFINIZIONE FRECCE - Allineate con quelle nell'HTML
 const defs = svg.append("defs");
 ["positive", "negative", "ambiguous", "neutral"].forEach(judgment => {
@@ -161,6 +177,9 @@ function createSegmentedLinks() {
   });
   
   const segmentedGroup = svg.append("g").attr("class", "segmented-links");
+  
+  // Sposta il gruppo segmentato prima dei nodi nel DOM per il corretto z-order
+  node.node().parentNode.insertBefore(segmentedGroup.node(), node.node());
   
   visibleLinks.forEach(linkData => {
     const sx = linkData.source.x, sy = linkData.source.y;
@@ -525,7 +544,7 @@ d3.json("data.json").then(data => {
         
         const seasonData = link?.seasons?.[season];
         const labels = seasonData?.labels || [];
-        const labelText = labels.length > 0 ? labels.join(', ') : 'No opinion';
+        const labelText = labels.length > 0 ? labels.join('<br>') : 'No opinion';
         
         return `<div style="display: inline-block; margin-right: 10px; padding: 5px; border: 1px solid #ccc; border-radius: 4px; background: #f9f9f9;">
           <strong>Ch.${season}</strong><br>
@@ -533,7 +552,7 @@ d3.json("data.json").then(data => {
         </div>`;
       }).join('');
       
-      tooltipContent = `<div style="display: flex; flex-wrap: wrap;">${boxes}</div>`;
+      tooltipContent = `<div style="display: flex; flex-wrap: nowrap; overflow-x: auto;">${boxes}</div>`;
     } else {
       // Single chapter mode: original behavior
       tooltipContent = opinionData.labels.join("<br>");
@@ -740,16 +759,19 @@ d3.json("data.json").then(data => {
         // If multiple seasons selected, combine labels from all seasons
         if (selectedSeasons.size > 1) {
           const allLabels = [];
+          let hasRealOpinion = false; // Traccia se ci sono opinioni reali
           const seasonsArray = Array.from(selectedSeasons).sort();
           seasonsArray.forEach(season => {
             const seasonData = link.seasons?.[season];
             if (seasonData && seasonData.labels && seasonData.labels.length > 0) {
               allLabels.push(`Chapter ${season}: ${seasonData.labels.join(', ')}`);
+              hasRealOpinion = true; // Trovata almeno una opinione reale
             } else {
               allLabels.push(`Chapter ${season}: No opinion`);
             }
           });
-          return { labels: allLabels };
+          // Restituisci null se non ci sono opinioni reali in nessun capitolo
+          return hasRealOpinion ? { labels: allLabels } : null;
         } else if (selectedSeasons.size === 1) {
           // Single season - original behavior
           const season = Array.from(selectedSeasons)[0];
