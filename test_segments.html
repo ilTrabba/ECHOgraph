@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Segmented Link Test</title>
+  <style>
+    svg {
+      border: 1px solid #ccc;
+      background: #f9f9f9;
+    }
+    .segment {
+      stroke-width: 4;
+      fill: none;
+      cursor: pointer;
+    }
+    .segment:hover {
+      stroke-width: 6;
+    }
+    .controls {
+      margin: 20px 0;
+    }
+    .season-dot {
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: #ddd;
+      text-align: center;
+      line-height: 30px;
+      margin: 5px;
+      cursor: pointer;
+      border: 2px solid transparent;
+    }
+    .season-dot.selected {
+      background: #69b3a2;
+      color: white;
+      border-color: #333;
+    }
+    #output {
+      margin-top: 20px;
+      padding: 10px;
+      background: #f0f0f0;
+      font-family: monospace;
+    }
+  </style>
+</head>
+<body>
+  <h2>Segmented Link Visualization Test</h2>
+  
+  <div class="controls">
+    <strong>Select chapters to see segmented edge:</strong><br>
+    <div id="season-dots"></div>
+    <div style="margin-top: 10px;">
+      <strong>Selected:</strong> <span id="selected-list">None</span>
+    </div>
+  </div>
+  
+  <svg width="600" height="400">
+    <!-- Node A -->
+    <circle cx="150" cy="200" r="15" fill="#69b3a2" stroke="#333" stroke-width="2"/>
+    <text x="150" y="180" text-anchor="middle" font-size="12">Node A</text>
+    
+    <!-- Node B -->
+    <circle cx="450" cy="200" r="15" fill="#69b3a2" stroke="#333" stroke-width="2"/>
+    <text x="450" y="180" text-anchor="middle" font-size="12">Node B</text>
+    
+    <!-- Link segments will be drawn here -->
+    <g id="segments"></g>
+  </svg>
+  
+  <div id="output">
+    Segments: None
+  </div>
+
+  <script>
+    const selectedSeasons = new Set();
+    const colorMap = {
+      positive: "#4CAF50",
+      negative: "#F44336", 
+      ambiguous: "#FFC107",
+      neutral: "#000000"
+    };
+    
+    // Mock data for testing
+    const mockLinkData = {
+      source: { x: 150, y: 200 },
+      target: { x: 450, y: 200 },
+      seasons: {
+        "1": { judgment: "", dialogues: [] },
+        "2": { judgment: "negative", dialogues: ["Some dialogue"] },
+        "3": { judgment: "positive", dialogues: ["Another dialogue"] },
+        "4": { judgment: "", dialogues: [] },
+        "5": { judgment: "ambiguous", dialogues: ["More dialogue"] },
+        "6": { judgment: "negative", dialogues: ["Final dialogue"] }
+      }
+    };
+    
+    const seasonDotContainer = document.getElementById('season-dots');
+    const selectedList = document.getElementById('selected-list');
+    const segmentsGroup = document.getElementById('segments');
+    const output = document.getElementById('output');
+    
+    function updateSelectedDisplay() {
+      if (selectedSeasons.size === 0) {
+        selectedList.textContent = 'None';
+      } else {
+        selectedList.textContent = Array.from(selectedSeasons).sort().join(', ');
+      }
+    }
+    
+    function createSegmentedLink() {
+      // Clear existing segments
+      segmentsGroup.innerHTML = '';
+      
+      if (selectedSeasons.size === 0) {
+        output.textContent = 'Segments: None';
+        return;
+      }
+      
+      const seasonsArray = Array.from(selectedSeasons).sort();
+      const segmentCount = seasonsArray.length;
+      
+      // Check if any season has judgment
+      let hasJudgment = false;
+      for (const season of selectedSeasons) {
+        const seasonData = mockLinkData.seasons[season];
+        if (seasonData && seasonData.judgment && seasonData.judgment.trim() !== "") {
+          hasJudgment = true;
+          break;
+        }
+      }
+      
+      if (!hasJudgment) {
+        output.textContent = 'Segments: No judgments in selected seasons';
+        return;
+      }
+      
+      const sx = mockLinkData.source.x;
+      const sy = mockLinkData.source.y; 
+      const tx = mockLinkData.target.x;
+      const ty = mockLinkData.target.y;
+      
+      let segments = [];
+      
+      seasonsArray.forEach((season, index) => {
+        const seasonData = mockLinkData.seasons[season];
+        const judgment = seasonData?.judgment || "";
+        const color = judgment ? (colorMap[judgment] || colorMap.neutral) : colorMap.neutral;
+        
+        // Calculate segment coordinates
+        const startX = sx + (tx - sx) * (index / segmentCount);
+        const startY = sy + (ty - sy) * (index / segmentCount);
+        const endX = sx + (tx - sx) * ((index + 1) / segmentCount);
+        const endY = sy + (ty - sy) * ((index + 1) / segmentCount);
+        
+        // Create segment path
+        const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+        path.setAttribute('class', 'segment');
+        path.setAttribute('d', `M${startX},${startY}L${endX},${endY}`);
+        path.setAttribute('stroke', color);
+        path.setAttribute('data-season', season);
+        path.setAttribute('data-judgment', judgment || 'neutral');
+        
+        // Add click handler
+        path.addEventListener('click', function() {
+          const segmentInfo = `Clicked: Season ${season}, Judgment: ${judgment || 'none'}`;
+          alert(segmentInfo);
+        });
+        
+        segmentsGroup.appendChild(path);
+        
+        segments.push(`Season ${season}: ${judgment || 'neutral'} (${color})`);
+      });
+      
+      output.textContent = 'Segments: ' + segments.join(' | ');
+    }
+    
+    // Create season filter
+    for (let i = 1; i <= 6; i++) {
+      const dot = document.createElement('div');
+      dot.className = 'season-dot';
+      dot.setAttribute('data-season', i);
+      dot.textContent = i;
+      
+      dot.addEventListener('click', function() {
+        const season = String(i);
+        
+        if (selectedSeasons.has(season)) {
+          selectedSeasons.delete(season);
+          this.classList.remove('selected');
+        } else {
+          selectedSeasons.add(season);
+          this.classList.add('selected');
+        }
+        
+        updateSelectedDisplay();
+        createSegmentedLink();
+      });
+      
+      seasonDotContainer.appendChild(dot);
+    }
+    
+    updateSelectedDisplay();
+    createSegmentedLink();
+  </script>
+</body>
+</html>
