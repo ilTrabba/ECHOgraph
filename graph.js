@@ -228,26 +228,7 @@ function createSegmentedLinks() {
         segment.attr("marker-end", `url(#arrow-${judgment})`);
       }
       
-      // Add click handler for segment
-      segment.on("click", function(event, d) {
-        if (!activeNodeId) return;
-        
-        const sourceId = typeof d.source === "object" ? d.source.id : d.source;
-        if (sourceId !== activeNodeId) return;
-        
-        const segmentSeason = d.segment.season;
-        const segmentSeasonData = d.segment.seasonData;
-        
-        if (segmentSeasonData && segmentSeasonData.judgment && segmentSeasonData.judgment.trim() !== "") {
-          // Show dialogue for this specific season
-          showDialogueForLink(d, segmentSeasonData);
-        } else {
-          // Show "no opinion" message
-          showNoOpinionMessage(d, segmentSeason);
-        }
-        
-        event.stopPropagation();
-      });
+      // NON aggiungo più il click handler qui, lo farò nel tick dove showDialogueForLink è disponibile
     });
   });
 }
@@ -271,6 +252,48 @@ function showNoOpinionMessage(linkData, season) {
     .style("left", `${pageX}px`)
     .style("top", `${pageY}px`)
     .classed("visible", true);
+}
+
+// Global function to show dialogue box for a link - AGGIUNTA GLOBALE
+function showDialogueForLink(linkData, seasonData) {
+  const dialogues = seasonData?.dialogues?.filter(line => line.line && line.line.trim() !== "");
+  
+  // Calcola la posizione del dialogue box
+  let sx = linkData.source.x, sy = linkData.source.y, tx = linkData.target.x, ty = linkData.target.y;
+  let cx = (sx + tx) / 2, cy = (sy + ty) / 2;
+
+  if (linkData._isCurved && linkData._ctrlPoint) {
+    cx = linkData._ctrlPoint.x;
+    cy = linkData._ctrlPoint.y;
+  }
+
+  // Converti le coordinate SVG in coordinate della pagina
+  const svgRect = svg.node().getBoundingClientRect();
+  const pageX = svgRect.left + cx;
+  const pageY = svgRect.top + cy;
+
+  if (!dialogues || dialogues.length === 0) {
+    dialogueBox
+      .html("<em>No dialogues available for this chapter</em>")
+      .style("left", `${pageX}px`)
+      .style("top", `${pageY}px`)
+      .classed("visible", true);
+  } else {
+    const html = dialogues.map(d => {
+      return `
+        <div style="margin-bottom: 8px;">
+          <strong>${d.character || "?"}</strong> <em>(${d.episode || "-"})</em><br>
+          "${d.line}"
+        </div>
+      `;
+    }).join("");
+
+    dialogueBox
+      .html(html)
+      .style("left", `${pageX}px`)
+      .style("top", `${pageY}px`)
+      .classed("visible", true);
+  }
 }
 
 // Function to configure event listeners on links
@@ -349,48 +372,6 @@ d3.json("data.json").then(data => {
     .attr("stroke-width", 2)
     .attr("fill", "none")
     .style("cursor", "pointer");
-
-  // Funzione per mostrare il dialogue box per un link
-  function showDialogueForLink(linkData, seasonData) {
-    const dialogues = seasonData?.dialogues?.filter(line => line.line && line.line.trim() !== "");
-    
-    // Calcola la posizione del dialogue box
-    let sx = linkData.source.x, sy = linkData.source.y, tx = linkData.target.x, ty = linkData.target.y;
-    let cx = (sx + tx) / 2, cy = (sy + ty) / 2;
-
-    if (linkData._isCurved && linkData._ctrlPoint) {
-      cx = linkData._ctrlPoint.x;
-      cy = linkData._ctrlPoint.y;
-    }
-
-    // Converti le coordinate SVG in coordinate della pagina
-    const svgRect = svg.node().getBoundingClientRect();
-    const pageX = svgRect.left + cx;
-    const pageY = svgRect.top + cy;
-
-    if (!dialogues || dialogues.length === 0) {
-      dialogueBox
-        .html("<em>No dialogues available for this chapter</em>")
-        .style("left", `${pageX}px`)
-        .style("top", `${pageY}px`)
-        .classed("visible", true);
-    } else {
-      const html = dialogues.map(d => {
-        return `
-          <div style="margin-bottom: 8px;">
-            <strong>${d.character || "?"}</strong> <em>(${d.episode || "-"})</em><br>
-            "${d.line}"
-          </div>
-        `;
-      }).join("");
-
-      dialogueBox
-        .html(html)
-        .style("left", `${pageX}px`)
-        .style("top", `${pageY}px`)
-        .classed("visible", true);
-    }
-  }
 
   // Configura gli event listener sui link dopo aver definito showDialogueForLink
   setupLinkClickHandlers(showDialogueForLink);
@@ -538,6 +519,27 @@ d3.json("data.json").then(data => {
     if (selectedSeasons.size > 1) {
       svg.selectAll(".segmented-link").remove();
       createSegmentedLinks();
+      
+      // ORA aggiungo i click handler ai segmenti DOPO che showDialogueForLink è disponibile
+      svg.selectAll(".segmented-link").on("click", function(event, d) {
+        if (!activeNodeId) return;
+        
+        const sourceId = typeof d.source === "object" ? d.source.id : d.source;
+        if (sourceId !== activeNodeId) return;
+        
+        const segmentSeason = d.segment.season;
+        const segmentSeasonData = d.segment.seasonData;
+        
+        if (segmentSeasonData && segmentSeasonData.judgment && segmentSeasonData.judgment.trim() !== "") {
+          // Show dialogue for this specific season
+          showDialogueForLink(d, segmentSeasonData);
+        } else {
+          // Show "no opinion" message
+          showNoOpinionMessage(d, segmentSeason);
+        }
+        
+        event.stopPropagation();
+      });
     }
 
     // Keep donut charts attached to nodes
@@ -549,48 +551,6 @@ d3.json("data.json").then(data => {
       }
     });
   });
-
-  // Funzione per mostrare il dialogue box per un link
-  function showDialogueForLink(linkData, seasonData) {
-    const dialogues = seasonData?.dialogues?.filter(line => line.line && line.line.trim() !== "");
-    
-    // Calcola la posizione del dialogue box
-    let sx = linkData.source.x, sy = linkData.source.y, tx = linkData.target.x, ty = linkData.target.y;
-    let cx = (sx + tx) / 2, cy = (sy + ty) / 2;
-
-    if (linkData._isCurved && linkData._ctrlPoint) {
-      cx = linkData._ctrlPoint.x;
-      cy = linkData._ctrlPoint.y;
-    }
-
-    // Converti le coordinate SVG in coordinate della pagina
-    const svgRect = svg.node().getBoundingClientRect();
-    const pageX = svgRect.left + cx;
-    const pageY = svgRect.top + cy;
-
-    if (!dialogues || dialogues.length === 0) {
-      dialogueBox
-        .html("<em>No dialogues available for this chapter</em>")
-        .style("left", `${pageX}px`)
-        .style("top", `${pageY}px`)
-        .classed("visible", true);
-    } else {
-      const html = dialogues.map(d => {
-        return `
-          <div style="margin-bottom: 8px;">
-            <strong>${d.character || "?"}</strong> <em>(${d.episode || "-"})</em><br>
-            "${d.line}"
-          </div>
-        `;
-      }).join("");
-
-      dialogueBox
-        .html(html)
-        .style("left", `${pageX}px`)
-        .style("top", `${pageY}px`)
-        .classed("visible", true);
-    }
-  }
 
   function toggleHighlight(nodeId) {
     // Close dialogue box, donut charts and tooltip
