@@ -7,7 +7,7 @@ const colorMap = {
   positive: "#4CAF50",
   negative: "#F44336",
   ambiguous: "#FFC107",
-  neutral: "#000000"
+  neutral: "#c9c9c9ff"
 };
 
 let activeNodeId = null;
@@ -50,13 +50,13 @@ for (let i = 1; i <= 6; i++) {
     });
 }
 
-// DEFINIZIONE FRECCE
+// DEFINIZIONE FRECCE - Allineate con quelle nell'HTML
 const defs = svg.append("defs");
 ["positive", "negative", "ambiguous", "neutral"].forEach(judgment => {
   defs.append("marker")
     .attr("id", `arrow-${judgment}`)
     .attr("viewBox", "0 -5 10 10")
-    .attr("refX", 22)
+    .attr("refX", 20) // Cambiato da 22 a 20 per allinearsi con l'HTML
     .attr("refY", 0)
     .attr("markerWidth", 6)
     .attr("markerHeight", 6)
@@ -145,6 +145,7 @@ function updateLinkVisibility() {
 function createSegmentedLinks() {
   const seasonsArray = Array.from(selectedSeasons).sort();
   const segmentCount = seasonsArray.length;
+  const nodeRadius = 14; // Same as the circle radius
   
   // Get visible links data
   const visibleLinks = link.data().filter(d => {
@@ -165,10 +166,44 @@ function createSegmentedLinks() {
     const sx = linkData.source.x, sy = linkData.source.y;
     const tx = linkData.target.x, ty = linkData.target.y;
     
+    // Calculate adjusted start and end points to stop at node edge
+    const dx = tx - sx;
+    const dy = ty - sy;
+    const distance = Math.sqrt(dx * dx + dy * dy);
+    const unitX = dx / distance;
+    const unitY = dy / distance;
+    
+    // Adjust points to stop at node boundaries
+    const adjustedSx = sx + unitX * nodeRadius;
+    const adjustedSy = sy + unitY * nodeRadius;
+    const adjustedTx = tx - unitX * nodeRadius;
+    const adjustedTy = ty - unitY * nodeRadius;
+    
     // Determine if this is a curved link (bidirectional)
     const sourceId = linkData.source.id || linkData.source;
     const targetId = linkData.target.id || linkData.target;
     const isCurved = linkData._isCurved;
+    
+    // Calculate adjusted control point for curves
+    let adjustedCtrlX, adjustedCtrlY;
+    if (isCurved && linkData._ctrlPoint) {
+      // Keep the same offset from the adjusted line as the original had from the original line
+      const originalCtrlX = linkData._ctrlPoint.x;
+      const originalCtrlY = linkData._ctrlPoint.y;
+      
+      // Find the perpendicular offset
+      const midAdjustedX = (adjustedSx + adjustedTx) / 2;
+      const midAdjustedY = (adjustedSy + adjustedTy) / 2;
+      const originalMidX = (sx + tx) / 2;
+      const originalMidY = (sy + ty) / 2;
+      
+      // Apply the same offset to the adjusted midpoint
+      const offsetX = originalCtrlX - originalMidX;
+      const offsetY = originalCtrlY - originalMidY;
+      
+      adjustedCtrlX = midAdjustedX + offsetX;
+      adjustedCtrlY = midAdjustedY + offsetY;
+    }
     
     seasonsArray.forEach((season, index) => {
       const seasonData = linkData.seasons?.[season];
@@ -177,30 +212,28 @@ function createSegmentedLinks() {
       
       // Calculate segment path
       let segmentPath;
-      if (isCurved && linkData._ctrlPoint) {
-        // For curved links, create segments along the curve
+      if (isCurved && adjustedCtrlX !== undefined && adjustedCtrlY !== undefined) {
+        // For curved links, create segments along the curve using adjusted coordinates
         const t1 = index / segmentCount;
         const t2 = (index + 1) / segmentCount;
-        const ctrlX = linkData._ctrlPoint.x;
-        const ctrlY = linkData._ctrlPoint.y;
         
-        // Calculate points along quadratic bezier curve
-        const startX = (1-t1)*(1-t1)*sx + 2*(1-t1)*t1*ctrlX + t1*t1*tx;
-        const startY = (1-t1)*(1-t1)*sy + 2*(1-t1)*t1*ctrlY + t1*t1*ty;
-        const endX = (1-t2)*(1-t2)*sx + 2*(1-t2)*t2*ctrlX + t2*t2*tx;
-        const endY = (1-t2)*(1-t2)*sy + 2*(1-t2)*t2*ctrlY + t2*t2*ty;
+        // Use adjusted coordinates throughout
+        const startX = (1-t1)*(1-t1)*adjustedSx + 2*(1-t1)*t1*adjustedCtrlX + t1*t1*adjustedTx;
+        const startY = (1-t1)*(1-t1)*adjustedSy + 2*(1-t1)*t1*adjustedCtrlY + t1*t1*adjustedTy;
+        const endX = (1-t2)*(1-t2)*adjustedSx + 2*(1-t2)*t2*adjustedCtrlX + t2*t2*adjustedTx;
+        const endY = (1-t2)*(1-t2)*adjustedSy + 2*(1-t2)*t2*adjustedCtrlY + t2*t2*adjustedTy;
         
-        // Control point for this segment
-        const segCtrlX = (1-(t1+t2)/2)*(1-(t1+t2)/2)*sx + 2*(1-(t1+t2)/2)*((t1+t2)/2)*ctrlX + ((t1+t2)/2)*((t1+t2)/2)*tx;
-        const segCtrlY = (1-(t1+t2)/2)*(1-(t1+t2)/2)*sy + 2*(1-(t1+t2)/2)*((t1+t2)/2)*ctrlY + ((t1+t2)/2)*((t1+t2)/2)*ty;
+        // Control point for this segment using adjusted coordinates
+        const segCtrlX = (1-(t1+t2)/2)*(1-(t1+t2)/2)*adjustedSx + 2*(1-(t1+t2)/2)*((t1+t2)/2)*adjustedCtrlX + ((t1+t2)/2)*((t1+t2)/2)*adjustedTx;
+        const segCtrlY = (1-(t1+t2)/2)*(1-(t1+t2)/2)*adjustedSy + 2*(1-(t1+t2)/2)*((t1+t2)/2)*adjustedCtrlY + ((t1+t2)/2)*((t1+t2)/2)*adjustedTy;
         
         segmentPath = `M${startX},${startY} Q${segCtrlX},${segCtrlY} ${endX},${endY}`;
       } else {
-        // For straight links, create linear segments
-        const startX = sx + (tx - sx) * (index / segmentCount);
-        const startY = sy + (ty - sy) * (index / segmentCount);
-        const endX = sx + (tx - sx) * ((index + 1) / segmentCount);
-        const endY = sy + (ty - sy) * ((index + 1) / segmentCount);
+        // For straight links, create linear segments using adjusted coordinates
+        const startX = adjustedSx + (adjustedTx - adjustedSx) * (index / segmentCount);
+        const startY = adjustedSy + (adjustedTy - adjustedSy) * (index / segmentCount);
+        const endX = adjustedSx + (adjustedTx - adjustedSx) * ((index + 1) / segmentCount);
+        const endY = adjustedSy + (adjustedTy - adjustedSy) * ((index + 1) / segmentCount);
         
         segmentPath = `M${startX},${startY}L${endX},${endY}`;
       }
@@ -228,7 +261,26 @@ function createSegmentedLinks() {
         segment.attr("marker-end", `url(#arrow-${judgment})`);
       }
       
-      // NON aggiungo più il click handler qui, lo farò nel tick dove showDialogueForLink è disponibile
+      // Add click handler for segment
+      segment.on("click", function(event, d) {
+        if (!activeNodeId) return;
+        
+        const sourceId = typeof d.source === "object" ? d.source.id : d.source;
+        if (sourceId !== activeNodeId) return;
+        
+        const segmentSeason = d.segment.season;
+        const segmentSeasonData = d.segment.seasonData;
+        
+        if (segmentSeasonData && segmentSeasonData.judgment && segmentSeasonData.judgment.trim() !== "") {
+          // Show dialogue for this specific season
+          showDialogueForLink(d, segmentSeasonData);
+        } else {
+          // Show "no opinion" message
+          showNoOpinionMessage(d, segmentSeason);
+        }
+        
+        event.stopPropagation();
+      });
     });
   });
 }
@@ -254,7 +306,7 @@ function showNoOpinionMessage(linkData, season) {
     .classed("visible", true);
 }
 
-// Global function to show dialogue box for a link - AGGIUNTA GLOBALE
+// Global function to show dialogue box for a link
 function showDialogueForLink(linkData, seasonData) {
   const dialogues = seasonData?.dialogues?.filter(line => line.line && line.line.trim() !== "");
   
@@ -372,6 +424,48 @@ d3.json("data.json").then(data => {
     .attr("stroke-width", 2)
     .attr("fill", "none")
     .style("cursor", "pointer");
+
+  // Funzione per mostrare il dialogue box per un link
+  function showDialogueForLink(linkData, seasonData) {
+    const dialogues = seasonData?.dialogues?.filter(line => line.line && line.line.trim() !== "");
+    
+    // Calcola la posizione del dialogue box
+    let sx = linkData.source.x, sy = linkData.source.y, tx = linkData.target.x, ty = linkData.target.y;
+    let cx = (sx + tx) / 2, cy = (sy + ty) / 2;
+
+    if (linkData._isCurved && linkData._ctrlPoint) {
+      cx = linkData._ctrlPoint.x;
+      cy = linkData._ctrlPoint.y;
+    }
+
+    // Converti le coordinate SVG in coordinate della pagina
+    const svgRect = svg.node().getBoundingClientRect();
+    const pageX = svgRect.left + cx;
+    const pageY = svgRect.top + cy;
+
+    if (!dialogues || dialogues.length === 0) {
+      dialogueBox
+        .html("<em>No dialogues available for this chapter</em>")
+        .style("left", `${pageX}px`)
+        .style("top", `${pageY}px`)
+        .classed("visible", true);
+    } else {
+      const html = dialogues.map(d => {
+        return `
+          <div style="margin-bottom: 8px;">
+            <strong>${d.character || "?"}</strong> <em>(${d.episode || "-"})</em><br>
+            "${d.line}"
+          </div>
+        `;
+      }).join("");
+
+      dialogueBox
+        .html(html)
+        .style("left", `${pageX}px`)
+        .style("top", `${pageY}px`)
+        .classed("visible", true);
+    }
+  }
 
   // Configura gli event listener sui link dopo aver definito showDialogueForLink
   setupLinkClickHandlers(showDialogueForLink);
@@ -519,27 +613,6 @@ d3.json("data.json").then(data => {
     if (selectedSeasons.size > 1) {
       svg.selectAll(".segmented-link").remove();
       createSegmentedLinks();
-      
-      // ORA aggiungo i click handler ai segmenti DOPO che showDialogueForLink è disponibile
-      svg.selectAll(".segmented-link").on("click", function(event, d) {
-        if (!activeNodeId) return;
-        
-        const sourceId = typeof d.source === "object" ? d.source.id : d.source;
-        if (sourceId !== activeNodeId) return;
-        
-        const segmentSeason = d.segment.season;
-        const segmentSeasonData = d.segment.seasonData;
-        
-        if (segmentSeasonData && segmentSeasonData.judgment && segmentSeasonData.judgment.trim() !== "") {
-          // Show dialogue for this specific season
-          showDialogueForLink(d, segmentSeasonData);
-        } else {
-          // Show "no opinion" message
-          showNoOpinionMessage(d, segmentSeason);
-        }
-        
-        event.stopPropagation();
-      });
     }
 
     // Keep donut charts attached to nodes
@@ -551,6 +624,48 @@ d3.json("data.json").then(data => {
       }
     });
   });
+
+  // Funzione per mostrare il dialogue box per un link
+  function showDialogueForLink(linkData, seasonData) {
+    const dialogues = seasonData?.dialogues?.filter(line => line.line && line.line.trim() !== "");
+    
+    // Calcola la posizione del dialogue box
+    let sx = linkData.source.x, sy = linkData.source.y, tx = linkData.target.x, ty = linkData.target.y;
+    let cx = (sx + tx) / 2, cy = (sy + ty) / 2;
+
+    if (linkData._isCurved && linkData._ctrlPoint) {
+      cx = linkData._ctrlPoint.x;
+      cy = linkData._ctrlPoint.y;
+    }
+
+    // Converti le coordinate SVG in coordinate della pagina
+    const svgRect = svg.node().getBoundingClientRect();
+    const pageX = svgRect.left + cx;
+    const pageY = svgRect.top + cy;
+
+    if (!dialogues || dialogues.length === 0) {
+      dialogueBox
+        .html("<em>No dialogues available for this chapter</em>")
+        .style("left", `${pageX}px`)
+        .style("top", `${pageY}px`)
+        .classed("visible", true);
+    } else {
+      const html = dialogues.map(d => {
+        return `
+          <div style="margin-bottom: 8px;">
+            <strong>${d.character || "?"}</strong> <em>(${d.episode || "-"})</em><br>
+            "${d.line}"
+          </div>
+        `;
+      }).join("");
+
+      dialogueBox
+        .html(html)
+        .style("left", `${pageX}px`)
+        .style("top", `${pageY}px`)
+        .classed("visible", true);
+    }
+  }
 
   function toggleHighlight(nodeId) {
     // Close dialogue box, donut charts and tooltip

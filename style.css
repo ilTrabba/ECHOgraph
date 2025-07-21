@@ -6,6 +6,7 @@ body {
   /* Utilizzo di Poppins come font principale per coerenza */
   font-family: 'Poppins', 'Segoe UI', sans-serif;
   background: #f5f5f5;
+  overflow: hidden; /* Nasconde lo scroll del body per evitare conflitti */
 }
 
 /* =========================================
@@ -16,6 +17,12 @@ body {
   height: 100vh;
   /* Cursori per indicare la possibilità di pan (trascinamento) */
   cursor: grab;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background: #f5f5f5;
+  overflow: auto; /* Permette lo scroll all'interno del contenitore */
 }
 
 #graph-container:active {
@@ -23,9 +30,11 @@ body {
 }
 
 svg {
-  width: 100%;
-  height: 100%;
-  display: block; /* Rimuove spazi extra sotto l'SVG */
+  width: 200vw; /* Raddoppia la larghezza per più spazio orizzontale */
+  height: 200vh; /* Raddoppia l'altezza per più spazio verticale */
+  display: block;
+  min-width: 100vw; /* Mantiene almeno la dimensione della viewport */
+  min-height: 100vh;
 }
 
 /* =========================================
@@ -78,7 +87,7 @@ svg {
 }
 
 .content-below-graph {
-  margin-top: 50vh;
+  margin-top: 100vh;
   padding: 25px 25px;
   background-color: rgba(245, 245, 245, 0.9);
   -webkit-backdrop-filter: blur(8px);
@@ -87,6 +96,9 @@ svg {
   font-family: 'Roboto', sans-serif;
   color: #333;
   line-height: 1.7;
+  position: relative;
+  z-index: 0;
+  display: none; /* Nasconde il contenuto sottostante per ora */
 }
 
 .content-below-graph h2 {
@@ -193,7 +205,7 @@ svg {
    DIALOGUE BOX (STILE MIGLIORATO)
    ========================================= */
 #dialogue-box {
-  position: absolute;
+  position: fixed;
   right: 20px;
   /* Posizionata più in basso per non sovrapporsi alla timeline */
   top: 85px;
@@ -281,4 +293,23 @@ svg {
 
 .dialogue-content::-webkit-scrollbar-thumb:hover {
   background: #999;
+}
+
+/* Nasconde le scrollbar del contenitore del grafo per un aspetto più pulito */
+#graph-container::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+#graph-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+#graph-container::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+}
+
+#graph-container::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.4);
 }
