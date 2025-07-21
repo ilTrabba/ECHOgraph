@@ -193,7 +193,7 @@ svg {
    DIALOGUE BOX (STILE MIGLIORATO)
    ========================================= */
 #dialogue-box {
-  position: fixed;
+  position: absolute;
   right: 20px;
   /* Posizionata più in basso per non sovrapporsi alla timeline */
   top: 85px;
