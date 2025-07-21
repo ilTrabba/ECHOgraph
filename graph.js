@@ -445,9 +445,36 @@ d3.json("data.json").then(data => {
     const x = svgRect.left + matrix.e;
     const y = svgRect.top + matrix.f;
 
+    let tooltipContent;
+    if (selectedSeasons.size > 1) {
+      // Multi-chapter mode: show boxes side by side
+      const seasonsArray = Array.from(selectedSeasons).sort();
+      const boxes = seasonsArray.map(season => {
+        const link = rawLinkData.find(l => {
+          const s = l.source.id || l.source;
+          const t = l.target.id || l.target;
+          return s === activeNodeId && t === d.id;
+        });
+        
+        const seasonData = link?.seasons?.[season];
+        const labels = seasonData?.labels || [];
+        const labelText = labels.length > 0 ? labels.join(', ') : 'No opinion';
+        
+        return `<div style="display: inline-block; margin-right: 10px; padding: 5px; border: 1px solid #ccc; border-radius: 4px; background: #f9f9f9;">
+          <strong>Ch.${season}</strong><br>
+          ${labelText}
+        </div>`;
+      }).join('');
+      
+      tooltipContent = `<div style="display: flex; flex-wrap: wrap;">${boxes}</div>`;
+    } else {
+      // Single chapter mode: original behavior
+      tooltipContent = opinionData.labels.join("<br>");
+    }
+
     tooltip
       .classed("hidden", false)
-      .html(opinionData.labels.join("<br>"))
+      .html(tooltipContent)
       .style("left", `${x}px`)
       .style("top", `${y - 40}px`);
   });
