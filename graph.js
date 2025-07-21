@@ -1,5 +1,5 @@
-const width = 1340;
-const height = 900;
+const width = 2680;  // Raddoppiato come richiesto
+const height = 1800; // Raddoppiato come richiesto
 const svg = d3.select("svg");
 const tooltip = d3.select("#tooltip");
 
@@ -56,7 +56,7 @@ const defs = svg.append("defs");
   defs.append("marker")
     .attr("id", `arrow-${judgment}`)
     .attr("viewBox", "0 -5 10 10")
-    .attr("refX", 20) // Cambiato da 22 a 20 per allinearsi con l'HTML
+    .attr("refX", 20) // Mantiene il valore corretto per la precisione
     .attr("refY", 0)
     .attr("markerWidth", 6)
     .attr("markerHeight", 6)
@@ -166,43 +166,35 @@ function createSegmentedLinks() {
     const sx = linkData.source.x, sy = linkData.source.y;
     const tx = linkData.target.x, ty = linkData.target.y;
     
-    // Calculate adjusted start and end points to stop at node edge
-    const dx = tx - sx;
-    const dy = ty - sy;
-    const distance = Math.sqrt(dx * dx + dy * dy);
-    const unitX = dx / distance;
-    const unitY = dy / distance;
-    
-    // Adjust points to stop at node boundaries
-    const adjustedSx = sx + unitX * nodeRadius;
-    const adjustedSy = sy + unitY * nodeRadius;
-    const adjustedTx = tx - unitX * nodeRadius;
-    const adjustedTy = ty - unitY * nodeRadius;
-    
     // Determine if this is a curved link (bidirectional)
     const sourceId = linkData.source.id || linkData.source;
     const targetId = linkData.target.id || linkData.target;
     const isCurved = linkData._isCurved;
     
-    // Calculate adjusted control point for curves
-    let adjustedCtrlX, adjustedCtrlY;
+    // Calculate the full path points (like the original links)
+    let fullPathStart, fullPathEnd, fullPathCtrl;
+    
     if (isCurved && linkData._ctrlPoint) {
-      // Keep the same offset from the adjusted line as the original had from the original line
-      const originalCtrlX = linkData._ctrlPoint.x;
-      const originalCtrlY = linkData._ctrlPoint.y;
+      // For curved links, use the same calculation as the original
+      fullPathStart = { x: sx, y: sy };
+      fullPathEnd = { x: tx, y: ty };
+      fullPathCtrl = { x: linkData._ctrlPoint.x, y: linkData._ctrlPoint.y };
+    } else {
+      // For straight links, calculate adjusted endpoints exactly like D3 does
+      const dx = tx - sx;
+      const dy = ty - sy;
+      const distance = Math.sqrt(dx * dx + dy * dy);
+      const unitX = dx / distance;
+      const unitY = dy / distance;
       
-      // Find the perpendicular offset
-      const midAdjustedX = (adjustedSx + adjustedTx) / 2;
-      const midAdjustedY = (adjustedSy + adjustedTy) / 2;
-      const originalMidX = (sx + tx) / 2;
-      const originalMidY = (sy + ty) / 2;
-      
-      // Apply the same offset to the adjusted midpoint
-      const offsetX = originalCtrlX - originalMidX;
-      const offsetY = originalCtrlY - originalMidY;
-      
-      adjustedCtrlX = midAdjustedX + offsetX;
-      adjustedCtrlY = midAdjustedY + offsetY;
+      fullPathStart = { 
+        x: sx + unitX * nodeRadius, 
+        y: sy + unitY * nodeRadius 
+      };
+      fullPathEnd = { 
+        x: tx - unitX * nodeRadius, 
+        y: ty - unitY * nodeRadius 
+      };
     }
     
     seasonsArray.forEach((season, index) => {
@@ -212,28 +204,28 @@ function createSegmentedLinks() {
       
       // Calculate segment path
       let segmentPath;
-      if (isCurved && adjustedCtrlX !== undefined && adjustedCtrlY !== undefined) {
-        // For curved links, create segments along the curve using adjusted coordinates
+      if (isCurved && fullPathCtrl) {
+        // For curved links, create segments along the curve
         const t1 = index / segmentCount;
         const t2 = (index + 1) / segmentCount;
         
-        // Use adjusted coordinates throughout
-        const startX = (1-t1)*(1-t1)*adjustedSx + 2*(1-t1)*t1*adjustedCtrlX + t1*t1*adjustedTx;
-        const startY = (1-t1)*(1-t1)*adjustedSy + 2*(1-t1)*t1*adjustedCtrlY + t1*t1*adjustedTy;
-        const endX = (1-t2)*(1-t2)*adjustedSx + 2*(1-t2)*t2*adjustedCtrlX + t2*t2*adjustedTx;
-        const endY = (1-t2)*(1-t2)*adjustedSy + 2*(1-t2)*t2*adjustedCtrlY + t2*t2*adjustedTy;
+        // Calculate points along the original curve
+        const startX = (1-t1)*(1-t1)*fullPathStart.x + 2*(1-t1)*t1*fullPathCtrl.x + t1*t1*fullPathEnd.x;
+        const startY = (1-t1)*(1-t1)*fullPathStart.y + 2*(1-t1)*t1*fullPathCtrl.y + t1*t1*fullPathEnd.y;
+        const endX = (1-t2)*(1-t2)*fullPathStart.x + 2*(1-t2)*t2*fullPathCtrl.x + t2*t2*fullPathEnd.x;
+        const endY = (1-t2)*(1-t2)*fullPathStart.y + 2*(1-t2)*t2*fullPathCtrl.y + t2*t2*fullPathEnd.y;
         
-        // Control point for this segment using adjusted coordinates
-        const segCtrlX = (1-(t1+t2)/2)*(1-(t1+t2)/2)*adjustedSx + 2*(1-(t1+t2)/2)*((t1+t2)/2)*adjustedCtrlX + ((t1+t2)/2)*((t1+t2)/2)*adjustedTx;
-        const segCtrlY = (1-(t1+t2)/2)*(1-(t1+t2)/2)*adjustedSy + 2*(1-(t1+t2)/2)*((t1+t2)/2)*adjustedCtrlY + ((t1+t2)/2)*((t1+t2)/2)*adjustedTy;
+        // Control point for this segment
+        const segCtrlX = (1-(t1+t2)/2)*(1-(t1+t2)/2)*fullPathStart.x + 2*(1-(t1+t2)/2)*((t1+t2)/2)*fullPathCtrl.x + ((t1+t2)/2)*((t1+t2)/2)*fullPathEnd.x;
+        const segCtrlY = (1-(t1+t2)/2)*(1-(t1+t2)/2)*fullPathStart.y + 2*(1-(t1+t2)/2)*((t1+t2)/2)*fullPathCtrl.y + ((t1+t2)/2)*((t1+t2)/2)*fullPathEnd.y;
         
         segmentPath = `M${startX},${startY} Q${segCtrlX},${segCtrlY} ${endX},${endY}`;
       } else {
-        // For straight links, create linear segments using adjusted coordinates
-        const startX = adjustedSx + (adjustedTx - adjustedSx) * (index / segmentCount);
-        const startY = adjustedSy + (adjustedTy - adjustedSy) * (index / segmentCount);
-        const endX = adjustedSx + (adjustedTx - adjustedSx) * ((index + 1) / segmentCount);
-        const endY = adjustedSy + (adjustedTy - adjustedSy) * ((index + 1) / segmentCount);
+        // For straight links, create linear segments using the adjusted coordinates
+        const startX = fullPathStart.x + (fullPathEnd.x - fullPathStart.x) * (index / segmentCount);
+        const startY = fullPathStart.y + (fullPathEnd.y - fullPathStart.y) * (index / segmentCount);
+        const endX = fullPathStart.x + (fullPathEnd.x - fullPathStart.x) * ((index + 1) / segmentCount);
+        const endY = fullPathStart.y + (fullPathEnd.y - fullPathStart.y) * ((index + 1) / segmentCount);
         
         segmentPath = `M${startX},${startY}L${endX},${endY}`;
       }
