@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
             
             setTimeout(() => {
                 
-                window.location.href = 'CHORD/index_chord.html'; 
+                window.location.href = '../CHORD/index_chord.html'; 
             }, 250);
         }
     });
@@ -607,7 +607,7 @@ function setupLinkClickHandlers(showDialogueCallback) {
   });
 }
 
-d3.json("data.json").then(data => {
+d3.json("../data.json").then(data => {
   rawLinkData = data.links;
   graphData = data;
   

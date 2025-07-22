@@ -3,7 +3,7 @@ let state = {
     selectedCharacter: null,
     selectedLabel: null,
     selectedType: null, // 'character' o 'label'
-    selectedSeason: "1",
+    selectedSeasons: new Set(["1"]), // Inizializzazione con stagione 1 selezionata
     data: null,
     svg: null,
     zoomGroup: null,
@@ -244,8 +244,18 @@ function createChordPath(sourceNode, targetNode) {
 }
 
 // --- Elabora dati nodi e connessioni ---
+// --- Elabora dati nodi e connessioni ---
 function processData() {
-    if (!state.data) return;
+    if (!state.data || state.selectedSeasons.size === 0) {
+        // Se nessuna stagione selezionata, resetta tutto
+        state.characterNodes = [];
+        state.characteristicNodes = [];
+        state.thoughtNodes = [];
+        state.connections = [];
+        state.groupedConnections = [];
+        return;
+    }
+    
     const characters = state.data.nodes.map(node => node.id);
     state.characterNodes = [];
     state.characteristicNodes = [];
@@ -256,32 +266,42 @@ function processData() {
     const characterData = characters.map(character => {
         const incomingLabels = [];
         const labelSources = {};
-        state.data.links.forEach(link => {
-            if (link.target === character &&
-                link.seasons &&
-                link.seasons[state.selectedSeason] &&
-                link.seasons[state.selectedSeason].labels &&
-                link.seasons[state.selectedSeason].labels.length > 0) {
-                link.seasons[state.selectedSeason].labels.forEach(label => {
-                    if (!incomingLabels.some(item => item.label === label)) {
-                        incomingLabels.push({
-                            label,
-                            source: link.source,
-                            judgment: link.seasons[state.selectedSeason].judgment
-                        });
-                    }
-                    if (!labelSources[label]) labelSources[label] = [];
-                    labelSources[label].push(link.source);
-                });
-            }
+        
+        // Per ogni stagione selezionata, raccogli le label
+        state.selectedSeasons.forEach(selectedSeason => {
+            state.data.links.forEach(link => {
+                if (link.target === character &&
+                    link.seasons &&
+                    link.seasons[selectedSeason] &&
+                    link.seasons[selectedSeason].labels &&
+                    link.seasons[selectedSeason].labels.length > 0) {
+                    link.seasons[selectedSeason].labels.forEach(label => {
+                        if (!incomingLabels.some(item => item.label === label)) {
+                            incomingLabels.push({
+                                label,
+                                source: link.source,
+                                judgment: link.seasons[selectedSeason].judgment
+                            });
+                        }
+                        if (!labelSources[label]) labelSources[label] = [];
+                        if (!labelSources[label].includes(link.source)) {
+                            labelSources[label].push(link.source);
+                        }
+                    });
+                }
+            });
         });
-        const hasOutgoingThoughts = state.data.links.some(link =>
-            link.source === character &&
-            link.seasons &&
-            link.seasons[state.selectedSeason] &&
-            link.seasons[state.selectedSeason].labels &&
-            link.seasons[state.selectedSeason].labels.length > 0
+        
+        const hasOutgoingThoughts = Array.from(state.selectedSeasons).some(selectedSeason => 
+            state.data.links.some(link =>
+                link.source === character &&
+                link.seasons &&
+                link.seasons[selectedSeason] &&
+                link.seasons[selectedSeason].labels &&
+                link.seasons[selectedSeason].labels.length > 0
+            )
         );
+        
         return {
             id: character,
             labelsCount: incomingLabels.length,
@@ -316,19 +336,12 @@ function processData() {
             const elementSpacing = availableSpan / (totalElements + 1);
             let elementIndex = 1;
             
-            // Nodo pensiero (nome rosso) - ULTIMA LETTERA ATTACCATA ESTERNAMENTE
             const thoughtAngle = charData.startAngle + 0.01 + elementIndex * elementSpacing;
-
-            // Calcola la metà della larghezza del testo
             const thoughtText = charData.id;
             const fontSize = 13 * state.config.scaleFactor;
             const avgCharWidth = fontSize * 0.6;
             const halfTextWidth = (thoughtText.length * avgCharWidth) / 2;
-
-            // AGGIUNGI metà testo per far iniziare il testo PRIMA della circonferenza
-            // così l'ultima lettera finisce ESATTAMENTE sulla circonferenza
             const adjustedRadius = state.config.labelRadius + halfTextWidth;
-
             const thoughtX = state.config.centerX + adjustedRadius * Math.cos(thoughtAngle);
             const thoughtY = state.config.centerY + adjustedRadius * Math.sin(thoughtAngle);
 
@@ -344,20 +357,13 @@ function processData() {
             });
             elementIndex++;
             
-            // Nodi delle label caratteristiche - ULTIMA LETTERA ATTACCATA ESTERNAMENTE
             charData.incomingLabels.forEach(labelData => {
                 const angle = charData.startAngle + 0.01 + elementIndex * elementSpacing;
-                
-                // Calcola la metà della larghezza del testo
                 const labelText = labelData.label;
                 const fontSize = 13 * state.config.scaleFactor;
                 const avgCharWidth = fontSize * 0.6;
                 const halfTextWidth = (labelText.length * avgCharWidth) / 2;
-                
-                // AGGIUNGI metà testo per far iniziare il testo PRIMA della circonferenza
-                // così l'ultima lettera finisce ESATTAMENTE sulla circonferenza
                 const adjustedRadius = state.config.labelRadius + halfTextWidth;
-                
                 const x = state.config.centerX + adjustedRadius * Math.cos(angle);
                 const y = state.config.centerY + adjustedRadius * Math.sin(angle);
         
@@ -378,27 +384,31 @@ function processData() {
         }
     });
 
-    // Connessioni raggruppate
+    // Connessioni raggruppate per tutte le stagioni selezionate
     state.characterNodes.forEach(charNode => {
         const targetChar = charNode.id;
         const labelGroups = {};
-        state.data.links.forEach(link => {
-            if (link.target === targetChar &&
-                link.seasons &&
-                link.seasons[state.selectedSeason] &&
-                link.seasons[state.selectedSeason].labels &&
-                link.seasons[state.selectedSeason].labels.length > 0) {
-                link.seasons[state.selectedSeason].labels.forEach(label => {
-                    if (!labelGroups[label]) labelGroups[label] = [];
-                    labelGroups[label].push({
-                        sourceCharacter: link.source,
-                        targetCharacter: link.target,
-                        label,
-                        judgment: link.seasons[state.selectedSeason].judgment
+        
+        state.selectedSeasons.forEach(selectedSeason => {
+            state.data.links.forEach(link => {
+                if (link.target === targetChar &&
+                    link.seasons &&
+                    link.seasons[selectedSeason] &&
+                    link.seasons[selectedSeason].labels &&
+                    link.seasons[selectedSeason].labels.length > 0) {
+                    link.seasons[selectedSeason].labels.forEach(label => {
+                        if (!labelGroups[label]) labelGroups[label] = [];
+                        labelGroups[label].push({
+                            sourceCharacter: link.source,
+                            targetCharacter: link.target,
+                            label,
+                            judgment: link.seasons[selectedSeason].judgment
+                        });
                     });
-                });
-            }
+                }
+            });
         });
+        
         Object.keys(labelGroups).forEach(label => {
             const connections = labelGroups[label];
             const targetCharacteristic = state.characteristicNodes.find(
@@ -423,21 +433,23 @@ function processData() {
         });
     });
     
-    // Mantieni le connessioni originali per il tracking
-    state.data.links.forEach(link => {
-        if (link.seasons &&
-            link.seasons[state.selectedSeason] &&
-            link.seasons[state.selectedSeason].labels &&
-            link.seasons[state.selectedSeason].labels.length > 0) {
-            link.seasons[state.selectedSeason].labels.forEach(label => {
-                state.connections.push({
-                    sourceCharacter: link.source,
-                    targetCharacter: link.target,
-                    label,
-                    judgment: link.seasons[state.selectedSeason].judgment
+    // Mantieni le connessioni originali per tutte le stagioni
+    state.selectedSeasons.forEach(selectedSeason => {
+        state.data.links.forEach(link => {
+            if (link.seasons &&
+                link.seasons[selectedSeason] &&
+                link.seasons[selectedSeason].labels &&
+                link.seasons[selectedSeason].labels.length > 0) {
+                link.seasons[selectedSeason].labels.forEach(label => {
+                    state.connections.push({
+                        sourceCharacter: link.source,
+                        targetCharacter: link.target,
+                        label,
+                        judgment: link.seasons[selectedSeason].judgment
+                    });
                 });
-            });
-        }
+            }
+        });
     });
 }
 
@@ -445,6 +457,18 @@ function processData() {
 function createVisualization() {
     if (!state.data) return;
     state.zoomGroup.innerHTML = '';
+
+    if (state.selectedSeasons.size === 0) {
+        const messageText = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+        messageText.setAttribute('x', state.config.centerX);
+        messageText.setAttribute('y', state.config.centerY);
+        messageText.setAttribute('text-anchor', 'middle');
+        messageText.setAttribute('font-size', 18);
+        messageText.setAttribute('fill', '#666');
+        messageText.textContent = 'Select chapters to view visualization';
+        state.zoomGroup.appendChild(messageText);
+        return;
+    }
 
     // ===== CONNESSIONI CHORD STYLE (partono dal bordo del cerchio interno) =====
     state.groupedConnections.forEach((connection, index) => {
@@ -775,12 +799,17 @@ function resetHighlighting() {
 function updateInfoPanel(character) {
     const infoContent = document.getElementById('info-content');
     if (!character) {
+        const selectedSeasonsArray = Array.from(state.selectedSeasons).sort();
+        const seasonsText = selectedSeasonsArray.length > 0 ? selectedSeasonsArray.join(', ') : 'None';
+        
         infoContent.innerHTML = `
             <strong>Istruzioni:</strong><br>
             Clicca su un arco esterno per evidenziare le relazioni del personaggio.<br>
             Clicca su una label interna per evidenziare solo gli archi che la puntano.<br>
             <span style="color: #ff6b6b;">Rosso</span>: Archi in uscita<br>
             <span style="color: #4fc3f7;">Blu</span>: Archi in entrata<br>
+            <br>
+            <strong>Chapters selected:</strong> ${seasonsText}<br>
             <br>
             <strong>Controlli:</strong><br>
             • Rotella mouse: Zoom al cursore<br>
@@ -794,9 +823,10 @@ function updateInfoPanel(character) {
     const incomingConnections = state.groupedConnections.filter(c =>
         c.targetCharacter === character
     );
+    const selectedSeasonsArray = Array.from(state.selectedSeasons).sort();
     infoContent.innerHTML = `
         <strong>${character}</strong><br>
-        <strong>Stagione:</strong> ${state.selectedSeason}<br>
+        <strong>Chapters:</strong> ${selectedSeasonsArray.join(', ')}<br>
         Pensieri verso altri: ${outgoingConnections.length}<br>
         Caratteristiche ricevute: ${incomingConnections.length}<br>
         <br>
@@ -810,11 +840,13 @@ function updateInfoPanelForLabel(character, label) {
         n.character === character && n.label === label
     );
     if (labelNode) {
+        const selectedSeasonsArray = Array.from(state.selectedSeasons).sort();
+        
         infoContent.innerHTML = `
             <strong>Label selezionata:</strong><br>
             "${label}"<br>
             <strong>Personaggio:</strong> ${character}<br>
-            <strong>Stagione:</strong> ${state.selectedSeason}<br>
+            <strong>Chapters:</strong> ${selectedSeasonsArray.join(', ')}<br>
             <strong>Pensato da:</strong> ${labelNode.sources.join(', ')}<br>
             <strong>Numero di fonti:</strong> ${labelNode.sources.length}<br>
             <br>
@@ -935,26 +967,93 @@ function centerVisualization() {
     updateZoom();
 }
 
+// AGGIUNGI QUESTA SEZIONE PRIMA DELLA FUNZIONE init() nel chord.js esistente
+
+// Funzionalità toggle per tornare alla pagina principale
+document.addEventListener('DOMContentLoaded', function() {
+    const pageToggle = document.getElementById('pageToggle');
+    
+    if (pageToggle) {
+        pageToggle.addEventListener('change', function() {
+            if (!this.checked) {
+                // Animazione di uscita
+                document.body.classList.add('page-fade-out');
+                
+                setTimeout(() => {
+                    window.location.href = '../GRAPH/index.html'; 
+                }, 250);
+            }
+        });
+    }
+});
+
 async function init() {
     showLoading();
     const dataLoaded = await loadData();
     hideLoading();
     if (!dataLoaded) return;
-    state.svg = document.getElementById('visualization');
-    state.zoomGroup = document.getElementById('zoom-group');
-    updateSeasonSelector();
+    state.svg = document.getElementById('chord-visualization') || document.getElementById('visualization');
+    state.zoomGroup = document.getElementById('chord-zoom-group') || document.getElementById('zoom-group');
     updateDimensions();
     processData();
     createVisualization();
     centerVisualization();
     setupEventListeners();
     setupZoom();
+    
+    // AGGIUNGI QUESTA RIGA
+    initializeSeasonFilter();
+    
     window.addEventListener('resize', () => {
         updateDimensions();
         processData();
         createVisualization();
         centerVisualization();
     });
+}
+
+// Inizializzazione del filtro dots 
+function initializeSeasonFilter() {
+    const seasonDotContainer = d3.select("#season-dots");
+    seasonDotContainer.selectAll("*").remove();
+
+    for (let i = 1; i <= 6; i++) {
+        seasonDotContainer.append("div")
+            .attr("class", "season-dot")
+            .attr("data-season", i)
+            .text(i)
+            .classed("selected", state.selectedSeasons.has(String(i))) // Seleziona stagione 1 inizialmente
+            .on("click", function () {
+                const season = String(i);
+                
+                if (state.selectedSeasons.has(season)) {
+                    state.selectedSeasons.delete(season);
+                    d3.select(this).classed("selected", false);
+                } else {
+                    state.selectedSeasons.add(season);
+                    d3.select(this).classed("selected", true);
+                }
+
+                // Aggiorna il chord
+                resetHighlighting();
+                processData();
+                createVisualization();
+                updateInfoPanel(null);
+            });
+    }
+
+    // Reset button
+    seasonDotContainer.append("div")
+        .attr("class", "reset-button")
+        .text("↻")
+        .on("click", function () {
+            state.selectedSeasons.clear();
+            seasonDotContainer.selectAll(".season-dot").classed("selected", false);
+            resetHighlighting();
+            processData();
+            createVisualization();
+            updateInfoPanel(null);
+        });
 }
 
 document.addEventListener('DOMContentLoaded', init);
