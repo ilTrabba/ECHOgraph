@@ -8,32 +8,6 @@
 </head>
 <body>
 
-<!-- Contenitore per il grafico D3 per la funzionalità di zoom -->
-<div id="graph-container">
-  <svg>
-    <defs>
-        <marker id="arrow-positive" viewBox="0 -5 10 10" refX="20" refY="0"
-            markerWidth="6" markerHeight="6" orient="auto">
-            <path d="M0,-5L10,0L0,5" fill="green" />
-        </marker>
-        <marker id="arrow-negative" viewBox="0 -5 10 10" refX="20" refY="0"
-            markerWidth="6" markerHeight="6" orient="auto">
-            <path d="M0,-5L10,0L0,5" fill="red" />
-        </marker>
-        <marker id="arrow-ambiguous" viewBox="0 -5 10 10" refX="20" refY="0"
-            markerWidth="6" markerHeight="6" orient="auto">
-            <path d="M0,-5L10,0L0,5" fill="orange" />
-        </marker>
-        <marker id="arrow-undefined" viewBox="0 -5 10 10" refX="20" refY="0"
-            markerWidth="6" markerHeight="6" orient="auto">
-            <path d="M0,-5L10,0L0,5" fill="#c9c9c9ff" />
-        </marker>
-    </defs>
-    <!-- Un elemento <g> per raggruppare tutti gli elementi del grafico e applicare lo zoom -->
-    <g id="zoom-group"></g>
-  </svg>
-</div>
-
 <!-- Timeline filtro stagioni -->
 <div id="season-timeline">
   <span><strong>Chapters</strong></span>
@@ -73,7 +47,7 @@
         <span class="slider"></span>
     </label>
     <div class="toggle-labels">
-        <span>Chords Diagram</span>
+        <span>Graph Analysis</span>
     </div>
 </div>
 

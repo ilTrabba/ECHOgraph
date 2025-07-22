@@ -25,6 +25,23 @@ const dialogueBox = d3.select("#dialogue-box");
 // SEASON DOT FILTER BAR
 const seasonDotContainer = d3.select("#season-dots");
 
+// Funzionalità toggle per tornare alla pagina principale
+document.addEventListener('DOMContentLoaded', function() {
+    const pageToggle = document.getElementById('pageToggle');
+    
+    pageToggle.addEventListener('change', function() {
+        if (!this.checked) {
+            // Animazione di uscita
+            document.body.classList.add('page-fade-out');
+            
+            setTimeout(() => {
+                // Naviga alla pagina principale (sostituisci con il nome del tuo file principale)
+                window.location.href = 'prova.html'; // <-- Cambia con il nome del tuo file principale
+            }, 250);
+        }
+    });
+});
+
 for (let i = 1; i <= 6; i++) {
   seasonDotContainer.append("div")
     .attr("class", "season-dot") // No initial selection
