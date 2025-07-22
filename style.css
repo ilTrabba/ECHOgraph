@@ -124,7 +124,7 @@ svg {
   border-radius: 10px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   font-size: 13px;
-  color: #040404;
+  color: #333;
   z-index: 1000;
   /* Effetto "vetro smerigliato" per i browser che lo supportano */
   -webkit-backdrop-filter: blur(8px);
@@ -360,7 +360,8 @@ svg {
     margin-bottom: 10px;
     font-weight: 600;
     font-size: 13px;
-    color: #333;
+    font-family: 'Poppins', sans-serif;
+    color: #1b1b1b;
 }
 
 .switch {
