@@ -32,7 +32,7 @@ svg:active {
 
 .character-arc {
     fill: none;
-    stroke: #4fc3f7;
+    stroke: #69b3a2;
     stroke-width: 6;
     cursor: pointer;
     transition: all 0.3s ease;

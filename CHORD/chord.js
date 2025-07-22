@@ -32,7 +32,7 @@ let state = {
         characteristic: '#333',
         thoughtNode: '#ff6b6b',
         outgoingLine: '#ff6b6b',
-        incomingLine: '#4fc3f7',
+        incomingLine: '#4f98f7ff',
         defaultConnection: '#444444'
     }
 }
@@ -688,49 +688,78 @@ function handleLabelClick(character, label) {
 
 // Nuova funzione per evidenziare SOLO gli archi uscenti (rossi)
 function highlightThoughtConnections(character) {
-    // RESET COMPLETO di tutti gli archi
+    // RESET COMPLETO di tutti gli archi con opacità molto bassa
     const allPaths = document.querySelectorAll('.connection-path');
     allPaths.forEach(path => {
         path.classList.remove('highlighted', 'dimmed');
         path.classList.add('dimmed');
+        // RESET COMPLETO degli stili inline con opacità molto bassa
         path.style.stroke = state.config.colors.defaultConnection;
         path.style.strokeWidth = '1';
-        path.style.opacity = '0.6';
+        path.style.opacity = '0.15'; // Molto trasparente
     });
 
-    // Evidenzia SOLO gli archi uscenti (rossi)
+    // Evidenzia SOLO gli archi uscenti (rossi) con alta opacità
     const outgoingPaths = document.querySelectorAll(`[data-source="${character}"]`);
     outgoingPaths.forEach(path => {
         path.classList.remove('dimmed');
         path.classList.add('highlighted');
         path.style.stroke = state.config.colors.outgoingLine; // Rosso
-        path.style.strokeWidth = '2';
-        path.style.opacity = '0.8';
+        path.style.strokeWidth = '3'; // Aumentato da 2 a 3
+        path.style.opacity = '1'; // Completamente opaco
     });
 
     // Reset archi personaggi e evidenzia quello selezionato
     const characterArcs = document.querySelectorAll('.character-arc');
     characterArcs.forEach(arc => {
         arc.style.filter = 'none';
+        arc.style.opacity = '0.4'; // Trasparenti di default
         if (arc.getAttribute('data-character') === character) {
             arc.style.filter = 'drop-shadow(0 0 20px rgba(255, 107, 107, 0.8))'; // Rosso come il thought
+            arc.style.opacity = '1'; // Completamente opaco
         }
     });
     
-    // Evidenzia il nome rosso cliccato
+    // Evidenzia il nome rosso cliccato e rendi trasparenti gli altri
     const thoughtTexts = document.querySelectorAll('.thought-text');
     thoughtTexts.forEach(text => {
         text.style.filter = 'none';
+        text.style.opacity = '0.3'; // Trasparenti di default
         if (text.getAttribute('data-character') === character) {
             text.style.filter = 'drop-shadow(0 0 15px rgba(255, 107, 107, 0.8))';
+            text.style.opacity = '1'; // Completamente opaco
         }
     });
 
-    // Reset delle label caratteristiche
+    // Reset delle label caratteristiche con opacità bassa
     const characteristicTexts = document.querySelectorAll('.characteristic-text');
     characteristicTexts.forEach(text => {
         text.style.filter = 'none';
         text.style.fontWeight = 'normal';
+        text.style.opacity = '0.3'; // Trasparenti di default
+        // Evidenzia solo le label target degli archi uscenti
+        const characterData = text.getAttribute('data-character');
+        const labelData = text.getAttribute('data-label');
+        const hasConnection = document.querySelector(`[data-source="${character}"][data-target="${characterData}"][data-label="${labelData}"]`);
+        if (hasConnection) {
+            text.style.opacity = '1'; // Opache le label target
+        }
+    });
+
+    // Rendi trasparenti i nomi esterni non rilevanti
+    const externalTexts = document.querySelectorAll('.character-external-text');
+    externalTexts.forEach(text => {
+        text.style.opacity = '0.3'; // Trasparenti di default
+        const nodeCharacter = text.getAttribute('data-character');
+        if (nodeCharacter === character) {
+            text.style.opacity = '1'; // Nome selezionato opaco
+        } else {
+            // Se questo personaggio è target di archi uscenti, rendilo opaco
+            const hasConnection = document.querySelector(`[data-source="${character}"][data-target="${nodeCharacter}"]`);
+            if (hasConnection) {
+                text.style.opacity = '1'; // Nomi target opachi
+            }
+        }
     });
 }
 
@@ -751,15 +780,15 @@ function updateInfoPanelForThought(character) {
 }
 
 function highlightCharacterConnections(character) {
-    // RESET COMPLETO di tutti gli archi
+    // RESET COMPLETO di tutti gli archi con opacità molto bassa
     const allPaths = document.querySelectorAll('.connection-path');
     allPaths.forEach(path => {
         path.classList.remove('highlighted', 'dimmed');
         path.classList.add('dimmed');
-        // RESET COMPLETO degli stili inline
+        // RESET COMPLETO degli stili inline con opacità molto bassa
         path.style.stroke = state.config.colors.defaultConnection;
         path.style.strokeWidth = '1';
-        path.style.opacity = '0.6';
+        path.style.opacity = '0.15'; // Molto trasparente come per le label
     });
 
     // Evidenzia solo gli archi del personaggio selezionato
@@ -768,8 +797,8 @@ function highlightCharacterConnections(character) {
         path.classList.remove('dimmed');
         path.classList.add('highlighted');
         path.style.stroke = state.config.colors.outgoingLine;
-        path.style.strokeWidth = '2';
-        path.style.opacity = '0.8';
+        path.style.strokeWidth = '3'; // Aumentato da 2 a 3
+        path.style.opacity = '1'; // Completamente opaco
     });
 
     const incomingPaths = document.querySelectorAll(`[data-target="${character}"]`);
@@ -777,40 +806,74 @@ function highlightCharacterConnections(character) {
         path.classList.remove('dimmed');
         path.classList.add('highlighted');
         path.style.stroke = state.config.colors.incomingLine;
-        path.style.strokeWidth = '2';
-        path.style.opacity = '0.8';
+        path.style.strokeWidth = '3'; // Aumentato da 2 a 3
+        path.style.opacity = '1'; // Completamente opaco
     });
 
-    // Reset archi personaggi
+    // Reset archi personaggi con opacità bassa, evidenzia solo quello selezionato
     const characterArcs = document.querySelectorAll('.character-arc');
     characterArcs.forEach(arc => {
         arc.style.filter = 'none';
+        arc.style.opacity = '0.4'; // Trasparenti di default
         if (arc.getAttribute('data-character') === character) {
             arc.style.filter = 'drop-shadow(0 0 20px rgba(79, 195, 247, 0.8))';
+            arc.style.opacity = '1'; // Completamente opaco
+        }
+    });
+    
+    // Evidenzia il nome rosso se presente e rendi trasparenti gli altri
+    const thoughtTexts = document.querySelectorAll('.thought-text');
+    thoughtTexts.forEach(text => {
+        text.style.filter = 'none';
+        text.style.opacity = '0.3'; // Trasparenti di default
+        if (text.getAttribute('data-character') === character) {
+            text.style.filter = 'drop-shadow(0 0 15px rgba(255, 107, 107, 0.8))';
+            text.style.opacity = '1'; // Completamente opaco
+        }
+    });
+
+    // Rendi trasparenti le label caratteristiche non coinvolte
+    const characteristicTexts = document.querySelectorAll('.characteristic-text');
+    characteristicTexts.forEach(text => {
+        text.style.filter = 'none';
+        text.style.fontWeight = 'normal';
+        text.style.opacity = '0.3'; // Trasparenti di default
+        // Evidenzia solo le label del personaggio selezionato
+        if (text.getAttribute('data-character') === character) {
+            text.style.opacity = '1'; // Opache le sue label
+        }
+    });
+
+    // Rendi trasparenti i nomi esterni non rilevanti
+    const externalTexts = document.querySelectorAll('.character-external-text');
+    externalTexts.forEach(text => {
+        text.style.opacity = '0.3'; // Trasparenti di default
+        if (text.getAttribute('data-character') === character) {
+            text.style.opacity = '1'; // Nome selezionato opaco
         }
     });
 }
 
 function highlightLabelConnections(character, label) {
-    // RESET COMPLETO di tutti gli archi
+    // RESET COMPLETO di tutti gli archi con opacità molto bassa
     const allPaths = document.querySelectorAll('.connection-path');
     allPaths.forEach(path => {
         path.classList.remove('highlighted', 'dimmed');
         path.classList.add('dimmed');
-        // RESET COMPLETO degli stili inline
+        // RESET COMPLETO degli stili inline con opacità molto bassa
         path.style.stroke = state.config.colors.defaultConnection;
         path.style.strokeWidth = '1';
-        path.style.opacity = '0.6';
+        path.style.opacity = '0.15'; // Era 0.6, ora molto più trasparente
     });
 
-    // Evidenzia SOLO gli archi della label specifica
+    // Evidenzia SOLO gli archi della label specifica con alta opacità
     const specificPaths = document.querySelectorAll(`[data-target="${character}"][data-label="${label}"]`);
     specificPaths.forEach(path => {
         path.classList.remove('dimmed');
         path.classList.add('highlighted');
         path.style.stroke = state.config.colors.incomingLine;
-        path.style.strokeWidth = '2';
-        path.style.opacity = '0.8';
+        path.style.strokeWidth = '3'; // Aumentato da 2 a 3
+        path.style.opacity = '1'; // Completamente opaco
     });
 
     // Reset di tutte le label e evidenzia solo quella selezionata
@@ -818,33 +881,57 @@ function highlightLabelConnections(character, label) {
     characteristicTexts.forEach(text => {
         text.style.filter = 'none';
         text.style.fontWeight = 'normal';
+        text.style.opacity = '0.3'; // Rendi trasparenti le altre label
         if (text.getAttribute('data-character') === character && text.getAttribute('data-label') === label) {
             text.style.filter = 'drop-shadow(0 0 15px rgba(255, 215, 0, 0.8))';
             text.style.fontWeight = 'bold';
+            text.style.opacity = '1'; // Label selezionata completamente opaca
         }
     });
 
     const thoughtTexts = document.querySelectorAll('.thought-text');
     thoughtTexts.forEach(text => {
         text.style.filter = 'none';
+        text.style.opacity = '0.3'; // Rendi trasparenti i nomi rossi
         if (text.getAttribute('data-character') === character && text.getAttribute('data-label') === label) {
             text.style.filter = 'drop-shadow(0 0 15px rgba(255, 107, 107, 0.8))';
+            text.style.opacity = '1'; // Nome rosso selezionato opaco
         }
     });
 
     // Reset archi personaggi e evidenzia solo quelli rilevanti
     const characterArcs = document.querySelectorAll('.character-arc');
     characterArcs.forEach(arc => {
-        arc.style.filter = 'none'; // Reset prima di tutto
+        arc.style.filter = 'none';
+        arc.style.opacity = '0.4'; // Rendi trasparenti gli archi non rilevanti
         const nodeCharacter = arc.getAttribute('data-character');
         if (nodeCharacter === character) {
             arc.style.filter = 'drop-shadow(0 0 20px rgba(79, 195, 247, 0.8))';
+            arc.style.opacity = '1'; // Arco target completamente opaco
         } else {
             const labelNode = state.characteristicNodes.find(n =>
                 n.character === character && n.label === label
             );
             if (labelNode && labelNode.sources.includes(nodeCharacter)) {
                 arc.style.filter = 'drop-shadow(0 0 20px rgba(255, 107, 107, 0.8))';
+                arc.style.opacity = '1'; // Archi sorgente completamente opachi
+            }
+        }
+    });
+
+    // Rendi trasparenti anche i nomi esterni non rilevanti
+    const externalTexts = document.querySelectorAll('.character-external-text');
+    externalTexts.forEach(text => {
+        text.style.opacity = '0.3'; // Trasparenti di default
+        const nodeCharacter = text.getAttribute('data-character');
+        if (nodeCharacter === character) {
+            text.style.opacity = '1'; // Nome target opaco
+        } else {
+            const labelNode = state.characteristicNodes.find(n =>
+                n.character === character && n.label === label
+            );
+            if (labelNode && labelNode.sources.includes(nodeCharacter)) {
+                text.style.opacity = '1'; // Nomi sorgente opachi
             }
         }
     });
@@ -853,7 +940,7 @@ function highlightLabelConnections(character, label) {
 function resetHighlighting() {
     state.selectedCharacter = null;
     state.selectedLabel = null;
-    state.selectedType = null; // Questo ora può essere 'character', 'label', o 'thought'
+    state.selectedType = null;
     
     // RESET COMPLETO di tutti gli archi
     const allPaths = document.querySelectorAll('.connection-path');
@@ -861,17 +948,21 @@ function resetHighlighting() {
         path.classList.remove('highlighted', 'dimmed');
         path.style.stroke = state.config.colors.defaultConnection;
         path.style.strokeWidth = '1';
-        path.style.opacity = '0.6';
+        path.style.opacity = '0.6'; // Opacità normale
     });
 
     // Reset archi personaggi
     const allArcs = document.querySelectorAll('.character-arc');
-    allArcs.forEach(arc => { arc.style.filter = 'none'; });
+    allArcs.forEach(arc => { 
+        arc.style.filter = 'none'; 
+        arc.style.opacity = '1'; // Ripristina opacità normale
+    });
 
-    // Reset testi
-    const allTexts = document.querySelectorAll('.characteristic-text, .thought-text, textPath');
+    // Reset testi con opacità normale
+    const allTexts = document.querySelectorAll('.characteristic-text, .thought-text, .character-external-text');
     allTexts.forEach(text => {
         text.style.filter = 'none';
+        text.style.opacity = '1'; // Ripristina opacità normale
         if (text.classList.contains('characteristic-text')) {
             text.style.fontWeight = 'normal';
         }
