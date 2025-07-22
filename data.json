@@ -5488,7 +5488,7 @@
         },
         "2": {
           "labels": [
-            "The Man of Faith (Byblical)", 
+            "The Man of Faith", 
             "The Spiritual Guide"
           ],
           "judgment": "ambiguous",
@@ -5507,7 +5507,7 @@
         },
         "3": {
           "labels": [
-            "The Man of Faith (Byblical)", 
+            "The Man of Faith", 
             "The Spiritual Guide",
             "The Lost Soul"
           ],
@@ -5524,7 +5524,7 @@
               "line": "(to Sayid, After Eko's death) I don't understand what happened. He just... gave up."
         }
           ],
-          "inherited_labels": [["The Man of Faith (Byblical)",2],["The Spiritual Guide",2]]
+          "inherited_labels": [["The Man of Faith",2],["The Spiritual Guide",2]]
         },
         "4": {
           "labels": [],
