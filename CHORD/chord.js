@@ -79,9 +79,9 @@ function calculateDynamicLabelRadius() {
     
     // Raggio minimo per evitare che sia troppo piccolo
     const minRadius = 150 * state.config.scaleFactor;
-    const maxRadius = 400 * state.config.scaleFactor;
+    const maxRadius = 1000 * state.config.scaleFactor;
     
-    return Math.max(minRadius, Math.min(maxRadius, radiusNeeded));
+    return (Math.max(minRadius, Math.min(maxRadius, radiusNeeded))+50);
 }
 
 // --- Utility per stima larghezza label più lunga (in pixel) ---
@@ -100,7 +100,7 @@ function estimateMaxLabelPixelWidth() {
     });
     const fontSize = 13 * state.config.scaleFactor;
     const avgCharWidth = fontSize * 0.6;
-    return maxLength * avgCharWidth;
+    return (maxLength * avgCharWidth)+80;  //+80 offset per aggiustare errori strani
 }
 
 // --- Aggiorna dimensioni e raggi dinamicamente in base alle label ---
@@ -126,7 +126,7 @@ function updateDimensions() {
     state.config.arcRadius = state.config.labelRadius + (maxLabelPixelWidth / 2) + margin;
 
     // Esterno (nomi personaggi) 
-    state.config.externalLabelRadius = state.config.arcRadius + 60 * scaleFactor;
+    state.config.externalLabelRadius = state.config.arcRadius + 70 * scaleFactor;
 
     // Compatibilità
     state.config.outerRadius = state.config.arcRadius;
@@ -656,14 +656,98 @@ function handleCharacterClick(character) {
 }
 
 function handleLabelClick(character, label) {
-    if (state.selectedCharacter === character && state.selectedLabel === label && state.selectedType === 'label') {
-        resetHighlighting(); return;
+    // Trova il nodo per determinare se è un thought node (rosso) o characteristic node (nero)
+    const thoughtNode = state.thoughtNodes.find(n => 
+        n.character === character && n.label === label
+    );
+    
+    if (thoughtNode) {
+        // È un NOME ROSSO (thought node) → mostra solo archi uscenti in rosso
+        if (state.selectedCharacter === character && state.selectedType === 'thought') {
+            resetHighlighting(); 
+            return;
+        }
+        state.selectedCharacter = character;
+        state.selectedLabel = null;
+        state.selectedType = 'thought'; // Nuovo tipo per distinguere
+        highlightThoughtConnections(character); // Nuova funzione per archi uscenti
+        updateInfoPanelForThought(character); // Nuova funzione per info thought
+    } else {
+        // È una LABEL CARATTERISTICA (nera) → comportamento attuale
+        if (state.selectedCharacter === character && state.selectedLabel === label && state.selectedType === 'label') {
+            resetHighlighting(); 
+            return;
+        }
+        state.selectedCharacter = character;
+        state.selectedLabel = label;
+        state.selectedType = 'label';
+        highlightLabelConnections(character, label);
+        updateInfoPanelForLabel(character, label);
     }
-    state.selectedCharacter = character;
-    state.selectedLabel = label;
-    state.selectedType = 'label';
-    highlightLabelConnections(character, label);
-    updateInfoPanelForLabel(character, label);
+}
+
+// Nuova funzione per evidenziare SOLO gli archi uscenti (rossi)
+function highlightThoughtConnections(character) {
+    // RESET COMPLETO di tutti gli archi
+    const allPaths = document.querySelectorAll('.connection-path');
+    allPaths.forEach(path => {
+        path.classList.remove('highlighted', 'dimmed');
+        path.classList.add('dimmed');
+        path.style.stroke = state.config.colors.defaultConnection;
+        path.style.strokeWidth = '1';
+        path.style.opacity = '0.6';
+    });
+
+    // Evidenzia SOLO gli archi uscenti (rossi)
+    const outgoingPaths = document.querySelectorAll(`[data-source="${character}"]`);
+    outgoingPaths.forEach(path => {
+        path.classList.remove('dimmed');
+        path.classList.add('highlighted');
+        path.style.stroke = state.config.colors.outgoingLine; // Rosso
+        path.style.strokeWidth = '2';
+        path.style.opacity = '0.8';
+    });
+
+    // Reset archi personaggi e evidenzia quello selezionato
+    const characterArcs = document.querySelectorAll('.character-arc');
+    characterArcs.forEach(arc => {
+        arc.style.filter = 'none';
+        if (arc.getAttribute('data-character') === character) {
+            arc.style.filter = 'drop-shadow(0 0 20px rgba(255, 107, 107, 0.8))'; // Rosso come il thought
+        }
+    });
+    
+    // Evidenzia il nome rosso cliccato
+    const thoughtTexts = document.querySelectorAll('.thought-text');
+    thoughtTexts.forEach(text => {
+        text.style.filter = 'none';
+        if (text.getAttribute('data-character') === character) {
+            text.style.filter = 'drop-shadow(0 0 15px rgba(255, 107, 107, 0.8))';
+        }
+    });
+
+    // Reset delle label caratteristiche
+    const characteristicTexts = document.querySelectorAll('.characteristic-text');
+    characteristicTexts.forEach(text => {
+        text.style.filter = 'none';
+        text.style.fontWeight = 'normal';
+    });
+}
+
+// Nuova funzione per info panel del thought
+function updateInfoPanelForThought(character) {
+    const infoContent = document.getElementById('info-content');
+    const outgoingConnections = state.groupedConnections.filter(c =>
+        c.sourceCharacter === character
+    );
+    const selectedSeasonsArray = Array.from(state.selectedSeasons).sort();
+    
+    infoContent.innerHTML = `
+        <strong>POV selected:</strong><br>
+        <strong style="color: #ff6b6b;">"${character}"</strong><br>
+        <strong>Chapters:</strong> ${selectedSeasonsArray.join(', ')}<br>
+        <strong>POVs:</strong> ${outgoingConnections.length}<br>
+    `;
 }
 
 function highlightCharacterConnections(character) {
@@ -769,7 +853,7 @@ function highlightLabelConnections(character, label) {
 function resetHighlighting() {
     state.selectedCharacter = null;
     state.selectedLabel = null;
-    state.selectedType = null;
+    state.selectedType = null; // Questo ora può essere 'character', 'label', o 'thought'
     
     // RESET COMPLETO di tutti gli archi
     const allPaths = document.querySelectorAll('.connection-path');
@@ -803,17 +887,9 @@ function updateInfoPanel(character) {
         const seasonsText = selectedSeasonsArray.length > 0 ? selectedSeasonsArray.join(', ') : 'None';
         
         infoContent.innerHTML = `
-            <strong>Istruzioni:</strong><br>
-            Clicca su un arco esterno per evidenziare le relazioni del personaggio.<br>
-            Clicca su una label interna per evidenziare solo gli archi che la puntano.<br>
-            <span style="color: #ff6b6b;">Rosso</span>: Archi in uscita<br>
-            <span style="color: #4fc3f7;">Blu</span>: Archi in entrata<br>
-            <br>
-            <strong>Chapters selected:</strong> ${seasonsText}<br>
-            <br>
-            <strong>Controlli:</strong><br>
-            • Rotella mouse: Zoom al cursore<br>
-            • Trascina: Pan<br>
+                <strong>Istructions:</strong><br>
+                Click on a character's name to highlight his/her relationships<br>
+                Click on an inside label to highlight only the links that go towards it<br>
         `;
         return;
     }
@@ -827,10 +903,8 @@ function updateInfoPanel(character) {
     infoContent.innerHTML = `
         <strong>${character}</strong><br>
         <strong>Chapters:</strong> ${selectedSeasonsArray.join(', ')}<br>
-        Pensieri verso altri: ${outgoingConnections.length}<br>
-        Caratteristiche ricevute: ${incomingConnections.length}<br>
-        <br>
-        <small>Clicca altrove per deselezionare</small>
+        POVs about others: ${outgoingConnections.length}<br>
+        Labels: ${incomingConnections.length}<br>
     `;
 }
 
@@ -843,14 +917,12 @@ function updateInfoPanelForLabel(character, label) {
         const selectedSeasonsArray = Array.from(state.selectedSeasons).sort();
         
         infoContent.innerHTML = `
-            <strong>Label selezionata:</strong><br>
+            <strong>Label selected:</strong><br>
             "${label}"<br>
-            <strong>Personaggio:</strong> ${character}<br>
+            <strong>Character:</strong> ${character}<br>
             <strong>Chapters:</strong> ${selectedSeasonsArray.join(', ')}<br>
-            <strong>Pensato da:</strong> ${labelNode.sources.join(', ')}<br>
-            <strong>Numero di fonti:</strong> ${labelNode.sources.length}<br>
-            <br>
-            <small>Clicca altrove per deselezionare</small>
+            <strong>Sources:</strong> ${labelNode.sources.join(', ')}<br>
+            <strong>Number of sources:</strong> ${labelNode.sources.length}<br>
         `;
     }
 }

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Visualizzazione Relazioni Personaggi - LOST</title>
+    <title>Chord Diagram Visualization</title>
     <link rel="stylesheet" href="chord_style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 </head>
@@ -24,15 +24,9 @@
         <!-- Info Panel (POSIZIONATO COME LA LEGENDA DEL GRAPH) -->
         <div class="info-panel">
             <div id="info-content">
-                <strong>Istruzioni:</strong><br>
-                Clicca su un personaggio per evidenziare le sue relazioni.<br>
-                Clicca su una label interna per evidenziare solo gli archi che la puntano.<br>
-                <span style="color: #ff6b6b;">Rosso</span>: Archi in uscita<br>
-                <span style="color: #4fc3f7;">Blu</span>: Archi in entrata<br>
-                <br>
-                <strong>Controlli:</strong><br>
-                • Rotella mouse: Zoom al cursore<br>
-                • Trascina: Pan<br>
+                <strong>Istructions:</strong><br>
+                Click on a character's name to highlight his/her relationships<br>
+                Click on an inside label to highlight only the links that go towards it<br>
             </div>
         </div>
 
@@ -47,6 +41,14 @@
                 <span>Graph Visualization</span>
             </div>
         </div>
+    </div>
+
+        <!-- Legenda -->
+    <div id="legend" class="legend">
+    <span style="font-size: 13px; font-weight: 600; margin-bottom: 10px; font-family: 'Poppins', sans-serif;">Links</span>
+    <div><span style="background:#ff6b6b; font-family: 'Poppins', sans-serif;"></span> incoming</div>
+    <div><span style="background:#4fc3f7; font-family: 'Poppins', sans-serif;"></span> outcoming</div>
+    <div><span style="background:#000000; font-family: 'Poppins', sans-serif;"></span> basic</div>
     </div>
 
     <script src="https://d3js.org/d3.v7.min.js"></script>

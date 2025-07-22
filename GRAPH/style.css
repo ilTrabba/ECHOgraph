@@ -395,7 +395,7 @@ svg {
     content: "";
     height: 22px;
     width: 22px;
-    left: 4px;
+    right: 64px;
     bottom: 4px;
     background-color: white;
     transition: .4s;

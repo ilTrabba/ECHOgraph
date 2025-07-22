@@ -4953,7 +4953,7 @@
         },
         "2": {
           "labels": [
-            "The man in the Hatch"
+            "The Man in the Hatch"
           ],
           "judgment": "ambiguous",
           "dialogues": [
@@ -4973,7 +4973,7 @@
         "3": {
           "labels": [
             "The Man with Visions",
-            "The man in the Hatch"
+            "The Man in the Hatch"
           ],
           "judgment": "positive",
           "dialogues": [
@@ -5874,7 +5874,7 @@
         },
         "2": {
           "labels": [
-            "The man in the Hatch"
+            "The Man in the Hatch"
           ],
           "judgment": "positive",
           "dialogues": [
@@ -5893,7 +5893,7 @@
         },
         "3": {
           "labels": [
-            "The man in the Hatch"
+            "The Man in the Hatch"
           ],
           "judgment": "positive",
           "dialogues": [],
@@ -6084,7 +6084,7 @@
             "The Master", 
             "The Unseen Power", 
             "The Manipulator", 
-            "The Embodiment of the Island"
+            "The Island's Voice"
           ],
           "judgment": "ambiguous",
           "dialogues": [
@@ -6737,7 +6737,7 @@
         },
         "2": {
           "labels": [
-            "The man in the Hatch"
+            "The Man in the Hatch"
           ],
           "judgment": "ambiguous",
           "dialogues": [
@@ -6757,7 +6757,7 @@
         "3": {
           "labels": [
             "The Visionary", 
-            "The Protector (of Charlie)", 
+            "The Protector", 
             "The Mysterious Ally"
           ],
           "judgment": "positive",
@@ -8416,23 +8416,9 @@
           "inherited_labels": []
         },
         "3": {
-          "labels": [
-            "The Smoke Monster", 
-            "The Devil"
-          ],
-          "judgment": "negative",
-          "dialogues": [
-            {
-              "episode": "3x05 - The Cost of Living", 
-              "character": "Mr. Eko-Man in Black (as Yemi)", 
-              "line": "**Mr. Eko**: When I was young, I killed a man to save my brother. I'm not sorry for this, I'm proud of this. I did not ask for the life that I was given, but it was given. And with it I did my best. **Man in Black (as Yemi)**: You speak to me as if I'm your brother. **Mr. Eko**: Who are you...?"
-            },
-            {
-              "episode": "3x05 - The Cost of Living", 
-              "character": "Mr. Eko-John Locke", 
-              "line":"(to John Locke, about the black smoke monster) I saw the devil... you're next"
-            }
-          ],
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
           "inherited_labels": []
         },
         "4": {
@@ -8472,9 +8458,23 @@
           "inherited_labels": []
         },
         "3": {
-          "labels": [],
-          "judgment": "",
-          "dialogues": [],
+          "labels": [
+            "The Smoke Monster", 
+            "The Devil"
+          ],
+          "judgment": "negative",
+          "dialogues": [
+            {
+              "episode": "3x05 - The Cost of Living", 
+              "character": "Mr. Eko-Man in Black (as Yemi)", 
+              "line": "**Mr. Eko**: When I was young, I killed a man to save my brother. I'm not sorry for this, I'm proud of this. I did not ask for the life that I was given, but it was given. And with it I did my best. **Man in Black (as Yemi)**: You speak to me as if I'm your brother. **Mr. Eko**: Who are you...?"
+            },
+            {
+              "episode": "3x05 - The Cost of Living", 
+              "character": "Mr. Eko-John Locke", 
+              "line":"(to John Locke, about the black smoke monster) I saw the devil... you're next"
+            }
+          ],
           "inherited_labels": []
         },
         "4": {
@@ -8720,26 +8720,26 @@
         },
         "2": {
           "labels": [
-            "The man in the Hatch"
+            "The Man in the Hatch"
           ],
           "judgment": "ambiguous",
           "dialogues": [
             {
               "episode": "2x01 - Man of Science, Man of Faith",
               "character": "Sayid",
-              "line": "(A Desmond, nella botola) 'Explain this to me. What is this place?'"
+              "line": "(To Desmond, inside the Hatch) 'Explain this to me. What is this place?'"
             },
             {
               "episode": "2x03 - Orientation",
               "character": "Sayid",
-              "line": "(A Locke e Jack, su Desmond) 'He has been pushing a button for three years. There has to be a scientific explanation!'"
+              "line": "(To Locke and Jack, about Desmond) 'He has been pushing a button for three years. There has to be a scientific explanation!'"
             }
           ],
           "inherited_labels": []
         },
         "3": {
           "labels": [
-            "The man in the Hatch",
+            "The Man in the Hatch",
             "The Seer"
           ],
           "judgment": "positive",
