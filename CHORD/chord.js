@@ -103,9 +103,55 @@ function calculateTextRotation(x, y, centerX, centerY) {
     return rotation;
 }
 
+// Funzione per stimare la lunghezza del testo in radianti
+function estimateTextWidth(text, fontSize) {
+    // Stima approssimativa: ogni carattere occupa circa 0.6 volte la dimensione del font
+    const avgCharWidth = fontSize * 0.6;
+    const pixelWidth = text.length * avgCharWidth;
+    // Converti in radianti basandosi sul raggio esterno
+    return pixelWidth / state.config.externalLabelRadius;
+}
+
+// Funzione per creare un path curvo per il testo lungo un arco - MODIFICATA
+function createTextPath(character, startAngle, endAngle, radius) {
+    const pathId = `textPath_${character.replace(/\s+/g, '_')}`;
+    
+    // Calcola lo spazio necessario per il testo completo
+    const fontSize = 12 * state.config.scaleFactor;
+    const requiredWidth = estimateTextWidth(character, fontSize);
+    const currentSpan = endAngle - startAngle;
+    
+    // Estendi l'arco se necessario per contenere tutto il testo
+    const minRequiredSpan = Math.max(requiredWidth * 1.2, 0.15); // 20% di padding extra, minimo 0.15 radianti
+    let finalStartAngle = startAngle;
+    let finalEndAngle = endAngle;
+    
+    if (currentSpan < minRequiredSpan) {
+        // Estendi simmetricamente l'arco
+        const extension = (minRequiredSpan - currentSpan) / 2;
+        finalStartAngle = startAngle - extension;
+        finalEndAngle = endAngle + extension;
+    }
+    
+    // Calcola i punti dell'arco esteso
+    const x1 = state.config.centerX + radius * Math.cos(finalStartAngle);
+    const y1 = state.config.centerY + radius * Math.sin(finalStartAngle);
+    const x2 = state.config.centerX + radius * Math.cos(finalEndAngle);
+    const y2 = state.config.centerY + radius * Math.sin(finalEndAngle);
+    
+    // Determina se l'arco è maggiore di 180 gradi
+    const span = finalEndAngle - finalStartAngle;
+    const largeArcFlag = span > Math.PI ? 1 : 0;
+    
+    // Crea il path dell'arco
+    const pathData = `M ${x1} ${y1} A ${radius} ${radius} 0 ${largeArcFlag} 1 ${x2} ${y2}`;
+    
+    return { pathId, pathData, finalStartAngle, finalEndAngle };
+}
+
 // Calcola l'ampiezza angolare necessaria per un personaggio basata sul numero di label
 function calculateCharacterArcSpan(labelsCount, hasThoughts) {
-    const totalElements = labelsCount + (hasThoughts ? 1 : 0);
+    const totalElements = labelsCount + 1; // SEMPRE +1 per il nome rosso
     if (totalElements === 0) return 0;
     
     // Spacing minimo tra elementi
@@ -308,7 +354,7 @@ function updateSeasonSelector() {
     }
 }
 
-// Aggiorna le dimensioni basate sulla finestra - CORRETTO
+// Aggiorna le dimensioni basate sulla finestra
 function updateDimensions() {
     state.config.width = 800;
     state.config.height = 600;
@@ -329,7 +375,7 @@ function updateDimensions() {
     state.config.innerRadius = state.config.labelRadius;
 }
 
-// Elabora i dati per creare la struttura necessaria - COMPLETAMENTE RISCRITTA
+// Elabora i dati per creare la struttura necessaria
 function processData() {
     if (!state.data) return;
     
@@ -378,11 +424,11 @@ function processData() {
             link.seasons[state.selectedSeason].labels &&
             link.seasons[state.selectedSeason].labels.length > 0
         );
-        
+
         return {
             id: character,
             labelsCount: incomingLabels.length,
-            hasThoughts: hasOutgoingThoughts,
+            hasThoughts: true, // SEMPRE true per garantire che ogni personaggio abbia il nome rosso
             incomingLabels: incomingLabels,
             labelSources: labelSources
         };
@@ -412,31 +458,29 @@ function processData() {
         state.characterNodes.push(characterNode);
         
         // Calcola posizioni per elementi interni (nome rosso + label)
-        const totalElements = charData.labelsCount + (charData.hasThoughts ? 1 : 0);
+        const totalElements = charData.labelsCount + 1; // SEMPRE +1 per il nome rosso
         if (totalElements > 0) {
             const availableSpan = charData.endAngle - charData.startAngle - 0.02; // Sottrai padding
             const elementSpacing = availableSpan / (totalElements + 1);
             
             let elementIndex = 1;
             
-            // Crea il nodo pensiero (nome rosso) PRIMA delle caratteristiche
-            if (charData.hasThoughts) {
-                const thoughtAngle = charData.startAngle + 0.01 + elementIndex * elementSpacing;
-                const thoughtX = state.config.centerX + state.config.labelRadius * Math.cos(thoughtAngle);
-                const thoughtY = state.config.centerY + state.config.labelRadius * Math.sin(thoughtAngle);
-                
-                state.thoughtNodes.push({
-                    id: `${charData.id}_thoughts`,
-                    character: charData.id,
-                    x: thoughtX,
-                    y: thoughtY,
-                    angle: thoughtAngle,
-                    type: 'thought',
-                    label: charData.id
-                });
-                
-                elementIndex++;
-            }
+            // Crea SEMPRE il nodo pensiero (nome rosso) PRIMA delle caratteristiche
+            const thoughtAngle = charData.startAngle + 0.01 + elementIndex * elementSpacing;
+            const thoughtX = state.config.centerX + state.config.labelRadius * Math.cos(thoughtAngle);
+            const thoughtY = state.config.centerY + state.config.labelRadius * Math.sin(thoughtAngle);
+            
+            state.thoughtNodes.push({
+                id: `${charData.id}_thoughts`,
+                character: charData.id,
+                x: thoughtX,
+                y: thoughtY,
+                angle: thoughtAngle,
+                type: 'thought',
+                label: charData.id
+            });
+            
+            elementIndex++;
             
             // Crea i nodi delle caratteristiche DOPO il nome rosso
             charData.incomingLabels.forEach((labelData) => {
@@ -572,87 +616,91 @@ function createCurvedPath(source, target) {
     return `M ${source.x} ${source.y} Q ${controlX} ${controlY} ${target.x} ${target.y}`;
 }
 
-// Crea la visualizzazione SVG
-function createVisualization() {
-    if (!state.data) return;
-    
-    state.zoomGroup.innerHTML = '';
+// Crea la visualizzazione SVG - MODIFICATA
+// Crea la visualizzazione SVG - MODIFICATA
+    function createVisualization() {
+        if (!state.data) return;
+        
+        state.zoomGroup.innerHTML = '';
 
-    // Crea le connessioni
-    state.groupedConnections.forEach((connection, index) => {
-        const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
-        path.setAttribute('d', createCurvedPath(connection.source, connection.target));
-        path.setAttribute('class', 'connection-path');
-        path.setAttribute('stroke', state.config.colors.defaultConnection);
-        path.setAttribute('data-source', connection.sourceCharacter);
-        path.setAttribute('data-target', connection.targetCharacter);
-        path.setAttribute('data-label', connection.label);
-        path.setAttribute('data-index', index);
-        state.zoomGroup.appendChild(path);
-    });
+        // Crea un elemento defs per i path dei testi curvi (solo per eventuali usi futuri)
+        const defs = document.createElementNS('http://www.w3.org/2000/svg', 'defs');
+        state.zoomGroup.appendChild(defs);
 
-    // Crea archi SEPARATI per ogni personaggio
-    state.characterNodes.forEach(node => {
-        if (node.labelsCount > 0 || node.hasOutgoingThoughts) {
-            // Crea l'arco per questo specifico personaggio
+        // Crea le connessioni
+        state.groupedConnections.forEach((connection, index) => {
+            const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+            path.setAttribute('d', createCurvedPath(connection.source, connection.target));
+            path.setAttribute('class', 'connection-path');
+            path.setAttribute('stroke', state.config.colors.defaultConnection);
+            path.setAttribute('data-source', connection.sourceCharacter);
+            path.setAttribute('data-target', connection.targetCharacter);
+            path.setAttribute('data-label', connection.label);
+            path.setAttribute('data-index', index);
+            state.zoomGroup.appendChild(path);
+        });
+
+        // Crea archi SEPARATI per ogni personaggio
+        state.characterNodes.forEach(node => {
+            // Crea SEMPRE l'arco per ogni personaggio
             const arc = document.createElementNS('http://www.w3.org/2000/svg', 'path');
             arc.setAttribute('d', createCharacterArc(node.startAngle, node.endAngle, state.config.arcRadius));
             arc.setAttribute('class', 'character-arc');
             arc.setAttribute('data-character', node.id);
             state.zoomGroup.appendChild(arc);
-        }
-        
-        // Nome esterno del personaggio (SEMPRE al raggio più esterno)
-        const externalText = document.createElementNS('http://www.w3.org/2000/svg', 'text');
-        externalText.setAttribute('x', node.x);
-        externalText.setAttribute('y', node.y);
-        externalText.setAttribute('class', 'character-external-text');
-        externalText.setAttribute('font-size', 16 * state.config.scaleFactor);
-        externalText.setAttribute('font-weight', 'bold');
-        externalText.setAttribute('fill', '#333');
-        const externalRotation = calculateTextRotation(node.x, node.y, state.config.centerX, state.config.centerY);
-        externalText.setAttribute('transform', `rotate(${externalRotation}, ${node.x}, ${node.y})`);
-        externalText.textContent = node.id;
-        state.zoomGroup.appendChild(externalText);
-    });
+            
+            // Nome esterno del personaggio (ortogonale, posizione radiale)
+            const externalText = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+            externalText.setAttribute('x', node.x);
+            externalText.setAttribute('y', node.y);
+            externalText.setAttribute('class', 'character-external-text');
+            externalText.setAttribute('font-size', 12 * state.config.scaleFactor); // Mantieni dimensione ridotta
+            externalText.setAttribute('font-weight', 'bold');
+            externalText.setAttribute('fill', '#333');
+            externalText.setAttribute('text-anchor', 'middle');
+            externalText.setAttribute('data-character', node.id);
+            const externalRotation = calculateTextRotation(node.x, node.y, state.config.centerX, state.config.centerY);
+            externalText.setAttribute('transform', `rotate(${externalRotation}, ${node.x}, ${node.y})`);
+            externalText.textContent = node.id;
+            state.zoomGroup.appendChild(externalText);
+        });
 
-    // Crea i testi delle caratteristiche (INTERNI agli archi)
-    state.characteristicNodes.forEach(node => {
-        const rotation = calculateTextRotation(node.x, node.y, state.config.centerX, state.config.centerY);
-        
-        const text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
-        text.setAttribute('x', node.x);
-        text.setAttribute('y', node.y);
-        text.setAttribute('class', 'characteristic-text clickable-label');
-        text.setAttribute('font-size', 13 * state.config.scaleFactor);
-        text.setAttribute('data-character', node.character);
-        text.setAttribute('data-label', node.label);
-        text.setAttribute('data-sources', node.sources.join(','));
-        text.setAttribute('transform', `rotate(${rotation}, ${node.x}, ${node.y})`);
-        text.textContent = node.label;
-        state.zoomGroup.appendChild(text);
-    });
+        // Crea i testi delle caratteristiche (INTERNI agli archi)
+        state.characteristicNodes.forEach(node => {
+            const rotation = calculateTextRotation(node.x, node.y, state.config.centerX, state.config.centerY);
+            
+            const text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+            text.setAttribute('x', node.x);
+            text.setAttribute('y', node.y);
+            text.setAttribute('class', 'characteristic-text clickable-label');
+            text.setAttribute('font-size', 13 * state.config.scaleFactor);
+            text.setAttribute('data-character', node.character);
+            text.setAttribute('data-label', node.label);
+            text.setAttribute('data-sources', node.sources.join(','));
+            text.setAttribute('transform', `rotate(${rotation}, ${node.x}, ${node.y})`);
+            text.textContent = node.label;
+            state.zoomGroup.appendChild(text);
+        });
 
-    // Crea i nomi rossi dei pensieri (INTERNI agli archi)
-    state.thoughtNodes.forEach(node => {
-        const rotation = calculateTextRotation(node.x, node.y, state.config.centerX, state.config.centerY);
-        
-        const text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
-        text.setAttribute('x', node.x);
-        text.setAttribute('y', node.y);
-        text.setAttribute('class', 'thought-text clickable-label');
-        text.setAttribute('fill', state.config.colors.thoughtNode);
-        text.setAttribute('font-weight', 'bold');
-        text.setAttribute('font-size', 13 * state.config.scaleFactor);
-        text.setAttribute('data-character', node.character);
-        text.setAttribute('data-label', node.label);
-        text.setAttribute('transform', `rotate(${rotation}, ${node.x}, ${node.y})`);
-        text.textContent = node.label;
-        state.zoomGroup.appendChild(text);
-    });
-}
+        // Crea i nomi rossi dei pensieri (INTERNI agli archi)
+        state.thoughtNodes.forEach(node => {
+            const rotation = calculateTextRotation(node.x, node.y, state.config.centerX, state.config.centerY);
+            
+            const text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+            text.setAttribute('x', node.x);
+            text.setAttribute('y', node.y);
+            text.setAttribute('class', 'thought-text clickable-label');
+            text.setAttribute('fill', state.config.colors.thoughtNode);
+            text.setAttribute('font-weight', 'bold');
+            text.setAttribute('font-size', 13 * state.config.scaleFactor);
+            text.setAttribute('data-character', node.character);
+            text.setAttribute('data-label', node.label);
+            text.setAttribute('transform', `rotate(${rotation}, ${node.x}, ${node.y})`);
+            text.textContent = node.label;
+            state.zoomGroup.appendChild(text);
+        });
+    }
 
-// Resto delle funzioni (zoom, event listeners, highlighting, etc.) rimangono uguali...
 // Configura il sistema di zoom
 function setupZoom() {
     const zoomInBtn = document.getElementById('zoom-in');
@@ -736,7 +784,7 @@ function updateZoom() {
 
 function setupEventListeners() {
     document.addEventListener('click', (e) => {
-        if (e.target.classList.contains('character-arc') || e.target.classList.contains('character-external-text')) {
+        if (e.target.classList.contains('character-arc') || e.target.classList.contains('character-external-text') || e.target.tagName === 'textPath') {
             const character = e.target.getAttribute('data-character') || e.target.textContent;
             handleCharacterClick(character);
         } else if (e.target.classList.contains('clickable-label')) {
@@ -805,9 +853,9 @@ function highlightCharacterConnections(character) {
         }
     });
     
-    const externalTexts = document.querySelectorAll('.character-external-text');
+    const externalTexts = document.querySelectorAll('textPath');
     externalTexts.forEach(text => {
-        if (text.textContent === character) {
+        if (text.getAttribute('data-character') === character || text.textContent === character) {
             text.style.filter = 'drop-shadow(0 0 15px rgba(79, 195, 247, 0.8))';
         } else {
             text.style.filter = 'none';
@@ -866,9 +914,9 @@ function highlightLabelConnections(character, label) {
         }
     });
     
-    const externalTexts = document.querySelectorAll('.character-external-text');
+    const externalTexts = document.querySelectorAll('textPath');
     externalTexts.forEach(text => {
-        const nodeCharacter = text.textContent;
+        const nodeCharacter = text.getAttribute('data-character') || text.textContent;
         if (nodeCharacter === character) {
             text.style.filter = 'drop-shadow(0 0 15px rgba(79, 195, 247, 0.8))';
         } else {
@@ -900,7 +948,7 @@ function resetHighlighting() {
         arc.style.filter = 'none';
     });
 
-    const allTexts = document.querySelectorAll('.characteristic-text, .thought-text, .character-external-text');
+    const allTexts = document.querySelectorAll('.characteristic-text, .thought-text, textPath');
     allTexts.forEach(text => {
         text.style.filter = 'none';
         if (text.classList.contains('characteristic-text')) {
