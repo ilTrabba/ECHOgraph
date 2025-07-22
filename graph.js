@@ -106,11 +106,14 @@ function updateGraphForSeasons() {
   activeNodeId = null;
   selectedLinkId = null;
   
-  // Close dialogue box and remove donut charts
+  // Close dialogue box and remove all overlays
   dialogueBox.html("").classed("visible", false);
   svg.selectAll(".donut-chart").remove();
   svg.selectAll(".donut-tooltip-group").remove();
   svg.selectAll(".segmented-links").remove();
+  svg.selectAll(".overlay-links").remove();
+  svg.selectAll(".pov-overlay-links").remove();
+  svg.selectAll(".pov-segmented-overlays").remove();
   
   // Update link visibility and style for selected seasons
   updateLinkVisibility();
@@ -132,8 +135,10 @@ function updateGraphForSeasons() {
 function updateLinkVisibility() {
   if (!link) return;
   
-  // Remove any existing segmented links
+  // Remove any existing segmented links and overlay links
   svg.selectAll(".segmented-link").remove();
+  svg.selectAll(".overlay-link").remove();
+  svg.selectAll(".segmented-overlay").remove();
   
   // If no seasons selected, hide all links
   if (selectedSeasons.size === 0) {
@@ -154,7 +159,7 @@ function updateLinkVisibility() {
     return hasJudgment ? "inline" : "none";
   });
   
-  // If only one season selected, use simple coloring
+  // If only one season selected, use simple coloring (NO overlay creation here)
   if (selectedSeasons.size === 1) {
     const season = Array.from(selectedSeasons)[0];
     link
@@ -167,11 +172,183 @@ function updateLinkVisibility() {
         return seasonData?.judgment ? `url(#arrow-${seasonData.judgment})` : `url(#arrow-neutral)`;
       });
   } else if (selectedSeasons.size > 1) {
-    // Multiple seasons - create segmented paths
+    // Multiple seasons - create segmented paths (NO overlay creation here)
     createSegmentedLinks();
     // Hide original links when segmented
     link.attr("display", "none");
   }
+}
+
+// Function to create overlay links for POV mode - Single Chapter
+function createPOVOverlaysSingle(season, activeNodeId) {
+  // Get links from active node only
+  const activeLinks = link.data().filter(d => {
+    const sourceId = typeof d.source === "object" ? d.source.id : d.source;
+    const seasonData = d.seasons?.[season];
+    return sourceId === activeNodeId && seasonData && seasonData.judgment && seasonData.judgment.trim() !== "";
+  });
+  
+  if (activeLinks.length === 0) return;
+  
+  const overlayGroup = svg.append("g").attr("class", "pov-overlay-links");
+  
+  // Insert overlay group before nodes
+  const nodeGroup = node.node().parentNode;
+  nodeGroup.parentNode.insertBefore(overlayGroup.node(), nodeGroup);
+  
+  activeLinks.forEach(linkData => {
+    const overlayLink = overlayGroup.append("path")
+      .attr("class", "pov-overlay-link")
+      .attr("stroke", "transparent")
+      .attr("stroke-width", 14)
+      .attr("fill", "none")
+      .attr("opacity", 0)
+      .style("cursor", "pointer")
+      .style("pointer-events", "stroke")
+      .datum(linkData);
+    
+    // Add click handler
+    overlayLink.on("click", function(event, d) {
+      const seasonData = d.seasons?.[season];
+      if (!seasonData || !seasonData.judgment || seasonData.judgment.trim() === "") return;
+      
+      const sourceId = typeof d.source === "object" ? d.source.id : d.source;
+      const targetId = typeof d.target === "object" ? d.target.id : d.target;
+      const linkKey = `${sourceId}->${targetId}-${season}`;
+      
+      if (selectedLinkId === linkKey) {
+        dialogueBox.html("").classed("visible", false);
+        selectedLinkId = null;
+        return;
+      }
+      
+      showDialogueForLink(d, seasonData);
+      selectedLinkId = linkKey;
+      event.stopPropagation();
+    });
+  });
+}
+
+// Function to create segmented overlay links for POV mode - Multi Chapter
+function createPOVOverlaysMulti(activeNodeId) {
+  const seasonsArray = Array.from(selectedSeasons).sort();
+  const segmentCount = seasonsArray.length;
+  
+  // Get links from active node only
+  const activeLinks = link.data().filter(d => {
+    const sourceId = typeof d.source === "object" ? d.source.id : d.source;
+    if (sourceId !== activeNodeId) return false;
+    
+    // Check if any selected season has judgment
+    for (const season of selectedSeasons) {
+      const seasonData = d.seasons?.[season];
+      if (seasonData && seasonData.judgment && seasonData.judgment.trim() !== "") {
+        return true;
+      }
+    }
+    return false;
+  });
+  
+  if (activeLinks.length === 0) return;
+  
+  const overlayGroup = svg.append("g").attr("class", "pov-segmented-overlays");
+  
+  // Insert overlay group before nodes
+  const nodeGroup = node.node().parentNode;
+  nodeGroup.parentNode.insertBefore(overlayGroup.node(), nodeGroup);
+  
+  activeLinks.forEach(linkData => {
+    const sx = linkData.source.x, sy = linkData.source.y;
+    const tx = linkData.target.x, ty = linkData.target.y;
+    const nodeRadius = 14;
+    
+    // Calculate full path (same logic as createSegmentedLinks)
+    let fullPathStart, fullPathEnd, fullPathCtrl;
+    const isCurved = linkData._isCurved;
+    
+    if (isCurved && linkData._ctrlPoint) {
+      fullPathStart = { x: sx, y: sy };
+      fullPathEnd = { x: tx, y: ty };
+      fullPathCtrl = { x: linkData._ctrlPoint.x, y: linkData._ctrlPoint.y };
+    } else {
+      const dx = tx - sx;
+      const dy = ty - sy;
+      const distance = Math.sqrt(dx * dx + dy * dy);
+      const unitX = dx / distance;
+      const unitY = dy / distance;
+      
+      fullPathStart = { 
+        x: sx + unitX * nodeRadius, 
+        y: sy + unitY * nodeRadius 
+      };
+      fullPathEnd = { 
+        x: tx - unitX * nodeRadius, 
+        y: ty - unitY * nodeRadius 
+      };
+    }
+    
+    // Create overlay for each segment
+    seasonsArray.forEach((season, index) => {
+      const seasonData = linkData.seasons?.[season];
+      
+      // Calculate segment path
+      let segmentPath;
+      if (isCurved && fullPathCtrl) {
+        const t1 = index / segmentCount;
+        const t2 = (index + 1) / segmentCount;
+        
+        const startX = (1-t1)*(1-t1)*fullPathStart.x + 2*(1-t1)*t1*fullPathCtrl.x + t1*t1*fullPathEnd.x;
+        const startY = (1-t1)*(1-t1)*fullPathStart.y + 2*(1-t1)*t1*fullPathCtrl.y + t1*t1*fullPathEnd.y;
+        const endX = (1-t2)*(1-t2)*fullPathStart.x + 2*(1-t2)*t2*fullPathCtrl.x + t2*t2*fullPathEnd.x;
+        const endY = (1-t2)*(1-t2)*fullPathStart.y + 2*(1-t2)*t2*fullPathCtrl.y + t2*t2*fullPathEnd.y;
+        
+        const segCtrlX = (1-(t1+t2)/2)*(1-(t1+t2)/2)*fullPathStart.x + 2*(1-(t1+t2)/2)*((t1+t2)/2)*fullPathCtrl.x + ((t1+t2)/2)*((t1+t2)/2)*fullPathEnd.x;
+        const segCtrlY = (1-(t1+t2)/2)*(1-(t1+t2)/2)*fullPathStart.y + 2*(1-(t1+t2)/2)*((t1+t2)/2)*fullPathCtrl.y + ((t1+t2)/2)*((t1+t2)/2)*fullPathEnd.y;
+        
+        segmentPath = `M${startX},${startY} Q${segCtrlX},${segCtrlY} ${endX},${endY}`;
+      } else {
+        const startX = fullPathStart.x + (fullPathEnd.x - fullPathStart.x) * (index / segmentCount);
+        const startY = fullPathStart.y + (fullPathEnd.y - fullPathStart.y) * (index / segmentCount);
+        const endX = fullPathStart.x + (fullPathEnd.x - fullPathStart.x) * ((index + 1) / segmentCount);
+        const endY = fullPathStart.y + (fullPathEnd.y - fullPathStart.y) * ((index + 1) / segmentCount);
+        
+        segmentPath = `M${startX},${startY}L${endX},${endY}`;
+      }
+      
+      // Create segment overlay
+      const segmentOverlay = overlayGroup.append("path")
+        .attr("class", "pov-segmented-overlay")
+        .attr("d", segmentPath)
+        .attr("stroke", "transparent")
+        .attr("stroke-width", 15)
+        .attr("fill", "none")
+        .attr("opacity", 0)
+        .style("cursor", "pointer")
+        .style("pointer-events", "stroke")
+        .datum({
+          ...linkData,
+          segment: {
+            season: season,
+            seasonData: seasonData,
+            index: index
+          }
+        });
+      
+      // Add click handler for segment
+      segmentOverlay.on("click", function(event, d) {
+        const segmentSeason = d.segment.season;
+        const segmentSeasonData = d.segment.seasonData;
+        
+        if (segmentSeasonData && segmentSeasonData.judgment && segmentSeasonData.judgment.trim() !== "") {
+          showDialogueForLink(d, segmentSeasonData);
+        } else {
+          showNoOpinionMessage(d, segmentSeason);
+        }
+        
+        event.stopPropagation();
+      });
+    });
+  });
 }
 
 // Function to create segmented links for multi-chapter visualization
@@ -658,6 +835,29 @@ d3.json("data.json").then(data => {
       }
     });
 
+    // Update POV overlay links to match normal links
+    svg.selectAll(".pov-overlay-link").attr("d", function(d) {
+      const sx = d.source.x, sy = d.source.y, tx = d.target.x, ty = d.target.y;
+      const a = (d.source.id || d.source);
+      const b = (d.target.id || d.target);
+      
+      if (bidir[`${a}->${b}`]) {
+        const curveOffset = 35;
+        const dx = tx - sx;
+        const dy = ty - sy;
+        const mx = (sx + tx) / 2;
+        const my = (sy + ty) / 2;
+        const nx = -dy;
+        const ny = dx;
+        const norm = Math.sqrt(nx * nx + ny * ny) || 1;
+        const px = mx + (nx / norm) * curveOffset;
+        const py = my + (ny / norm) * curveOffset;
+        return `M${sx},${sy} Q${px},${py} ${tx},${ty}`;
+      } else {
+        return `M${sx},${sy}L${tx},${ty}`;
+      }
+    });
+
     node.attr("transform", d => `translate(${d.x},${d.y})`);
 
     // Update segmented links if they exist
@@ -676,53 +876,14 @@ d3.json("data.json").then(data => {
     });
   });
 
-  // Funzione per mostrare il dialogue box per un link
-  function showDialogueForLink(linkData, seasonData) {
-    const dialogues = seasonData?.dialogues?.filter(line => line.line && line.line.trim() !== "");
-    
-    // Calcola la posizione del dialogue box
-    let sx = linkData.source.x, sy = linkData.source.y, tx = linkData.target.x, ty = linkData.target.y;
-    let cx = (sx + tx) / 2, cy = (sy + ty) / 2;
-
-    if (linkData._isCurved && linkData._ctrlPoint) {
-      cx = linkData._ctrlPoint.x;
-      cy = linkData._ctrlPoint.y;
-    }
-
-    // Converti le coordinate SVG in coordinate della pagina
-    const svgRect = svg.node().getBoundingClientRect();
-    const pageX = svgRect.left + cx;
-    const pageY = svgRect.top + cy;
-
-    if (!dialogues || dialogues.length === 0) {
-      dialogueBox
-        .html("<em>No dialogues available for this chapter</em>")
-        .style("left", `${pageX}px`)
-        .style("top", `${pageY}px`)
-        .classed("visible", true);
-    } else {
-      const html = dialogues.map(d => {
-        return `
-          <div style="margin-bottom: 8px;">
-            <strong>${d.character || "?"}</strong> <em>(${d.episode || "-"})</em><br>
-            "${d.line}"
-          </div>
-        `;
-      }).join("");
-
-      dialogueBox
-        .html(html)
-        .style("left", `${pageX}px`)
-        .style("top", `${pageY}px`)
-        .classed("visible", true);
-    }
-  }
-
   function toggleHighlight(nodeId) {
     // Close dialogue box, donut charts and tooltip
     d3.selectAll(".donut-chart").remove();
     d3.selectAll(".donut-tooltip-group").remove();
     svg.selectAll(".segmented-links").remove();
+    svg.selectAll(".overlay-links").remove();
+    svg.selectAll(".pov-overlay-links").remove();         // Rimuovi overlay POV esistenti
+    svg.selectAll(".pov-segmented-overlays").remove();    // Rimuovi overlay segmentati esistenti
     dialogueBox.html("").classed("visible", false);
     selectedLinkId = null;
     
@@ -789,6 +950,16 @@ d3.json("data.json").then(data => {
       const sourceId = d.source.id || d.source;
       return sourceId === nodeId ? 1 : 0.01;
     });
+    
+    // 🎯 CREATE POV OVERLAYS HERE!
+    if (selectedSeasons.size === 1) {
+      // Single chapter: create simple overlays
+      const season = Array.from(selectedSeasons)[0];
+      createPOVOverlaysSingle(season, nodeId);
+    } else if (selectedSeasons.size > 1) {
+      // Multi chapter: create segmented overlays
+      createPOVOverlaysMulti(nodeId);
+    }
   }
 
   function getOpinions(fromId, toId) {
