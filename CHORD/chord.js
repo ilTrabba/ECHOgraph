@@ -16,27 +16,73 @@ let state = {
     currentTranslateX: 0,
     currentTranslateY: 0,
     config: {
-        outerRadius: 0,
-        innerRadius: 0,
-        arcRadius: 0,
-        labelRadius: 0,
-        externalLabelRadius: 0,
-        centerX: 0,
-        centerY: 0,
-        scaleFactor: 1.5,
-        minArcGap: 0.08,
-        minLabelSpacing: 0.06,
-        colors: {
-            character: '#ffffff',
-            characterStroke: '#4fc3f7',
-            characteristic: '#333',
-            thoughtNode: '#ff6b6b',
-            outgoingLine: '#ff6b6b',
-            incomingLine: '#4fc3f7',
-            defaultConnection: '#444444'
-        }
+    outerRadius: 0,
+    innerRadius: 0,
+    arcRadius: 0,
+    labelRadius: 0,
+    externalLabelRadius: 0,
+    centerX: 0,
+    centerY: 0,
+    scaleFactor: 1.5,
+    minArcGap: 0.08,
+    minLabelSpacing: 0.08,
+    colors: {
+        character: '#ffffff',
+        characterStroke: '#4fc3f7',
+        characteristic: '#333',
+        thoughtNode: '#ff6b6b',
+        outgoingLine: '#ff6b6b',
+        incomingLine: '#4fc3f7',
+        defaultConnection: '#444444'
     }
+}
 };
+
+// --- NUOVE FUNZIONI DA AGGIUNGERE IN FONDO ---
+
+// --- Calcola il raggio dinamico per le label interne ---
+function calculateDynamicLabelRadius() {
+    if (!state.data) return 200;
+    
+    // Conta tutte le label uniche che verranno visualizzate
+    const allLabels = new Set();
+    
+    state.data.nodes.forEach(node => {
+        allLabels.add(node.id); // nomi personaggi (thought nodes)
+    });
+    
+    state.data.links.forEach(link => {
+        if (link.seasons && 
+            link.seasons[state.selectedSeason] && 
+            link.seasons[state.selectedSeason].labels) {
+            link.seasons[state.selectedSeason].labels.forEach(label => {
+                allLabels.add(label); // label caratteristiche
+            });
+        }
+    });
+    
+    const totalLabels = allLabels.size;
+    
+    // Calcola lo spazio angolare necessario per ogni label
+    const fontSize = 13 * state.config.scaleFactor;
+    const avgLabelLength = Array.from(allLabels).reduce((sum, label) => sum + label.length, 0) / totalLabels;
+    const avgCharWidth = fontSize * 0.6;
+    const avgLabelPixelWidth = avgLabelLength * avgCharWidth;
+    
+    // Spaziatura minima desiderata in pixel tra le label
+    const minSpacingPixels = 15 * state.config.scaleFactor;
+    
+    // Calcola il raggio necessario per garantire la spaziatura minima
+    const totalPixelWidthNeeded = totalLabels * (avgLabelPixelWidth + minSpacingPixels);
+    const circumferenceNeeded = totalPixelWidthNeeded;
+    const radiusNeeded = circumferenceNeeded / (2 * Math.PI);
+    
+    // Raggio minimo per evitare che sia troppo piccolo
+    const minRadius = 150 * state.config.scaleFactor;
+    const maxRadius = 400 * state.config.scaleFactor;
+    
+    return Math.max(minRadius, Math.min(maxRadius, radiusNeeded));
+}
 
 // --- Utility per stima larghezza label più lunga (in pixel) ---
 function estimateMaxLabelPixelWidth() {
@@ -58,29 +104,29 @@ function estimateMaxLabelPixelWidth() {
 }
 
 // --- Aggiorna dimensioni e raggi dinamicamente in base alle label ---
+// --- Aggiorna dimensioni con raggio dinamico (SOSTITUISCE LA VERSIONE ESISTENTE) ---
 function updateDimensions() {
-    state.config.width = 800;
-    state.config.height = 600;
-    state.config.centerX = 400;
-    state.config.centerY = 300;
+    state.config.width = 900;  // Aumentato per contenere raggi più grandi
+    state.config.height = 900; // Aumentato per contenere raggi più grandi
+    state.config.centerX = 450;
+    state.config.centerY = 450;
 
     state.svg.setAttribute('viewBox', `0 0 ${state.config.width} ${state.config.height}`);
 
-    const minDimension = Math.min(state.config.width, state.config.height);
     const scaleFactor = state.config.scaleFactor;
 
-    // Raggio delle label interne (fisso)
-    state.config.labelRadius = (minDimension / 2) * 0.35 * scaleFactor;
+    // RAGGIO DINAMICO per le label interne
+    state.config.labelRadius = calculateDynamicLabelRadius();
 
     // Calcola larghezza massima label (px)
     const maxLabelPixelWidth = estimateMaxLabelPixelWidth();
 
-    // L'anello degli archi esterni DEVE essere sempre oltre la label più lunga
-    const margin = 28 * scaleFactor; // margine extra per sicurezza visiva
+    // L'anello degli archi esterni sempre oltre la label più lunga
+    const margin = 35 * scaleFactor; // Aumentato il margine
     state.config.arcRadius = state.config.labelRadius + (maxLabelPixelWidth / 2) + margin;
 
-    // Esterno (nomi personaggi) - CORRETTO per evitare sovrapposizione con archi
-    state.config.externalLabelRadius = state.config.arcRadius + 50 * scaleFactor;
+    // Esterno (nomi personaggi) 
+    state.config.externalLabelRadius = state.config.arcRadius + 60 * scaleFactor;
 
     // Compatibilità
     state.config.outerRadius = state.config.arcRadius;
@@ -104,14 +150,23 @@ function calculateTextRotation(x, y, centerX, centerY) {
 }
 
 // --- Calcola ampiezza angolare ---
+// --- Calcola ampiezza angolare con spaziatura aumentata per evitare sovrapposizioni ---
 function calculateCharacterArcSpan(labelsCount, hasThoughts) {
     const totalElements = labelsCount + 1;
     if (totalElements === 0) return 0;
-    const minElementSpacing = state.config.minLabelSpacing * 1.5;
-    const baseElementWidth = 0.04;
+    
+    // AUMENTATO: Spaziatura minima tra gli elementi (era 1.5, ora 2.5)
+    const minElementSpacing = state.config.minLabelSpacing * 2.5;
+    
+    // AUMENTATO: Larghezza base di ogni elemento (era 0.04, ora 0.06)  
+    const baseElementWidth = 0.06;
+    
     const totalSpacing = (totalElements - 1) * minElementSpacing;
     const totalElementWidth = totalElements * baseElementWidth;
-    const padding = 0.04;
+    
+    // AUMENTATO: Padding ai lati (era 0.04, ora 0.08)
+    const padding = 0.08;
+    
     return totalElementWidth + totalSpacing + (2 * padding);
 }
 
