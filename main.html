@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECHOgraph - Character Relationships Visualization</title>
+    <link rel="stylesheet" href="main_style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Filtro Capitoli - SEMPRE VISIBILE -->
+    <div id="season-timeline">
+        <span class="filter-title"><strong>Chapters</strong></span>
+        <div id="season-dots">
+            <!-- I dot saranno generati da JS -->
+        </div>
+    </div>
+
+    <!-- Toggle Switch - SEMPRE VISIBILE -->
+    <div class="page-toggle">
+        <label class="toggle-label">Switch View</label>
+        <label class="switch">
+            <input type="checkbox" id="mainToggle" checked>
+            <span class="slider"></span>
+        </label>
+        <div class="toggle-labels">
+            <span class="left-label">Graph</span>
+            <span class="right-label">Chord</span>
+        </div>
+    </div>
+
+    <!-- Contenitore principale che cambia contenuto -->
+    <div id="main-container">
+        <!-- Il contenuto viene caricato dinamicamente qui -->
+    </div>
+
+    <!-- Legenda - SEMPRE VISIBILE -->
+    <div id="legend" class="legend">
+        <span class="legend-title">Links</span>
+        <div><span style="background:#4CAF50;"></span> positive</div>
+        <div><span style="background:#F44336;"></span> negative</div>
+        <div><span style="background:#FFC107;"></span> ambiguous</div>
+        <div><span style="background:#c9c9c9ff;"></span> undefined</div>
+    </div>
+
+    <!-- Tooltip globale -->
+    <div id="tooltip" class="hidden"></div>
+    
+    <!-- Dialogue box globale -->
+    <div id="dialogue-box" class="dialogue-box">
+        <div class="dialogue-header">
+            <span class="dialogue-title">Dialogue</span>
+            <button class="close-btn">×</button>
+        </div>
+        <div class="dialogue-content"></div>
+    </div>
+
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
