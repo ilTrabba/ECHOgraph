@@ -316,19 +316,22 @@ function processData() {
             const elementSpacing = availableSpan / (totalElements + 1);
             let elementIndex = 1;
             
-            // Nodo pensiero (nome rosso)
+            // Nodo pensiero (nome rosso) - ULTIMA LETTERA ATTACCATA ESTERNAMENTE
             const thoughtAngle = charData.startAngle + 0.01 + elementIndex * elementSpacing;
+
+            // Calcola la metà della larghezza del testo
             const thoughtText = charData.id;
             const fontSize = 13 * state.config.scaleFactor;
-            const estimatedCharWidth = fontSize * 0.6;
-            const textWidth = thoughtText.length * estimatedCharWidth;
-            const textOffsetDistance = textWidth / 2;
-            const offsetX = Math.cos(thoughtAngle) * textOffsetDistance;
-            const offsetY = Math.sin(thoughtAngle) * textOffsetDistance;
-            const baseX = state.config.centerX + state.config.labelRadius * Math.cos(thoughtAngle);
-            const baseY = state.config.centerY + state.config.labelRadius * Math.sin(thoughtAngle);
-            const thoughtX = baseX + offsetX;
-            const thoughtY = baseY + offsetY;
+            const avgCharWidth = fontSize * 0.6;
+            const halfTextWidth = (thoughtText.length * avgCharWidth) / 2;
+
+            // AGGIUNGI metà testo per far iniziare il testo PRIMA della circonferenza
+            // così l'ultima lettera finisce ESATTAMENTE sulla circonferenza
+            const adjustedRadius = state.config.labelRadius + halfTextWidth;
+
+            const thoughtX = state.config.centerX + adjustedRadius * Math.cos(thoughtAngle);
+            const thoughtY = state.config.centerY + adjustedRadius * Math.sin(thoughtAngle);
+
             state.thoughtNodes.push({
                 id: `${charData.id}_thoughts`,
                 character: charData.id,
@@ -337,24 +340,27 @@ function processData() {
                 angle: thoughtAngle,
                 type: 'thought',
                 label: charData.id,
-                textEnd: { x: baseX, y: baseY }
+                textEnd: { x: thoughtX, y: thoughtY }
             });
             elementIndex++;
             
-            // Nodi delle label caratteristiche
+            // Nodi delle label caratteristiche - ULTIMA LETTERA ATTACCATA ESTERNAMENTE
             charData.incomingLabels.forEach(labelData => {
                 const angle = charData.startAngle + 0.01 + elementIndex * elementSpacing;
+                
+                // Calcola la metà della larghezza del testo
                 const labelText = labelData.label;
                 const fontSize = 13 * state.config.scaleFactor;
-                const estimatedCharWidth = fontSize * 0.6;
-                const textWidth = labelText.length * estimatedCharWidth;
-                const textOffsetDistance = textWidth / 2;
-                const offsetX = Math.cos(angle) * textOffsetDistance;
-                const offsetY = Math.sin(angle) * textOffsetDistance;
-                const baseX = state.config.centerX + state.config.labelRadius * Math.cos(angle);
-                const baseY = state.config.centerY + state.config.labelRadius * Math.sin(angle);
-                const x = baseX + offsetX;
-                const y = baseY + offsetY;
+                const avgCharWidth = fontSize * 0.6;
+                const halfTextWidth = (labelText.length * avgCharWidth) / 2;
+                
+                // AGGIUNGI metà testo per far iniziare il testo PRIMA della circonferenza
+                // così l'ultima lettera finisce ESATTAMENTE sulla circonferenza
+                const adjustedRadius = state.config.labelRadius + halfTextWidth;
+                
+                const x = state.config.centerX + adjustedRadius * Math.cos(angle);
+                const y = state.config.centerY + adjustedRadius * Math.sin(angle);
+        
                 state.characteristicNodes.push({
                     id: `${charData.id}_${labelData.label}`,
                     character: charData.id,
@@ -365,7 +371,7 @@ function processData() {
                     label: labelData.label,
                     sources: charData.labelSources[labelData.label],
                     judgment: labelData.judgment,
-                    textEnd: { x: baseX, y: baseY }
+                    textEnd: { x, y }
                 });
                 elementIndex++;
             });
