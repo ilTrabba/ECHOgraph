@@ -18,9 +18,14 @@ let state = {
     config: {
         outerRadius: 0,
         innerRadius: 0,
+        arcRadius: 0, // Raggio per gli archi dei personaggi
+        labelRadius: 0, // Raggio per le label interne agli archi
+        externalLabelRadius: 0, // Raggio per i nomi esterni
         centerX: 0,
         centerY: 0,
         scaleFactor: 1.5,
+        minArcGap: 0.08, // Gap minimo tra archi adiacenti
+        minLabelSpacing: 0.06, // Spaziatura minima tra label
         colors: {
             character: '#ffffff',
             characterStroke: '#4fc3f7',
@@ -28,7 +33,7 @@ let state = {
             thoughtNode: '#ff6b6b',
             outgoingLine: '#ff6b6b',
             incomingLine: '#4fc3f7',
-            defaultConnection: '#444444' // Grigio molto scuro per gli archi di default
+            defaultConnection: '#444444'
         }
     }
 };
@@ -44,7 +49,6 @@ async function loadData() {
         console.log('Dati caricati con successo:', state.data);
     } catch (error) {
         console.error('Errore nel caricamento dei dati:', error);
-        // Mostra un errore all'utente
         showError('Errore nel caricamento del file data.json. Assicurati che il file sia presente e accessibile.');
         return false;
     }
@@ -99,40 +103,118 @@ function calculateTextRotation(x, y, centerX, centerY) {
     return rotation;
 }
 
+// Calcola l'ampiezza angolare necessaria per un personaggio basata sul numero di label
+function calculateCharacterArcSpan(labelsCount, hasThoughts) {
+    const totalElements = labelsCount + (hasThoughts ? 1 : 0);
+    if (totalElements === 0) return 0;
+    
+    // Spacing minimo tra elementi
+    const minElementSpacing = state.config.minLabelSpacing;
+    const baseElementWidth = 0.04; // Larghezza angolare base per elemento
+    
+    // Calcola l'ampiezza necessaria
+    const totalSpacing = (totalElements - 1) * minElementSpacing;
+    const totalElementWidth = totalElements * baseElementWidth;
+    const padding = 0.02; // Padding ai lati dell'arco
+    
+    return totalElementWidth + totalSpacing + (2 * padding);
+}
+
+// Distribuisce i personaggi attorno al cerchio considerando le loro esigenze di spazio
+function distributeCharactersOptimally(characterData) {
+    const totalCharacters = characterData.length;
+    const totalCircumference = 2 * Math.PI;
+    
+    // Calcola l'ampiezza necessaria per ogni personaggio
+    const characterSpans = characterData.map(data => {
+        const span = calculateCharacterArcSpan(data.labelsCount, data.hasThoughts);
+        return Math.max(span, 0.05); // Ampiezza minima
+    });
+    
+    // Calcola lo spazio totale necessario
+    const totalRequiredSpace = characterSpans.reduce((sum, span) => sum + span, 0);
+    const totalGapSpace = totalCharacters * state.config.minArcGap;
+    const totalNeededSpace = totalRequiredSpace + totalGapSpace;
+    
+    // Se serve più spazio, espandi il raggio
+    let scalingFactor = 1;
+    if (totalNeededSpace > totalCircumference) {
+        scalingFactor = totalNeededSpace / totalCircumference;
+        console.log(`Scaling factor: ${scalingFactor}`);
+    }
+    
+    // Distribuisci i personaggi
+    const characterPositions = [];
+    let currentAngle = -Math.PI / 2; // Inizia dall'alto
+    
+    for (let i = 0; i < totalCharacters; i++) {
+        const span = characterSpans[i] / scalingFactor;
+        const startAngle = currentAngle;
+        const endAngle = currentAngle + span;
+        const centerAngle = (startAngle + endAngle) / 2;
+        
+        characterPositions.push({
+            ...characterData[i],
+            startAngle: startAngle,
+            endAngle: endAngle,
+            centerAngle: centerAngle,
+            span: span
+        });
+        
+        // Muovi al prossimo personaggio con gap
+        currentAngle = endAngle + (state.config.minArcGap / scalingFactor);
+    }
+    
+    return characterPositions;
+}
+
+// Crea un arco SVG per rappresentare un personaggio
+function createCharacterArc(startAngle, endAngle, radius) {
+    // Assicurati che gli angoli siano nel range corretto
+    if (endAngle <= startAngle) {
+        endAngle = startAngle + 0.05; // Arco minimo
+    }
+    
+    // Calcola i punti dell'arco
+    const x1 = state.config.centerX + radius * Math.cos(startAngle);
+    const y1 = state.config.centerY + radius * Math.sin(startAngle);
+    const x2 = state.config.centerX + radius * Math.cos(endAngle);
+    const y2 = state.config.centerY + radius * Math.sin(endAngle);
+    
+    // Determina se l'arco è maggiore di 180 gradi
+    const largeArcFlag = (endAngle - startAngle) > Math.PI ? 1 : 0;
+    
+    // Crea il path dell'arco
+    const pathData = `M ${x1} ${y1} A ${radius} ${radius} 0 ${largeArcFlag} 1 ${x2} ${y2}`;
+    
+    return pathData;
+}
+
 // Inizializzazione
 async function init() {
-    // Mostra un loading indicator
     showLoading();
     
-    // Carica i dati prima di inizializzare
     const dataLoaded = await loadData();
-    
-    // Nasconde il loading indicator
     hideLoading();
     
     if (!dataLoaded) {
-        return; // Fermati se i dati non sono stati caricati
+        return;
     }
     
     state.svg = document.getElementById('visualization');
     state.zoomGroup = document.getElementById('zoom-group');
     
-    // Aggiorna il selettore di stagione
     updateSeasonSelector();
-    
-    // Calcola dimensioni dinamiche
     updateDimensions();
     
     processData();
     createVisualization();
     
-    // Centra la visualizzazione inizialmente
     centerVisualization();
     
     setupEventListeners();
     setupZoom();
     
-    // Aggiorna dimensioni al resize
     window.addEventListener('resize', () => {
         updateDimensions();
         processData();
@@ -147,7 +229,6 @@ function centerVisualization() {
     const svgCenterX = svgRect.width / 2;
     const svgCenterY = svgRect.height / 2;
     
-    // Centra il gruppo zoom sul centro dell'SVG
     state.currentTranslateX = svgCenterX - state.config.centerX;
     state.currentTranslateY = svgCenterY - state.config.centerY;
     state.currentZoom = 1;
@@ -199,7 +280,6 @@ function updateSeasonSelector() {
     if (seasonSelector) {
         seasonSelector.innerHTML = '';
         
-        // Trova tutte le stagioni disponibili
         const seasons = new Set();
         state.data.links.forEach(link => {
             if (link.seasons) {
@@ -209,7 +289,6 @@ function updateSeasonSelector() {
             }
         });
         
-        // Crea le opzioni
         Array.from(seasons).sort().forEach(season => {
             const option = document.createElement('option');
             option.value = season;
@@ -220,7 +299,6 @@ function updateSeasonSelector() {
             seasonSelector.appendChild(option);
         });
         
-        // Aggiungi event listener per il cambio stagione
         seasonSelector.addEventListener('change', (e) => {
             state.selectedSeason = e.target.value;
             processData();
@@ -230,32 +308,32 @@ function updateSeasonSelector() {
     }
 }
 
-// Aggiorna le dimensioni basate sulla finestra
+// Aggiorna le dimensioni basate sulla finestra - CORRETTO
 function updateDimensions() {
-    const container = document.querySelector('.visualization-container');
-    const rect = container.getBoundingClientRect();
-    
-    // Usa dimensioni fisse per il sistema di coordinate interno
     state.config.width = 800;
     state.config.height = 600;
     state.config.centerX = 400;
     state.config.centerY = 300;
     
-    // Aggiorna il viewBox dell'SVG
     state.svg.setAttribute('viewBox', `0 0 ${state.config.width} ${state.config.height}`);
     
-    // Calcola raggi basati sulla dimensione fissa
     const minDimension = Math.min(state.config.width, state.config.height);
-    state.config.outerRadius = (minDimension / 2) * 0.9 * state.config.scaleFactor;
-    state.config.innerRadius = (minDimension / 2) * 0.65 * state.config.scaleFactor;
+    
+    // IMPORTANTE: L'ordine corretto dei raggi dal centro verso l'esterno
+    state.config.labelRadius = (minDimension / 2) * 0.45 * state.config.scaleFactor;     // Interno: label
+    state.config.arcRadius = (minDimension / 2) * 0.65 * state.config.scaleFactor;      // Medio: archi
+    state.config.externalLabelRadius = (minDimension / 2) * 0.85 * state.config.scaleFactor; // Esterno: nomi
+    
+    // Mantieni compatibilità
+    state.config.outerRadius = state.config.arcRadius;
+    state.config.innerRadius = state.config.labelRadius;
 }
 
-// Elabora i dati per creare la struttura necessaria
+// Elabora i dati per creare la struttura necessaria - COMPLETAMENTE RISCRITTA
 function processData() {
     if (!state.data) return;
     
     const characters = state.data.nodes.map(node => node.id);
-    const characterCount = characters.length;
     
     // Reset arrays
     state.characterNodes = [];
@@ -264,36 +342,19 @@ function processData() {
     state.connections = [];
     state.groupedConnections = [];
     
-    // Crea i nodi dei personaggi (anello esterno)
-    state.characterNodes = characters.map((character, index) => {
-        const angle = (index / characterCount) * 2 * Math.PI - Math.PI / 2; // Inizia dall'alto
-        const x = state.config.centerX + state.config.outerRadius * Math.cos(angle);
-        const y = state.config.centerY + state.config.outerRadius * Math.sin(angle);
-        
-        return {
-            id: character,
-            x: x,
-            y: y,
-            angle: angle,
-            type: 'character'
-        };
-    });
-
-    // Crea i nodi delle caratteristiche e dei pensieri per ogni personaggio
-    state.characterNodes.forEach(charNode => {
-        // Trova tutte le caratteristiche ricevute da questo personaggio per la stagione selezionata
+    // Prima passata: raccoglie dati per ogni personaggio
+    const characterData = characters.map(character => {
         const incomingLabels = [];
-        const labelSources = {}; // Mappa per tenere traccia delle fonti per ogni label
+        const labelSources = {};
         
         state.data.links.forEach(link => {
-            if (link.target === charNode.id && 
+            if (link.target === character && 
                 link.seasons && 
                 link.seasons[state.selectedSeason] && 
                 link.seasons[state.selectedSeason].labels &&
                 link.seasons[state.selectedSeason].labels.length > 0) {
                 
                 link.seasons[state.selectedSeason].labels.forEach(label => {
-                    // Raggruppa per label solo per questo personaggio specifico
                     if (!incomingLabels.some(item => item.label === label)) {
                         incomingLabels.push({
                             label: label,
@@ -302,7 +363,6 @@ function processData() {
                         });
                     }
                     
-                    // Tieni traccia di tutte le fonti per questa label per questo personaggio
                     if (!labelSources[label]) {
                         labelSources[label] = [];
                     }
@@ -310,70 +370,101 @@ function processData() {
                 });
             }
         });
-
-        // Verifica se ha pensieri in uscita per la stagione selezionata
+        
         const hasOutgoingThoughts = state.data.links.some(link => 
-            link.source === charNode.id && 
+            link.source === character && 
             link.seasons && 
             link.seasons[state.selectedSeason] && 
             link.seasons[state.selectedSeason].labels &&
             link.seasons[state.selectedSeason].labels.length > 0
         );
         
-        // Crea un nodo per i pensieri in uscita solo se esistono (ora solo label)
-        if (hasOutgoingThoughts) {
-            const thoughtAngle = charNode.angle;
-            const thoughtX = state.config.centerX + state.config.innerRadius * Math.cos(thoughtAngle);
-            const thoughtY = state.config.centerY + state.config.innerRadius * Math.sin(thoughtAngle);
+        return {
+            id: character,
+            labelsCount: incomingLabels.length,
+            hasThoughts: hasOutgoingThoughts,
+            incomingLabels: incomingLabels,
+            labelSources: labelSources
+        };
+    });
+    
+    // Distribuisci i personaggi ottimalmente
+    const characterPositions = distributeCharactersOptimally(characterData);
+    
+    // Crea i nodi dei personaggi
+    characterPositions.forEach(charData => {
+        // Nome esterno del personaggio
+        const externalX = state.config.centerX + state.config.externalLabelRadius * Math.cos(charData.centerAngle);
+        const externalY = state.config.centerY + state.config.externalLabelRadius * Math.sin(charData.centerAngle);
+        
+        const characterNode = {
+            id: charData.id,
+            x: externalX,
+            y: externalY,
+            angle: charData.centerAngle,
+            startAngle: charData.startAngle,
+            endAngle: charData.endAngle,
+            type: 'character',
+            labelsCount: charData.labelsCount,
+            hasOutgoingThoughts: charData.hasThoughts
+        };
+        
+        state.characterNodes.push(characterNode);
+        
+        // Calcola posizioni per elementi interni (nome rosso + label)
+        const totalElements = charData.labelsCount + (charData.hasThoughts ? 1 : 0);
+        if (totalElements > 0) {
+            const availableSpan = charData.endAngle - charData.startAngle - 0.02; // Sottrai padding
+            const elementSpacing = availableSpan / (totalElements + 1);
             
-            const thoughtNode = {
-                id: `${charNode.id}_thoughts`,
-                character: charNode.id,
-                x: thoughtX,
-                y: thoughtY,
-                angle: thoughtAngle,
-                type: 'thought',
-                label: charNode.id // Nome completo del personaggio
-            };
+            let elementIndex = 1;
             
-            state.thoughtNodes.push(thoughtNode);
-        }
-
-        // Crea i nodi delle caratteristiche (solo testo, senza cerchi) - MAGGIORE DISTANZIAMENTO
-        const totalNodes = incomingLabels.length;
-        if (totalNodes > 0) {
-            // Aumentato lo spazio angolare per maggiore distanziamento
-            const angleSpan = (2 * Math.PI / characterCount) * 1.2; // Aumentato da 0.8 a 1.2
-            const angleStep = angleSpan / (totalNodes + 1);
-            const startAngle = charNode.angle - angleSpan / 2;
-
-            incomingLabels.forEach((labelData, index) => {
-                const angle = startAngle + (index + 1) * angleStep;
-                const x = state.config.centerX + state.config.innerRadius * Math.cos(angle);
-                const y = state.config.centerY + state.config.innerRadius * Math.sin(angle);
+            // Crea il nodo pensiero (nome rosso) PRIMA delle caratteristiche
+            if (charData.hasThoughts) {
+                const thoughtAngle = charData.startAngle + 0.01 + elementIndex * elementSpacing;
+                const thoughtX = state.config.centerX + state.config.labelRadius * Math.cos(thoughtAngle);
+                const thoughtY = state.config.centerY + state.config.labelRadius * Math.sin(thoughtAngle);
                 
-                const characteristicNode = {
-                    id: `${charNode.id}_${labelData.label}`,
-                    character: charNode.id,
+                state.thoughtNodes.push({
+                    id: `${charData.id}_thoughts`,
+                    character: charData.id,
+                    x: thoughtX,
+                    y: thoughtY,
+                    angle: thoughtAngle,
+                    type: 'thought',
+                    label: charData.id
+                });
+                
+                elementIndex++;
+            }
+            
+            // Crea i nodi delle caratteristiche DOPO il nome rosso
+            charData.incomingLabels.forEach((labelData) => {
+                const angle = charData.startAngle + 0.01 + elementIndex * elementSpacing;
+                const x = state.config.centerX + state.config.labelRadius * Math.cos(angle);
+                const y = state.config.centerY + state.config.labelRadius * Math.sin(angle);
+                
+                state.characteristicNodes.push({
+                    id: `${charData.id}_${labelData.label}`,
+                    character: charData.id,
                     x: x,
                     y: y,
                     angle: angle,
                     type: 'characteristic',
                     label: labelData.label,
-                    sources: labelSources[labelData.label], // Tutte le fonti per questa label per questo personaggio
+                    sources: charData.labelSources[labelData.label],
                     judgment: labelData.judgment
-                };
+                });
                 
-                state.characteristicNodes.push(characteristicNode);
+                elementIndex++;
             });
         }
     });
 
-    // Crea le connessioni raggruppate per personaggio e label
+    // Crea le connessioni raggruppate
     state.characterNodes.forEach(charNode => {
         const targetChar = charNode.id;
         
-        // Raggruppa le connessioni per label solo per questo personaggio specifico
         const labelGroups = {};
         state.data.links.forEach(link => {
             if (link.target === targetChar && 
@@ -396,7 +487,6 @@ function processData() {
             }
         });
 
-        // Crea una connessione raggruppata per ogni label unica per questo personaggio
         Object.keys(labelGroups).forEach(label => {
             const connections = labelGroups[label];
             const targetCharacteristic = state.characteristicNodes.find(
@@ -404,7 +494,6 @@ function processData() {
             );
             
             if (targetCharacteristic && connections.length > 0) {
-                // Per ogni fonte diversa, crea una connessione
                 const uniqueSources = [...new Set(connections.map(c => c.sourceCharacter))];
                 
                 uniqueSources.forEach(sourceChar => {
@@ -444,13 +533,12 @@ function processData() {
     });
 }
 
-// Crea percorsi curvi per le connessioni con curvatura adattiva basata sulla distanza
+// Crea percorsi curvi per le connessioni
 function createCurvedPath(source, target) {
     const dx = target.x - source.x;
     const dy = target.y - source.y;
     const distance = Math.sqrt(dx * dx + dy * dy);
     
-    // Calcola la distanza angolare tra i due personaggi sull'anello esterno
     const sourceCharNode = state.characterNodes.find(n => n.id === source.character);
     const targetCharNode = state.characterNodes.find(n => n.id === target.character);
     
@@ -458,38 +546,26 @@ function createCurvedPath(source, target) {
         return `M ${source.x} ${source.y} L ${target.x} ${target.y}`;
     }
     
-    // Calcola la differenza angolare
     let angleDiff = Math.abs(targetCharNode.angle - sourceCharNode.angle);
-    // Normalizza la differenza angolare (considera il percorso più breve)
     if (angleDiff > Math.PI) {
         angleDiff = 2 * Math.PI - angleDiff;
     }
     
-    // Normalizza la differenza angolare da 0 a 1 (0 = molto vicini, 1 = molto lontani)
     const normalizedAngleDiff = angleDiff / Math.PI;
-    
-    // Calcola l'intensità della curva in base alla distanza angolare
-    // Vicini = più curvi, lontani = più diretti
-    const maxCurvature = 0.8; // Massima curvatura per nodi vicini
-    const minCurvature = 0.1; // Minima curvatura per nodi lontani
-    
-    // Usa una funzione inversa: nodi vicini (normalizedAngleDiff basso) = curvatura alta
+    const maxCurvature = 0.8;
+    const minCurvature = 0.1;
     const curvatureIntensity = maxCurvature - (normalizedAngleDiff * (maxCurvature - minCurvature));
     
-    // Calcola il punto medio
     const midX = (source.x + target.x) / 2;
     const midY = (source.y + target.y) / 2;
     
-    // Calcola la direzione verso il centro
     const centerX = state.config.centerX;
     const centerY = state.config.centerY;
     const towardsCenterX = centerX - midX;
     const towardsCenterY = centerY - midY;
     
-    // Calcola la distanza del punto di controllo
     const controlDistance = distance * curvatureIntensity;
     
-    // Calcola il punto di controllo
     const controlX = midX + (towardsCenterX / Math.sqrt(towardsCenterX * towardsCenterX + towardsCenterY * towardsCenterY)) * controlDistance;
     const controlY = midY + (towardsCenterY / Math.sqrt(towardsCenterX * towardsCenterX + towardsCenterY * towardsCenterY)) * controlDistance;
     
@@ -500,15 +576,14 @@ function createCurvedPath(source, target) {
 function createVisualization() {
     if (!state.data) return;
     
-    // Pulisce l'SVG
     state.zoomGroup.innerHTML = '';
 
-    // Crea le connessioni raggruppate (percorsi curvi) - grigio scuro di default
+    // Crea le connessioni
     state.groupedConnections.forEach((connection, index) => {
         const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
         path.setAttribute('d', createCurvedPath(connection.source, connection.target));
         path.setAttribute('class', 'connection-path');
-        path.setAttribute('stroke', state.config.colors.defaultConnection); // Grigio scuro di default
+        path.setAttribute('stroke', state.config.colors.defaultConnection);
         path.setAttribute('data-source', connection.sourceCharacter);
         path.setAttribute('data-target', connection.targetCharacter);
         path.setAttribute('data-label', connection.label);
@@ -516,41 +591,40 @@ function createVisualization() {
         state.zoomGroup.appendChild(path);
     });
 
-    // Crea i nodi dei personaggi (anello esterno)
+    // Crea archi SEPARATI per ogni personaggio
     state.characterNodes.forEach(node => {
-        // Cerchio del personaggio
-        const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
-        circle.setAttribute('cx', node.x);
-        circle.setAttribute('cy', node.y);
-        circle.setAttribute('r', 25 * state.config.scaleFactor);
-        circle.setAttribute('fill', state.config.colors.character);
-        circle.setAttribute('stroke', state.config.colors.characterStroke);
-        circle.setAttribute('stroke-width', 4);
-        circle.setAttribute('class', 'character-node');
-        circle.setAttribute('data-character', node.id);
-        state.zoomGroup.appendChild(circle);
-
-        // Testo del personaggio (nome completo)
-        const text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
-        text.setAttribute('x', node.x);
-        text.setAttribute('y', node.y - (35 * state.config.scaleFactor));
-        text.setAttribute('class', 'character-text');
-        text.setAttribute('font-size', 16 * state.config.scaleFactor);
-        text.textContent = node.id;
-        state.zoomGroup.appendChild(text);
+        if (node.labelsCount > 0 || node.hasOutgoingThoughts) {
+            // Crea l'arco per questo specifico personaggio
+            const arc = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+            arc.setAttribute('d', createCharacterArc(node.startAngle, node.endAngle, state.config.arcRadius));
+            arc.setAttribute('class', 'character-arc');
+            arc.setAttribute('data-character', node.id);
+            state.zoomGroup.appendChild(arc);
+        }
+        
+        // Nome esterno del personaggio (SEMPRE al raggio più esterno)
+        const externalText = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+        externalText.setAttribute('x', node.x);
+        externalText.setAttribute('y', node.y);
+        externalText.setAttribute('class', 'character-external-text');
+        externalText.setAttribute('font-size', 16 * state.config.scaleFactor);
+        externalText.setAttribute('font-weight', 'bold');
+        externalText.setAttribute('fill', '#333');
+        const externalRotation = calculateTextRotation(node.x, node.y, state.config.centerX, state.config.centerY);
+        externalText.setAttribute('transform', `rotate(${externalRotation}, ${node.x}, ${node.y})`);
+        externalText.textContent = node.id;
+        state.zoomGroup.appendChild(externalText);
     });
 
-    // Crea solo i testi delle caratteristiche (senza cerchi) - più grandi e ruotati
+    // Crea i testi delle caratteristiche (INTERNI agli archi)
     state.characteristicNodes.forEach(node => {
-        // Calcola l'angolo di rotazione basato sulla posizione rispetto al centro
         const rotation = calculateTextRotation(node.x, node.y, state.config.centerX, state.config.centerY);
         
-        // Solo testo della caratteristica completo e più grande
         const text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
         text.setAttribute('x', node.x);
         text.setAttribute('y', node.y);
         text.setAttribute('class', 'characteristic-text clickable-label');
-        text.setAttribute('font-size', 14 * state.config.scaleFactor);
+        text.setAttribute('font-size', 13 * state.config.scaleFactor);
         text.setAttribute('data-character', node.character);
         text.setAttribute('data-label', node.label);
         text.setAttribute('data-sources', node.sources.join(','));
@@ -559,19 +633,17 @@ function createVisualization() {
         state.zoomGroup.appendChild(text);
     });
 
-    // Crea solo le label dei pensieri (senza cerchi) - nome completo in grassetto
+    // Crea i nomi rossi dei pensieri (INTERNI agli archi)
     state.thoughtNodes.forEach(node => {
-        // Calcola l'angolo di rotazione basato sulla posizione rispetto al centro
         const rotation = calculateTextRotation(node.x, node.y, state.config.centerX, state.config.centerY);
         
-        // Solo testo del nome completo in grassetto
         const text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
         text.setAttribute('x', node.x);
         text.setAttribute('y', node.y);
         text.setAttribute('class', 'thought-text clickable-label');
         text.setAttribute('fill', state.config.colors.thoughtNode);
         text.setAttribute('font-weight', 'bold');
-        text.setAttribute('font-size', 14 * state.config.scaleFactor);
+        text.setAttribute('font-size', 13 * state.config.scaleFactor);
         text.setAttribute('data-character', node.character);
         text.setAttribute('data-label', node.label);
         text.setAttribute('transform', `rotate(${rotation}, ${node.x}, ${node.y})`);
@@ -580,52 +652,52 @@ function createVisualization() {
     });
 }
 
-// Configura il sistema di zoom - COMPLETAMENTE RIPARATO
+// Resto delle funzioni (zoom, event listeners, highlighting, etc.) rimangono uguali...
+// Configura il sistema di zoom
 function setupZoom() {
     const zoomInBtn = document.getElementById('zoom-in');
     const zoomOutBtn = document.getElementById('zoom-out');
     const zoomResetBtn = document.getElementById('zoom-reset');
     
-    zoomInBtn.addEventListener('click', () => {
-        state.currentZoom = Math.min(state.currentZoom * 1.3, 5);
-        updateZoom();
-    });
+    if (zoomInBtn) {
+        zoomInBtn.addEventListener('click', () => {
+            state.currentZoom = Math.min(state.currentZoom * 1.3, 5);
+            updateZoom();
+        });
+    }
     
-    zoomOutBtn.addEventListener('click', () => {
-        state.currentZoom = Math.max(state.currentZoom / 1.3, 0.2);
-        updateZoom();
-    });
+    if (zoomOutBtn) {
+        zoomOutBtn.addEventListener('click', () => {
+            state.currentZoom = Math.max(state.currentZoom / 1.3, 0.2);
+            updateZoom();
+        });
+    }
     
-    zoomResetBtn.addEventListener('click', () => {
-        centerVisualization();
-    });
+    if (zoomResetBtn) {
+        zoomResetBtn.addEventListener('click', () => {
+            centerVisualization();
+        });
+    }
     
-    // Zoom con rotella del mouse - ALGORITMO SEMPLIFICATO E FUNZIONANTE
     state.svg.addEventListener('wheel', (e) => {
         e.preventDefault();
         
-        // Ottieni le coordinate del mouse rispetto all'SVG
         const rect = state.svg.getBoundingClientRect();
         const mouseX = e.clientX - rect.left;
         const mouseY = e.clientY - rect.top;
         
-        // Converti le coordinate del mouse nel sistema di coordinate SVG
         const svgX = (mouseX / rect.width) * state.config.width;
         const svgY = (mouseY / rect.height) * state.config.height;
         
-        // Calcola il punto nel mondo prima del zoom
         const worldX = (svgX - state.currentTranslateX) / state.currentZoom;
         const worldY = (svgY - state.currentTranslateY) / state.currentZoom;
         
-        // Calcola il nuovo zoom
         const zoomFactor = e.deltaY > 0 ? 0.9 : 1.1;
         const newZoom = Math.max(0.2, Math.min(5, state.currentZoom * zoomFactor));
         
-        // Calcola la nuova traslazione per mantenere il punto fisso
         const newTranslateX = svgX - worldX * newZoom;
         const newTranslateY = svgY - worldY * newZoom;
         
-        // Aggiorna lo stato
         state.currentZoom = newZoom;
         state.currentTranslateX = newTranslateX;
         state.currentTranslateY = newTranslateY;
@@ -633,7 +705,6 @@ function setupZoom() {
         updateZoom();
     });
     
-    // Pan con trascinamento
     let isDragging = false;
     let startX, startY;
     
@@ -658,18 +729,15 @@ function setupZoom() {
     });
 }
 
-// Aggiorna la trasformazione dello zoom
 function updateZoom() {
     const transform = `translate(${state.currentTranslateX}, ${state.currentTranslateY}) scale(${state.currentZoom})`;
     state.zoomGroup.setAttribute('transform', transform);
 }
 
-// Configura gli event listener
 function setupEventListeners() {
-    // Click sui personaggi e sui nodi interni
     document.addEventListener('click', (e) => {
-        if (e.target.classList.contains('character-node')) {
-            const character = e.target.getAttribute('data-character');
+        if (e.target.classList.contains('character-arc') || e.target.classList.contains('character-external-text')) {
+            const character = e.target.getAttribute('data-character') || e.target.textContent;
             handleCharacterClick(character);
         } else if (e.target.classList.contains('clickable-label')) {
             const character = e.target.getAttribute('data-character');
@@ -681,7 +749,6 @@ function setupEventListeners() {
     });
 }
 
-// Gestisce il click su un personaggio
 function handleCharacterClick(character) {
     if (state.selectedCharacter === character && state.selectedType === 'character') {
         resetHighlighting();
@@ -695,7 +762,6 @@ function handleCharacterClick(character) {
     updateInfoPanel(character);
 }
 
-// Gestisce il click su una label interna
 function handleLabelClick(character, label) {
     if (state.selectedCharacter === character && state.selectedLabel === label && state.selectedType === 'label') {
         resetHighlighting();
@@ -709,16 +775,13 @@ function handleLabelClick(character, label) {
     updateInfoPanelForLabel(character, label);
 }
 
-// Evidenzia le connessioni di un personaggio (SENZA evidenziare i nodi interni)
 function highlightCharacterConnections(character) {
-    // Reset di tutti i percorsi
     const allPaths = document.querySelectorAll('.connection-path');
     allPaths.forEach(path => {
         path.classList.remove('highlighted', 'dimmed');
         path.classList.add('dimmed');
     });
 
-    // Evidenzia i percorsi in uscita (rossi)
     const outgoingPaths = document.querySelectorAll(`[data-source="${character}"]`);
     outgoingPaths.forEach(path => {
         path.classList.remove('dimmed');
@@ -726,7 +789,6 @@ function highlightCharacterConnections(character) {
         path.style.stroke = state.config.colors.outgoingLine;
     });
 
-    // Evidenzia i percorsi in entrata (blu)
     const incomingPaths = document.querySelectorAll(`[data-target="${character}"]`);
     incomingPaths.forEach(path => {
         path.classList.remove('dimmed');
@@ -734,27 +796,32 @@ function highlightCharacterConnections(character) {
         path.style.stroke = state.config.colors.incomingLine;
     });
 
-    // Evidenzia solo il personaggio selezionato
-    const characterNodes = document.querySelectorAll('.character-node');
-    characterNodes.forEach(node => {
-        if (node.getAttribute('data-character') === character) {
-            node.style.filter = 'drop-shadow(0 0 20px rgba(79, 195, 247, 0.8))';
+    const characterArcs = document.querySelectorAll('.character-arc');
+    characterArcs.forEach(arc => {
+        if (arc.getAttribute('data-character') === character) {
+            arc.style.filter = 'drop-shadow(0 0 20px rgba(79, 195, 247, 0.8))';
         } else {
-            node.style.filter = 'none';
+            arc.style.filter = 'none';
+        }
+    });
+    
+    const externalTexts = document.querySelectorAll('.character-external-text');
+    externalTexts.forEach(text => {
+        if (text.textContent === character) {
+            text.style.filter = 'drop-shadow(0 0 15px rgba(79, 195, 247, 0.8))';
+        } else {
+            text.style.filter = 'none';
         }
     });
 }
 
-// Evidenzia solo le connessioni che puntano a una specifica label
 function highlightLabelConnections(character, label) {
-    // Reset di tutti i percorsi
     const allPaths = document.querySelectorAll('.connection-path');
     allPaths.forEach(path => {
         path.classList.remove('highlighted', 'dimmed');
         path.classList.add('dimmed');
     });
 
-    // Evidenzia solo i percorsi che puntano a questa specifica label per questo personaggio
     const specificPaths = document.querySelectorAll(`[data-target="${character}"][data-label="${label}"]`);
     specificPaths.forEach(path => {
         path.classList.remove('dimmed');
@@ -762,7 +829,6 @@ function highlightLabelConnections(character, label) {
         path.style.stroke = state.config.colors.incomingLine;
     });
 
-    // Evidenzia solo la label selezionata
     const characteristicTexts = document.querySelectorAll('.characteristic-text');
     characteristicTexts.forEach(text => {
         if (text.getAttribute('data-character') === character && text.getAttribute('data-label') === label) {
@@ -774,7 +840,6 @@ function highlightLabelConnections(character, label) {
         }
     });
 
-    // Evidenzia le label dei pensieri se è un nodo pensiero
     const thoughtTexts = document.querySelectorAll('.thought-text');
     thoughtTexts.forEach(text => {
         if (text.getAttribute('data-character') === character && text.getAttribute('data-label') === label) {
@@ -784,29 +849,41 @@ function highlightLabelConnections(character, label) {
         }
     });
 
-    // Evidenzia i personaggi coinvolti - considera tutte le fonti per questo personaggio specifico
-    const characterNodes = document.querySelectorAll('.character-node');
-    characterNodes.forEach(node => {
-        const nodeCharacter = node.getAttribute('data-character');
-        // Evidenzia il personaggio target
+    const characterArcs = document.querySelectorAll('.character-arc');
+    characterArcs.forEach(arc => {
+        const nodeCharacter = arc.getAttribute('data-character');
         if (nodeCharacter === character) {
-            node.style.filter = 'drop-shadow(0 0 20px rgba(79, 195, 247, 0.8))';
-        }
-        // Evidenzia tutti i personaggi source per questa specifica label per questo personaggio
-        else {
+            arc.style.filter = 'drop-shadow(0 0 20px rgba(79, 195, 247, 0.8))';
+        } else {
             const labelNode = state.characteristicNodes.find(n => 
                 n.character === character && n.label === label
             );
             if (labelNode && labelNode.sources.includes(nodeCharacter)) {
-                node.style.filter = 'drop-shadow(0 0 20px rgba(255, 107, 107, 0.8))';
+                arc.style.filter = 'drop-shadow(0 0 20px rgba(255, 107, 107, 0.8))';
             } else {
-                node.style.filter = 'none';
+                arc.style.filter = 'none';
+            }
+        }
+    });
+    
+    const externalTexts = document.querySelectorAll('.character-external-text');
+    externalTexts.forEach(text => {
+        const nodeCharacter = text.textContent;
+        if (nodeCharacter === character) {
+            text.style.filter = 'drop-shadow(0 0 15px rgba(79, 195, 247, 0.8))';
+        } else {
+            const labelNode = state.characteristicNodes.find(n => 
+                n.character === character && n.label === label
+            );
+            if (labelNode && labelNode.sources.includes(nodeCharacter)) {
+                text.style.filter = 'drop-shadow(0 0 15px rgba(255, 107, 107, 0.8))';
+            } else {
+                text.style.filter = 'none';
             }
         }
     });
 }
 
-// Reset dell'evidenziazione
 function resetHighlighting() {
     state.selectedCharacter = null;
     state.selectedLabel = null;
@@ -815,15 +892,15 @@ function resetHighlighting() {
     const allPaths = document.querySelectorAll('.connection-path');
     allPaths.forEach(path => {
         path.classList.remove('highlighted', 'dimmed');
-        path.style.stroke = state.config.colors.defaultConnection; // Torna al grigio scuro
+        path.style.stroke = state.config.colors.defaultConnection;
     });
 
-    const allNodes = document.querySelectorAll('.character-node');
-    allNodes.forEach(node => {
-        node.style.filter = 'none';
+    const allArcs = document.querySelectorAll('.character-arc');
+    allArcs.forEach(arc => {
+        arc.style.filter = 'none';
     });
 
-    const allTexts = document.querySelectorAll('.characteristic-text, .thought-text');
+    const allTexts = document.querySelectorAll('.characteristic-text, .thought-text, .character-external-text');
     allTexts.forEach(text => {
         text.style.filter = 'none';
         if (text.classList.contains('characteristic-text')) {
@@ -834,14 +911,13 @@ function resetHighlighting() {
     updateInfoPanel(null);
 }
 
-// Aggiorna il pannello informazioni per i personaggi
 function updateInfoPanel(character) {
-    const infoPanel = document.getElementById('info-panel');
+    const infoContent = document.getElementById('info-content');
     
     if (!character) {
-        infoPanel.innerHTML = `
+        infoContent.innerHTML = `
             <strong>Istruzioni:</strong><br>
-            Clicca su un personaggio per evidenziare le sue relazioni.<br>
+            Clicca su un arco esterno per evidenziare le relazioni del personaggio.<br>
             Clicca su una label interna per evidenziare solo gli archi che la puntano.<br>
             <span style="color: #ff6b6b;">Rosso</span>: Archi in uscita<br>
             <span style="color: #4fc3f7;">Blu</span>: Archi in entrata<br>
@@ -849,13 +925,10 @@ function updateInfoPanel(character) {
             <strong>Controlli:</strong><br>
             • Rotella mouse: Zoom al cursore<br>
             • Trascina: Pan<br>
-            • Bottoni: Zoom controlli<br>
-            • Selettore: Cambia stagione
         `;
         return;
     }
 
-    // Conta le connessioni raggruppate
     const outgoingConnections = state.groupedConnections.filter(c => 
         c.sourceCharacter === character
     );
@@ -863,7 +936,7 @@ function updateInfoPanel(character) {
         c.targetCharacter === character
     );
 
-    infoPanel.innerHTML = `
+    infoContent.innerHTML = `
         <strong>${character}</strong><br>
         <strong>Stagione:</strong> ${state.selectedSeason}<br>
         Pensieri verso altri: ${outgoingConnections.length}<br>
@@ -873,17 +946,15 @@ function updateInfoPanel(character) {
     `;
 }
 
-// Aggiorna il pannello informazioni per le label
 function updateInfoPanelForLabel(character, label) {
-    const infoPanel = document.getElementById('info-panel');
+    const infoContent = document.getElementById('info-content');
     
-    // Trova la label e tutte le sue fonti per questo personaggio specifico
     const labelNode = state.characteristicNodes.find(n => 
         n.character === character && n.label === label
     );
 
     if (labelNode) {
-        infoPanel.innerHTML = `
+        infoContent.innerHTML = `
             <strong>Label selezionata:</strong><br>
             "${label}"<br>
             <strong>Personaggio:</strong> ${character}<br>
@@ -896,5 +967,4 @@ function updateInfoPanelForLabel(character, label) {
     }
 }
 
-// Avvia l'applicazione quando il DOM è caricato
 document.addEventListener('DOMContentLoaded', init);

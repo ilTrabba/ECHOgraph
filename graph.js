@@ -35,8 +35,8 @@ document.addEventListener('DOMContentLoaded', function() {
             document.body.classList.add('page-fade-out');
             
             setTimeout(() => {
-                // Naviga alla pagina principale (sostituisci con il nome del tuo file principale)
-                window.location.href = 'prova.html'; // <-- Cambia con il nome del tuo file principale
+                
+                window.location.href = 'CHORD/index_chord.html'; 
             }, 250);
         }
     });
