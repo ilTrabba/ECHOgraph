@@ -2,52 +2,40 @@ Graph visualization with D3 - ECHOgraph for character's POV
 
 Description:
 -------------
-Questo progetto visualizza un grafo interattivo con nodi e archi basato su dati JSON.
-È possibile selezionare un nodo come "punto di vista" (POV) tramite click singolo,
-visualizzare tooltip con opinioni sui link collegati, e filtrare dialoghi basati
-sulla stagione tramite un filtro a slider.
+This project offers a clear and effective way to visualize information related to the POVs of characters from literary works, films, and much more. 
+The visualization is divided between the presentation of an interactive chord diagram, which users can dynamically explore, and an interactive graph with nodes and edges based on JSON data. Users can select a node as a "point of view" (POV) with a single click, view tooltips with opinions on the connected links, and filter dialoguesby season using a slider filter.
 
 Principles features:
 ---------------------------
-- Grafico interattivo con nodi trascinabili (drag).
-- Archi con frecce colorate che indicano giudizi (positivo, negativo, ambiguo).
-- Tooltip che mostra etichette di opinioni passando con mouse sopra un nodo
-  collegato al POV selezionato.
-- Filtro stagione estetico con 6 pallini su una linea per selezionare la stagione.
-- Box dialoghi fissa a destra che si popola con dialoghi relativi alla stagione
-  selezionata e al link cliccato nel POV.
-- Possibilità di resettare la selezione cliccando nuovamente sul nodo o arco.
-- Legenda colori fissa in alto a sinistra.
-- Stile moderno con animazioni e ombre leggere per tooltip e box dialoghi.
-
-Main files:
-----------------
-- index.html          : struttura base della pagina con svg, tooltip, box dialoghi e filtro stagione
-- graph.js            : script principale con la logica di caricamento dati, forze fisiche, interazioni e filtro
-- style.css           : foglio di stile con regole per grafico, tooltip, box dialoghi, filtro e legenda
-- data.json           : file dati con nodi, archi, opinioni stagionali e dialoghi annidati
+- Chord diagram to show a general and global view of the relative context
+- Interactive graph with draggable nodes.
+- Edges with colored arrows indicating sentiment (positive, negative, ambiguous).
+- Tooltip showing opinion labels when hovering over a node connected to the selected POV.
+- Aesthetic season filter with dots on a line to select the season.
+- Ability to reset selection by clicking again on the node or edge.
+- Fixed color legend in the top-left corner.
+- Modern style with animations and subtle shadows for tooltips and the dialogue box.
 
 How to use:
 -----------
-1. Apri index.html in un browser moderno (Chrome, Firefox, Edge).
-2. Seleziona un nodo con click singolo per entrare nel POV.
-3. Passa il mouse su un nodo collegato per vedere il tooltip con opinioni.
-4. Seleziona una stagione tramite il filtro a slider (linea con 6 pallini).
-5. Clicca su un arco tra due nodi nel POV per visualizzare i dialoghi di quella stagione
-   nella box dialoghi a destra.
-6. Clicca nuovamente su un nodo o arco per resettare la selezione e nascondere la box/dialoghi.
-7. Usa la legenda in alto a sinistra per capire il significato dei colori degli archi.
+1. Open index_chord.html in a modern browser (Chrome, Firefox, Edge).
+2. Select a specific character name (in black) with a single click to enter the POV and explore the labels.
+3. Switch to the graph visualization to explore the node with a more clear view over a connected node to view the tooltip with opinions.
+4. Select a season using the slider filter (line with dots).
+5. Click on an edge between two nodes within the POV to display that season’s dialogues in the dialogue box.
+6. Click again on a node or edge to reset the selection and hide the dialogue box.
+7. Use the legend in the top-left corner to understand the meaning of the edge colors.
 
 Personalizations:
 ------------------
-- Cambia i colori o la distanza del grafo modificando colorMap e forceLink distance.
-- Modifica dimensioni e stile del filtro stagione nel CSS.
-- Aggiungi più stagioni o dialoghi nel file data.json secondo la struttura mostrata.
-- Migliora la box dialoghi aggiungendo animazioni o avatar come suggerito nel README CSS.
+- Change the graph’s colors or link distances by modifying colorMap and forceLink distance.
+- Adjust the size and style of the season filter in the CSS.
+- Add more seasons or dialogues in the data.json file following the existing structure.
+- Enhance the dialogue box by adding animations or character-specific avatars.
 
 Support:
 ---------
-Per domande o problemi, contattare lo sviluppatore o aprire issue su repository GitHub.
+For questions or issues, contact the developer or open an issue on the GitHub repository.
 
 ---
 
