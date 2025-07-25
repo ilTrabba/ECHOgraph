@@ -140,6 +140,36 @@ function estimateTextWidth(text, fontSize, radius) {
     return pixelWidth / radius;
 }
 
+// --- Calcola posizione ottimale e ancoraggio per le label ---
+function calculateLabelPosition(angle, text, fontSize) {
+    const centerX = state.config.centerX;
+    const centerY = state.config.centerY;
+    const labelRadius = state.config.labelRadius;
+    
+    // Determina se la label è sul lato destro (-π/2 a π/2) o sinistro
+    const isRightSide = angle >= -Math.PI/2 && angle <= Math.PI/2;
+    
+    let x, y, textAnchor;
+    
+    if (isRightSide) {
+        // Lato destro: prima lettera tangente al cerchio interno
+        x = centerX + labelRadius * Math.cos(angle);
+        y = centerY + labelRadius * Math.sin(angle);
+        textAnchor = 'start';
+    } else {
+        // Lato sinistro: ultima lettera tangente al cerchio interno
+        x = centerX + labelRadius * Math.cos(angle);
+        y = centerY + labelRadius * Math.sin(angle);
+        textAnchor = 'end';
+    }
+    
+    return {
+        x,
+        y,
+        textAnchor
+    };
+}
+
 // --- Rotazione testo leggibile ---
 function calculateTextRotation(x, y, centerX, centerY) {
     const angle = Math.atan2(y - centerY, x - centerX);
@@ -339,21 +369,20 @@ function processData() {
             const thoughtAngle = charData.startAngle + 0.01 + elementIndex * elementSpacing;
             const thoughtText = charData.id;
             const fontSize = 13 * state.config.scaleFactor;
-            const avgCharWidth = fontSize * 0.6;
-            const halfTextWidth = (thoughtText.length * avgCharWidth) / 2;
-            const adjustedRadius = state.config.labelRadius + halfTextWidth;
-            const thoughtX = state.config.centerX + adjustedRadius * Math.cos(thoughtAngle);
-            const thoughtY = state.config.centerY + adjustedRadius * Math.sin(thoughtAngle);
+            
+            // Usa la nuova funzione per calcolare posizione e ancoraggio
+            const thoughtPosition = calculateLabelPosition(thoughtAngle, thoughtText, fontSize);
 
             state.thoughtNodes.push({
                 id: `${charData.id}_thoughts`,
                 character: charData.id,
-                x: thoughtX,
-                y: thoughtY,
+                x: thoughtPosition.x,
+                y: thoughtPosition.y,
                 angle: thoughtAngle,
                 type: 'thought',
                 label: charData.id,
-                textEnd: { x: thoughtX, y: thoughtY }
+                textAnchor: thoughtPosition.textAnchor,
+                textEnd: { x: thoughtPosition.x, y: thoughtPosition.y }
             });
             elementIndex++;
             
@@ -361,23 +390,22 @@ function processData() {
                 const angle = charData.startAngle + 0.01 + elementIndex * elementSpacing;
                 const labelText = labelData.label;
                 const fontSize = 13 * state.config.scaleFactor;
-                const avgCharWidth = fontSize * 0.6;
-                const halfTextWidth = (labelText.length * avgCharWidth) / 2;
-                const adjustedRadius = state.config.labelRadius + halfTextWidth;
-                const x = state.config.centerX + adjustedRadius * Math.cos(angle);
-                const y = state.config.centerY + adjustedRadius * Math.sin(angle);
+                
+                // Usa la nuova funzione per calcolare posizione e ancoraggio
+                const labelPosition = calculateLabelPosition(angle, labelText, fontSize);
         
                 state.characteristicNodes.push({
                     id: `${charData.id}_${labelData.label}`,
                     character: charData.id,
-                    x,
-                    y,
+                    x: labelPosition.x,
+                    y: labelPosition.y,
                     angle,
                     type: 'characteristic',
                     label: labelData.label,
                     sources: charData.labelSources[labelData.label],
                     judgment: labelData.judgment,
-                    textEnd: { x, y }
+                    textAnchor: labelPosition.textAnchor,
+                    textEnd: { x: labelPosition.x, y: labelPosition.y }
                 });
                 elementIndex++;
             });
@@ -526,7 +554,7 @@ function createVisualization() {
         text.setAttribute('data-character', node.character);
         text.setAttribute('data-label', node.label);
         text.setAttribute('data-sources', node.sources.join(','));
-        text.setAttribute('text-anchor', 'middle');
+        text.setAttribute('text-anchor', node.textAnchor || 'middle');
         text.setAttribute('alignment-baseline', 'middle');
         text.setAttribute('transform', `rotate(${rotation}, ${node.x}, ${node.y})`);
         text.textContent = node.label;
@@ -545,7 +573,7 @@ function createVisualization() {
         text.setAttribute('font-size', 13 * state.config.scaleFactor);
         text.setAttribute('data-character', node.character);
         text.setAttribute('data-label', node.label);
-        text.setAttribute('text-anchor', 'middle');
+        text.setAttribute('text-anchor', node.textAnchor || 'middle');
         text.setAttribute('alignment-baseline', 'middle');
         text.setAttribute('transform', `rotate(${rotation}, ${node.x}, ${node.y})`);
         text.textContent = node.label;
@@ -1177,6 +1205,13 @@ async function init() {
 
 // Inizializzazione del filtro dots 
 function initializeSeasonFilter() {
+    // Fallback se d3 non è disponibile
+    if (typeof d3 === 'undefined') {
+        console.warn('D3 library not available, using vanilla JS for season filter');
+        initializeSeasonFilterVanilla();
+        return;
+    }
+    
     const seasonDotContainer = d3.select("#season-dots");
     seasonDotContainer.selectAll("*").remove();
 
@@ -1217,6 +1252,60 @@ function initializeSeasonFilter() {
             createVisualization();
             updateInfoPanel(null);
         });
+}
+
+// Versione vanilla JS del filtro stagioni
+function initializeSeasonFilterVanilla() {
+    const seasonDotContainer = document.getElementById("season-dots");
+    if (!seasonDotContainer) return;
+    
+    seasonDotContainer.innerHTML = '';
+
+    for (let i = 1; i <= 6; i++) {
+        const dot = document.createElement("div");
+        dot.className = "season-dot";
+        dot.setAttribute("data-season", i);
+        dot.textContent = i;
+        if (state.selectedSeasons.has(String(i))) {
+            dot.classList.add("selected");
+        }
+        
+        dot.addEventListener("click", function () {
+            const season = String(i);
+            
+            if (state.selectedSeasons.has(season)) {
+                state.selectedSeasons.delete(season);
+                this.classList.remove("selected");
+            } else {
+                state.selectedSeasons.add(season);
+                this.classList.add("selected");
+            }
+
+            // Aggiorna il chord
+            resetHighlighting();
+            processData();
+            createVisualization();
+            updateInfoPanel(null);
+        });
+        
+        seasonDotContainer.appendChild(dot);
+    }
+
+    // Reset button
+    const resetButton = document.createElement("div");
+    resetButton.className = "reset-button";
+    resetButton.textContent = "↻";
+    resetButton.addEventListener("click", function () {
+        state.selectedSeasons.clear();
+        const dots = seasonDotContainer.querySelectorAll(".season-dot");
+        dots.forEach(dot => dot.classList.remove("selected"));
+        resetHighlighting();
+        processData();
+        createVisualization();
+        updateInfoPanel(null);
+    });
+    
+    seasonDotContainer.appendChild(resetButton);
 }
 
 document.addEventListener('DOMContentLoaded', init);
