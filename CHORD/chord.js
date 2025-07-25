@@ -1021,7 +1021,7 @@ function updateInfoPanelForLabel(character, label) {
 // ===== CARICAMENTO DATI E INIT =====
 async function loadData() {
     try {
-        const response = await fetch('../data.json');
+        const response = await fetch('data.json');
         if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
         state.data = await response.json();
         console.log('Dati caricati con successo:', state.data);
