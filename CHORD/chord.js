@@ -1203,8 +1203,6 @@ function centerVisualization() {
     updateZoom();
 }
 
-// AGGIUNGI QUESTA SEZIONE PRIMA DELLA FUNZIONE init() nel chord.js esistente
-
 // Funzionalità toggle per tornare alla pagina principale
 document.addEventListener('DOMContentLoaded', function() {
     const pageToggle = document.getElementById('pageToggle');
@@ -1216,7 +1214,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 document.body.classList.add('page-fade-out');
                 
                 setTimeout(() => {
-                    window.location.href = '../GRAPH/index.html'; 
+                    // AGGIUNGI IL PARAMETRO center=true
+                    window.location.href = '../GRAPH/index.html?center=true'; 
                 }, 250);
             }
         });

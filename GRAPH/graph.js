@@ -25,21 +25,57 @@ const dialogueBox = d3.select("#dialogue-box");
 // SEASON DOT FILTER BAR
 const seasonDotContainer = d3.select("#season-dots");
 
-// Funzionalità toggle per tornare alla pagina principale
+// Function to center graph immediately without animation
+function centerGraphImmediate() {
+  if (!simulation || !node) return;
+  
+  const nodes = simulation.nodes();
+  if (nodes.length === 0) return;
+  
+  // Find graph bounds
+  let minX = Infinity, maxX = -Infinity;
+  let minY = Infinity, maxY = -Infinity;
+  
+  nodes.forEach(d => {
+    if (d.x < minX) minX = d.x;
+    if (d.x > maxX) maxX = d.x;
+    if (d.y < minY) minY = d.y;
+    if (d.y > maxY) maxY = d.y;
+  });
+  
+  // Calculate center
+  const graphCenterX = (minX + maxX) / 2;
+  const graphCenterY = (minY + maxY) / 2;
+  
+  // Viewport center
+  const viewportCenterX = window.innerWidth / 2;
+  const viewportCenterY = window.innerHeight / 2;
+  
+  // Calculate transform
+  const translateX = viewportCenterX - graphCenterX;
+  const translateY = viewportCenterY - graphCenterY;
+  
+  // Apply transform IMMEDIATELY without animation
+  const svgElement = svg.node();
+  svgElement.style.transform = `translate(${translateX}px, ${translateY}px)`;
+}
+
 document.addEventListener('DOMContentLoaded', function() {
     const pageToggle = document.getElementById('pageToggle');
     
-    pageToggle.addEventListener('change', function() {
-        if (!this.checked) {
-            // Animazione di uscita
-            document.body.classList.add('page-fade-out');
-            
-            setTimeout(() => {
+    if (pageToggle) {
+        pageToggle.addEventListener('change', function() {
+            if (!this.checked) {
+                // Add exit animation
+                document.body.classList.add('page-fade-out');
                 
-                window.location.href = '../CHORD/index_chord.html'; 
-            }, 250);
-        }
-    });
+                setTimeout(() => {
+                    // Add center parameter when going to graph
+                    window.location.href = '../CHORD/index_chord.html'; 
+                }, 250);
+            }
+        });
+    }
 });
 
 for (let i = 1; i <= 6; i++) {
@@ -614,6 +650,11 @@ d3.json("../data.json").then(data => {
   const nodes = data.nodes.map(d => ({ ...d }));
   const links = data.links.map(d => ({ ...d }));
 
+  // Check if we need to center immediately (coming from chord)
+  const urlParams = new URLSearchParams(window.location.search);
+  const shouldCenter = urlParams.get('center');
+  let hasCentered = false; // Flag to center only once
+
   simulation = d3.forceSimulation(nodes)
     .force("link", d3.forceLink(links).id(d => d.id).distance(300))
     .force("charge", d3.forceManyBody().strength(-500))
@@ -791,6 +832,16 @@ d3.json("../data.json").then(data => {
 
   // ANIMATION: update positions during simulation
   simulation.on("tick", () => {
+    // CENTRA IMMEDIATAMENTE AL PRIMO TICK se necessario
+    if (shouldCenter === 'true' && !hasCentered) {
+      hasCentered = true;
+      
+      // Centra immediatamente senza setTimeout
+      centerGraphImmediate();
+      // Rimuovi il parametro dall'URL
+      window.history.replaceState({}, document.title, window.location.pathname);
+    }
+
     // Build map to identify bidirectional links
     const bidir = {};
     links.forEach(link => {
