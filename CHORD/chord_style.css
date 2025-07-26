@@ -350,3 +350,21 @@ input:checked + .slider:before {
     margin-right: 8px;
     border-radius: 3px;
 }
+
+/* Toggle deve apparire/scomparire istantaneamente */
+.toggle-container {
+    transition: none !important;
+    animation: none !important;
+}
+
+.toggle-container.hidden {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+}
+
+.toggle-container.visible {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}

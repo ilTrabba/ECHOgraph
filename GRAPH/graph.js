@@ -653,7 +653,22 @@ d3.json("../data.json").then(data => {
   // Check if we need to center immediately (coming from chord)
   const urlParams = new URLSearchParams(window.location.search);
   const shouldCenter = urlParams.get('center');
+  const povCharacter = urlParams.get('character');
+  const povSeasons = urlParams.get('seasons');
   let hasCentered = false; // Flag to center only once
+
+  // Se arriva dal CHORD con POV, imposta le stagioni selezionate
+  if (povSeasons) {
+    selectedSeasons.clear();
+    povSeasons.split(',').forEach(season => {
+      selectedSeasons.add(season);
+      // Aggiorna anche i dot visivamente
+      seasonDotContainer.selectAll(".season-dot")
+        .classed("selected", function() {
+          return povSeasons.split(',').includes(d3.select(this).attr("data-season"));
+        });
+    });
+  }
 
   simulation = d3.forceSimulation(nodes)
     .force("link", d3.forceLink(links).id(d => d.id).distance(300))
@@ -732,6 +747,15 @@ d3.json("../data.json").then(data => {
     .attr("x", 25)
     .attr("y", 5)
     .style("font-size", "12px");
+
+  // Se arriva dal CHORD con POV, attiva automaticamente il POV
+  if (povCharacter && shouldCenter === 'true') {
+    setTimeout(() => {
+      toggleHighlight(povCharacter);
+      centerGraphImmediate();
+      window.history.replaceState({}, document.title, window.location.pathname);
+    }, 100);
+  }
 
   // Click e doppio click sui nodi
   let clickTimer = null;

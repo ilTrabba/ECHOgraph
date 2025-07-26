@@ -89,6 +89,29 @@ function calculateDynamicLabelRadius() {
     return (Math.max(minRadius, Math.min(maxRadius, radiusNeeded))+50);
 } */
 
+function updateToggleVisibility() {
+    const pageToggle = document.getElementById('pageToggle');
+    const toggleContainer = pageToggle?.closest('.toggle-container') || pageToggle?.parentElement;
+    
+    if (!toggleContainer) return;
+    
+    if (state.selectedType === 'thought') {
+        // MOSTRA immediatamente quando in POV (nome rosso)
+        toggleContainer.classList.remove('hidden');
+        toggleContainer.classList.add('visible');
+        toggleContainer.style.display = 'block';
+        toggleContainer.style.opacity = '1';
+        toggleContainer.style.visibility = 'visible';
+    } else {
+        // NASCONDI immediatamente in tutti gli altri casi
+        toggleContainer.classList.remove('visible');
+        toggleContainer.classList.add('hidden');
+        toggleContainer.style.display = 'none';
+        toggleContainer.style.opacity = '0';
+        toggleContainer.style.visibility = 'hidden';
+    }
+}
+
 // --- Utility per stima larghezza label più lunga (in pixel) ---
 function estimateMaxLabelPixelWidth() {
     let maxLength = 0;
@@ -695,34 +718,36 @@ function setupEventListeners() {
 
 function handleCharacterClick(character) {
     if (state.selectedCharacter === character && state.selectedType === 'character') {
-        resetHighlighting(); return;
+        resetHighlighting(); 
+        return;
     }
     state.selectedCharacter = character;
     state.selectedLabel = null;
     state.selectedType = 'character';
     highlightCharacterConnections(character);
     updateInfoPanel(character);
+    updateToggleVisibility(); // Scompare SUBITO
 }
 
 function handleLabelClick(character, label) {
-    // Trova il nodo per determinare se è un thought node (rosso) o characteristic node (nero)
     const thoughtNode = state.thoughtNodes.find(n => 
         n.character === character && n.label === label
     );
     
     if (thoughtNode) {
-        // È un NOME ROSSO (thought node) → mostra solo archi uscenti in rosso
+        // È un NOME ROSSO (thought node)
         if (state.selectedCharacter === character && state.selectedType === 'thought') {
             resetHighlighting(); 
             return;
         }
         state.selectedCharacter = character;
         state.selectedLabel = null;
-        state.selectedType = 'thought'; // Nuovo tipo per distinguere
-        highlightThoughtConnections(character); // Nuova funzione per archi uscenti
-        updateInfoPanelForThought(character); // Nuova funzione per info thought
+        state.selectedType = 'thought';
+        highlightThoughtConnections(character);
+        updateInfoPanelForThought(character);
+        updateToggleVisibility(); // Appare SUBITO
     } else {
-        // È una LABEL CARATTERISTICA (nera) → comportamento attuale
+        // È una LABEL CARATTERISTICA (nera)
         if (state.selectedCharacter === character && state.selectedLabel === label && state.selectedType === 'label') {
             resetHighlighting(); 
             return;
@@ -732,6 +757,7 @@ function handleLabelClick(character, label) {
         state.selectedType = 'label';
         highlightLabelConnections(character, label);
         updateInfoPanelForLabel(character, label);
+        updateToggleVisibility(); // Scompare SUBITO
     }
 }
 
@@ -1041,6 +1067,7 @@ function resetHighlighting() {
         }
     });
 
+    updateToggleVisibility(); // Resetta visibilità toggle
     updateInfoPanel(null);
 }
 
@@ -1203,26 +1230,28 @@ function centerVisualization() {
     updateZoom();
 }
 
-// Funzionalità toggle per tornare alla pagina principale
-document.addEventListener('DOMContentLoaded', function() {
-    const pageToggle = document.getElementById('pageToggle');
-    
-    if (pageToggle) {
-        pageToggle.addEventListener('change', function() {
-            if (!this.checked) {
-                // Animazione di uscita
-                document.body.classList.add('page-fade-out');
+const pageToggle = document.getElementById('pageToggle');
+if (pageToggle) {
+    pageToggle.addEventListener('change', function() {
+        if (!this.checked) {
+            document.body.classList.add('page-fade-out');
+            
+            setTimeout(() => {
+                // Passa i dati dello stato corrente al grafo
+                const selectedSeasonsArray = Array.from(state.selectedSeasons);
+                const urlParams = new URLSearchParams();
+                urlParams.set('center', 'true');
+                urlParams.set('character', state.selectedCharacter);
+                urlParams.set('seasons', selectedSeasonsArray.join(','));
                 
-                setTimeout(() => {
-                    // AGGIUNGI IL PARAMETRO center=true
-                    window.location.href = '../GRAPH/index.html?center=true'; 
-                }, 250);
-            }
-        });
-    }
-});
+                window.location.href = `../GRAPH/index.html?${urlParams.toString()}`;
+            }, 250);
+        }
+    });
+}
 
 async function init() {
+    updateToggleVisibility();
     showLoading();
     const dataLoaded = await loadData();
     hideLoading();
