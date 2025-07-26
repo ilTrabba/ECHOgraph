@@ -23,9 +23,9 @@ let state = {
     externalLabelRadius: 0,
     centerX: 0,
     centerY: 0,
-    scaleFactor: 1.5,
+    scaleFactor: 2,
     minArcGap: 0.08,
-    minLabelSpacing: 0.08,
+    minLabelSpacing: 0.1,
     colors: {
         character: '#ffffff',
         characterStroke: '#4fc3f7',
@@ -40,6 +40,11 @@ let state = {
 
 // --- NUOVE FUNZIONI DA AGGIUNGERE IN FONDO ---
 
+function calculateDynamicLabelRadius() {
+    return 400 * state.config.scaleFactor; // Raggio fisso per ora, da implementare logica dinamica
+}
+
+/*
 // --- Calcola il raggio dinamico per le label interne ---
 function calculateDynamicLabelRadius() {
     if (!state.data) return 200;
@@ -66,7 +71,7 @@ function calculateDynamicLabelRadius() {
     // Calcola lo spazio angolare necessario per ogni label
     const fontSize = 13 * state.config.scaleFactor;
     const avgLabelLength = Array.from(allLabels).reduce((sum, label) => sum + label.length, 0) / totalLabels;
-    const avgCharWidth = fontSize * 0.6;
+    const avgCharWidth = fontSize * 0.02;
     const avgLabelPixelWidth = avgLabelLength * avgCharWidth;
     
     // Spaziatura minima desiderata in pixel tra le label
@@ -82,7 +87,7 @@ function calculateDynamicLabelRadius() {
     const maxRadius = 1000 * state.config.scaleFactor;
     
     return (Math.max(minRadius, Math.min(maxRadius, radiusNeeded))+50);
-}
+} */
 
 // --- Utility per stima larghezza label più lunga (in pixel) ---
 function estimateMaxLabelPixelWidth() {
@@ -115,7 +120,7 @@ function updateDimensions() {
 
     const scaleFactor = state.config.scaleFactor;
 
-    // RAGGIO DINAMICO per le label interne
+    // RAGGIO DINAMICO per le label interne (problema)
     state.config.labelRadius = calculateDynamicLabelRadius();
 
     // Calcola larghezza massima label (px)
@@ -244,7 +249,6 @@ function createChordPath(sourceNode, targetNode) {
 }
 
 // --- Elabora dati nodi e connessioni ---
-// --- Elabora dati nodi e connessioni ---
 function processData() {
     if (!state.data || state.selectedSeasons.size === 0) {
         // Se nessuna stagione selezionata, resetta tutto
@@ -336,14 +340,14 @@ function processData() {
             const elementSpacing = availableSpan / (totalElements + 1);
             let elementIndex = 1;
             
+            // MODIFIED: Posizione coerente per il thought node
             const thoughtAngle = charData.startAngle + 0.01 + elementIndex * elementSpacing;
             const thoughtText = charData.id;
-            const fontSize = 13 * state.config.scaleFactor;
-            const avgCharWidth = fontSize * 0.6;
-            const halfTextWidth = (thoughtText.length * avgCharWidth) / 2;
-            const adjustedRadius = state.config.labelRadius + halfTextWidth;
-            const thoughtX = state.config.centerX + adjustedRadius * Math.cos(thoughtAngle);
-            const thoughtY = state.config.centerY + adjustedRadius * Math.sin(thoughtAngle);
+            
+            // MODIFIED: Usa una posizione fissa rispetto alla circonferenza interna
+            const labelOffsetFromCircle = 30 * state.config.scaleFactor; // Offset fisso dal cerchio interno
+            const thoughtX = state.config.centerX + (state.config.labelRadius + labelOffsetFromCircle) * Math.cos(thoughtAngle);
+            const thoughtY = state.config.centerY + (state.config.labelRadius + labelOffsetFromCircle) * Math.sin(thoughtAngle);
 
             state.thoughtNodes.push({
                 id: `${charData.id}_thoughts`,
@@ -357,15 +361,15 @@ function processData() {
             });
             elementIndex++;
             
+            // MODIFIED: Posizione coerente per le label caratteristiche
             charData.incomingLabels.forEach(labelData => {
                 const angle = charData.startAngle + 0.01 + elementIndex * elementSpacing;
                 const labelText = labelData.label;
-                const fontSize = 13 * state.config.scaleFactor;
-                const avgCharWidth = fontSize * 0.6;
-                const halfTextWidth = (labelText.length * avgCharWidth) / 2;
-                const adjustedRadius = state.config.labelRadius + halfTextWidth;
-                const x = state.config.centerX + adjustedRadius * Math.cos(angle);
-                const y = state.config.centerY + adjustedRadius * Math.sin(angle);
+                
+                // MODIFIED: Usa una posizione fissa rispetto alla circonferenza interna
+                const characteristicOffsetFromCircle = 30 * state.config.scaleFactor; // Stesso offset per tutte le label
+                const x = state.config.centerX + (state.config.labelRadius + characteristicOffsetFromCircle) * Math.cos(angle);
+                const y = state.config.centerY + (state.config.labelRadius + characteristicOffsetFromCircle) * Math.sin(angle);
         
                 state.characteristicNodes.push({
                     id: `${charData.id}_${labelData.label}`,
@@ -470,6 +474,43 @@ function createVisualization() {
         return;
     }
 
+    // MODIFIED: Aggiungi una linea di collegamento visibile dal label al cerchio interno
+    state.thoughtNodes.forEach(node => {
+        const cx = state.config.centerX;
+        const cy = state.config.centerY;
+        const innerX = cx + state.config.labelRadius * Math.cos(node.angle);
+        const innerY = cy + state.config.labelRadius * Math.sin(node.angle);
+        
+        const connectionLine = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+        connectionLine.setAttribute('x1', innerX);
+        connectionLine.setAttribute('y1', innerY);
+        connectionLine.setAttribute('x2', node.x);
+        connectionLine.setAttribute('y2', node.y);
+        connectionLine.setAttribute('stroke', 'rgba(255, 107, 107, 0.3)');
+        connectionLine.setAttribute('stroke-width', '1');
+        connectionLine.setAttribute('stroke-dasharray', '2,2');
+        connectionLine.setAttribute('class', 'label-connection');
+        state.zoomGroup.appendChild(connectionLine);
+    });
+    
+    state.characteristicNodes.forEach(node => {
+        const cx = state.config.centerX;
+        const cy = state.config.centerY;
+        const innerX = cx + state.config.labelRadius * Math.cos(node.angle);
+        const innerY = cy + state.config.labelRadius * Math.sin(node.angle);
+        
+        const connectionLine = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+        connectionLine.setAttribute('x1', innerX);
+        connectionLine.setAttribute('y1', innerY);
+        connectionLine.setAttribute('x2', node.x);
+        connectionLine.setAttribute('y2', node.y);
+        connectionLine.setAttribute('stroke', 'rgba(0, 0, 0, 0.15)');
+        connectionLine.setAttribute('stroke-width', '1');
+        connectionLine.setAttribute('stroke-dasharray', '2,2');
+        connectionLine.setAttribute('class', 'label-connection');
+        state.zoomGroup.appendChild(connectionLine);
+    });
+
     // ===== CONNESSIONI CHORD STYLE (partono dal bordo del cerchio interno) =====
     state.groupedConnections.forEach((connection, index) => {
         const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
@@ -516,6 +557,9 @@ function createVisualization() {
 
     // ===== ANELLO INTERNO: Label caratteristiche =====
     state.characteristicNodes.forEach(node => {
+        // FIXED: Determina se è nel lato sinistro o destro
+        const isLeftSide = node.angle > Math.PI / 2 && node.angle < 3 * Math.PI / 2;
+        
         const rotation = calculateTextRotation(node.x, node.y, state.config.centerX, state.config.centerY);
         const text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
         text.setAttribute('x', node.x);
@@ -526,7 +570,8 @@ function createVisualization() {
         text.setAttribute('data-character', node.character);
         text.setAttribute('data-label', node.label);
         text.setAttribute('data-sources', node.sources.join(','));
-        text.setAttribute('text-anchor', 'middle');
+        // FIXED: Ancoraggio corretto - lato sinistro 'end', lato destro 'start'
+        text.setAttribute('text-anchor', isLeftSide ? 'end' : 'start');
         text.setAttribute('alignment-baseline', 'middle');
         text.setAttribute('transform', `rotate(${rotation}, ${node.x}, ${node.y})`);
         text.textContent = node.label;
@@ -535,6 +580,9 @@ function createVisualization() {
 
     // ===== ANELLO INTERNO: Nomi rossi pensiero =====
     state.thoughtNodes.forEach(node => {
+        // FIXED: Determina se è nel lato sinistro o destro
+        const isLeftSide = node.angle > Math.PI / 2 && node.angle < 3 * Math.PI / 2;
+        
         const rotation = calculateTextRotation(node.x, node.y, state.config.centerX, state.config.centerY);
         const text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
         text.setAttribute('x', node.x);
@@ -545,7 +593,8 @@ function createVisualization() {
         text.setAttribute('font-size', 13 * state.config.scaleFactor);
         text.setAttribute('data-character', node.character);
         text.setAttribute('data-label', node.label);
-        text.setAttribute('text-anchor', 'middle');
+        // FIXED: Ancoraggio corretto - lato sinistro 'end', lato destro 'start'
+        text.setAttribute('text-anchor', isLeftSide ? 'end' : 'start');
         text.setAttribute('alignment-baseline', 'middle');
         text.setAttribute('transform', `rotate(${rotation}, ${node.x}, ${node.y})`);
         text.textContent = node.label;
@@ -699,6 +748,12 @@ function highlightThoughtConnections(character) {
         path.style.opacity = '0.15'; // Molto trasparente
     });
 
+    // MODIFIED: Aggiorna visibilità anche delle linee di collegamento
+    const allConnections = document.querySelectorAll('.label-connection');
+    allConnections.forEach(line => {
+        line.style.opacity = '0.2'; // Trasparenti di default
+    });
+
     // Evidenzia SOLO gli archi uscenti (rossi) con alta opacità
     const outgoingPaths = document.querySelectorAll(`[data-source="${character}"]`);
     outgoingPaths.forEach(path => {
@@ -791,6 +846,12 @@ function highlightCharacterConnections(character) {
         path.style.opacity = '0.15'; // Molto trasparente come per le label
     });
 
+    // MODIFIED: Aggiorna visibilità anche delle linee di collegamento
+    const allConnections = document.querySelectorAll('.label-connection');
+    allConnections.forEach(line => {
+        line.style.opacity = '0.2'; // Trasparenti di default
+    });
+
     // Evidenzia solo gli archi del personaggio selezionato
     const outgoingPaths = document.querySelectorAll(`[data-source="${character}"]`);
     outgoingPaths.forEach(path => {
@@ -864,6 +925,12 @@ function highlightLabelConnections(character, label) {
         path.style.stroke = state.config.colors.defaultConnection;
         path.style.strokeWidth = '1';
         path.style.opacity = '0.15'; // Era 0.6, ora molto più trasparente
+    });
+
+    // MODIFIED: Aggiorna visibilità anche delle linee di collegamento
+    const allConnections = document.querySelectorAll('.label-connection');
+    allConnections.forEach(line => {
+        line.style.opacity = '0.2'; // Trasparenti di default
     });
 
     // Evidenzia SOLO gli archi della label specifica con alta opacità
@@ -949,6 +1016,12 @@ function resetHighlighting() {
         path.style.stroke = state.config.colors.defaultConnection;
         path.style.strokeWidth = '1';
         path.style.opacity = '0.6'; // Opacità normale
+    });
+
+    // MODIFIED: Reset linee di collegamento
+    const allConnections = document.querySelectorAll('.label-connection');
+    allConnections.forEach(line => {
+        line.style.opacity = '0.3'; // Opacità normale
     });
 
     // Reset archi personaggi

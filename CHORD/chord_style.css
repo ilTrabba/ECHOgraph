@@ -52,20 +52,22 @@ svg:active {
     pointer-events: none;
 }
 
+/* FIXED: Label caratteristiche - posizionate esattamente sulla circonferenza */
 .characteristic-text {
     font-size: 14px;
     fill: #333;
-    text-anchor: middle;
     dominant-baseline: central;
     font-weight: 500;
+    /* Rimuovi text-anchor da qui, sarà gestito dinamicamente dal JS */
 }
 
+/* FIXED: Nomi rossi pensiero - posizionati esattamente sulla circonferenza */
 .thought-text {
     font-size: 14px;
     fill: #ff6b6b;
-    text-anchor: middle;
     dominant-baseline: central;
     font-weight: bold;
+    /* Rimuovi text-anchor da qui, sarà gestito dinamicamente dal JS */
 }
 
 .clickable-label {
@@ -94,6 +96,18 @@ svg:active {
     opacity: 0.2;
 }
 
+/* NUOVO: Stili per le linee di collegamento label-circonferenza */
+.label-connection {
+    opacity: 0.3;
+    transition: opacity 0.3s ease;
+}
+
+/* NUOVO: Cerchio di riferimento */
+.reference-circle {
+    opacity: 0.3;
+    transition: opacity 0.3s ease;
+}
+
 /* =========================================
    INFO PANEL (COME LA LEGENDA DEL GRAPH)
    ========================================= */
@@ -111,7 +125,6 @@ svg:active {
     max-width: 356px;
     -webkit-backdrop-filter: blur(8px);
     backdrop-filter: blur(8px);
-    
 }
 
 /* =========================================
@@ -301,31 +314,29 @@ input:checked + .slider:before {
     }
 }
 
-
 /* =========================================
    LEGENDA
    ========================================= */
-   .legend {
-  position: fixed;
-  top: 20px;
-  left: 20px;
-  background: rgba(255, 255, 255, 0.85);
-  padding: 12px 16px;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  font-size: 13px;
-  color: #333;
-  z-index: 1000;
-  /* Effetto "vetro smerigliato" per i browser che lo supportano */
-  -webkit-backdrop-filter: blur(8px);
-  backdrop-filter: blur(8px);
+.legend {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background: rgba(255, 255, 255, 0.85);
+    padding: 12px 16px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    font-size: 13px;
+    color: #333;
+    z-index: 1000;
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
 }
 
 .legend div {
-  display: flex;
-  align-items: center;
-  margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 6px;
 }
 
 .legend div:last-child {
@@ -333,9 +344,9 @@ input:checked + .slider:before {
 }
 
 .legend span {
-  display: inline-block;
-  width: 12px;
-  height: 12px;
-  margin-right: 8px;
-  border-radius: 3px; /* Quadrati arrotondati invece di cerchi */
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin-right: 8px;
+    border-radius: 3px;
 }
