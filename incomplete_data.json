@@ -87,6 +87,24 @@
             {}
           ],
           "inherited_labels": []
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -107,6 +125,24 @@
           "inherited_labels": []
         },
         "3": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
           "labels": [],
           "judgment": "",
           "dialogues": [],
@@ -135,6 +171,24 @@
           "judgment": "",
           "dialogues": [],
           "inherited_labels": []
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -159,6 +213,24 @@
           "judgment": "",
           "dialogues": [],
           "inherited_labels": []
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -179,6 +251,24 @@
           "inherited_labels": []
         },
         "3": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
           "labels": [],
           "judgment": "",
           "dialogues": [],
@@ -216,6 +306,24 @@
               "line": "(to James) Every time your heart rate goes above 140, the device in your chest will detonate, and your heart will explode."
             }
           ],
+          "inherited_labels": []
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
           "inherited_labels": []
         }
       }
@@ -262,24 +370,25 @@
               "line": "**Ben**: Let me ask you something, Jack. If I told you that I was the one who brought you here, would you believe me? **Jack**: You’re lying. Ben: And yet... here you are."
             }
           ],
-          "inherited_labels": [
-            [
-              "the Doctor",
-              2
-            ],
-            [
-              "The Rival Leader",
-              2
-            ],
-            [
-              "The Antagonist",
-              2
-            ],
-            [
-              "The Man of Science",
-              2
-            ]
-          ]
+          "inherited_labels": [["the Doctor",2],["The Rival Leader",2],["The Antagonist",2],["The Man of Science",2]]
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -325,24 +434,25 @@
               "line": "**Ben**: I know what you're looking for, John. You're looking for someone to tell you what to do next. **Locke**: No, Ben. I’m looking for the man who's in charge — and I don’t think it’s you."
             }
           ],
-          "inherited_labels": [
-            [
-              "The Man of Faith",
-              2
-            ],
-            [
-              "The Rival",
-              2
-            ],
-            [
-              "The Hunter",
-              2
-            ],
-            [
-              "The Island's Chosen",
-              2
-            ]
-          ]
+          "inherited_labels": [["The Man of Faith",2],["The Rival",2],["The Hunter",2],["The Island's Chosen",2]]
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -375,16 +485,25 @@
               "line": "**Ben**: Do you love him (referring to Jack), Kate? **Kate**: What does it matter? **Ben**: Because I need to know what you’re willing to do to keep him alive."
             }
           ],
-          "inherited_labels": [
-            [
-              "the Intruder",
-              2
-            ],
-            [
-              "the Pawn",
-              2
-            ]
-          ]
+          "inherited_labels": [["the Intruder",2],["the Pawn",2]]
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -409,6 +528,24 @@
           "judgment": "",
           "dialogues": [],
           "inherited_labels": []
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -429,6 +566,24 @@
           "inherited_labels": []
         },
         "3": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
           "labels": [],
           "judgment": "",
           "dialogues": [],
@@ -476,20 +631,25 @@
               "line": "**Sayid**: Who are you? **Ben**: I'm Benjamin Linus. And I believe you're holding one of my people. **Sayid**: Then maybe you shouldn't have sent him to spy on us."
             }
           ],
-          "inherited_labels": [
-            [
-              "The Threat",
-              2
-            ],
-            [
-              "The Man of Action",
-              2
-            ],
-            [
-              "The Intruder",
-              2
-            ]
-          ]
+          "inherited_labels": [["The Threat",2],["The Man of Action",2],["The Intruder",2]]
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -514,6 +674,24 @@
           "judgment": "",
           "dialogues": [],
           "inherited_labels": []
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -534,6 +712,24 @@
           "inherited_labels": []
         },
         "3": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
           "labels": [],
           "judgment": "",
           "dialogues": [],
@@ -572,6 +768,24 @@
             }
           ],
           "inherited_labels": []
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -609,20 +823,7 @@
               "line": ""
             }
           ],
-          "inherited_labels": [
-            [
-              "The Villain",
-              1
-            ],
-            [
-              "The Other",
-              1
-            ],
-            [
-              "The Threat",
-              1
-            ]
-          ]
+          "inherited_labels": [["The Villain",1],["The Other",1],["The Threat",1]]
         },
         "3": {
           "labels": [
@@ -632,20 +833,25 @@
           ],
           "judgment": "negative",
           "dialogues": [],
-          "inherited_labels": [
-            [
-              "The Villain",
-              1
-            ],
-            [
-              "The Other",
-              1
-            ],
-            [
-              "The Threat",
-              1
-            ]
-          ]
+          "inherited_labels": [["The Villain",1],["The Other",1],["The Threat",1]]
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -685,24 +891,7 @@
               "line": "**Charlie**: Hurley, what’s with all the bad luck talk? It’s like you believe the island’s cursed or something. **Hurley**: Man, I know it sounds crazy, but I’ve had nothing but bad luck since the crash. I mean, numbers showing up everywhere, people dying... I’m telling you, it’s the island. **Charlie**: Maybe it’s just us. Maybe the island’s not cursed — maybe it’s just messing with our heads. **Hurley**: Or maybe the island’s trying to tell us something. We just gotta figure out what."
             }
           ],
-          "inherited_labels": [
-            [
-              "The Helper",
-              1
-            ],
-            [
-              "The Calm Presence",
-              1
-            ],
-            [
-              "The Good-hearted",
-              1
-            ],
-            [
-              "The Loyal",
-              1
-            ]
-          ]
+          "inherited_labels": [["The Helper",1], ["The Calm Presence",1], ["The Good-hearted",1], ["The Loyal",1]]
         },
         "3": {
           "labels": [
@@ -719,24 +908,25 @@
               "line": "**Hurley**: Charlie, you ever think about how weird this all is? **Charlie**: Every day, man. But if we don’t laugh, we’ll go crazy."
             }
           ],
-          "inherited_labels": [
-            [
-              "The Helper",
-              1
-            ],
-            [
-              "The Calm Presence",
-              1
-            ],
-            [
-              "The Good-hearted",
-              1
-            ],
-            [
-              "The Loyal",
-              1
-            ]
-          ]
+          "inherited_labels": [["The Helper",1], ["The Calm Presence",1], ["The Good-hearted",1], ["The Loyal",1]]
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -757,6 +947,24 @@
           "inherited_labels": []
         },
         "3": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
           "labels": [],
           "judgment": "",
           "dialogues": [],
@@ -799,20 +1007,7 @@
               "line": "(to Sawyer) You've got them, don't you? The rest of my statues. You took them from my stash."
             }
           ],
-          "inherited_labels": [
-            [
-              "The Troublemaker",
-              1
-            ],
-            [
-              "The Annoyance",
-              1
-            ],
-            [
-              "The Provocateur",
-              1
-            ]
-          ]
+          "inherited_labels": [["The Troublemaker",1], ["The Annoyance",1], ["The Provocateur",1]]
         },
         "3": {
           "labels": [
@@ -828,12 +1023,25 @@
               "line": "**Charlie**: Sawyer, you think you’re the king of the island? **Sawyer**: Maybe I am. What’s it to you? **Charlie**: Just don’t forget who actually keeps us alive sometimes."
             }
           ],
-          "inherited_labels": [
-            [
-              "The Provocateur",
-              1
-            ]
-          ]
+          "inherited_labels": [["The Provocateur",1]]
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -872,20 +1080,7 @@
               "line": "(referring to Jack) He doesn't believe, you know."
             }
           ],
-          "inherited_labels": [
-            [
-              "The Leader",
-              1
-            ],
-            [
-              "The Hero",
-              1
-            ],
-            [
-              "The Doctor",
-              1
-            ]
-          ]
+          "inherited_labels": [["The Leader",1], ["The Hero",1], ["The Doctor",1]]
         },
         "3": {
           "labels": [
@@ -902,24 +1097,25 @@
               "line": "**Charlie**: What’s the plan, Doc? Rescue or wait? **Jack**: Right now, staying alive is the plan."
             }
           ],
-          "inherited_labels": [
-            [
-              "The Leader",
-              1
-            ],
-            [
-              "The Hero",
-              1
-            ],
-            [
-              "The Doctor",
-              1
-            ],
-            [
-              "The Skeptic",
-              2
-            ]
-          ]
+          "inherited_labels": [["The Leader",1], ["The Hero",1], ["The Doctor",1], ["The Skeptic",2]]
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -957,16 +1153,7 @@
               "line": "(to John Locke) Don't you walk away from me! You're the one who told me that this place was special! That it had a purpose for me! And when I finally find it, you call me a madman!"
             }
           ],
-          "inherited_labels": [
-            [
-              "The Man of Faith",
-              1
-            ],
-            [
-              "The Mysterious One",
-              1
-            ]
-          ]
+          "inherited_labels": [["The Man of Faith",1], ["The Mysterious One",1]]
         },
         "3": {
           "labels": [
@@ -982,20 +1169,25 @@
               "line": "**John**: I saw Boone. **Charlie**: Boone? What did he have to say for himself? **John**: He told me I had to clean up my own mess. **Charlie**: Well, dead as he may be, I agree with Boone. If you kept pushing that button like Eko told you to... **John**: We wouldn't have had to save him in the first place. Yeah, Charlie, that's what cleaning up your own mess means. **Charlie**: Spoken like someone who's had a few too many messes to clean."
             }
           ],
-          "inherited_labels": [
-            [
-              "The Man of Faith",
-              1
-            ],
-            [
-              "The Mysterious One",
-              1
-            ],
-            [
-              "The Rival",
-              2
-            ]
-          ]
+          "inherited_labels": [["The Man of Faith",1], ["The Mysterious One",1],["The Rival",2]]
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -1033,20 +1225,7 @@
               "line": "**Charlie**: You all right? **Kate**: Yeah, just... the others. **Charlie**: Still giving you the eye? **Kate**: Something like that. **Charlie**: Well, maybe they just need time. You know, they'll come around. **Kate**: Thanks, Charlie."
             }
           ],
-          "inherited_labels": [
-            [
-              "The Survivor",
-              1
-            ],
-            [
-              "The Indipendent",
-              1
-            ],
-            [
-              "The Wildcard",
-              1
-            ]
-          ]
+          "inherited_labels": [["The Survivor",1], ["The Indipendent",1], ["The Wildcard",1]]
         },
         "3": {
           "labels": [
@@ -1062,20 +1241,25 @@
               "line": "**Kate**: You coming with us? **Charlie**: I don’t think so. I should stay with Claire. **Kate**: She's lucky to have you. **Charlie**: Thanks. So's Jack… lucky to have you. **Kate**: Charlie… **Charlie**: Just saying. Be careful out there."
             }
           ],
-          "inherited_labels": [
-            [
-              "The Survivor",
-              1
-            ],
-            [
-              "The Indipendent",
-              1
-            ],
-            [
-              "The Wildcard",
-              1
-            ]
-          ]
+          "inherited_labels": [["The Survivor",1], ["The Indipendent",1], ["The Wildcard",1]]
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -1100,6 +1284,24 @@
           "judgment": "",
           "dialogues": [],
           "inherited_labels": []
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -1120,6 +1322,24 @@
           "inherited_labels": []
         },
         "3": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
           "labels": [],
           "judgment": "",
           "dialogues": [],
@@ -1161,12 +1381,7 @@
               "line": "Why? What's out there? Is it the Others?"
             }
           ],
-          "inherited_labels": [
-            [
-              "The Analyst",
-              1
-            ]
-          ]
+          "inherited_labels": [["The Analyst",1]]
         },
         "3": {
           "labels": [
@@ -1183,20 +1398,25 @@
               "line": "**Charlie**: Sayid, you’re always the one who keeps us grounded. **Sayid**: Someone’s got to. Otherwise, we’re lost"
             }
           ],
-          "inherited_labels": [
-            [
-              "The Problem-solver",
-              2
-            ],
-            [
-              "The Analyst",
-              1
-            ],
-            [
-              "The man of Action",
-              2
-            ]
-          ]
+          "inherited_labels": [["The Problem-solver",2], ["The Analyst",1], ["The man of Action",2]]
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -1231,6 +1451,24 @@
             }
           ],
           "inherited_labels": []
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -1251,6 +1489,24 @@
           "inherited_labels": []
         },
         "3": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
           "labels": [],
           "judgment": "",
           "dialogues": [],
@@ -1288,6 +1544,24 @@
             }
           ],
           "inherited_labels": []
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -1308,6 +1582,24 @@
           "inherited_labels": []
         },
         "3": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
           "labels": [],
           "judgment": "",
           "dialogues": [],
@@ -1346,6 +1638,24 @@
             }
           ],
           "inherited_labels": []
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -1370,6 +1680,24 @@
           "judgment": "",
           "dialogues": [],
           "inherited_labels": []
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -1390,6 +1718,24 @@
           "inherited_labels": []
         },
         "3": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
           "labels": [],
           "judgment": "",
           "dialogues": [],
@@ -1438,20 +1784,25 @@
               "line": "**Jack**: You really believe he (Charlie) can change what’s meant to happen? **Desmond**: I believe in fighting for a second chance, even when it seems impossible."
             }
           ],
-          "inherited_labels": [
-            [
-              "The Man of Science",
-              2
-            ],
-            [
-              "The Skeptic",
-              2
-            ],
-            [
-              "The Leader",
-              2
-            ]
-          ]
+          "inherited_labels": [["The Man of Science",2],["The Skeptic",2],["The Leader",2]]
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -1493,12 +1844,25 @@
               "line": "**Locke**: The island chooses who lives and dies. **Desmond**: Then maybe it’s time to question the island’s choices."
             }
           ],
-          "inherited_labels": [
-            [
-              "The Man of Faith",
-              2
-            ]
-          ]
+          "inherited_labels": [["The Man of Faith",2]]
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -1541,6 +1905,24 @@
             }
           ],
           "inherited_labels": []
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -1561,6 +1943,24 @@
           "inherited_labels": []
         },
         "3": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
           "labels": [],
           "judgment": "",
           "dialogues": [],
@@ -1589,6 +1989,24 @@
           "judgment": "",
           "dialogues": [],
           "inherited_labels": []
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -1609,6 +2027,24 @@
           "inherited_labels": []
         },
         "3": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
           "labels": [],
           "judgment": "",
           "dialogues": [],
@@ -1637,6 +2073,24 @@
           "judgment": "",
           "dialogues": [],
           "inherited_labels": []
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -1657,6 +2111,24 @@
           "inherited_labels": []
         },
         "3": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
           "labels": [],
           "judgment": "",
           "dialogues": [],
@@ -1695,6 +2167,24 @@
           "judgment": "",
           "dialogues": [],
           "inherited_labels": []
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -1715,6 +2205,24 @@
           "inherited_labels": []
         },
         "3": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
           "labels": [],
           "judgment": "",
           "dialogues": [],
@@ -1743,6 +2251,24 @@
           "judgment": "",
           "dialogues": [],
           "inherited_labels": []
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -1767,6 +2293,24 @@
           "judgment": "",
           "dialogues": [],
           "inherited_labels": []
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -1787,6 +2331,24 @@
           "inherited_labels": []
         },
         "3": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
           "labels": [],
           "judgment": "",
           "dialogues": [],
@@ -1824,6 +2386,24 @@
           "judgment": "",
           "dialogues": [],
           "inherited_labels": []
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -1844,6 +2424,24 @@
           "inherited_labels": []
         },
         "3": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
           "labels": [],
           "judgment": "",
           "dialogues": [],
@@ -1872,6 +2470,24 @@
           "judgment": "",
           "dialogues": [],
           "inherited_labels": []
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -1892,6 +2508,24 @@
           "inherited_labels": []
         },
         "3": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
           "labels": [],
           "judgment": "",
           "dialogues": [],
@@ -1920,6 +2554,24 @@
           "judgment": "",
           "dialogues": [],
           "inherited_labels": []
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -1940,6 +2592,24 @@
           "inherited_labels": []
         },
         "3": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
           "labels": [],
           "judgment": "",
           "dialogues": [],
@@ -1968,6 +2638,24 @@
           "judgment": "",
           "dialogues": [],
           "inherited_labels": []
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -1988,6 +2676,24 @@
           "inherited_labels": []
         },
         "3": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
           "labels": [],
           "judgment": "",
           "dialogues": [],
@@ -2031,24 +2737,7 @@
               "line": "**Hurley**: Dude, you ever think we’re all just pieces on some giant chessboard? **Charlie**: I dunno, mate. If this is chess, I feel like I’m the pawn that gets sacrificed first. **Hurley**: Better than being the guy who knocks over the board."
             }
           ],
-          "inherited_labels": [
-            [
-              "The Friend",
-              1
-            ],
-            [
-              "The Good-hearted",
-              1
-            ],
-            [
-              "The Musician",
-              1
-            ],
-            [
-              "The Vulnerable",
-              1
-            ]
-          ]
+          "inherited_labels": [["The Friend",1],["The Good-hearted",1],["The Musician",1],["The Vulnerable",1]]
         },
         "3": {
           "labels": [
@@ -2065,24 +2754,25 @@
               "line": "**Hurley**: Dude, you’re coming with me. We’re fixing this van. **Charlie**: And if it explodes? **Hurley**: Then we’ll go together, man."
             }
           ],
-          "inherited_labels": [
-            [
-              "The Friend",
-              1
-            ],
-            [
-              "The Good-hearted",
-              1
-            ],
-            [
-              "The Musician",
-              1
-            ],
-            [
-              "The Vulnerable",
-              1
-            ]
-          ]
+          "inherited_labels": [["The Friend",1],["The Good-hearted",1],["The Musician",1],["The Vulnerable",1]]
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -2117,6 +2807,24 @@
             }
           ],
           "inherited_labels": []
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -2141,6 +2849,24 @@
           "judgment": "",
           "dialogues": [],
           "inherited_labels": []
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -2161,6 +2887,24 @@
           "inherited_labels": []
         },
         "3": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
           "labels": [],
           "judgment": "",
           "dialogues": [],
@@ -2203,20 +2947,7 @@
               "line": "**Hurley**: Sawyer, why do you always gotta be such a pain? **Sawyer**: Someone’s gotta keep things interesting around here. **Hurley**: Yeah, well, you’re just making everyone’s life harder. **Sawyer**: Maybe you’re just too soft, big guy."
             }
           ],
-          "inherited_labels": [
-            [
-              "The Annoyance",
-              1
-            ],
-            [
-              "The Wildcard",
-              1
-            ],
-            [
-              "The Troublemaker",
-              1
-            ]
-          ]
+          "inherited_labels": [["The Annoyance",1],["The Wildcard",1],["The Troublemaker",1]]
         },
         "3": {
           "labels": [
@@ -2233,24 +2964,25 @@
               "line": "**Sawyer**: You trying to be the new sheriff in town? **Hurley**: Maybe the island needs a new kind of lawman."
             }
           ],
-          "inherited_labels": [
-            [
-              "The Annoyance",
-              1
-            ],
-            [
-              "The Wildcard",
-              1
-            ],
-            [
-              "The Troublemaker",
-              1
-            ],
-            [
-              "The Resourceful",
-              2
-            ]
-          ]
+          "inherited_labels": [["The Annoyance",1],["The Wildcard",1],["The Troublemaker",1],["The Resourceful",2]]
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -2290,24 +3022,7 @@
               "line": "**Hurley**: I don’t think we should go. It feels like a trap. **Jack**: We don’t have a choice, Hurley. They took our people. **Hurley**: Yeah… but walking into the jungle at night? That’s how horror movies start, dude."
             }
           ],
-          "inherited_labels": [
-            [
-              "The Leader",
-              1
-            ],
-            [
-              "The Reliable",
-              1
-            ],
-            [
-              "The Doctor",
-              1
-            ],
-            [
-              "The Responsible",
-              1
-            ]
-          ]
+          "inherited_labels": [["The Leader",1],["The Reliable",1],["The Doctor",1],["The Responsible",1]]
         },
         "3": {
           "labels": [
@@ -2324,24 +3039,25 @@
               "line": "**Hurley**: You didn’t want me in the plan, but I came anyway. I saved them, Jack. **Jack**: You did, Hurley. You saved us all."
             }
           ],
-          "inherited_labels": [
-            [
-              "The Leader",
-              1
-            ],
-            [
-              "The Reliable",
-              1
-            ],
-            [
-              "The Doctor",
-              1
-            ],
-            [
-              "The Responsible",
-              1
-            ]
-          ]
+          "inherited_labels": [["The Leader",1],["The Reliable",1],["The Doctor",1],["The Responsible",1]]
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -2379,20 +3095,7 @@
               "line": "(to Locke) The numbers are bad, and this island... this island is a part of it. And it's all my fault."
             }
           ],
-          "inherited_labels": [
-            [
-              "The Hunter",
-              1
-            ],
-            [
-              "The Man of Faith",
-              1
-            ],
-            [
-              "The Mysterious One",
-              1
-            ]
-          ]
+          "inherited_labels": [["The Hunter",1],["The Man of Faith",1],["The Mysterious One",1]]
         },
         "3": {
           "labels": [
@@ -2408,20 +3111,25 @@
               "line": "**Hurley**: You left us, John. People died. **Locke**: I did what I had to. **Hurley**: So did I. That’s why I drove the van.."
             }
           ],
-          "inherited_labels": [
-            [
-              "The Hunter",
-              1
-            ],
-            [
-              "The Man of Faith",
-              1
-            ],
-            [
-              "The Mysterious One",
-              1
-            ]
-          ]
+          "inherited_labels": [["The Hunter",1],["The Man of Faith",1],["The Mysterious One",1]]
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -2459,20 +3167,7 @@
               "line": "**Hurley**: So, uh, you ever think we’re like… in a reality show or something? **Kate**: If we are, it’s got the worst catering ever. **Hurley**: Yeah, and zero privacy. I'm not a fan."
             }
           ],
-          "inherited_labels": [
-            [
-              "The Friend",
-              1
-            ],
-            [
-              "The Independent",
-              1
-            ],
-            [
-              "The Strong",
-              1
-            ]
-          ]
+          "inherited_labels": [["The Friend",1],["The Independent",1],["The Strong",1]]
         },
         "3": {
           "labels": [
@@ -2488,20 +3183,25 @@
               "line": "**Kate**: We can't just let him get away with it. **Hurley**: I know. But we’ve gotta be smart, not angry."
             }
           ],
-          "inherited_labels": [
-            [
-              "The Friend",
-              1
-            ],
-            [
-              "The Independent",
-              1
-            ],
-            [
-              "The Strong",
-              1
-            ]
-          ]
+          "inherited_labels": [["The Friend",1],["The Independent",1],["The Strong",1]]
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -2526,6 +3226,24 @@
           "judgment": "",
           "dialogues": [],
           "inherited_labels": []
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -2546,6 +3264,24 @@
           "inherited_labels": []
         },
         "3": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
           "labels": [],
           "judgment": "",
           "dialogues": [],
@@ -2587,20 +3323,7 @@
               "line": "**Hurley**: You ever fix a radio with coconuts and bamboo? **Sayid**: No, but I have fixed one with a piece of chewing gum and a battery. **Hurley**: Dude… you’re like, our Iraqi MacGyver."
             }
           ],
-          "inherited_labels": [
-            [
-              "The Analyst",
-              1
-            ],
-            [
-              "The Problem-solver",
-              1
-            ],
-            [
-              "The Trustworthy",
-              1
-            ]
-          ]
+          "inherited_labels": [["The Analyst",1],["The Problem-solver",1],["The Trustworthy",1]]
         },
         "3": {
           "labels": [
@@ -2616,20 +3339,25 @@
               "line": "**Sayid**: You shouldn't be here, Hurley. **Hurley**: Maybe not. But I am. And I’m gonna help."
             }
           ],
-          "inherited_labels": [
-            [
-              "The Analyst",
-              1
-            ],
-            [
-              "The Problem-solver",
-              1
-            ],
-            [
-              "The Trustworthy",
-              1
-            ]
-          ]
+          "inherited_labels": [["The Analyst",1],["The Problem-solver",1],["The Trustworthy",1]]
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -2669,24 +3397,7 @@
               "line": "**Hurley**: Hey, Sun… you got any more of that tea stuff? **Sun**: Of course. It helps with stress. **Hurley**: Great, ‘cause I’m like, one mango away from a breakdown."
             }
           ],
-          "inherited_labels": [
-            [
-              "The Helper",
-              1
-            ],
-            [
-              "The Calm Presence",
-              1
-            ],
-            [
-              "The Intelligent",
-              1
-            ],
-            [
-              "The Caring",
-              1
-            ]
-          ]
+          "inherited_labels": [["The Helper",1],["The Calm Presence",1],["The Intelligent",1],["The Caring",1]]
         },
         "3": {
           "labels": [
@@ -2703,24 +3414,25 @@
               "line": "**Hurley**: We found a car, want to come? **Sun**: Jin might like that. **Hurley**: Bring him, it’s a group joyride!"
             }
           ],
-          "inherited_labels": [
-            [
-              "The Helper",
-              1
-            ],
-            [
-              "The Calm Presence",
-              1
-            ],
-            [
-              "The Intelligent",
-              1
-            ],
-            [
-              "The Caring",
-              1
-            ]
-          ]
+          "inherited_labels": [["The Helper",1],["The Calm Presence",1],["The Intelligent",1],["The Caring",1]]
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -2741,6 +3453,24 @@
           "inherited_labels": []
         },
         "3": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
           "labels": [],
           "judgment": "",
           "dialogues": [],
@@ -2769,6 +3499,24 @@
           "judgment": "",
           "dialogues": [],
           "inherited_labels": []
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -2789,6 +3537,24 @@
           "inherited_labels": []
         },
         "3": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
           "labels": [],
           "judgment": "",
           "dialogues": [],
@@ -2817,6 +3583,24 @@
           "judgment": "",
           "dialogues": [],
           "inherited_labels": []
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -2837,6 +3621,24 @@
           "inherited_labels": []
         },
         "3": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
           "labels": [],
           "judgment": "",
           "dialogues": [],
@@ -2865,6 +3667,24 @@
           "judgment": "",
           "dialogues": [],
           "inherited_labels": []
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -2885,6 +3705,24 @@
           "inherited_labels": []
         },
         "3": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
           "labels": [],
           "judgment": "",
           "dialogues": [],
@@ -2913,6 +3751,24 @@
           "judgment": "",
           "dialogues": [],
           "inherited_labels": []
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -2933,6 +3789,24 @@
           "inherited_labels": []
         },
         "3": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
           "labels": [],
           "judgment": "",
           "dialogues": [],
@@ -2961,6 +3835,24 @@
           "judgment": "",
           "dialogues": [],
           "inherited_labels": []
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -2981,6 +3873,24 @@
           "inherited_labels": []
         },
         "3": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
           "labels": [],
           "judgment": "",
           "dialogues": [],
@@ -3009,6 +3919,24 @@
           "judgment": "",
           "dialogues": [],
           "inherited_labels": []
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -3029,6 +3957,24 @@
           "inherited_labels": []
         },
         "3": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
           "labels": [],
           "judgment": "",
           "dialogues": [],
@@ -3068,6 +4014,24 @@
             }
           ],
           "inherited_labels": []
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -3105,20 +4069,7 @@
               "line": "**Charlie**: Why do you always nickname everyone? **Sawyer**: ‘Cause it’s more fun than remembering boring names. **Charlie**: So what’s mine? **Sawyer**: You? You’ll always be Baby Napster to me."
             }
           ],
-          "inherited_labels": [
-            [
-              "The Vulnerable",
-              1
-            ],
-            [
-              "The Troubled",
-              1
-            ],
-            [
-              "The Pathetic",
-              1
-            ]
-          ]
+          "inherited_labels": [["The Vulnerable",1],["The Troubled",1],["The Pathetic",1]]
         },
         "3": {
           "labels": [
@@ -3134,16 +4085,25 @@
               "line": "**Sawyer**: Well, well, now look who had to relocate to the suburbs. Ain’t that just like a woman? She keeps the house and you get the cheap-ass apartment. Man, I thought these people hated me, but I've got to hand it to you — stealing a baby, trying to drown it — now, that's a new low. You even made Locke take a swing at you. **Charlie**: Shouldn't you be more worried about Jack ransacking your tent right now? **Sawyer**: What?"
             }
           ],
-          "inherited_labels": [
-            [
-              "The Vulnerable",
-              1
-            ],
-            [
-              "The Troubled",
-              1
-            ]
-          ]
+          "inherited_labels": [["The Vulnerable",1],["The Troubled",1]]
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -3164,6 +4124,24 @@
           "inherited_labels": []
         },
         "3": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
           "labels": [],
           "judgment": "",
           "dialogues": [],
@@ -3203,16 +4181,7 @@
               "line": ""
             }
           ],
-          "inherited_labels": [
-            [
-              "The Threat",
-              1
-            ],
-            [
-              "The Dangerous",
-              1
-            ]
-          ]
+          "inherited_labels": [["The Threat",1],["The Dangerous",1]]
         },
         "3": {
           "labels": [
@@ -3227,16 +4196,25 @@
               "line": ""
             }
           ],
-          "inherited_labels": [
-            [
-              "The Threat",
-              1
-            ],
-            [
-              "The Dangerous",
-              1
-            ]
-          ]
+          "inherited_labels": [["The Threat",1],["The Dangerous",1]]
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -3275,20 +4253,7 @@
               "line": "**Hurley**: I think I’m going crazy, man. **Sawyer**: Welcome to the club, everyone on this rock. **Hurley**: Yeah, but I brought snacks."
             }
           ],
-          "inherited_labels": [
-            [
-              "The Unrefined",
-              1
-            ],
-            [
-              "The Chubby guy",
-              1
-            ],
-            [
-              "The Simple Minded",
-              1
-            ]
-          ]
+          "inherited_labels": [["The Unrefined",1],["The Chubby guy",1],["The Simple Minded",1]]
         },
         "3": {
           "labels": [
@@ -3306,24 +4271,25 @@
               "line": "**Hurley**: You really think that van’s gonna start? **Sawyer**: It’s not about the van, man. It’s about hope. **Hurley**: Hope’s a dangerous thing."
             }
           ],
-          "inherited_labels": [
-            [
-              "The Unrefined",
-              1
-            ],
-            [
-              "The Chubby guy",
-              1
-            ],
-            [
-              "The Simple Minded",
-              1
-            ],
-            [
-              "The Helper",
-              2
-            ]
-          ]
+          "inherited_labels": [["The Unrefined",1],["The Chubby guy",1],["The Simple Minded",1],["The Helper",2]]
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -3344,6 +4310,24 @@
           "inherited_labels": []
         },
         "3": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
           "labels": [],
           "judgment": "",
           "dialogues": [],
@@ -3373,8 +4357,7 @@
         "2": {
           "labels": [
             "The Rival",
-            "The Doctor"
-          ],
+            "The Doctor"],
           "judgment": "ambiguous",
           "dialogues": [
             {
@@ -3383,16 +4366,7 @@
               "line": "**Sawyer**: Where is she (Kate)? **Jack**: She's fine. She's just a little shaken up. **Sawyer**: She said… she loved me. **Jack**: What? **Sawyer**: I was delirious, yeah? She said it, though. Just before you pulled the plug. **Jack**: (pauses) It’s not important right now. You need to rest. **Sawyer**: You love her? **Jack**: Sawyer, get some sleep. **Sawyer**: Yeah… that’s what I thought."
             }
           ],
-          "inherited_labels": [
-            [
-              "The Rival",
-              1
-            ],
-            [
-              "The Doctor",
-              1
-            ]
-          ]
+          "inherited_labels": [["The Rival",1],["The Doctor",1]]
         },
         "3": {
           "labels": [
@@ -3408,16 +4382,25 @@
               "line": "**Sawyer**: You think you can just walk in and take over? **Jack**: Someone’s gotta keep order. **Sawyer**: Order? This island’s chaos, Doc."
             }
           ],
-          "inherited_labels": [
-            [
-              "The Rival",
-              1
-            ],
-            [
-              "The Doctor",
-              1
-            ]
-          ]
+          "inherited_labels": [["The Rival",1],["The Doctor",1]]
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -3455,20 +4438,7 @@
               "line": "**Sawyer**: A couple of days? I thought you said we were getting off this rock? **Locke**: We are. **Sawyer**: When? **Locke**: Maybe we should talk about this in private. **Sawyer**: Great. Let's go."
             }
           ],
-          "inherited_labels": [
-            [
-              "The Mysterious One",
-              1
-            ],
-            [
-              "The Hunter",
-              1
-            ],
-            [
-              "The Strange",
-              1
-            ]
-          ]
+          "inherited_labels": [["The Mysterious One",1],["The Hunter",1],["The Strange",1]]
         },
         "3": {
           "labels": [
@@ -3485,20 +4455,25 @@
               "line": "(to Locke) You want me to do it for you? That's why you brought me here? Because you're too chicken to do it yourself?"
             }
           ],
-          "inherited_labels": [
-            [
-              "The Mysterious One",
-              1
-            ],
-            [
-              "The Hunter",
-              1
-            ],
-            [
-              "The Strange",
-              1
-            ]
-          ]
+          "inherited_labels": [["The Mysterious One",1],["The Hunter",1],["The Strange",1]]
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -3536,20 +4511,7 @@
               "line": "**Sawyer**: I love her. I love her like I’ve never loved anybody. **Kate**: Who do you mean? **Sawyer** (weakly, half-conscious): You, Freckles... always you."
             }
           ],
-          "inherited_labels": [
-            [
-              "The Attractive",
-              1
-            ],
-            [
-              "The Strong",
-              1
-            ],
-            [
-              "The Independent",
-              1
-            ]
-          ]
+          "inherited_labels": [["The Attractive",1],["The Strong",1],["The Independent",1]]
         },
         "3": {
           "labels": [
@@ -3566,20 +4528,25 @@
               "line": "**Sawyer**: So, what’s the plan, Kate? Run away again? **Kate**: Maybe. Better than standing still. **Sawyer**: Always running, huh? "
             }
           ],
-          "inherited_labels": [
-            [
-              "The Attractive",
-              1
-            ],
-            [
-              "The Strong",
-              1
-            ],
-            [
-              "The Independent",
-              1
-            ]
-          ]
+          "inherited_labels": [["The Attractive",1],["The Strong",1],["The Independent",1]]
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -3604,6 +4571,24 @@
           "judgment": "",
           "dialogues": [],
           "inherited_labels": []
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -3624,6 +4609,24 @@
           "inherited_labels": []
         },
         "3": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
           "labels": [],
           "judgment": "",
           "dialogues": [],
@@ -3666,20 +4669,7 @@
               "line": "**Sawyer**: You gonna torture him again, Captain Falafel? **Sayid**: Only if he lies. **Sawyer**: Then you better get comfortable — that guy’s mouth is a damn factory."
             }
           ],
-          "inherited_labels": [
-            [
-              "The Analyst",
-              1
-            ],
-            [
-              "The Skilled",
-              1
-            ],
-            [
-              "The Suspicious",
-              1
-            ]
-          ]
+          "inherited_labels": [["The Analyst",1],["The Skilled",1],["The Suspicious",1]]
         },
         "3": {
           "labels": [
@@ -3696,24 +4686,25 @@
               "line": "**Sawyer**: You think killing’s the answer? **Sayid**: Sometimes it’s the only language people understand. **Sawyer**: Then we’re both in trouble."
             }
           ],
-          "inherited_labels": [
-            [
-              "The Analyst",
-              1
-            ],
-            [
-              "The Skilled",
-              1
-            ],
-            [
-              "The Suspicious",
-              1
-            ],
-            [
-              "The Ally",
-              2
-            ]
-          ]
+          "inherited_labels": [["The Analyst",1],["The Skilled",1],["The Suspicious",1],["The Ally",2]]
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -3751,20 +4742,7 @@
               "line": "**Sawyer**: Hey, Seoul, you seen Jin? **Sun**: His name is Jin, and yes — he went looking for Michael. **Sawyer**: Right. Tell Tarzan I want my damn shirt back."
             }
           ],
-          "inherited_labels": [
-            [
-              "The Quiet",
-              1
-            ],
-            [
-              "The Mysterious One",
-              1
-            ],
-            [
-              "The Intelligent",
-              1
-            ]
-          ]
+          "inherited_labels": [["The Quiet",1],["The Mysterious One",1],["The Intelligent",1]]
         },
         "3": {
           "labels": [
@@ -3780,20 +4758,25 @@
               "line": "**Sawyer**: You really think you can trust anyone on this island? **Sun**: Trust is a luxury I can’t afford. **Sawyer**: Smart woman. Maybe we’re not so different after all."
             }
           ],
-          "inherited_labels": [
-            [
-              "The Quiet",
-              1
-            ],
-            [
-              "The Mysterious One",
-              1
-            ],
-            [
-              "The Intelligent",
-              1
-            ]
-          ]
+          "inherited_labels": [["The Quiet",1],["The Mysterious One",1],["The Intelligent",1]]
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -3835,42 +4818,51 @@
         "3": {
           "labels": [
             "The Manipulator",
-            "The Mastermind",
+            "The Mastermind", 
             "The Others leader"
           ],
           "judgment": "negative",
           "dialogues": [
             {
-              "episode": "3x01 - A Tale of Two Cities",
-              "character": "Jack Shephard",
+              "episode": "3x01 - A Tale of Two Cities", 
+              "character": "Jack Shephard", 
               "line": "(to Ben) You want me to fix you? You want me to operate on your spine?"
             },
             {
-              "episode": "3x01 - A Tale of Two Cities",
-              "character": "Benjamin Linus-Jack Shephard",
+              "episode": "3x01 - A Tale of Two Cities", 
+              "character": "Benjamin Linus-Jack Shephard", 
               "line": "**Ben**: You have a choice, Jack. You can operate... or you can watch them die. **Jack**: I will never help you. Not after what you've done."
             },
             {
-              "episode": "3x04 - Every Man for Himself",
-              "character": "Benjamin Linus-Jack Shephard",
+              "episode": "3x04 - Every Man for Himself", 
+              "character": "Benjamin Linus-Jack Shephard", 
               "line": "**Ben**: We're not so different, Jack. We're both leaders. We both make sacrifices. **Jack**: Don't compare yourself to me! You're a monster."
             },
             {
-              "episode": "3x11 - Enter 77",
-              "character": "Jack Shephard",
+              "episode": "3x11 - Enter 77", 
+              "character": "Jack Shephard", 
               "line": "(to Locke, about Ben) He's a master manipulator. Don't trust anything he says."
             }
           ],
-          "inherited_labels": [
-            [
-              "The Manipulator",
-              2
-            ],
-            [
-              "The Others leader",
-              2
-            ]
-          ]
+          "inherited_labels": [["The Manipulator",2],["The Others leader",2]]
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -3913,36 +4905,39 @@
               "line": "(to Claire, about Charlie) He needs to get his act together. For all our sakes."
             }
           ],
-          "inherited_labels": [
-            [
-              "The Troubled",
-              1
-            ],
-            [
-              "The Vulnerable",
-              1
-            ]
-          ]
+          "inherited_labels": [["The Troubled",1],["The Vulnerable",1]]
         },
         "3": {
           "labels": [
-            "The Vulnerable",
+            "The Vulnerable",  
             "The Good-hearted"
           ],
           "judgment": "positive",
           "dialogues": [
             {
-              "episode": "3x16 - One of Us",
-              "character": "Jack Shephard",
-              "line": "(to Claire, about Charlie) He's lucky to be alive, Claire. Very lucky."
-            }
+              "episode": "3x16 - One of Us", 
+              "character": "Jack Shephard", 
+              "line": "(to Claire, about Charlie) He's lucky to be alive, Claire. Very lucky."}
           ],
-          "inherited_labels": [
-            [
-              "The Vulnerable",
-              1
-            ]
-          ]
+          "inherited_labels": [["The Vulnerable",1]]
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -3988,12 +4983,25 @@
               "line": "**Desmond**: Do I know you? **Jack**: (pauses) …Jack? **Desmond**: It was 3 years ago. I was on a solo race around the world, and my boat crashed into the reef… Kelvin came, brought me down here… first thing he does – types in the code, pushes the button, that’s saving the world. Then Kelvin died, now here I am all alone. **Jack**: Saving the world? **Desmond**: His words, not mine… So I started pushing the button too"
             }
           ],
-          "inherited_labels": [
-            [
-              "The Man in the Hatch",
-              2
-            ]
-          ]
+          "inherited_labels": [["The Man in the Hatch",2]]
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -4030,20 +5038,7 @@
           ],
           "judgment": "negative",
           "dialogues": [],
-          "inherited_labels": [
-            [
-              "The Threat",
-              1
-            ],
-            [
-              "The Dangerous",
-              1
-            ],
-            [
-              "The Kidnapper",
-              1
-            ]
-          ]
+          "inherited_labels": [["The Threat",1],["The Dangerous",1],["The Kidnapper",1]]
         },
         "3": {
           "labels": [
@@ -4053,20 +5048,25 @@
           ],
           "judgment": "",
           "dialogues": [],
-          "inherited_labels": [
-            [
-              "The Threat",
-              1
-            ],
-            [
-              "The Dangerous",
-              1
-            ],
-            [
-              "The Kidnapper",
-              1
-            ]
-          ]
+          "inherited_labels": [["The Threat",1],["The Dangerous",1],["The Kidnapper",1]]
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -4104,20 +5104,7 @@
               "line": "(to Hurley) Whatever's going on, we'll figure it out. Together."
             }
           ],
-          "inherited_labels": [
-            [
-              "The Good-hearted",
-              1
-            ],
-            [
-              "The Reliable",
-              1
-            ],
-            [
-              "The Helper",
-              1
-            ]
-          ]
+          "inherited_labels": [["The Good-hearted",1],["The Reliable",1],["The Helper",1]]
         },
         "3": {
           "labels": [
@@ -4133,20 +5120,25 @@
               "line": "**Hurley**: (On-Island, the beach camp is ready to leave… Hurley holds Aaron) Charlie’s gonna be fine. **Jack**: They’re ready. We’ll figure this thing out. **Hurley**: I got you. **Jack**: It’s good to see you, Hurley."
             }
           ],
-          "inherited_labels": [
-            [
-              "The Good-hearted",
-              1
-            ],
-            [
-              "The Reliable",
-              1
-            ],
-            [
-              "The Helper",
-              1
-            ]
-          ]
+          "inherited_labels": [["The Good-hearted",1],["The Reliable",1],["The Helper",1]]
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -4167,6 +5159,24 @@
           "inherited_labels": []
         },
         "3": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
           "labels": [],
           "judgment": "",
           "dialogues": [],
@@ -4218,20 +5228,7 @@
               "line": "(to Kate, angry for Sawyer) He's always looking out for himself, Kate. Always."
             }
           ],
-          "inherited_labels": [
-            [
-              "The Troublemaker",
-              1
-            ],
-            [
-              "The Selfish",
-              1
-            ],
-            [
-              "The Annoyance",
-              1
-            ]
-          ]
+          "inherited_labels": [["The Troublemaker",1],["The Selfish",1],["The Annoyance",1]]
         },
         "3": {
           "labels": [
@@ -4243,30 +5240,34 @@
           "judgment": "positive",
           "dialogues": [
             {
-              "episode": "3x01 - A Tale of Two Cities",
-              "character": "Jack Shephard",
+              "episode": "3x01 - A Tale of Two Cities", 
+              "character": "Jack Shephard", 
               "line": "(to Sawyer) We're together in this, whether you like it or not."
             },
             {
-              "episode": "3x16 - One of Us",
-              "character": "Jack Shephard",
-              "line": " (to Sawyer) You did good, Sawyer. You kept them safe."
-            }
+              "episode": "3x16 - One of Us", 
+              "character": "Jack Shephard", 
+              "line": " (to Sawyer) You did good, Sawyer. You kept them safe."}
           ],
-          "inherited_labels": [
-            [
-              "The Troublemaker",
-              1
-            ],
-            [
-              "The Selfish",
-              1
-            ],
-            [
-              "The Annoyance",
-              1
-            ]
-          ]
+          "inherited_labels": [["The Troublemaker",1],["The Selfish",1],["The Annoyance",1]]
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -4309,33 +5310,41 @@
               "line": "**Jack**: It's not 32, it's 42. He just told me, Desmond **John Locke**:...You do it Jack, you have to do it **Jack**: You do it yourself John **John Locke**: No you saw the film Jack, this is a 2-person job, at least **Jack**: Look, you want to push the button? You do it yourself **John Locke**: If it's not real, then what are you doing here Jack? Why did you come back. Why do you find so hard to belive!? **Jack**: Why do you find it so easy? **John Locke**: It's never been, easy. **Jack**: I don't want to. It's just a button **John Locke**: I can't do this alone, Jack. It's a leap of faith"
             }
           ],
-          "inherited_labels": [
-            [
-              "The Man of Faith",
-              1
-            ]
-          ]
+          "inherited_labels": [["The Man of Faith",1]]
         },
         "3": {
           "labels": [
-            "The Delusional",
+            "The Delusional", 
             "The Stubborn",
             "The Man of Faith"
           ],
           "judgment": "negative",
           "dialogues": [
             {
-              "episode": "3x23 - Trough the looking glass: part 2",
-              "character": "Jack Shephard-John Locke",
+              "episode": "3x23 - Trough the looking glass: part 2", 
+              "character": "Jack Shephard-John Locke", 
               "line": "(After John stabbed Naomi) **John Locke**: Step back Jack **Jack**: What did you do!? **John Locke**: What I had to, now step back. Stay away from the phone. **Jack**: What are you doing John? **John Locke**: I don't wanna shoot you. Please, put the phone down. **Jack**: No, you're done keeping me on this island. **John Locke**: I will kill you if i have to. **Jack**: Then do it John! **John Locke**: Jack... you are not supposed to do this. (John put the gun away)"
             }
           ],
-          "inherited_labels": [
-            [
-              "The man of Faith",
-              1
-            ]
-          ]
+          "inherited_labels": [["The man of Faith",1]]
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -4368,30 +5377,15 @@
           "judgment": "positive",
           "dialogues": [
             {
-              "episode": "2x01 - Man of Science, Man of Faith",
-              "character": "Jack Shephard",
-              "line": "(to Kate, smiling) You came back."
-            },
-            {
-              "episode": "2x08 - Collision",
-              "character": "Jack Shephard",
-              "line": "(to Kate) You're tougher than you look, Kate."
-            }
+              "episode": "2x01 - Man of Science, Man of Faith", 
+              "character": "Jack Shephard", 
+              "line": "(to Kate, smiling) You came back."},
+          {
+            "episode": "2x08 - Collision", 
+            "character": "Jack Shephard", 
+            "line": "(to Kate) You're tougher than you look, Kate."}
           ],
-          "inherited_labels": [
-            [
-              "The Strong",
-              1
-            ],
-            [
-              "The Trustworthy",
-              1
-            ],
-            [
-              "The Attractive",
-              1
-            ]
-          ]
+          "inherited_labels": [["The Strong",1],["The Trustworthy",1],["The Attractive",1]]
         },
         "3": {
           "labels": [
@@ -4402,36 +5396,41 @@
           ],
           "judgment": "positive",
           "dialogues": [
-            {
-              "episode": "3x01 - A Tale of Two Cities",
-              "character": "Jack Shephard",
-              "line": "(to Kate, in the cage) We'll get out of here, Kate. I promise."
-            },
-            {
-              "episode": "3x02 - The Glass Ballerina",
-              "character": "Jack Shephard-Kate",
-              "line": "**Jack**: Why are you still here, Kate? Why are you doing this? **Kate**: Because you're worth it, Jack."
-            },
-            {
-              "episode": "3x16 - One of Us",
-              "character": "Jack Shephard",
-              "line": "(to Kate, tired) I just... I wish things were simple."
-            }
-          ],
-          "inherited_labels": [
-            [
-              "The Strong",
-              1
-            ],
-            [
-              "The Trustworthy",
-              1
-            ],
-            [
-              "The Attractive",
-              1
-            ]
-          ]
+          {
+            "episode": "3x01 - A Tale of Two Cities", 
+            "character": "Jack Shephard", 
+            "line": "(to Kate, in the cage) We'll get out of here, Kate. I promise."
+          },
+          {
+            "episode": "3x02 - The Glass Ballerina", 
+            "character": "Jack Shephard-Kate", 
+            "line": "**Jack**: Why are you still here, Kate? Why are you doing this? **Kate**: Because you're worth it, Jack."
+          },
+          {
+            "episode": "3x16 - One of Us", 
+            "character": "Jack Shephard", 
+            "line": "(to Kate, tired) I just... I wish things were simple."
+          }
+        ],
+          "inherited_labels": [["The Strong",1],["The Trustworthy",1],["The Attractive",1]]
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -4456,6 +5455,24 @@
           "judgment": "",
           "dialogues": [],
           "inherited_labels": []
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -4471,19 +5488,18 @@
         },
         "2": {
           "labels": [
-            "The Man of Faith",
+            "The Man of Faith", 
             "The Spiritual Guide"
           ],
           "judgment": "ambiguous",
           "dialogues": [
             {
-              "episode": "2x07 - The Other 48 Days",
-              "character": "Jack Shephard",
-              "line": "(to Mr. Eko, about the use of violence) I'm a doctor. I don't believe in beating answers out of people."
-            },
+              "episode": "2x07 - The Other 48 Days", 
+              "character": "Jack Shephard", 
+              "line": "(to Mr. Eko, about the use of violence) I'm a doctor. I don't believe in beating answers out of people."},
             {
-              "episode": "2x14 - One of Them",
-              "character": "Jack Shephard",
+              "episode": "2x14 - One of Them", 
+              "character": "Jack Shephard", 
               "line": "(to Mr. Eko) Your methods... they're not mine."
             }
           ],
@@ -4491,33 +5507,42 @@
         },
         "3": {
           "labels": [
-            "The Man of Faith",
+            "The Man of Faith", 
             "The Spiritual Guide",
             "The Lost Soul"
           ],
           "judgment": "ambiguous",
           "dialogues": [
             {
-              "episode": "3x05 - The Cost of Living",
-              "character": "Jack Shephard",
+              "episode": "3x05 - The Cost of Living", 
+              "character": "Jack Shephard", 
               "line": "(to Locke, about Eko) He's not well, John. He's... losing his mind."
             },
             {
-              "episode": "3x05 - The Cost of Living",
-              "character": "Jack Shephard",
+              "episode": "3x05 - The Cost of Living", 
+              "character": "Jack Shephard", 
               "line": "(to Sayid, After Eko's death) I don't understand what happened. He just... gave up."
-            }
+        }
           ],
-          "inherited_labels": [
-            [
-              "The Man of Faith",
-              2
-            ],
-            [
-              "The Spiritual Guide",
-              2
-            ]
-          ]
+          "inherited_labels": [["The Man of Faith",2],["The Spiritual Guide",2]]
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -4562,56 +5587,48 @@
               "line": "Good work, Sayid. What's our next move?"
             }
           ],
-          "inherited_labels": [
-            [
-              "The Analyst",
-              1
-            ],
-            [
-              "The Reliable",
-              1
-            ],
-            [
-              "The Skilled",
-              1
-            ],
-            [
-              "The Interrogator",
-              1
-            ]
-          ]
+          "inherited_labels": [["The Analyst",1],["The Reliable",1],["The Skilled",1],["The Interrogator",1]]
         },
         "3": {
           "labels": [
-            "The Strategist",
-            "The Reliable",
-            "The Loyal Ally",
+            "The Strategist", 
+            "The Reliable", 
+            "The Loyal Ally", 
             "The Pragmatist",
             "The Interrogator"
           ],
           "judgment": "positive",
           "dialogues": [
             {
-              "episode": "3x01 - A Tale of Two Cities",
-              "character": "Jack Shephard",
-              "line": "(to Sayid) We need to find a way out of here. Think, Sayid!"
+              "episode": "3x01 - A Tale of Two Cities", 
+              "character": "Jack Shephard", 
+              "line": "(to Sayid) We need to find a way out of here. Think, Sayid!" 
             },
             {
-              "episode": "3x16 - One of Us",
-              "character": "Jack Shephard",
+              "episode": "3x16 - One of Us", 
+              "character": "Jack Shephard", 
               "line": "(to Sayid, with gratitude) I couldn't have done it without you, Sayid."
             }
           ],
-          "inherited_labels": [
-            [
-              "The Reliable",
-              1
-            ],
-            [
-              "The Interrogator",
-              1
-            ]
-          ]
+          "inherited_labels": [["The Reliable",1],["The Interrogator",1]]
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -4652,16 +5669,7 @@
               "line": "(to Sun) You've been through a lot. You're very strong."
             }
           ],
-          "inherited_labels": [
-            [
-              "The Kind-hearted",
-              1
-            ],
-            [
-              "The Strong",
-              1
-            ]
-          ]
+          "inherited_labels": [["The Kind-hearted",1],["The Strong",1]]
         },
         "3": {
           "labels": [
@@ -4673,26 +5681,35 @@
           "judgment": "positive",
           "dialogues": [
             {
-              "episode": "3x04 - Every Man for Himself",
-              "character": "Jack Shephard",
+              "episode": "3x04 - Every Man for Himself", 
+              "character": "Jack Shephard", 
               "line": "(to Juliet, about Sun) She's pregnant. We need to make sure she's safe."
             },
             {
-              "episode": "3x22 - Through the Looking Glass, Part 1",
-              "character": "Jack Shephard",
+              "episode": "3x22 - Through the Looking Glass, Part 1", 
+              "character": "Jack Shephard", 
               "line": "(to Sun) We're going to get you out of here, Sun. All of you."
             }
           ],
-          "inherited_labels": [
-            [
-              "The Kind-hearted",
-              1
-            ],
-            [
-              "The Strong",
-              1
-            ]
-          ]
+          "inherited_labels": [["The Kind-hearted",1],["The Strong",1]]
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -4743,34 +5760,35 @@
           "judgment": "negative",
           "dialogues": [
             {
-              "episode": "3x13 - The Man from Tallahassee",
-              "character": "Benjamin Linus-John Locke",
+              "episode": "3x13 - The Man from Tallahassee", 
+              "character": "Benjamin Linus-John Locke", 
               "line": "**John Locke**: You're not gonna start talking about the magic box again, are you? **Ben**: No, John. I'm gonna show you what came out of it."
             },
             {
-              "episode": "3x20 - The Man Behind the Curtain",
-              "character": "Benjamin Linus-John Locke",
+              "episode": "3x20 - The Man Behind the Curtain", 
+              "character": "Benjamin Linus-John Locke", 
               "line": "**Ben**: This is where I came from, these are my people: The Dharma Initiative. When it became clear that one side had to go, one side had to be purged... I did what I had to do. I was one of the people that was smart enough to make sure that I didn't end up in that ditch; which makes me considerably smarter than you John. (Ben shoot John) **Ben**: What did Jacob say to you? **John Locke**: Why did you do this? **Ben**: Because you heard him. Now I need to know what he said **John Locke**: He said 'Help me'. **Ben**: Well I certainly hope he helps you John."
             }
-          ],
-          "inherited_labels": [
-            [
-              "The Prisoner",
-              2
-            ],
-            [
-              "The Liar",
-              2
-            ],
-            [
-              "The Manipulator",
-              2
-            ],
-            [
-              "The Enigma",
-              2
-            ]
-          ]
+         ],
+          "inherited_labels": [["The Prisoner",2],["The Liar",2],["The Manipulator",2],["The Enigma",2]]
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -4813,16 +5831,7 @@
               "line": "**Charlie**: She has a lot to learn about being a mum; you know... it's a responsability. **John Locke**: You know, that is interesting told by an heroin addict"
             }
           ],
-          "inherited_labels": [
-            [
-              "The Lost Soul",
-              1
-            ],
-            [
-              "The drug addict",
-              1
-            ]
-          ]
+          "inherited_labels": [["The Lost Soul",1],["The drug addict",1]]
         },
         "3": {
           "labels": [
@@ -4831,16 +5840,25 @@
           ],
           "judgment": "positive",
           "dialogues": [],
-          "inherited_labels": [
-            [
-              "The Lost Soul",
-              1
-            ],
-            [
-              "The Potential",
-              2
-            ]
-          ]
+          "inherited_labels": [["The Lost Soul",1],["The Potential",2]]
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -4879,12 +5897,25 @@
           ],
           "judgment": "positive",
           "dialogues": [],
-          "inherited_labels": [
-            [
-              "The Man in the Hatch",
-              1
-            ]
-          ]
+          "inherited_labels": [["The Man in the Hatch",1]]
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -4921,20 +5952,7 @@
           ],
           "judgment": "negative",
           "dialogues": [],
-          "inherited_labels": [
-            [
-              "The Villain",
-              1
-            ],
-            [
-              "The Intruder",
-              1
-            ],
-            [
-              "The Other",
-              1
-            ]
-          ]
+          "inherited_labels": [["The Villain",1],["The Intruder",1],["The Other",1]]
         },
         "3": {
           "labels": [
@@ -4944,20 +5962,25 @@
           ],
           "judgment": "negative",
           "dialogues": [],
-          "inherited_labels": [
-            [
-              "The Villain",
-              1
-            ],
-            [
-              "The Intruder",
-              1
-            ],
-            [
-              "The Other",
-              1
-            ]
-          ]
+          "inherited_labels": [["The Villain",1],["The Intruder",1],["The Other",1]]
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -4997,45 +6020,45 @@
               "line": "(to Hurley) Whatever happened to you before, Hurley... it doesn't matter now. This island wants you here."
             }
           ],
-          "inherited_labels": [
-            [
-              "The Good-hearted",
-              1
-            ],
-            [
-              "The Calm Presence",
-              1
-            ],
-            [
-              "The Innocent",
-              1
-            ],
-            [
-              "The Pure",
-              1
-            ]
-          ]
+          "inherited_labels": [["The Good-hearted",1],["The Calm Presence",1],["The Innocent",1],["The Pure",1]]
         },
         "3": {
           "labels": [
-            "The Faithful Follower",
-            "The Loyal",
-            "The Source of Optimism",
+            "The Faithful Follower", 
+            "The Loyal", 
+            "The Source of Optimism", 
             "The Intuitive"
           ],
           "judgment": "positive",
           "dialogues": [
             {
-              "episode": "3x04 - Every Man for Himself",
-              "character": "John Locke",
+              "episode": "3x04 - Every Man for Himself", 
+              "character": "John Locke", 
               "line": "(to Hurley) Thank you, Hurley. You have a good heart."
             },
             {
-              "episode": "3x11 - Enter 77",
-              "character": "John Locke",
-              "line": "(to Hurley) You'll understand, Hurley. You always do."
-            }
-          ],
+              "episode": "3x11 - Enter 77", 
+              "character": "John Locke", 
+              "line": "(to Hurley) You'll understand, Hurley. You always do."}
+        ],
+          "inherited_labels": []
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
           "inherited_labels": []
         }
       }
@@ -5058,19 +6081,35 @@
         },
         "3": {
           "labels": [
-            "The Master",
-            "The Unseen Power",
-            "The Manipulator",
+            "The Master", 
+            "The Unseen Power", 
+            "The Manipulator", 
             "The Island's Voice"
           ],
           "judgment": "ambiguous",
           "dialogues": [
             {
-              "episode": "3x20 - The Man Behind the Curtain",
-              "character": "Benjamin Linus-John Locke",
-              "line": "**Ben**: You want to meet Jacob, John? He lives here. **John Locke**: (with amazement) He lives here? Show me. **Ben**: Say hello, Jacob."
+              "episode": "3x20 - The Man Behind the Curtain", "character": "Benjamin Linus-John Locke", "line": "**Ben**: You want to meet Jacob, John? He lives here. **John Locke**: (with amazement) He lives here? Show me. **Ben**: Say hello, Jacob."
             }
           ],
+          "inherited_labels": []
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
           "inherited_labels": []
         }
       }
@@ -5114,20 +6153,7 @@
               "line": "(to Sawyer) This isn't about the guns, is it, James? It's about control."
             }
           ],
-          "inherited_labels": [
-            [
-              "The Selfish",
-              1
-            ],
-            [
-              "The Troublemaker",
-              1
-            ],
-            [
-              "The Lost Soul",
-              1
-            ]
-          ]
+          "inherited_labels": [["The Selfish",1],["The Troublemaker",1],["The Lost Soul",1]]
         },
         "3": {
           "labels": [
@@ -5136,26 +6162,44 @@
           "judgment": "positive",
           "dialogues": [
             {
-              "episode": "3x04 - Every Man for Himself",
-              "character": "John Locke-Sawyer",
+              "episode": "3x04 - Every Man for Himself", 
+              "character": "John Locke-Sawyer", 
               "line": "**John Locke**: We need to get back to camp. **Sawyer**: You think I don't know that, bald head? Just try and keep up."
             },
             {
-              "episode": "3x19 – The Brig",
-              "character": "John Locke-Sawyer",
+              "episode": "3x19 – The Brig", 
+              "character": "John Locke-Sawyer", 
               "line": "**Sawyer**: Why did you do this? **John Locke**: He ruined my life and ruined yours. And he had it coming."
             },
             {
-              "episode": "3x19 – The Brig",
-              "character": "John Locke-Sawyer",
+              "episode": "3x19 – The Brig", 
+              "character": "John Locke-Sawyer", 
               "line": "**John Locke**: Juliet is a mole. **Sawyer**:What? **John Locke**: She's working for Ben. **Sawyer**: Why are you telling me this? **John Locke**: So you can warn the camp."
             },
             {
-              "episode": "3x19 – The Brig",
-              "character": "John Locke-Sawyer",
+              "episode": "3x19 – The Brig", 
+              "character": "John Locke-Sawyer", 
               "line": "**Sawyer**: Hey, is it true? **John Locke**:  Is what true? **Sawyer**: That he threw you out a window, that you were a cripple **John Locke**: Not any more."
             }
           ],
+          "inherited_labels": []
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
           "inherited_labels": []
         }
       }
@@ -5202,16 +6246,7 @@
               "line": "**Jack**:It's not 32, it's 42. He just tol me, Desmond **John Locke**:...You do it Jack, you have to do it **Jack**: You do it yourself John **John Locke**: No you saw the film Jack, this is a 2-person job, at least **Jack**: Look, you want to push the button? You do it yourself **John Locke**: If it's not real, then what are you doing here Jack? Why did you come back. Why do you find so hard to belive!? **Jack**: Why do you find it so easy? **John Locke**: It's neven been, easy. **Jack**: I don't want to. It's just a button **John Locke**: I can't do this alone, Jack. It's a leap of faith, Jack"
             }
           ],
-          "inherited_labels": [
-            [
-              "The Man of Science",
-              1
-            ],
-            [
-              "The Skeptic",
-              1
-            ]
-          ]
+          "inherited_labels": [["The Man of Science",1],["The Skeptic",1]]
         },
         "3": {
           "labels": [
@@ -5221,21 +6256,30 @@
           "judgment": "ambiguous",
           "dialogues": [
             {
-              "episode": "3x23 - Trough the looking glass: part 2",
-              "character": "Jack Shephard-John Locke",
+              "episode": "3x23 - Trough the looking glass: part 2", 
+              "character": "Jack Shephard-John Locke", 
               "line": " (After John stabbed Naomi) **John Locke**: Step back Jack **Jack**: What did you do **John Locke**: What i had to, now step back. Stay away from the phone. **Jack**: What are you doing John? **John Locke**: I don't wanna shoot you. Please, put the phone down. **Jack**: No, you're done keeping me on this island. **John Locke**: I will kill you if i have to. **Jack**: Then do it John **John Locke**: Jack... you are not supposed to do this. (John put the gun away)"
             }
           ],
-          "inherited_labels": [
-            [
-              "The Man of Science",
-              1
-            ],
-            [
-              "The Skeptic",
-              1
-            ]
-          ]
+          "inherited_labels": [["The Man of Science",1],["The Skeptic",1]]
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -5276,16 +6320,7 @@
               "line": "(to Kate) We need your help with this, Kate. You're quick on your feet."
             }
           ],
-          "inherited_labels": [
-            [
-              "The Capable",
-              1
-            ],
-            [
-              "The Ally",
-              1
-            ]
-          ]
+          "inherited_labels": [["The Capable",1],["The Ally",1]]
         },
         "3": {
           "labels": [
@@ -5293,6 +6328,24 @@
             "The Ally"
           ],
           "judgment": "positive",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
           "dialogues": [],
           "inherited_labels": []
         }
@@ -5315,6 +6368,24 @@
           "inherited_labels": []
         },
         "3": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
           "labels": [],
           "judgment": "",
           "dialogues": [],
@@ -5360,21 +6431,30 @@
           "judgment": "positive",
           "dialogues": [
             {
-              "episode": "3x05 - The Cost of Living",
-              "character": "Mr. Eko",
+              "episode": "3x05 - The Cost of Living", 
+              "character": "Mr. Eko", 
               "line": "(to John Locke, about the black smoke monster) I saw the devil... you're next"
             }
           ],
-          "inherited_labels": [
-            [
-              "The Man of God",
-              2
-            ],
-            [
-              "The Spiritual Guide",
-              2
-            ]
-          ]
+          "inherited_labels": [["The Man of God",2],["The Spiritual Guide",2]]
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -5423,20 +6503,7 @@
               "line": "(to Sayid, about Benjamin Linus) He's lying, Sayid. I know it."
             }
           ],
-          "inherited_labels": [
-            [
-              "The Man of Logic",
-              1
-            ],
-            [
-              "The Interrogator",
-              1
-            ],
-            [
-              "The Skilled",
-              1
-            ]
-          ]
+          "inherited_labels": [["The Man of Logic",1],["The Interrogator",1],["The Skilled",1]]
         },
         "3": {
           "labels": [
@@ -5446,20 +6513,25 @@
           ],
           "judgment": "positive",
           "dialogues": [],
-          "inherited_labels": [
-            [
-              "The Man of Logic",
-              1
-            ],
-            [
-              "The Interrogator",
-              1
-            ],
-            [
-              "The Skilled",
-              1
-            ]
-          ]
+          "inherited_labels": [["The Man of Logic",1],["The Interrogator",1],["The Skilled",1]]
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -5495,16 +6567,7 @@
               "line": "(to Sun) You've made this place... home."
             }
           ],
-          "inherited_labels": [
-            [
-              "The Patient Soul",
-              1
-            ],
-            [
-              "The Kind-hearted",
-              1
-            ]
-          ]
+          "inherited_labels": [["The Patient Soul",1],["The Kind-hearted",1]]
         },
         "3": {
           "labels": [
@@ -5513,16 +6576,25 @@
           ],
           "judgment": "positive",
           "dialogues": [],
-          "inherited_labels": [
-            [
-              "The Patient Soul",
-              1
-            ],
-            [
-              "The Kind-hearted",
-              1
-            ]
-          ]
+          "inherited_labels": [["The Patient Soul",1],["The Kind-hearted",1]]
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -5563,16 +6635,25 @@
           ],
           "judgment": "negative",
           "dialogues": [],
-          "inherited_labels": [
-            [
-              "The Deceiver",
-              2
-            ],
-            [
-              "The Others leader",
-              2
-            ]
-          ]
+          "inherited_labels": [["The Deceiver",2],["The Others leader",2]]
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -5613,16 +6694,7 @@
               "line": "(to Jack, on Charlie) He's hurting, Jack. We need to help him."
             }
           ],
-          "inherited_labels": [
-            [
-              "The Vulnerable",
-              1
-            ],
-            [
-              "The drug addict",
-              1
-            ]
-          ]
+          "inherited_labels": [["The Vulnerable",1],["The drug addict",1]]
         },
         "3": {
           "labels": [
@@ -5631,16 +6703,25 @@
           ],
           "judgment": "positive",
           "dialogues": [],
-          "inherited_labels": [
-            [
-              "The Vulnerable",
-              1
-            ],
-            [
-              "The drug addict",
-              2
-            ]
-          ]
+          "inherited_labels": [["The Vulnerable",1],["The drug addict",2]]
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -5675,11 +6756,29 @@
         },
         "3": {
           "labels": [
-            "The Visionary",
-            "The Protector",
+            "The Visionary", 
+            "The Protector", 
             "The Mysterious Ally"
           ],
           "judgment": "positive",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
           "dialogues": [],
           "inherited_labels": []
         }
@@ -5711,16 +6810,7 @@
           ],
           "judgment": "negative",
           "dialogues": [],
-          "inherited_labels": [
-            [
-              "The Villain",
-              1
-            ],
-            [
-              "The Other",
-              1
-            ]
-          ]
+          "inherited_labels": [["The Villain",1],["The Other",1]]
         },
         "3": {
           "labels": [
@@ -5729,16 +6819,25 @@
           ],
           "judgment": "negative",
           "dialogues": [],
-          "inherited_labels": [
-            [
-              "The Villain",
-              1
-            ],
-            [
-              "The Other",
-              1
-            ]
-          ]
+          "inherited_labels": [["The Villain",1],["The Other",1]]
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -5783,24 +6882,7 @@
               "line": "(to Hurley) Are you okay, Hurley? You look like you've seen a ghost."
             }
           ],
-          "inherited_labels": [
-            [
-              "The Good-hearted",
-              1
-            ],
-            [
-              "The Loyal",
-              1
-            ],
-            [
-              "The Innocent",
-              1
-            ],
-            [
-              "The Comic Relief",
-              1
-            ]
-          ]
+          "inherited_labels": [["The Good-hearted",1],["The Loyal",1],["The Innocent",1],["The Comic Relief",1]]
         },
         "3": {
           "labels": [
@@ -5811,24 +6893,25 @@
           ],
           "judgment": "positive",
           "dialogues": [],
-          "inherited_labels": [
-            [
-              "The Good-hearted",
-              1
-            ],
-            [
-              "The Loyal",
-              1
-            ],
-            [
-              "The Innocent",
-              1
-            ],
-            [
-              "The Comic Relief",
-              1
-            ]
-          ]
+          "inherited_labels": [["The Good-hearted",1],["The Loyal",1],["The Innocent",1],["The Comic Relief",1]]
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -5849,6 +6932,24 @@
           "inherited_labels": []
         },
         "3": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
           "labels": [],
           "judgment": "",
           "dialogues": [],
@@ -5902,20 +7003,7 @@
               "line": "(to Sawyer, smiling) You're a con man, Sawyer. It's what you do."
             }
           ],
-          "inherited_labels": [
-            [
-              "The Intriguing",
-              1
-            ],
-            [
-              "The Annoyance",
-              1
-            ],
-            [
-              "The Troublemaker",
-              1
-            ]
-          ]
+          "inherited_labels": [["The Intriguing",1],["The Annoyance",1],["The Troublemaker",1]]
         },
         "3": {
           "labels": [
@@ -5926,17 +7014,30 @@
           "judgment": "positive",
           "dialogues": [
             {
-              "episode": "3x02 - The Glass Ballerina",
-              "character": "Kate Austen-Sawyer",
+              "episode": "3x02 - The Glass Ballerina", 
+              "character": "Kate Austen-Sawyer", 
               "line": "**Sawyer**: If you really love me, go. **Kate**: I only said that so he'd stop hitting you"
             }
           ],
-          "inherited_labels": [
-            [
-              "The Annoyance",
-              1
-            ]
-          ]
+          "inherited_labels": [["The Annoyance",1]]
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -5990,49 +7091,41 @@
               "line": "(to Jack) Don't do this, Jack. Don't leave me."
             }
           ],
-          "inherited_labels": [
-            [
-              "The Leader",
-              1
-            ],
-            [
-              "The Protector",
-              1
-            ],
-            [
-              "The Hero",
-              1
-            ]
-          ]
+          "inherited_labels": [["The Leader",1],["The Protector",1],["The Hero",1]]
         },
         "3": {
           "labels": [
-            "The Leader",
-            "The Protector",
+            "The Leader", 
+            "The Protector", 
             "The Hero"
           ],
           "judgment": "positive",
           "dialogues": [
             {
-              "episode": "3x06 - I Do",
-              "character": "Kate Austen",
+              "episode": "3x06 - I Do", 
+              "character": "Kate Austen", 
               "line": "**Kate**: Jack? **Jack**: Promise me that you'll never come back here for me."
             }
           ],
-          "inherited_labels": [
-            [
-              "The Leader",
-              1
-            ],
-            [
-              "The Protector",
-              1
-            ],
-            [
-              "The Hero",
-              1
-            ]
-          ]
+          "inherited_labels": [["The Leader",1],["The Protector",1],["The Hero",1]]
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -6079,16 +7172,7 @@
               "line": "(to Locke) You seriously believe that pushing a button every 108 minutes is going to save the world?"
             }
           ],
-          "inherited_labels": [
-            [
-              "The Mysterious One",
-              1
-            ],
-            [
-              "The Hunter",
-              1
-            ]
-          ]
+          "inherited_labels": [["The Mysterious One",1],["The Hunter",1]]
         },
         "3": {
           "labels": [
@@ -6098,16 +7182,25 @@
           ],
           "judgment": "negative",
           "dialogues": [],
-          "inherited_labels": [
-            [
-              "The Man of Faith",
-              2
-            ],
-            [
-              "The Mysterious One",
-              1
-            ]
-          ]
+          "inherited_labels": [["The Man of Faith",2],["The Mysterious One",1]]
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -6132,6 +7225,24 @@
           "judgment": "",
           "dialogues": [],
           "inherited_labels": []
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -6152,6 +7263,24 @@
           "inherited_labels": []
         },
         "3": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
           "labels": [],
           "judgment": "",
           "dialogues": [],
@@ -6199,16 +7328,7 @@
               "line": "(to Sayid) You think you can get him to talk?"
             }
           ],
-          "inherited_labels": [
-            [
-              "The Skilled",
-              1
-            ],
-            [
-              "The Trusted Ally",
-              1
-            ]
-          ]
+          "inherited_labels": [["The Skilled",1],["The Trusted Ally",1]]
         },
         "3": {
           "labels": [
@@ -6218,20 +7338,25 @@
           ],
           "judgment": "positive",
           "dialogues": [],
-          "inherited_labels": [
-            [
-              "The Interrogator",
-              2
-            ],
-            [
-              "The Skilled",
-              1
-            ],
-            [
-              "The Trusted Ally",
-              1
-            ]
-          ]
+          "inherited_labels": [["The Interrogator",2],["The Skilled",1],["The Trusted Ally",1]]
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -6279,20 +7404,7 @@
               "line": "to Sun, with empathy) I know what it's like to keep secrets. You're doing great."
             }
           ],
-          "inherited_labels": [
-            [
-              "The Confidant",
-              1
-            ],
-            [
-              "The Strong",
-              1
-            ],
-            [
-              "The Kind-hearted",
-              1
-            ]
-          ]
+          "inherited_labels": [["The Confidant",1],["The Strong",1],["The Kind-hearted",1]]
         },
         "3": {
           "labels": [
@@ -6302,20 +7414,25 @@
           ],
           "judgment": "positive",
           "dialogues": [],
-          "inherited_labels": [
-            [
-              "The Confidant",
-              1
-            ],
-            [
-              "The Strong",
-              1
-            ],
-            [
-              "The Kind-hearted",
-              1
-            ]
-          ]
+          "inherited_labels": [["The Confidant",1],["The Strong",1],["The Kind-hearted",1]]
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -6336,6 +7453,24 @@
           "inherited_labels": []
         },
         "3": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
           "labels": [],
           "judgment": "",
           "dialogues": [],
@@ -6364,6 +7499,24 @@
           "judgment": "",
           "dialogues": [],
           "inherited_labels": []
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -6384,6 +7537,24 @@
           "inherited_labels": []
         },
         "3": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
           "labels": [],
           "judgment": "",
           "dialogues": [],
@@ -6412,6 +7583,24 @@
           "judgment": "",
           "dialogues": [],
           "inherited_labels": []
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -6432,6 +7621,24 @@
           "inherited_labels": []
         },
         "3": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
           "labels": [],
           "judgment": "",
           "dialogues": [],
@@ -6460,6 +7667,24 @@
           "judgment": "",
           "dialogues": [],
           "inherited_labels": []
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -6480,6 +7705,24 @@
           "inherited_labels": []
         },
         "3": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
           "labels": [],
           "judgment": "",
           "dialogues": [],
@@ -6508,6 +7751,24 @@
           "judgment": "",
           "dialogues": [],
           "inherited_labels": []
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -6528,6 +7789,24 @@
           "inherited_labels": []
         },
         "3": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
           "labels": [],
           "judgment": "",
           "dialogues": [],
@@ -6556,6 +7835,24 @@
           "judgment": "",
           "dialogues": [],
           "inherited_labels": []
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -6576,6 +7873,24 @@
           "inherited_labels": []
         },
         "3": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
           "labels": [],
           "judgment": "",
           "dialogues": [],
@@ -6604,6 +7919,24 @@
           "judgment": "",
           "dialogues": [],
           "inherited_labels": []
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -6628,6 +7961,24 @@
           "judgment": "",
           "dialogues": [],
           "inherited_labels": []
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -6648,6 +7999,24 @@
           "inherited_labels": []
         },
         "3": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
           "labels": [],
           "judgment": "",
           "dialogues": [],
@@ -6692,16 +8061,25 @@
           ],
           "judgment": "positive",
           "dialogues": [],
-          "inherited_labels": [
-            [
-              "The Lost Soul",
-              1
-            ],
-            [
-              "The Burdened",
-              1
-            ]
-          ]
+          "inherited_labels": [["The Lost Soul",1],["The Burdened",1]]
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -6722,6 +8100,24 @@
           "inherited_labels": []
         },
         "3": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
           "labels": [],
           "judgment": "",
           "dialogues": [],
@@ -6750,6 +8146,24 @@
           "judgment": "",
           "dialogues": [],
           "inherited_labels": []
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -6770,6 +8184,24 @@
           "inherited_labels": []
         },
         "3": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
           "labels": [],
           "judgment": "",
           "dialogues": [],
@@ -6798,6 +8230,24 @@
           "judgment": "",
           "dialogues": [],
           "inherited_labels": []
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -6822,6 +8272,24 @@
           "judgment": "",
           "dialogues": [],
           "inherited_labels": []
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -6842,6 +8310,24 @@
           "inherited_labels": []
         },
         "3": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
           "labels": [],
           "judgment": "",
           "dialogues": [],
@@ -6886,17 +8372,30 @@
           "judgment": "positive",
           "dialogues": [
             {
-              "episode": "3x05 - The Cost of Living",
-              "character": "Mr. Eko-John Locke",
-              "line": "(to John Locke, about the black smoke monster) I saw the devil... you're next"
+              "episode": "3x05 - The Cost of Living", 
+              "character": "Mr. Eko-John Locke", 
+              "line":"(to John Locke, about the black smoke monster) I saw the devil... you're next"
             }
           ],
-          "inherited_labels": [
-            [
-              "The Shattered Believer",
-              2
-            ]
-          ]
+          "inherited_labels": [["The Shattered Believer",2]]
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -6917,6 +8416,24 @@
           "inherited_labels": []
         },
         "3": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
           "labels": [],
           "judgment": "",
           "dialogues": [],
@@ -6942,22 +8459,40 @@
         },
         "3": {
           "labels": [
-            "The Smoke Monster",
+            "The Smoke Monster", 
             "The Devil"
           ],
           "judgment": "negative",
           "dialogues": [
             {
-              "episode": "3x05 - The Cost of Living",
-              "character": "Mr. Eko-Man in Black (as Yemi)",
+              "episode": "3x05 - The Cost of Living", 
+              "character": "Mr. Eko-Man in Black (as Yemi)", 
               "line": "**Mr. Eko**: When I was young, I killed a man to save my brother. I'm not sorry for this, I'm proud of this. I did not ask for the life that I was given, but it was given. And with it I did my best. **Man in Black (as Yemi)**: You speak to me as if I'm your brother. **Mr. Eko**: Who are you...?"
             },
             {
-              "episode": "3x05 - The Cost of Living",
-              "character": "Mr. Eko-John Locke",
-              "line": "(to John Locke, about the black smoke monster) I saw the devil... you're next"
+              "episode": "3x05 - The Cost of Living", 
+              "character": "Mr. Eko-John Locke", 
+              "line":"(to John Locke, about the black smoke monster) I saw the devil... you're next"
             }
           ],
+          "inherited_labels": []
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
           "inherited_labels": []
         }
       }
@@ -6983,6 +8518,24 @@
           "judgment": "",
           "dialogues": [],
           "inherited_labels": []
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -7003,6 +8556,24 @@
           "inherited_labels": []
         },
         "3": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
           "labels": [],
           "judgment": "",
           "dialogues": [],
@@ -7052,16 +8623,25 @@
           ],
           "judgment": "negative",
           "dialogues": [],
-          "inherited_labels": [
-            [
-              "The Deceiver",
-              2
-            ],
-            [
-              "The Other",
-              2
-            ]
-          ]
+          "inherited_labels": [["The Deceiver",2],["The Other",2]]
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -7091,20 +8671,11 @@
           ],
           "judgment": "positive",
           "dialogues": [],
-          "inherited_labels": [
-            [
-              "The Vulnerable",
-              1
-            ],
-            [
-              "The Good-hearted",
-              1
-            ]
-          ]
+          "inherited_labels": [["The Vulnerable",1],["The Good-hearted",1]]
         },
         "3": {
           "labels": [
-            "The Vulnerable",
+            "The Vulnerable", 
             "The Trusted Ally"
           ],
           "judgment": "positive",
@@ -7115,12 +8686,25 @@
               "line": "**Charlie**: Sayid, you’re always the one who keeps us grounded. **Sayid**: Someone’s got to. Otherwise, we’re lost"
             }
           ],
-          "inherited_labels": [
-            [
-              "The Vulnerable",
-              1
-            ]
-          ]
+            "inherited_labels": [["The Vulnerable",1]]
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -7160,12 +8744,25 @@
           ],
           "judgment": "positive",
           "dialogues": [],
-          "inherited_labels": [
-            [
-              "The Man in the Hatch",
-              2
-            ]
-          ]
+          "inherited_labels": [["The Man in the Hatch",2]]
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -7197,20 +8794,7 @@
           ],
           "judgment": "negative",
           "dialogues": [],
-          "inherited_labels": [
-            [
-              "The Villain",
-              1
-            ],
-            [
-              "The Other",
-              1
-            ],
-            [
-              "The Intruder",
-              1
-            ]
-          ]
+          "inherited_labels": [["The Villain",1],["The Other",1],["The Intruder",1]]
         },
         "3": {
           "labels": [
@@ -7220,20 +8804,25 @@
           ],
           "judgment": "negative",
           "dialogues": [],
-          "inherited_labels": [
-            [
-              "The Villain",
-              1
-            ],
-            [
-              "The Other",
-              1
-            ],
-            [
-              "The Intruder",
-              1
-            ]
-          ]
+          "inherited_labels": [["The Villain",1],["The Other",1],["The Intruder",1]]
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -7273,24 +8862,7 @@
               "line": "(to Hurley) Do not worry, Hurley. We will find out what is happening."
             }
           ],
-          "inherited_labels": [
-            [
-              "The Good-hearted",
-              1
-            ],
-            [
-              "The Innocent",
-              1
-            ],
-            [
-              "The Trustworthy",
-              1
-            ],
-            [
-              "The Friend",
-              1
-            ]
-          ]
+          "inherited_labels": [["The Good-hearted",1],["The Innocent",1],["The Trustworthy",1],["The Friend",1]]
         },
         "3": {
           "labels": [
@@ -7300,20 +8872,25 @@
           ],
           "judgment": "positive",
           "dialogues": [],
-          "inherited_labels": [
-            [
-              "The Good-hearted",
-              1
-            ],
-            [
-              "The Trustworthy",
-              1
-            ],
-            [
-              "The Friend",
-              1
-            ]
-          ]
+          "inherited_labels": [["The Good-hearted",1],["The Trustworthy",1],["The Friend",1]]
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -7334,6 +8911,24 @@
           "inherited_labels": []
         },
         "3": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
           "labels": [],
           "judgment": "",
           "dialogues": [],
@@ -7385,26 +8980,31 @@
               "line": "(to Jack, on the fight) He provoked it. He always does."
             }
           ],
-          "inherited_labels": [
-            [
-              "The Untrustworthy",
-              1
-            ],
-            [
-              "The Annoyance",
-              1
-            ],
-            [
-              "The Selfish",
-              1
-            ]
-          ]
+          "inherited_labels": [["The Untrustworthy",1],["The Annoyance",1],["The Selfish",1]]
         },
         "3": {
           "labels": [
             "The Selfish"
           ],
           "judgment": "ambiguous",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
           "dialogues": [],
           "inherited_labels": []
         }
@@ -7456,24 +9056,7 @@
               "line": "(to Jack) I believe he is lying. And I will find out why."
             }
           ],
-          "inherited_labels": [
-            [
-              "The Leader",
-              1
-            ],
-            [
-              "The Trusted Ally",
-              1
-            ],
-            [
-              "The Doctor",
-              1
-            ],
-            [
-              "The Hero",
-              1
-            ]
-          ]
+          "inherited_labels": [["The Leader",1],["The Trusted Ally",1],["The Doctor",1],["The Hero",1]]
         },
         "3": {
           "labels": [
@@ -7484,24 +9067,25 @@
           ],
           "judgment": "positive",
           "dialogues": [],
-          "inherited_labels": [
-            [
-              "The Leader",
-              1
-            ],
-            [
-              "The Trusted Ally",
-              1
-            ],
-            [
-              "The Doctor",
-              1
-            ],
-            [
-              "The Hero",
-              1
-            ]
-          ]
+          "inherited_labels": [["The Leader",1],["The Trusted Ally",1],["The Doctor",1],["The Hero",1]]
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -7554,20 +9138,7 @@
               "line": "(to Locke) Your belief, John, it blinds you to the truth of what this place is."
             }
           ],
-          "inherited_labels": [
-            [
-              "The Mysterious One",
-              1
-            ],
-            [
-              "The Man of Faith",
-              1
-            ],
-            [
-              "The Hunter",
-              1
-            ]
-          ]
+          "inherited_labels": [["The Mysterious One",1],["The Man of Faith",1],["The Hunter",1]]
         },
         "3": {
           "labels": [
@@ -7576,11 +9147,29 @@
           "judgment": "negative",
           "dialogues": [
             {
-              "episode": "3x11 - Enter 77",
+              "episode": "3x11 - Enter 77", 
               "character": "Sayid-John Locke",
               "line": "**Sayid**: What have you done John? That place was our only hope of communications with the outside world! **John Locke**: The computer said if there was an incursion by the hostiles, I should to enter 77. So I entered 77"
             }
           ],
+          "inherited_labels": []
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
           "inherited_labels": []
         }
       }
@@ -7625,12 +9214,7 @@
               "line": "(to Kate) Are you ready? We must be precise."
             }
           ],
-          "inherited_labels": [
-            [
-              "The Trusted Ally",
-              1
-            ]
-          ]
+          "inherited_labels": [["The Trusted Ally",1]]
         },
         "3": {
           "labels": [
@@ -7638,12 +9222,25 @@
           ],
           "judgment": "positive",
           "dialogues": [],
-          "inherited_labels": [
-            [
-              "The Trusted Ally",
-              1
-            ]
-          ]
+          "inherited_labels": [["The Trusted Ally",1]]
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -7668,6 +9265,24 @@
           "judgment": "",
           "dialogues": [],
           "inherited_labels": []
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -7688,6 +9303,24 @@
           "inherited_labels": []
         },
         "3": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
           "labels": [],
           "judgment": "",
           "dialogues": [],
@@ -7732,16 +9365,7 @@
               "line": "(to Sun) Your English is very good, Sun. You are very clever."
             }
           ],
-          "inherited_labels": [
-            [
-              "The Strong",
-              1
-            ],
-            [
-              "The Kind-hearted",
-              1
-            ]
-          ]
+          "inherited_labels": [["The Strong",1],["The Kind-hearted",1]]
         },
         "3": {
           "labels": [
@@ -7749,6 +9373,24 @@
             "The Kind-hearted"
           ],
           "judgment": "positive",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
           "dialogues": [],
           "inherited_labels": []
         }
@@ -7772,11 +9414,29 @@
         },
         "3": {
           "labels": [
-            "The Manipulator",
-            "The Deceiver",
+            "The Manipulator", 
+            "The Deceiver", 
             "The Others leader"
           ],
           "judgment": "negative",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
           "dialogues": [],
           "inherited_labels": []
         }
@@ -7818,24 +9478,7 @@
               "line": "(to Claire) He is... lost, Claire. He needs help."
             }
           ],
-          "inherited_labels": [
-            [
-              "The Vulnerable",
-              1
-            ],
-            [
-              "The Troubled",
-              1
-            ],
-            [
-              "The Fellow Survivor",
-              1
-            ],
-            [
-              "The Good-hearted",
-              1
-            ]
-          ]
+          "inherited_labels": [["The Vulnerable",1],["The Troubled",1],["The Fellow Survivor",1],["The Good-hearted",1]]
         },
         "3": {
           "labels": [
@@ -7846,24 +9489,25 @@
           ],
           "judgment": "positive",
           "dialogues": [],
-          "inherited_labels": [
-            [
-              "The Vulnerable",
-              1
-            ],
-            [
-              "The Troubled",
-              1
-            ],
-            [
-              "The Fellow Survivor",
-              1
-            ],
-            [
-              "The Good-hearted",
-              1
-            ]
-          ]
+          "inherited_labels": [["The Vulnerable",1],["The Troubled",1],["The Fellow Survivor",1],["The Good-hearted",1]]
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -7890,11 +9534,29 @@
           "judgment": "positive",
           "dialogues": [
             {
-              "episode": "3x08 - Flashes Before Your Eyes",
-              "character": "Sun",
+              "episode": "3x08 - Flashes Before Your Eyes", 
+              "character": "Sun", 
               "line": "(to Jin) He sees things. Things that will happen. It is strange."
             }
           ],
+          "inherited_labels": []
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
           "inherited_labels": []
         }
       }
@@ -7925,16 +9587,7 @@
           ],
           "judgment": "negative",
           "dialogues": [],
-          "inherited_labels": [
-            [
-              "The Villain",
-              1
-            ],
-            [
-              "The Other",
-              1
-            ]
-          ]
+          "inherited_labels": [["The Villain",1],["The Other",1]]
         },
         "3": {
           "labels": [
@@ -7943,16 +9596,25 @@
           ],
           "judgment": "negative",
           "dialogues": [],
-          "inherited_labels": [
-            [
-              "The Villain",
-              1
-            ],
-            [
-              "The Other",
-              1
-            ]
-          ]
+          "inherited_labels": [["The Villain",1],["The Other",1]]
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -7990,20 +9652,7 @@
               "line": "(to Hurley) You are a good man, Hurley. Don't let anyone tell you otherwise."
             }
           ],
-          "inherited_labels": [
-            [
-              "The Kind-hearted",
-              1
-            ],
-            [
-              "The Comic Relief",
-              1
-            ],
-            [
-              "The Friend",
-              1
-            ]
-          ]
+          "inherited_labels": [["The Kind-hearted",1],["The Comic Relief",1],["The Friend",1]]
         },
         "3": {
           "labels": [
@@ -8014,25 +9663,30 @@
           "judgment": "positive",
           "dialogues": [
             {
-              "episode": "3x04 - Every Man for Himself",
-              "character": "Sun-Hwa Kwon",
+              "episode": "3x04 - Every Man for Himself", 
+              "character": "Sun-Hwa Kwon", 
               "line": "(to Hurley, smiling) You always make me feel better, Hurley."
             }
           ],
-          "inherited_labels": [
-            [
-              "The Kind-hearted",
-              1
-            ],
-            [
-              "The Comic Relief",
-              1
-            ],
-            [
-              "The Friend",
-              1
-            ]
-          ]
+          "inherited_labels": [["The Kind-hearted",1],["The Comic Relief",1],["The Friend",1]]
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -8053,6 +9707,24 @@
           "inherited_labels": []
         },
         "3": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
           "labels": [],
           "judgment": "",
           "dialogues": [],
@@ -8101,34 +9773,34 @@
               "line": "(to Sawyer) Must you always be so... difficult?"
             }
           ],
-          "inherited_labels": [
-            [
-              "The Annoyance",
-              1
-            ],
-            [
-              "The Selfish",
-              1
-            ],
-            [
-              "The Troublemaker",
-              1
-            ]
-          ]
+          "inherited_labels": [["The Annoyance",1],["The Selfish",1],["The Troublemaker",1]]
         },
         "3": {
           "labels": [
-            "The Annoyance",
+            "The Annoyance", 
             "The Reluctant Ally"
           ],
           "judgment": "ambiguous",
           "dialogues": [],
-          "inherited_labels": [
-            [
-              "The Annoyance",
-              1
-            ]
-          ]
+          "inherited_labels": [["The Annoyance",1]]
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -8178,24 +9850,7 @@
               "line": "(to Jack, about Jin) Please, Jack. You must help him."
             }
           ],
-          "inherited_labels": [
-            [
-              "The Leader",
-              1
-            ],
-            [
-              "The Doctor",
-              1
-            ],
-            [
-              "The Trustworthy",
-              1
-            ],
-            [
-              "The Hero",
-              1
-            ]
-          ]
+          "inherited_labels": [["The Leader",1],["The Doctor",1],["The Trustworthy",1],["The Hero",1]]
         },
         "3": {
           "labels": [
@@ -8207,29 +9862,30 @@
           "judgment": "positive",
           "dialogues": [
             {
-              "episode": "3x22 - Through the Looking Glass, Part 1",
-              "character": "Sun",
-              "line": "(to Jack) We need you, Jack. Please, lead us."
+              "episode": "3x22 - Through the Looking Glass, Part 1", 
+              "character": "Sun", 
+              "line": "(to Jack) We need you, Jack. Please, lead us." 
             }
           ],
-          "inherited_labels": [
-            [
-              "The Leader",
-              1
-            ],
-            [
-              "The Doctor",
-              1
-            ],
-            [
-              "The Trustworthy",
-              1
-            ],
-            [
-              "The Hero",
-              1
-            ]
-          ]
+          "inherited_labels": [["The Leader",1],["The Doctor",1],["The Trustworthy",1],["The Hero",1]]
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -8266,12 +9922,7 @@
               "line": "**Sun**: I don’t think I’ve ever seen you angry. **John**: Oh, I used to get angry—frustrated, too. **Sun**: You’re not frustrated any more? **John**: I’m not lost any more. **Sun**: How did you do that? **John**: The same way anything lost gets found. I stopped looking."
             }
           ],
-          "inherited_labels": [
-            [
-              "The Hunter",
-              1
-            ]
-          ]
+          "inherited_labels": [["The Hunter",1]]
         },
         "3": {
           "labels": [
@@ -8280,16 +9931,25 @@
           ],
           "judgment": "positive",
           "dialogues": [],
-          "inherited_labels": [
-            [
-              "The Hunter",
-              1
-            ],
-            [
-              "The Man of Faith",
-              2
-            ]
-          ]
+          "inherited_labels": [["The Hunter",1],["The Man of Faith",2]]
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -8333,20 +9993,7 @@
               "line": "(to Kate, about pregnancy) I am afraid, Kate. Very afraid."
             }
           ],
-          "inherited_labels": [
-            [
-              "The Trusted Ally",
-              1
-            ],
-            [
-              "The Strong",
-              1
-            ],
-            [
-              "The Confidant",
-              1
-            ]
-          ]
+          "inherited_labels": [["The Trusted Ally",1],["The Strong",1],["The Confidant",1]]
         },
         "3": {
           "labels": [
@@ -8357,24 +10004,25 @@
           ],
           "judgment": "positive",
           "dialogues": [],
-          "inherited_labels": [
-            [
-              "The Trusted Ally",
-              1
-            ],
-            [
-              "The Strong",
-              1
-            ],
-            [
-              "The Confidant",
-              1
-            ],
-            [
-              "The Friend",
-              2
-            ]
-          ]
+          "inherited_labels": [["The Trusted Ally",1],["The Strong",1],["The Confidant",1],["The Friend",2]]
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -8399,6 +10047,24 @@
           "judgment": "",
           "dialogues": [],
           "inherited_labels": []
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -8419,6 +10085,24 @@
           "inherited_labels": []
         },
         "3": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
           "labels": [],
           "judgment": "",
           "dialogues": [],
@@ -8460,20 +10144,7 @@
               "line": "(to Sayid) You fixed it. Thank you, Sayid."
             }
           ],
-          "inherited_labels": [
-            [
-              "The Skilled",
-              1
-            ],
-            [
-              "The Resourceful",
-              1
-            ],
-            [
-              "The Reliable",
-              1
-            ]
-          ]
+          "inherited_labels": [["The Skilled",1],["The Resourceful",1],["The Reliable",1]]
         },
         "3": {
           "labels": [
@@ -8484,25 +10155,30 @@
           "judgment": "positive",
           "dialogues": [
             {
-              "episode": "3x16 - One of Us",
-              "character": "Sun",
+              "episode": "3x16 - One of Us", 
+              "character": "Sun", 
               "line": "(to Sayid, worried for Jin) Can you find him, Sayid? Can you bring him back?"
             }
           ],
-          "inherited_labels": [
-            [
-              "The Skilled",
-              1
-            ],
-            [
-              "The Resourceful",
-              1
-            ],
-            [
-              "The Reliable",
-              1
-            ]
-          ]
+          "inherited_labels": [["The Skilled",1],["The Resourceful",1],["The Reliable",1]]
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -8523,6 +10199,24 @@
           "inherited_labels": []
         },
         "3": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
           "labels": [],
           "judgment": "",
           "dialogues": [],
@@ -8551,6 +10245,24 @@
           "judgment": "",
           "dialogues": [],
           "inherited_labels": []
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -8571,6 +10283,24 @@
           "inherited_labels": []
         },
         "3": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
           "labels": [],
           "judgment": "",
           "dialogues": [],
@@ -8599,6 +10329,24 @@
           "judgment": "",
           "dialogues": [],
           "inherited_labels": []
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -8619,6 +10367,24 @@
           "inherited_labels": []
         },
         "3": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
           "labels": [],
           "judgment": "",
           "dialogues": [],
@@ -8647,6 +10413,24 @@
           "judgment": "",
           "dialogues": [],
           "inherited_labels": []
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -8667,6 +10451,24 @@
           "inherited_labels": []
         },
         "3": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
           "labels": [],
           "judgment": "",
           "dialogues": [],
@@ -8695,6 +10497,24 @@
           "judgment": "",
           "dialogues": [],
           "inherited_labels": []
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -8715,6 +10535,24 @@
           "inherited_labels": []
         },
         "3": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
           "labels": [],
           "judgment": "",
           "dialogues": [],
@@ -8743,6 +10581,24 @@
           "judgment": "",
           "dialogues": [],
           "inherited_labels": []
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -8763,6 +10619,24 @@
           "inherited_labels": []
         },
         "3": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
           "labels": [],
           "judgment": "",
           "dialogues": [],
@@ -8791,6 +10665,24 @@
           "judgment": "",
           "dialogues": [],
           "inherited_labels": []
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -8815,6 +10707,24 @@
           "judgment": "",
           "dialogues": [],
           "inherited_labels": []
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -8835,6 +10745,24 @@
           "inherited_labels": []
         },
         "3": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "4": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "5": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "6": {
           "labels": [],
           "judgment": "",
           "dialogues": [],

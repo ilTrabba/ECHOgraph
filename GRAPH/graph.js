@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-for (let i = 1; i <= 6; i++) {
+for (let i = 1; i <= 3; i++) {
   seasonDotContainer.append("div")
     .attr("class", "season-dot") // No initial selection
     .attr("data-season", i)
@@ -541,7 +541,7 @@ function showNoOpinionMessage(linkData, season) {
   const pageY = svgRect.top + cy;
 
   dialogueBox
-    .html(`<em>Nessuna opinione presente nel capitolo ${season}</em>`)
+    .html(`<em>No dialogues available for this chapter ${season}</em>`)
     .style("left", `${pageX}px`)
     .style("top", `${pageY}px`)
     .classed("visible", true);
@@ -671,9 +671,9 @@ d3.json("../data.json").then(data => {
   }
 
   simulation = d3.forceSimulation(nodes)
-    .force("link", d3.forceLink(links).id(d => d.id).distance(300))
-    .force("charge", d3.forceManyBody().strength(-500))
-    .force("collision", d3.forceCollide(40))
+    .force("link", d3.forceLink(links).id(d => d.id).distance(400))
+    .force("charge", d3.forceManyBody().strength(-700))
+    .force("collision", d3.forceCollide(60))
     .force("center", d3.forceCenter(width / 2, height / 2));
 
   // CREAZIONE ARCHI (link)
@@ -889,7 +889,7 @@ d3.json("../data.json").then(data => {
       
       if (bidir[`${a}->${b}`]) {
         // CURVE for bidirectional links
-        const curveOffset = 35;
+        const curveOffset = 50;
         const dx = tx - sx;
         const dy = ty - sy;
         const mx = (sx + tx) / 2;
@@ -917,7 +917,7 @@ d3.json("../data.json").then(data => {
       const b = (d.target.id || d.target);
       
       if (bidir[`${a}->${b}`]) {
-        const curveOffset = 35;
+        const curveOffset = 50;
         const dx = tx - sx;
         const dy = ty - sy;
         const mx = (sx + tx) / 2;

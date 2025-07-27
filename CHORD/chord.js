@@ -1281,7 +1281,7 @@ function initializeSeasonFilter() {
     const seasonDotContainer = d3.select("#season-dots");
     seasonDotContainer.selectAll("*").remove();
 
-    for (let i = 1; i <= 6; i++) {
+    for (let i = 1; i <= 3; i++) {
         seasonDotContainer.append("div")
             .attr("class", "season-dot")
             .attr("data-season", i)
