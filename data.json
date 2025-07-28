@@ -518,6 +518,30 @@
       }
     },
     {
+      "source": "Benjamin Linus",
+      "target": "Implicit Reader",
+      "seasons": {
+        "1": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "2": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "3": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        }
+      }
+    },
+    {
       "source": "Charlie Pace",
       "target": "Benjamin Linus",
       "seasons": {
@@ -1235,6 +1259,30 @@
       }
     },
     {
+      "source": "Charlie Pace",
+      "target": "Implicit Reader",
+      "seasons": {
+        "1": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "2": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "3": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        }
+      }
+    },
+    {
       "source": "Desmond Hume",
       "target": "Benjamin Linus",
       "seasons": {
@@ -1641,6 +1689,30 @@
       }
     },
     {
+      "source": "Desmond Hume",
+      "target": "Implicit Reader",
+      "seasons": {
+        "1": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "2": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "3": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        }
+      }
+    },
+    {
       "source": "Ethan Rom",
       "target": "Benjamin Linus",
       "seasons": {
@@ -1950,6 +2022,30 @@
     {
       "source": "Ethan Rom",
       "target": "Sun-Hwa Kwon",
+      "seasons": {
+        "1": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "2": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "3": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        }
+      }
+    },
+    {
+      "source": "Ethan Rom",
+      "target": "Implicit Reader",
       "seasons": {
         "1": {
           "labels": [],
@@ -2725,6 +2821,30 @@
       }
     },
     {
+      "source": "Hugo 'Hurley' Reyes",
+      "target": "Implicit Reader",
+      "seasons": {
+        "1": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "2": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "3": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        }
+      }
+    },
+    {
       "source": "Jacob",
       "target": "Benjamin Linus",
       "seasons": {
@@ -3015,6 +3135,30 @@
     {
       "source": "Jacob",
       "target": "Sun-Hwa Kwon",
+      "seasons": {
+        "1": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "2": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "3": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        }
+      }
+    },
+    {
+      "source": "Jacob",
+      "target": "Implicit Reader",
       "seasons": {
         "1": {
           "labels": [],
@@ -3794,6 +3938,30 @@
               1
             ]
           ]
+        }
+      }
+    },
+    {
+      "source": "James 'Sawyer' Ford",
+      "target": "Implicit Reader",
+      "seasons": {
+        "1": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "2": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "3": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
         }
       }
     },
@@ -4697,6 +4865,30 @@
       }
     },
     {
+      "source": "Jack Shephard",
+      "target": "Implicit Reader",
+      "seasons": {
+        "1": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "2": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "3": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        }
+      }
+    },
+    {
       "source": "John Locke",
       "target": "Benjamin Linus",
       "seasons": {
@@ -5527,6 +5719,30 @@
       }
     },
     {
+      "source": "John Locke",
+      "target": "Implicit Reader",
+      "seasons": {
+        "1": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "2": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "3": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        }
+      }
+    },
+    {
       "source": "Kate Austen",
       "target": "Benjamin Linus",
       "seasons": {
@@ -6320,6 +6536,30 @@
       }
     },
     {
+      "source": "Kate Austen",
+      "target": "Implicit Reader",
+      "seasons": {
+        "1": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "2": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "3": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        }
+      }
+    },
+    {
       "source": "Man in black",
       "target": "Benjamin Linus",
       "seasons": {
@@ -6610,6 +6850,30 @@
     {
       "source": "Man in black",
       "target": "Sun-Hwa Kwon",
+      "seasons": {
+        "1": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "2": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "3": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        }
+      }
+    },
+    {
+      "source": "Man in black",
+      "target": "Implicit Reader",
       "seasons": {
         "1": {
           "labels": [],
@@ -6989,6 +7253,30 @@
     {
       "source": "Mr. Eko",
       "target": "Sun-Hwa Kwon",
+      "seasons": {
+        "1": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "2": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "3": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        }
+      }
+    },
+    {
+      "source": "Mr. Eko",
+      "target": "Implicit Reader",
       "seasons": {
         "1": {
           "labels": [],
@@ -7755,6 +8043,30 @@
       }
     },
     {
+      "source": "Sayid Jarrah",
+      "target": "Implicit Reader",
+      "seasons": {
+        "1": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "2": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "3": {
+          "labels": [],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        }
+      }
+    },
+    {
       "source": "Sun-Hwa Kwon",
       "target": "Benjamin Linus",
       "seasons": {
@@ -8507,8 +8819,8 @@
       }
     },
     {
-      "source": "Implicit Reader",
-      "target": "Benjamin Linus",
+      "source": "Sun-Hwa Kwon",
+      "target": "Implicit Reader",
       "seasons": {
         "1": {
           "labels": [],
@@ -8532,7 +8844,7 @@
     },
     {
       "source": "Implicit Reader",
-      "target": "Charlie Pace",
+      "target": "Benjamin Linus",
       "seasons": {
         "1": {
           "labels": [],
@@ -8541,13 +8853,37 @@
           "inherited_labels": []
         },
         "2": {
-          "labels": [],
-          "judgment": "",
+          "labels": ["The Manipulator", "The Others leader"],
+          "judgment": "ambiguous",
           "dialogues": [],
           "inherited_labels": []
         },
         "3": {
-          "labels": [],
+          "labels": ["The Manipulator", "The Others leader"],
+          "judgment": "ambiguous",
+          "dialogues": [],
+          "inherited_labels": [["The Manipulator",2], ["The Others leader",2]]
+        }
+      }
+    },
+    {
+      "source": "Implicit Reader",
+      "target": "Charlie Pace",
+      "seasons": {
+        "1": {
+          "labels": ["The drug Addict","The Kind-hearted"],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": []
+        },
+        "2": {
+          "labels": ["The drug Addict","The Lost Soul"],
+          "judgment": "",
+          "dialogues": [],
+          "inherited_labels": [["The drug Addict",1]]
+        },
+        "3": {
+          "labels": ["The Hero"],
           "judgment": "",
           "dialogues": [],
           "inherited_labels": []
@@ -8565,16 +8901,16 @@
           "inherited_labels": []
         },
         "2": {
-          "labels": [],
-          "judgment": "",
+          "labels": ["The Man in the Hatch","Odysseus"],
+          "judgment": "ambiguous",
           "dialogues": [],
           "inherited_labels": []
         },
         "3": {
-          "labels": [],
-          "judgment": "",
+          "labels": ["The Seer","Odysseus"],
+          "judgment": "positive",
           "dialogues": [],
-          "inherited_labels": []
+          "inherited_labels": [["Odysseus",2]]
         }
       }
     },
@@ -8583,22 +8919,22 @@
       "target": "Ethan Rom",
       "seasons": {
         "1": {
-          "labels": [],
-          "judgment": "",
+          "labels": ["The Villain","The Other"],
+          "judgment": "ambiguous",
           "dialogues": [],
           "inherited_labels": []
         },
         "2": {
-          "labels": [],
-          "judgment": "",
+          "labels": ["The Villain","The Other"],
+          "judgment": "ambiguous",
           "dialogues": [],
-          "inherited_labels": []
+          "inherited_labels": [["The Villain",1],["The Other",1]]
         },
         "3": {
-          "labels": [],
-          "judgment": "",
+          "labels": ["The Villain","The Other"],
+          "judgment": "ambiguous",
           "dialogues": [],
-          "inherited_labels": []
+          "inherited_labels": [["The Villain",1],["The Other",1]]
         }
       }
     },
@@ -8607,22 +8943,22 @@
       "target": "Hugo 'Hurley' Reyes",
       "seasons": {
         "1": {
-          "labels": [],
-          "judgment": "",
+          "labels": ["The Kind-hearted","The Comic Relief"],
+          "judgment": "positive",
           "dialogues": [],
           "inherited_labels": []
         },
         "2": {
-          "labels": [],
-          "judgment": "",
+          "labels": ["The Kind-hearted","The Comic Relief"],
+          "judgment": "positive",
           "dialogues": [],
-          "inherited_labels": []
+          "inherited_labels": [["The Kind-hearted",1],["The Comic Relief",1]]
         },
         "3": {
-          "labels": [],
-          "judgment": "",
+          "labels": ["The Kind-hearted","The Comic Relief"],
+          "judgment": "positive",
           "dialogues": [],
-          "inherited_labels": []
+          "inherited_labels": [["The Kind-hearted",1],["The Comic Relief",1]]
         }
       }
     },
@@ -8643,8 +8979,8 @@
           "inherited_labels": []
         },
         "3": {
-          "labels": [],
-          "judgment": "",
+          "labels": ["The Island's Voice"],
+          "judgment": "ambiguous",
           "dialogues": [],
           "inherited_labels": []
         }
@@ -8655,20 +8991,20 @@
       "target": "James 'Sawyer' Ford",
       "seasons": {
         "1": {
-          "labels": [],
-          "judgment": "",
+          "labels": ["The Annoyance"],
+          "judgment": "ambiguous",
           "dialogues": [],
           "inherited_labels": []
         },
         "2": {
-          "labels": [],
-          "judgment": "",
+          "labels": ["The Troublemaker"],
+          "judgment": "ambiguous",
           "dialogues": [],
           "inherited_labels": []
         },
         "3": {
-          "labels": [],
-          "judgment": "",
+          "labels": ["The Lost Soul"],
+          "judgment": "ambiguous",
           "dialogues": [],
           "inherited_labels": []
         }
@@ -8679,22 +9015,22 @@
       "target": "Jack Shephard",
       "seasons": {
         "1": {
-          "labels": [],
-          "judgment": "",
+          "labels": ["The Hero","The Doctor","The Leader"],
+          "judgment": "positive",
           "dialogues": [],
           "inherited_labels": []
         },
         "2": {
-          "labels": [],
-          "judgment": "",
+          "labels": ["The Hero","The Doctor","The Leader"],
+          "judgment": "positive",
           "dialogues": [],
-          "inherited_labels": []
+          "inherited_labels": [["The Hero",1],["The Doctor",1],["The Leader",1]]
         },
         "3": {
-          "labels": [],
-          "judgment": "",
+          "labels": ["The Hero","The Doctor","The Leader"],
+          "judgment": "positive",
           "dialogues": [],
-          "inherited_labels": []
+          "inherited_labels": [["The Hero",1],["The Doctor",1],["The Leader",1]]
         }
       }
     },
@@ -8703,22 +9039,22 @@
       "target": "John Locke",
       "seasons": {
         "1": {
-          "labels": [],
-          "judgment": "",
+          "labels": ["The Man of Faith","The Loser"],
+          "judgment": "positive",
           "dialogues": [],
           "inherited_labels": []
         },
         "2": {
-          "labels": [],
-          "judgment": "",
+          "labels": ["The Man of Faith","The Loser","Gilgamesh"],
+          "judgment": "positive",
           "dialogues": [],
-          "inherited_labels": []
+          "inherited_labels": [["The Man of Faith",1],["The Loser",1]]
         },
         "3": {
-          "labels": [],
-          "judgment": "",
+          "labels": ["The Man of Faith","The Loser","Gilgamesh"],
+          "judgment": "positive",
           "dialogues": [],
-          "inherited_labels": []
+          "inherited_labels": [["The Man of Faith",1],["The Loser",1],["Gilgamesh",2]]
         }
       }
     },
@@ -8727,22 +9063,22 @@
       "target": "Kate Austen",
       "seasons": {
         "1": {
-          "labels": [],
-          "judgment": "",
+          "labels": ["The Fugitive","The Strong"],
+          "judgment": "positive",
           "dialogues": [],
           "inherited_labels": []
         },
         "2": {
-          "labels": [],
-          "judgment": "",
+          "labels": ["The Fugitive","The Strong"],
+          "judgment": "positive",
           "dialogues": [],
-          "inherited_labels": []
+          "inherited_labels": [["The Fugitive",1],["The Strong",1]]
         },
         "3": {
-          "labels": [],
-          "judgment": "",
+          "labels": ["The Fugitive","The Strong"],
+          "judgment": "positive",
           "dialogues": [],
-          "inherited_labels": []
+          "inherited_labels": [["The Fugitive",1],["The Strong",1]]
         }
       }
     },
@@ -8781,16 +9117,16 @@
           "inherited_labels": []
         },
         "2": {
-          "labels": [],
-          "judgment": "",
+          "labels": ["The Man of Faith","Enkidu"],
+          "judgment": "positive",
           "dialogues": [],
           "inherited_labels": []
         },
         "3": {
-          "labels": [],
-          "judgment": "",
+          "labels": ["The Man of Faith","Enkidu"],
+          "judgment": "positive",
           "dialogues": [],
-          "inherited_labels": []
+          "inherited_labels": [["The Man of Faith",2],["Enkidu",2]]
         }
       }
     },
@@ -8799,22 +9135,22 @@
       "target": "Sayid Jarrah",
       "seasons": {
         "1": {
-          "labels": [],
-          "judgment": "",
+          "labels": ["The Analyst","The Interrogator"],
+          "judgment": "positive",
           "dialogues": [],
           "inherited_labels": []
         },
         "2": {
-          "labels": [],
-          "judgment": "",
+          "labels": ["The Analyst","The Interrogator"],
+          "judgment": "positive",
           "dialogues": [],
-          "inherited_labels": []
+          "inherited_labels": [["The Analyst",1],["The Interrogator",1]]
         },
         "3": {
-          "labels": [],
-          "judgment": "",
+          "labels": ["The Analyst","The Interrogator"],
+          "judgment": "positive",
           "dialogues": [],
-          "inherited_labels": []
+          "inherited_labels": [["The Analyst",1],["The Interrogator",1]]
         }
       }
     },
@@ -8823,22 +9159,22 @@
       "target": "Sun-Hwa Kwon",
       "seasons": {
         "1": {
-          "labels": [],
-          "judgment": "",
+          "labels": ["The Strong"],
+          "judgment": "positive",
           "dialogues": [],
           "inherited_labels": []
         },
         "2": {
-          "labels": [],
-          "judgment": "",
+          "labels": ["The Strong"],
+          "judgment": "positive",
           "dialogues": [],
-          "inherited_labels": []
+          "inherited_labels": [["The Strong",1]]
         },
         "3": {
-          "labels": [],
-          "judgment": "",
+          "labels": ["The Strong"],
+          "judgment": "positive",
           "dialogues": [],
-          "inherited_labels": []
+          "inherited_labels": [["The Strong",1]]
         }
       }
     }
