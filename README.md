@@ -3,7 +3,7 @@ Graph visualization with D3 - ECHOgraph for character's POV
 Description:
 -------------
 This project offers a clear and effective way to visualize information related to the POVs of characters from literary works, films, and much more. 
-The visualization is divided between the presentation of an interactive chord diagram, which users can dynamically explore, and an interactive graph with nodes and edges based on JSON data. Users can select a node as a "point of view" (POV) with a single click, view tooltips with opinions on the connected links, and filter dialoguesby season using a slider filter.
+The visualization is divided between the presentation of an interactive chord diagram, which users can dynamically explore, and an interactive graph with nodes and edges based on JSON data. Users can select a node as a "point of view" (POV) with a single click, view tooltips with opinions on the connected links, and filter dialogues by season using a slider filter.
 
 Principles features:
 ---------------------------
