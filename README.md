@@ -19,7 +19,7 @@ Principles features:
 How to use:
 -----------
 1. Open index_chord.html in a modern browser (Chrome, Firefox, Edge).
-2. Select a specific character name (in black) with a single click to enter the POV and explore the labels.
+2. Select a specific POV, click on the character name (in red) with a single click to enter the POV and explore the labels in the graph.
 3. Switch to the graph visualization to explore the node with a more clear view over a connected node to view the tooltip with opinions.
 4. Select a season using the slider filter (line with dots).
 5. Click on an edge between two nodes within the POV to display that season’s dialogues in the dialogue box.
